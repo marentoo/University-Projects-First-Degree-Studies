@@ -1,0 +1,177 @@
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       36818               85.2505 %
+Incorrectly Classified Instances      6370               14.7495 %
+Kappa statistic                          0.4336
+Mean absolute error                      0.1578
+Root mean squared error                  0.3636
+Relative absolute error                 69.1232 %
+Root relative squared error            107.6085 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,890    0,395    0,937      0,890    0,913      0,440    0,812     0,955     no
+                 0,605    0,110    0,454      0,605    0,519      0,440    0,812     0,474     yes
+Weighted Avg.    0,853    0,358    0,874      0,853    0,861      0,440    0,812     0,892     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 33386  4126 |     a = no
+  2244  3432 |     b = yes
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       38809               89.8606 %
+Incorrectly Classified Instances      4379               10.1394 %
+Kappa statistic                          0.4592
+Mean absolute error                      0.1553
+Root mean squared error                  0.2856
+Relative absolute error                 68.0118 %
+Root relative squared error             84.5323 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,974    0,596    0,915      0,974    0,943      0,481    0,806     0,946     no
+                 0,404    0,026    0,697      0,404    0,511      0,481    0,806     0,536     yes
+Weighted Avg.    0,899    0,521    0,887      0,899    0,887      0,481    0,806     0,892     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 36518   994 |     a = no
+  3385  2291 |     b = yes
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 20 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       38375               88.8557 %
+Incorrectly Classified Instances      4813               11.1443 %
+Kappa statistic                          0.4437
+Mean absolute error                      0.1524
+Root mean squared error                  0.2969
+Relative absolute error                 66.748  %
+Root relative squared error             87.8663 %
+Coverage of cases (0.95 level)          96.9436 %
+Mean rel. region size (0.95 level)      70.0137 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,958    0,568    0,918      0,958    0,937      0,452    0,799     0,948     no
+                 0,432    0,042    0,607      0,432    0,504      0,452    0,799     0,513     yes
+Weighted Avg.    0,889    0,499    0,877      0,889    0,880      0,452    0,799     0,890     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 35925  1587 |     a = no
+  3226  2450 |     b = yes
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       37712               87.3206 %
+Incorrectly Classified Instances      5476               12.6794 %
+Kappa statistic                          0.1988
+Mean absolute error                      0.1765
+Root mean squared error                  0.301 
+Relative absolute error                 77.2853 %
+Root relative squared error             89.0864 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,982    0,844    0,885      0,982    0,931      0,249    0,800     0,949     no
+                 0,156    0,018    0,564      0,156    0,244      0,249    0,800     0,434     yes
+Weighted Avg.    0,873    0,735    0,843      0,873    0,841      0,249    0,800     0,881     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 36826   686 |     a = no
+  4790   886 |     b = yes
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       38515               89.1799 %
+Incorrectly Classified Instances      4673               10.8201 %
+Kappa statistic                          0.3963
+Mean absolute error                      0.1626
+Root mean squared error                  0.2856
+Relative absolute error                 71.2133 %
+Root relative squared error             84.531  %
+Coverage of cases (0.95 level)          98.4278 %
+Mean rel. region size (0.95 level)      77.8526 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,976    0,665    0,907      0,976    0,940      0,427    0,836     0,960     no
+                 0,335    0,024    0,679      0,335    0,449      0,427    0,836     0,536     yes
+Weighted Avg.    0,892    0,581    0,877      0,892    0,875      0,427    0,836     0,905     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 36613   899 |     a = no
+  3774  1902 |     b = yes
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21-weka.filters.unsupervised.attribute.Remove-R1-4-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R1-2
+
+=== Summary ===
+
+Correctly Classified Instances       38446               89.0201 %
+Incorrectly Classified Instances      4742               10.9799 %
+Kappa statistic                          0.3932
+Mean absolute error                      0.1849
+Root mean squared error                  0.3057
+Relative absolute error                 80.9754 %
+Root relative squared error             90.4713 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,974    0,662    0,907      0,974    0,939      0,421    0,661     0,907     no
+                 0,338    0,026    0,661      0,338    0,447      0,421    0,661     0,371     yes
+Weighted Avg.    0,890    0,579    0,874      0,890    0,874      0,421    0,661     0,837     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 36528   984 |     a = no
+  3758  1918 |     b = yes

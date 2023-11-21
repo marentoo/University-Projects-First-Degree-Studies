@@ -1,0 +1,360 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P20.0
+Instances:    800
+Attributes:   7
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+numer klienta = 6
+|   miesi¹c = 9
+|   |   Oddzia³ = Rzeszów: '(190.833333-inf)' (3.0/1.0)
+|   |   Oddzia³ = Wroc³aw: '(190.833333-inf)' (5.0/3.0)
+|   |   Oddzia³ = £ódŸ: '(54.166667-88.333333]' (2.0)
+|   |   Oddzia³ = Warszawa: '(122.5-156.666667]' (5.0/2.0)
+|   miesi¹c = 10
+|   |   przedstawiciel = P03: '(-inf-54.166667]' (3.0/1.0)
+|   |   przedstawiciel = P02: '(-inf-54.166667]' (3.0/2.0)
+|   |   przedstawiciel = P05: '(156.666667-190.833333]' (5.0/3.0)
+|   |   przedstawiciel = P01
+|   |   |   czas rozmowy <= 100: '(190.833333-inf)' (3.0/1.0)
+|   |   |   czas rozmowy > 100: '(122.5-156.666667]' (4.0/2.0)
+|   |   przedstawiciel = P04: '(-inf-54.166667]' (3.0/1.0)
+|   miesi¹c = 8
+|   |   przedstawiciel = P03: '(88.333333-122.5]' (5.0/3.0)
+|   |   przedstawiciel = P02: '(54.166667-88.333333]' (6.0/4.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 81
+|   |   |   |   czas rozmowy <= 30: '(54.166667-88.333333]' (2.0/1.0)
+|   |   |   |   czas rozmowy > 30: '(190.833333-inf)' (3.0/1.0)
+|   |   |   czas rozmowy > 81: '(54.166667-88.333333]' (2.0/1.0)
+|   |   przedstawiciel = P01: '(88.333333-122.5]' (2.0/1.0)
+|   |   przedstawiciel = P04: '(190.833333-inf)' (7.0/3.0)
+numer klienta = 12
+|   miesi¹c = 9: '(88.333333-122.5]' (14.0/9.0)
+|   miesi¹c = 10
+|   |   czas rozmowy <= 125: '(88.333333-122.5]' (5.0/3.0)
+|   |   czas rozmowy > 125: '(122.5-156.666667]' (5.0/3.0)
+|   miesi¹c = 8
+|   |   przedstawiciel = P03: '(156.666667-190.833333]' (5.0/2.0)
+|   |   przedstawiciel = P02: '(-inf-54.166667]' (2.0/1.0)
+|   |   przedstawiciel = P05: '(54.166667-88.333333]' (2.0/1.0)
+|   |   przedstawiciel = P01: '(-inf-54.166667]' (3.0/1.0)
+|   |   przedstawiciel = P04
+|   |   |   czas rozmowy <= 156: '(122.5-156.666667]' (2.0/1.0)
+|   |   |   czas rozmowy > 156: '(88.333333-122.5]' (2.0/1.0)
+numer klienta = 9
+|   przedstawiciel = P03
+|   |   miesi¹c = 9: '(54.166667-88.333333]' (2.0)
+|   |   miesi¹c = 10: '(-inf-54.166667]' (3.0/2.0)
+|   |   miesi¹c = 8: '(122.5-156.666667]' (2.0)
+|   przedstawiciel = P02
+|   |   miesi¹c = 9
+|   |   |   czas rozmowy <= 82: '(54.166667-88.333333]' (4.0/1.0)
+|   |   |   czas rozmowy > 82: '(-inf-54.166667]' (4.0/2.0)
+|   |   miesi¹c = 10: '(88.333333-122.5]' (4.0/2.0)
+|   |   miesi¹c = 8: '(88.333333-122.5]' (4.0/2.0)
+|   przedstawiciel = P05
+|   |   miesi¹c = 9
+|   |   |   czas rozmowy <= 81: '(-inf-54.166667]' (4.0/2.0)
+|   |   |   czas rozmowy > 81: '(122.5-156.666667]' (4.0/2.0)
+|   |   miesi¹c = 10
+|   |   |   czas rozmowy <= 66: '(54.166667-88.333333]' (2.0/1.0)
+|   |   |   czas rozmowy > 66: '(88.333333-122.5]' (3.0/1.0)
+|   |   miesi¹c = 8: '(54.166667-88.333333]' (6.0/3.0)
+|   przedstawiciel = P01
+|   |   czas rozmowy <= 77: '(122.5-156.666667]' (5.0/3.0)
+|   |   czas rozmowy > 77: '(156.666667-190.833333]' (5.0/2.0)
+|   przedstawiciel = P04
+|   |   czas rozmowy <= 143: '(88.333333-122.5]' (5.0/3.0)
+|   |   czas rozmowy > 143: '(54.166667-88.333333]' (2.0/1.0)
+numer klienta = 3
+|   miesi¹c = 9
+|   |   przedstawiciel = P03: '(54.166667-88.333333]' (3.0/2.0)
+|   |   przedstawiciel = P02: '(190.833333-inf)' (0.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 86: '(-inf-54.166667]' (3.0/1.0)
+|   |   |   czas rozmowy > 86: '(122.5-156.666667]' (4.0/2.0)
+|   |   przedstawiciel = P01
+|   |   |   czas rozmowy <= 125: '(88.333333-122.5]' (3.0/1.0)
+|   |   |   czas rozmowy > 125
+|   |   |   |   czas rozmowy <= 147: '(190.833333-inf)' (2.0)
+|   |   |   |   czas rozmowy > 147: '(-inf-54.166667]' (2.0/1.0)
+|   |   przedstawiciel = P04
+|   |   |   czas rozmowy <= 38: '(190.833333-inf)' (2.0)
+|   |   |   czas rozmowy > 38: '(122.5-156.666667]' (2.0)
+|   miesi¹c = 10
+|   |   przedstawiciel = P03: '(156.666667-190.833333]' (4.0/2.0)
+|   |   przedstawiciel = P02
+|   |   |   czas rozmowy <= 88: '(54.166667-88.333333]' (6.0/2.0)
+|   |   |   czas rozmowy > 88: '(88.333333-122.5]' (2.0/1.0)
+|   |   przedstawiciel = P05: '(156.666667-190.833333]' (2.0/1.0)
+|   |   przedstawiciel = P01: '(156.666667-190.833333]' (2.0)
+|   |   przedstawiciel = P04: '(54.166667-88.333333]' (2.0/1.0)
+|   miesi¹c = 8
+|   |   przedstawiciel = P03: '(156.666667-190.833333]' (4.0/2.0)
+|   |   przedstawiciel = P02: '(190.833333-inf)' (1.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 111: '(-inf-54.166667]' (3.0/1.0)
+|   |   |   czas rozmowy > 111: '(54.166667-88.333333]' (3.0/2.0)
+|   |   przedstawiciel = P01: '(190.833333-inf)' (6.0/3.0)
+|   |   przedstawiciel = P04: '(-inf-54.166667]' (3.0/2.0)
+numer klienta = 7
+|   miesi¹c = 9
+|   |   przedstawiciel = P03: '(156.666667-190.833333]' (6.0/4.0)
+|   |   przedstawiciel = P02
+|   |   |   czas rozmowy <= 99: '(54.166667-88.333333]' (4.0/1.0)
+|   |   |   czas rozmowy > 99: '(122.5-156.666667]' (4.0/2.0)
+|   |   przedstawiciel = P05: '(54.166667-88.333333]' (4.0/2.0)
+|   |   przedstawiciel = P01: '(156.666667-190.833333]' (3.0/1.0)
+|   |   przedstawiciel = P04
+|   |   |   czas rozmowy <= 56: '(-inf-54.166667]' (2.0/1.0)
+|   |   |   czas rozmowy > 56
+|   |   |   |   czas rozmowy <= 81: '(122.5-156.666667]' (2.0)
+|   |   |   |   czas rozmowy > 81: '(88.333333-122.5]' (2.0/1.0)
+|   miesi¹c = 10
+|   |   czas rozmowy <= 92: '(88.333333-122.5]' (5.0/1.0)
+|   |   czas rozmowy > 92: '(54.166667-88.333333]' (10.0/7.0)
+|   miesi¹c = 8
+|   |   czas rozmowy <= 126: '(88.333333-122.5]' (10.0/6.0)
+|   |   czas rozmowy > 126: '(156.666667-190.833333]' (7.0/4.0)
+numer klienta = 11
+|   czas rozmowy <= 144
+|   |   przedstawiciel = P03
+|   |   |   czas rozmowy <= 79: '(-inf-54.166667]' (9.0/6.0)
+|   |   |   czas rozmowy > 79
+|   |   |   |   czas rozmowy <= 112: '(88.333333-122.5]' (2.0)
+|   |   |   |   czas rozmowy > 112: '(54.166667-88.333333]' (6.0/3.0)
+|   |   przedstawiciel = P02: '(54.166667-88.333333]' (11.0/6.0)
+|   |   przedstawiciel = P05
+|   |   |   miesi¹c = 9
+|   |   |   |   czas rozmowy <= 57: '(54.166667-88.333333]' (2.0)
+|   |   |   |   czas rozmowy > 57: '(-inf-54.166667]' (5.0/2.0)
+|   |   |   miesi¹c = 10: '(-inf-54.166667]' (4.0/2.0)
+|   |   |   miesi¹c = 8: '(190.833333-inf)' (3.0/1.0)
+|   |   przedstawiciel = P01: '(-inf-54.166667]' (6.0/3.0)
+|   |   przedstawiciel = P04: '(-inf-54.166667]' (10.0/7.0)
+|   czas rozmowy > 144: '(122.5-156.666667]' (15.0/9.0)
+numer klienta = 2
+|   miesi¹c = 9
+|   |   Region = Po³udnie: '(54.166667-88.333333]' (2.0)
+|   |   Region = Zachód: '(54.166667-88.333333]' (2.0/1.0)
+|   |   Region = Centrum: '(156.666667-190.833333]' (3.0/1.0)
+|   miesi¹c = 10
+|   |   przedstawiciel = P03
+|   |   |   czas rozmowy <= 107: '(88.333333-122.5]' (2.0)
+|   |   |   czas rozmowy > 107
+|   |   |   |   czas rozmowy <= 160: '(-inf-54.166667]' (2.0)
+|   |   |   |   czas rozmowy > 160: '(54.166667-88.333333]' (2.0/1.0)
+|   |   przedstawiciel = P02: '(-inf-54.166667]' (3.0/1.0)
+|   |   przedstawiciel = P05: '(88.333333-122.5]' (2.0/1.0)
+|   |   przedstawiciel = P01: '(190.833333-inf)' (5.0/2.0)
+|   |   przedstawiciel = P04: '(156.666667-190.833333]' (1.0)
+|   miesi¹c = 8
+|   |   przedstawiciel = P03: '(54.166667-88.333333]' (1.0)
+|   |   przedstawiciel = P02
+|   |   |   czas rozmowy <= 72: '(122.5-156.666667]' (2.0)
+|   |   |   czas rozmowy > 72: '(-inf-54.166667]' (3.0/2.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 120: '(54.166667-88.333333]' (2.0/1.0)
+|   |   |   czas rozmowy > 120: '(-inf-54.166667]' (2.0/1.0)
+|   |   przedstawiciel = P01
+|   |   |   czas rozmowy <= 113
+|   |   |   |   czas rozmowy <= 32: '(54.166667-88.333333]' (2.0/1.0)
+|   |   |   |   czas rozmowy > 32: '(190.833333-inf)' (3.0/1.0)
+|   |   |   czas rozmowy > 113: '(156.666667-190.833333]' (2.0)
+|   |   przedstawiciel = P04
+|   |   |   czas rozmowy <= 117: '(190.833333-inf)' (2.0)
+|   |   |   czas rozmowy > 117: '(88.333333-122.5]' (2.0/1.0)
+numer klienta = 5
+|   miesi¹c = 9: '(-inf-54.166667]' (20.0/12.0)
+|   miesi¹c = 10
+|   |   przedstawiciel = P03
+|   |   |   czas rozmowy <= 60: '(88.333333-122.5]' (3.0/1.0)
+|   |   |   czas rozmowy > 60: '(190.833333-inf)' (4.0/2.0)
+|   |   przedstawiciel = P02: '(156.666667-190.833333]' (3.0/1.0)
+|   |   przedstawiciel = P05: '(-inf-54.166667]' (3.0/1.0)
+|   |   przedstawiciel = P01
+|   |   |   czas rozmowy <= 91: '(88.333333-122.5]' (2.0)
+|   |   |   czas rozmowy > 91: '(190.833333-inf)' (3.0)
+|   |   przedstawiciel = P04: '(156.666667-190.833333]' (6.0/2.0)
+|   miesi¹c = 8
+|   |   czas rozmowy <= 135: '(-inf-54.166667]' (14.0/9.0)
+|   |   czas rozmowy > 135
+|   |   |   czas rozmowy <= 157: '(156.666667-190.833333]' (3.0/1.0)
+|   |   |   czas rozmowy > 157: '(88.333333-122.5]' (3.0/2.0)
+numer klienta = 10
+|   miesi¹c = 9
+|   |   przedstawiciel = P03
+|   |   |   czas rozmowy <= 71: '(88.333333-122.5]' (2.0)
+|   |   |   czas rozmowy > 71: '(156.666667-190.833333]' (2.0)
+|   |   przedstawiciel = P02: '(54.166667-88.333333]' (3.0/1.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 112: '(88.333333-122.5]' (2.0/1.0)
+|   |   |   czas rozmowy > 112: '(-inf-54.166667]' (2.0)
+|   |   przedstawiciel = P01: '(-inf-54.166667]' (3.0/2.0)
+|   |   przedstawiciel = P04: '(54.166667-88.333333]' (3.0/1.0)
+|   miesi¹c = 10
+|   |   czas rozmowy <= 46: '(122.5-156.666667]' (6.0/3.0)
+|   |   czas rozmowy > 46: '(156.666667-190.833333]' (13.0/8.0)
+|   miesi¹c = 8
+|   |   przedstawiciel = P03: '(-inf-54.166667]' (3.0/1.0)
+|   |   przedstawiciel = P02
+|   |   |   czas rozmowy <= 113: '(88.333333-122.5]' (4.0/2.0)
+|   |   |   czas rozmowy > 113: '(-inf-54.166667]' (3.0/2.0)
+|   |   przedstawiciel = P05
+|   |   |   czas rozmowy <= 104: '(190.833333-inf)' (4.0/2.0)
+|   |   |   czas rozmowy > 104: '(88.333333-122.5]' (3.0/1.0)
+|   |   przedstawiciel = P01
+|   |   |   czas rozmowy <= 55: '(-inf-54.166667]' (2.0/1.0)
+|   |   |   czas rozmowy > 55: '(88.333333-122.5]' (3.0/2.0)
+|   |   przedstawiciel = P04: '(-inf-54.166667]' (3.0/1.0)
+numer klienta = 1
+|   przedstawiciel = P03: '(122.5-156.666667]' (4.0/2.0)
+|   przedstawiciel = P02
+|   |   czas rozmowy <= 71: '(-inf-54.166667]' (4.0/2.0)
+|   |   czas rozmowy > 71: '(54.166667-88.333333]' (4.0/3.0)
+|   przedstawiciel = P05: '(-inf-54.166667]' (3.0/2.0)
+|   przedstawiciel = P01: '(190.833333-inf)' (8.0/4.0)
+|   przedstawiciel = P04
+|   |   czas rozmowy <= 77: '(88.333333-122.5]' (4.0/1.0)
+|   |   czas rozmowy > 77: '(-inf-54.166667]' (3.0/2.0)
+numer klienta = 8
+|   Oddzia³ = Rzeszów
+|   |   miesi¹c = 9: '(-inf-54.166667]' (1.0)
+|   |   miesi¹c = 10: '(190.833333-inf)' (5.0/2.0)
+|   |   miesi¹c = 8
+|   |   |   czas rozmowy <= 126: '(122.5-156.666667]' (4.0/2.0)
+|   |   |   czas rozmowy > 126: '(-inf-54.166667]' (2.0/1.0)
+|   Oddzia³ = Wroc³aw
+|   |   czas rozmowy <= 17: '(122.5-156.666667]' (2.0)
+|   |   czas rozmowy > 17: '(156.666667-190.833333]' (10.0/5.0)
+|   Oddzia³ = £ódŸ: '(156.666667-190.833333]' (7.0/4.0)
+|   Oddzia³ = Warszawa
+|   |   miesi¹c = 9
+|   |   |   czas rozmowy <= 51: '(122.5-156.666667]' (3.0/1.0)
+|   |   |   czas rozmowy > 51: '(156.666667-190.833333]' (6.0/3.0)
+|   |   miesi¹c = 10
+|   |   |   czas rozmowy <= 127: '(122.5-156.666667]' (4.0/2.0)
+|   |   |   czas rozmowy > 127: '(54.166667-88.333333]' (3.0/2.0)
+|   |   miesi¹c = 8
+|   |   |   przedstawiciel = P03: '(54.166667-88.333333]' (0.0)
+|   |   |   przedstawiciel = P02: '(54.166667-88.333333]' (0.0)
+|   |   |   przedstawiciel = P05: '(54.166667-88.333333]' (0.0)
+|   |   |   przedstawiciel = P01
+|   |   |   |   czas rozmowy <= 67: '(-inf-54.166667]' (2.0/1.0)
+|   |   |   |   czas rozmowy > 67: '(88.333333-122.5]' (3.0/1.0)
+|   |   |   przedstawiciel = P04: '(54.166667-88.333333]' (4.0/2.0)
+numer klienta = 4
+|   Region = Po³udnie: '(122.5-156.666667]' (13.0/8.0)
+|   Region = Zachód
+|   |   miesi¹c = 9: '(88.333333-122.5]' (8.0/2.0)
+|   |   miesi¹c = 10: '(-inf-54.166667]' (3.0/2.0)
+|   |   miesi¹c = 8: '(54.166667-88.333333]' (4.0/2.0)
+|   Region = Centrum
+|   |   czas rozmowy <= 94: '(122.5-156.666667]' (28.0/19.0)
+|   |   czas rozmowy > 94
+|   |   |   Oddzia³ = Rzeszów: '(190.833333-inf)' (0.0)
+|   |   |   Oddzia³ = Wroc³aw: '(190.833333-inf)' (0.0)
+|   |   |   Oddzia³ = £ódŸ
+|   |   |   |   czas rozmowy <= 124: '(88.333333-122.5]' (2.0/1.0)
+|   |   |   |   czas rozmowy > 124: '(-inf-54.166667]' (2.0/1.0)
+|   |   |   Oddzia³ = Warszawa
+|   |   |   |   przedstawiciel = P03: '(190.833333-inf)' (0.0)
+|   |   |   |   przedstawiciel = P02: '(190.833333-inf)' (0.0)
+|   |   |   |   przedstawiciel = P05: '(190.833333-inf)' (0.0)
+|   |   |   |   przedstawiciel = P01
+|   |   |   |   |   czas rozmowy <= 175: '(54.166667-88.333333]' (6.0/3.0)
+|   |   |   |   |   czas rozmowy > 175: '(122.5-156.666667]' (2.0)
+|   |   |   |   przedstawiciel = P04: '(190.833333-inf)' (8.0/4.0)
+numer klienta = 15
+|   Oddzia³ = Rzeszów
+|   |   czas rozmowy <= 110: '(-inf-54.166667]' (5.0/3.0)
+|   |   czas rozmowy > 110: '(190.833333-inf)' (3.0/1.0)
+|   Oddzia³ = Wroc³aw
+|   |   czas rozmowy <= 102: '(54.166667-88.333333]' (5.0/2.0)
+|   |   czas rozmowy > 102: '(88.333333-122.5]' (3.0/1.0)
+|   Oddzia³ = £ódŸ
+|   |   czas rozmowy <= 59: '(-inf-54.166667]' (2.0)
+|   |   czas rozmowy > 59: '(190.833333-inf)' (3.0/1.0)
+|   Oddzia³ = Warszawa
+|   |   miesi¹c = 9: '(156.666667-190.833333]' (4.0/1.0)
+|   |   miesi¹c = 10
+|   |   |   przedstawiciel = P03: '(190.833333-inf)' (0.0)
+|   |   |   przedstawiciel = P02: '(190.833333-inf)' (0.0)
+|   |   |   przedstawiciel = P05: '(190.833333-inf)' (0.0)
+|   |   |   przedstawiciel = P01: '(190.833333-inf)' (3.0/1.0)
+|   |   |   przedstawiciel = P04
+|   |   |   |   czas rozmowy <= 57: '(-inf-54.166667]' (2.0/1.0)
+|   |   |   |   czas rozmowy > 57: '(122.5-156.666667]' (3.0/1.0)
+|   |   miesi¹c = 8
+|   |   |   czas rozmowy <= 102
+|   |   |   |   czas rozmowy <= 58: '(156.666667-190.833333]' (3.0/1.0)
+|   |   |   |   czas rozmowy > 58: '(88.333333-122.5]' (2.0/1.0)
+|   |   |   czas rozmowy > 102
+|   |   |   |   czas rozmowy <= 131: '(54.166667-88.333333]' (2.0)
+|   |   |   |   czas rozmowy > 131: '(190.833333-inf)' (3.0/1.0)
+numer klienta = 13
+|   Region = Po³udnie
+|   |   miesi¹c = 9: '(54.166667-88.333333]' (1.0)
+|   |   miesi¹c = 10: '(-inf-54.166667]' (2.0/1.0)
+|   |   miesi¹c = 8: '(190.833333-inf)' (2.0)
+|   Region = Zachód
+|   |   miesi¹c = 9: '(88.333333-122.5]' (2.0)
+|   |   miesi¹c = 10: '(54.166667-88.333333]' (3.0/1.0)
+|   |   miesi¹c = 8: '(54.166667-88.333333]' (3.0/1.0)
+|   Region = Centrum: '(-inf-54.166667]' (19.0/13.0)
+numer klienta = 14: '(-inf-54.166667]' (40.0/29.0)
+
+Number of Leaves  : 	198
+
+Size of the tree : 	300
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         117               14.625  %
+Incorrectly Classified Instances       683               85.375  %
+Kappa statistic                         -0.0251
+Mean absolute error                      0.2795
+Root mean squared error                  0.4318
+Relative absolute error                100.638  %
+Root relative squared error            115.8618 %
+Total Number of Instances              800     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,212    0,252    0,148      0,212    0,174      -0,035   0,480     0,165     '(-inf-54.166667]'
+                 0,157    0,188    0,144      0,157    0,150      -0,030   0,487     0,172     '(54.166667-88.333333]'
+                 0,126    0,160    0,129      0,126    0,127      -0,035   0,507     0,169     '(88.333333-122.5]'
+                 0,109    0,132    0,136      0,109    0,121      -0,025   0,501     0,158     '(122.5-156.666667]'
+                 0,130    0,145    0,158      0,130    0,143      -0,016   0,473     0,164     '(156.666667-190.833333]'
+                 0,140    0,148    0,162      0,140    0,150      -0,008   0,519     0,176     '(190.833333-inf)'
+Weighted Avg.    0,146    0,171    0,147      0,146    0,145      -0,025   0,494     0,167     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 29 30 21 19 17 21 |  a = '(-inf-54.166667]'
+ 39 21 23  9 23 19 |  b = '(54.166667-88.333333]'
+ 21 32 16 17 22 19 |  c = '(88.333333-122.5]'
+ 34 20 19 14 18 23 |  d = '(122.5-156.666667]'
+ 35 21 27 21 18 16 |  e = '(156.666667-190.833333]'
+ 38 22 18 23 16 19 |  f = '(190.833333-inf)'
+

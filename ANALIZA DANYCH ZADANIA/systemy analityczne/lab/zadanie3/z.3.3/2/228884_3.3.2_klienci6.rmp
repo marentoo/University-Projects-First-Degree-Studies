@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process" origin="GENERATED_TRAINING">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z3.3\2\228884_klienci6binominal.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="numerklienta.true.integer.id"/>
+          <parameter key="1" value="miesiac.true.integer.attribute"/>
+          <parameter key="2" value="dzientygodnia.true.polynominal.attribute"/>
+          <parameter key="3" value="przedzialczasrozmowy.true.polynominal.attribute"/>
+          <parameter key="4" value="przedstawiciel.true.polynominal.attribute"/>
+          <parameter key="5" value="region.true.polynominal.attribute"/>
+          <parameter key="6" value="oddzial.true.polynominal.attribute"/>
+          <parameter key="7" value="plec.true.polynominal.attribute"/>
+          <parameter key="8" value="przedzialkwotowy.true.polynominal.attribute"/>
+          <parameter key="9" value="nowyprzedzialkwotowy.true.polynominal.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" origin="GENERATED_TRAINING" width="90" x="313" y="34"/>
+      <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters (Grid)" origin="GENERATED_TRAINING" width="90" x="514" y="34">
+        <list key="parameters">
+          <parameter key="Select Subprocess.select_which" value="[1.0;3;3;linear]"/>
+        </list>
+        <parameter key="error_handling" value="fail on error"/>
+        <parameter key="log_performance" value="true"/>
+        <parameter key="log_all_criteria" value="false"/>
+        <parameter key="synchronize" value="false"/>
+        <parameter key="enable_parallel_execution" value="false"/>
+        <process expanded="true">
+          <operator activated="true" class="select_subprocess" compatibility="9.6.000" expanded="true" height="124" name="Select Subprocess" origin="GENERATED_TRAINING" width="90" x="380" y="34">
+            <parameter key="select_which" value="3"/>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters DT" origin="GENERATED_TRAINING" width="90" x="45" y="34">
+                <list key="parameters">
+                  <parameter key="Decision Tree.criterion" value="gain_ratio,information_gain,gini_index,accuracy"/>
+                  <parameter key="Decision Tree.minimal_gain" value="[0.01;1;100;linear]"/>
+                </list>
+                <parameter key="error_handling" value="fail on error"/>
+                <parameter key="log_performance" value="true"/>
+                <parameter key="log_all_criteria" value="true"/>
+                <parameter key="synchronize" value="false"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+                <process expanded="true">
+                  <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation" origin="GENERATED_TRAINING" width="90" x="447" y="34">
+                    <parameter key="split_on_batch_attribute" value="false"/>
+                    <parameter key="leave_one_out" value="false"/>
+                    <parameter key="number_of_folds" value="10"/>
+                    <parameter key="sampling_type" value="automatic"/>
+                    <parameter key="use_local_random_seed" value="false"/>
+                    <parameter key="local_random_seed" value="1992"/>
+                    <parameter key="enable_parallel_execution" value="true"/>
+                    <process expanded="true">
+                      <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="9.4.000" expanded="true" height="103" name="Decision Tree" origin="GENERATED_TRAINING" width="90" x="179" y="34">
+                        <parameter key="criterion" value="gain_ratio"/>
+                        <parameter key="maximal_depth" value="20"/>
+                        <parameter key="apply_pruning" value="true"/>
+                        <parameter key="confidence" value="0.25"/>
+                        <parameter key="apply_prepruning" value="true"/>
+                        <parameter key="minimal_gain" value="0.01"/>
+                        <parameter key="minimal_leaf_size" value="2"/>
+                        <parameter key="minimal_size_for_split" value="4"/>
+                        <parameter key="number_of_prepruning_alternatives" value="3"/>
+                      </operator>
+                      <connect from_port="training set" to_op="Decision Tree" to_port="training set"/>
+                      <connect from_op="Decision Tree" from_port="model" to_port="model"/>
+                      <portSpacing port="source_training set" spacing="0"/>
+                      <portSpacing port="sink_model" spacing="0"/>
+                      <portSpacing port="sink_through 1" spacing="0"/>
+                    </process>
+                    <process expanded="true">
+                      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model" origin="GENERATED_TRAINING" width="90" x="112" y="34">
+                        <list key="application_parameters"/>
+                        <parameter key="create_view" value="false"/>
+                      </operator>
+                      <operator activated="true" class="performance" compatibility="9.6.000" expanded="true" height="82" name="Performance" origin="GENERATED_TRAINING" width="90" x="313" y="34">
+                        <parameter key="use_example_weights" value="true"/>
+                      </operator>
+                      <connect from_port="model" to_op="Apply Model" to_port="model"/>
+                      <connect from_port="test set" to_op="Apply Model" to_port="unlabelled data"/>
+                      <connect from_op="Apply Model" from_port="labelled data" to_op="Performance" to_port="labelled data"/>
+                      <connect from_op="Performance" from_port="performance" to_port="performance 1"/>
+                      <connect from_op="Performance" from_port="example set" to_port="test set results"/>
+                      <portSpacing port="source_model" spacing="0"/>
+                      <portSpacing port="source_test set" spacing="0"/>
+                      <portSpacing port="source_through 1" spacing="0"/>
+                      <portSpacing port="sink_test set results" spacing="0"/>
+                      <portSpacing port="sink_performance 1" spacing="0"/>
+                      <portSpacing port="sink_performance 2" spacing="0"/>
+                    </process>
+                  </operator>
+                  <connect from_port="input 1" to_op="Cross Validation" to_port="example set"/>
+                  <connect from_op="Cross Validation" from_port="performance 1" to_port="performance"/>
+                  <portSpacing port="source_input 1" spacing="0"/>
+                  <portSpacing port="source_input 2" spacing="0"/>
+                  <portSpacing port="sink_performance" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                  <portSpacing port="sink_output 1" spacing="0"/>
+                </process>
+              </operator>
+              <operator activated="true" class="remember" compatibility="9.6.000" expanded="true" height="68" name="Remember" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+                <parameter key="name" value="DT"/>
+                <parameter key="io_object" value="ParameterSet"/>
+                <parameter key="store_which" value="1"/>
+                <parameter key="remove_from_process" value="true"/>
+              </operator>
+              <connect from_port="input 1" to_op="Optimize Parameters DT" to_port="input 1"/>
+              <connect from_op="Optimize Parameters DT" from_port="performance" to_port="output 1"/>
+              <connect from_op="Optimize Parameters DT" from_port="parameter set" to_op="Remember" to_port="store"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="source_input 3" spacing="0"/>
+              <portSpacing port="source_input 4" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters RF" origin="GENERATED_TRAINING" width="90" x="45" y="34">
+                <list key="parameters">
+                  <parameter key="Random Forest (2).number_of_trees" value="[1.0;10;10;linear]"/>
+                </list>
+                <parameter key="error_handling" value="fail on error"/>
+                <parameter key="log_performance" value="true"/>
+                <parameter key="log_all_criteria" value="true"/>
+                <parameter key="synchronize" value="false"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+                <process expanded="true">
+                  <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation (2)" origin="GENERATED_TRAINING" width="90" x="447" y="34">
+                    <parameter key="split_on_batch_attribute" value="false"/>
+                    <parameter key="leave_one_out" value="false"/>
+                    <parameter key="number_of_folds" value="10"/>
+                    <parameter key="sampling_type" value="automatic"/>
+                    <parameter key="use_local_random_seed" value="false"/>
+                    <parameter key="local_random_seed" value="1992"/>
+                    <parameter key="enable_parallel_execution" value="true"/>
+                    <process expanded="true">
+                      <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.4.000" expanded="true" height="103" name="Random Forest (2)" origin="GENERATED_TRAINING" width="90" x="246" y="34">
+                        <parameter key="number_of_trees" value="5"/>
+                        <parameter key="criterion" value="gain_ratio"/>
+                        <parameter key="maximal_depth" value="20"/>
+                        <parameter key="apply_pruning" value="true"/>
+                        <parameter key="confidence" value="0.25"/>
+                        <parameter key="apply_prepruning" value="true"/>
+                        <parameter key="minimal_gain" value="0.1"/>
+                        <parameter key="minimal_leaf_size" value="2"/>
+                        <parameter key="minimal_size_for_split" value="4"/>
+                        <parameter key="number_of_prepruning_alternatives" value="3"/>
+                        <parameter key="random_splits" value="false"/>
+                        <parameter key="guess_subset_ratio" value="true"/>
+                        <parameter key="subset_ratio" value="0.2"/>
+                        <parameter key="voting_strategy" value="confidence vote"/>
+                        <parameter key="use_local_random_seed" value="false"/>
+                        <parameter key="local_random_seed" value="1992"/>
+                        <parameter key="enable_parallel_execution" value="true"/>
+                      </operator>
+                      <connect from_port="training set" to_op="Random Forest (2)" to_port="training set"/>
+                      <connect from_op="Random Forest (2)" from_port="model" to_port="model"/>
+                      <portSpacing port="source_training set" spacing="0"/>
+                      <portSpacing port="sink_model" spacing="0"/>
+                      <portSpacing port="sink_through 1" spacing="0"/>
+                    </process>
+                    <process expanded="true">
+                      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (2)" origin="GENERATED_TRAINING" width="90" x="112" y="34">
+                        <list key="application_parameters"/>
+                        <parameter key="create_view" value="false"/>
+                      </operator>
+                      <operator activated="true" class="performance" compatibility="9.6.000" expanded="true" height="82" name="Performance (2)" origin="GENERATED_TRAINING" width="90" x="313" y="34">
+                        <parameter key="use_example_weights" value="true"/>
+                      </operator>
+                      <connect from_port="model" to_op="Apply Model (2)" to_port="model"/>
+                      <connect from_port="test set" to_op="Apply Model (2)" to_port="unlabelled data"/>
+                      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Performance (2)" to_port="labelled data"/>
+                      <connect from_op="Performance (2)" from_port="performance" to_port="performance 1"/>
+                      <connect from_op="Performance (2)" from_port="example set" to_port="test set results"/>
+                      <portSpacing port="source_model" spacing="0"/>
+                      <portSpacing port="source_test set" spacing="0"/>
+                      <portSpacing port="source_through 1" spacing="0"/>
+                      <portSpacing port="sink_test set results" spacing="0"/>
+                      <portSpacing port="sink_performance 1" spacing="0"/>
+                      <portSpacing port="sink_performance 2" spacing="0"/>
+                    </process>
+                  </operator>
+                  <connect from_port="input 1" to_op="Cross Validation (2)" to_port="example set"/>
+                  <connect from_op="Cross Validation (2)" from_port="performance 1" to_port="performance"/>
+                  <portSpacing port="source_input 1" spacing="0"/>
+                  <portSpacing port="source_input 2" spacing="0"/>
+                  <portSpacing port="sink_performance" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                  <portSpacing port="sink_output 1" spacing="0"/>
+                </process>
+              </operator>
+              <operator activated="true" class="remember" compatibility="9.6.000" expanded="true" height="68" name="Remember (2)" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+                <parameter key="name" value="RF"/>
+                <parameter key="io_object" value="ParameterSet"/>
+                <parameter key="store_which" value="1"/>
+                <parameter key="remove_from_process" value="true"/>
+              </operator>
+              <connect from_port="input 1" to_op="Optimize Parameters RF" to_port="input 1"/>
+              <connect from_op="Optimize Parameters RF" from_port="performance" to_port="output 1"/>
+              <connect from_op="Optimize Parameters RF" from_port="parameter set" to_op="Remember (2)" to_port="store"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="source_input 3" spacing="0"/>
+              <portSpacing port="source_input 4" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters RI" origin="GENERATED_TRAINING" width="90" x="45" y="34">
+                <list key="parameters">
+                  <parameter key="Rule Induction (2).minimal_prune_benefit" value="[0.0;1.0;10;linear]"/>
+                </list>
+                <parameter key="error_handling" value="fail on error"/>
+                <parameter key="log_performance" value="true"/>
+                <parameter key="log_all_criteria" value="true"/>
+                <parameter key="synchronize" value="false"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+                <process expanded="true">
+                  <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation (3)" origin="GENERATED_TRAINING" width="90" x="447" y="34">
+                    <parameter key="split_on_batch_attribute" value="false"/>
+                    <parameter key="leave_one_out" value="false"/>
+                    <parameter key="number_of_folds" value="10"/>
+                    <parameter key="sampling_type" value="automatic"/>
+                    <parameter key="use_local_random_seed" value="false"/>
+                    <parameter key="local_random_seed" value="1992"/>
+                    <parameter key="enable_parallel_execution" value="true"/>
+                    <process expanded="true">
+                      <operator activated="true" class="rule_induction" compatibility="9.6.000" expanded="true" height="82" name="Rule Induction (2)" origin="GENERATED_TRAINING" width="90" x="179" y="34">
+                        <parameter key="criterion" value="information_gain"/>
+                        <parameter key="sample_ratio" value="0.9"/>
+                        <parameter key="pureness" value="0.9"/>
+                        <parameter key="minimal_prune_benefit" value="0.0"/>
+                        <parameter key="use_local_random_seed" value="false"/>
+                        <parameter key="local_random_seed" value="1992"/>
+                      </operator>
+                      <connect from_port="training set" to_op="Rule Induction (2)" to_port="training set"/>
+                      <connect from_op="Rule Induction (2)" from_port="model" to_port="model"/>
+                      <portSpacing port="source_training set" spacing="0"/>
+                      <portSpacing port="sink_model" spacing="0"/>
+                      <portSpacing port="sink_through 1" spacing="0"/>
+                    </process>
+                    <process expanded="true">
+                      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (3)" origin="GENERATED_TRAINING" width="90" x="112" y="34">
+                        <list key="application_parameters"/>
+                        <parameter key="create_view" value="false"/>
+                      </operator>
+                      <operator activated="true" class="performance" compatibility="9.6.000" expanded="true" height="82" name="Performance (3)" origin="GENERATED_TRAINING" width="90" x="313" y="34">
+                        <parameter key="use_example_weights" value="true"/>
+                      </operator>
+                      <connect from_port="model" to_op="Apply Model (3)" to_port="model"/>
+                      <connect from_port="test set" to_op="Apply Model (3)" to_port="unlabelled data"/>
+                      <connect from_op="Apply Model (3)" from_port="labelled data" to_op="Performance (3)" to_port="labelled data"/>
+                      <connect from_op="Performance (3)" from_port="performance" to_port="performance 1"/>
+                      <connect from_op="Performance (3)" from_port="example set" to_port="test set results"/>
+                      <portSpacing port="source_model" spacing="0"/>
+                      <portSpacing port="source_test set" spacing="0"/>
+                      <portSpacing port="source_through 1" spacing="0"/>
+                      <portSpacing port="sink_test set results" spacing="0"/>
+                      <portSpacing port="sink_performance 1" spacing="0"/>
+                      <portSpacing port="sink_performance 2" spacing="0"/>
+                    </process>
+                  </operator>
+                  <connect from_port="input 1" to_op="Cross Validation (3)" to_port="example set"/>
+                  <connect from_op="Cross Validation (3)" from_port="performance 1" to_port="performance"/>
+                  <portSpacing port="source_input 1" spacing="0"/>
+                  <portSpacing port="source_input 2" spacing="0"/>
+                  <portSpacing port="source_input 3" spacing="0"/>
+                  <portSpacing port="sink_performance" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                  <portSpacing port="sink_output 1" spacing="0"/>
+                </process>
+              </operator>
+              <operator activated="true" class="remember" compatibility="9.6.000" expanded="true" height="68" name="Remember (3)" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+                <parameter key="name" value="RI"/>
+                <parameter key="io_object" value="ParameterSet"/>
+                <parameter key="store_which" value="1"/>
+                <parameter key="remove_from_process" value="true"/>
+              </operator>
+              <connect from_port="input 1" to_op="Optimize Parameters RI" to_port="input 1"/>
+              <connect from_port="input 2" to_op="Optimize Parameters RI" to_port="input 2"/>
+              <connect from_op="Optimize Parameters RI" from_port="performance" to_port="output 1"/>
+              <connect from_op="Optimize Parameters RI" from_port="parameter set" to_op="Remember (3)" to_port="store"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="source_input 3" spacing="0"/>
+              <portSpacing port="source_input 4" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters JR" origin="GENERATED_TRAINING" width="90" x="45" y="34">
+                <list key="parameters">
+                  <parameter key="W-JRip.F" value="[0;100;10;linear]"/>
+                  <parameter key="W-JRip.N" value="[0;100;10;linear]"/>
+                </list>
+                <parameter key="error_handling" value="fail on error"/>
+                <parameter key="log_performance" value="true"/>
+                <parameter key="log_all_criteria" value="true"/>
+                <parameter key="synchronize" value="false"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+                <process expanded="true">
+                  <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation (4)" origin="GENERATED_TRAINING" width="90" x="447" y="34">
+                    <parameter key="split_on_batch_attribute" value="false"/>
+                    <parameter key="leave_one_out" value="false"/>
+                    <parameter key="number_of_folds" value="10"/>
+                    <parameter key="sampling_type" value="automatic"/>
+                    <parameter key="use_local_random_seed" value="false"/>
+                    <parameter key="local_random_seed" value="1992"/>
+                    <parameter key="enable_parallel_execution" value="true"/>
+                    <process expanded="true">
+                      <operator activated="true" class="weka:W-JRip" compatibility="7.3.000" expanded="true" height="82" name="W-JRip" width="90" x="112" y="34">
+                        <parameter key="F" value="3.0"/>
+                        <parameter key="N" value="2.0"/>
+                        <parameter key="O" value="2.0"/>
+                        <parameter key="D" value="false"/>
+                        <parameter key="S" value="1.0"/>
+                        <parameter key="E" value="false"/>
+                        <parameter key="P" value="false"/>
+                      </operator>
+                      <connect from_port="training set" to_op="W-JRip" to_port="training set"/>
+                      <connect from_op="W-JRip" from_port="model" to_port="model"/>
+                      <portSpacing port="source_training set" spacing="0"/>
+                      <portSpacing port="sink_model" spacing="0"/>
+                      <portSpacing port="sink_through 1" spacing="0"/>
+                    </process>
+                    <process expanded="true">
+                      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (4)" origin="GENERATED_TRAINING" width="90" x="112" y="34">
+                        <list key="application_parameters"/>
+                        <parameter key="create_view" value="false"/>
+                      </operator>
+                      <operator activated="true" class="performance" compatibility="9.6.000" expanded="true" height="82" name="Performance (4)" origin="GENERATED_TRAINING" width="90" x="313" y="34">
+                        <parameter key="use_example_weights" value="true"/>
+                      </operator>
+                      <connect from_port="model" to_op="Apply Model (4)" to_port="model"/>
+                      <connect from_port="test set" to_op="Apply Model (4)" to_port="unlabelled data"/>
+                      <connect from_op="Apply Model (4)" from_port="labelled data" to_op="Performance (4)" to_port="labelled data"/>
+                      <connect from_op="Performance (4)" from_port="performance" to_port="performance 1"/>
+                      <connect from_op="Performance (4)" from_port="example set" to_port="test set results"/>
+                      <portSpacing port="source_model" spacing="0"/>
+                      <portSpacing port="source_test set" spacing="0"/>
+                      <portSpacing port="source_through 1" spacing="0"/>
+                      <portSpacing port="sink_test set results" spacing="0"/>
+                      <portSpacing port="sink_performance 1" spacing="0"/>
+                      <portSpacing port="sink_performance 2" spacing="0"/>
+                    </process>
+                  </operator>
+                  <connect from_port="input 1" to_op="Cross Validation (4)" to_port="example set"/>
+                  <connect from_op="Cross Validation (4)" from_port="performance 1" to_port="performance"/>
+                  <portSpacing port="source_input 1" spacing="0"/>
+                  <portSpacing port="source_input 2" spacing="0"/>
+                  <portSpacing port="source_input 3" spacing="0"/>
+                  <portSpacing port="sink_performance" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                  <portSpacing port="sink_output 1" spacing="0"/>
+                </process>
+              </operator>
+              <operator activated="true" class="remember" compatibility="9.6.000" expanded="true" height="68" name="Remember (4)" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+                <parameter key="name" value="JR"/>
+                <parameter key="io_object" value="ParameterSet"/>
+                <parameter key="store_which" value="1"/>
+                <parameter key="remove_from_process" value="true"/>
+              </operator>
+              <connect from_port="input 1" to_op="Optimize Parameters JR" to_port="input 1"/>
+              <connect from_port="input 3" to_op="Optimize Parameters JR" to_port="input 2"/>
+              <connect from_op="Optimize Parameters JR" from_port="performance" to_port="output 1"/>
+              <connect from_op="Optimize Parameters JR" from_port="parameter set" to_op="Remember (4)" to_port="store"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="source_input 3" spacing="0"/>
+              <portSpacing port="source_input 4" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters J48" origin="GENERATED_TRAINING" width="90" x="45" y="34">
+                <list key="parameters">
+                  <parameter key="W-J48.U" value="true,false"/>
+                  <parameter key="W-J48.C" value="[0;100;10;linear]"/>
+                  <parameter key="W-J48.M" value="[0;100;10;linear]"/>
+                </list>
+                <parameter key="error_handling" value="fail on error"/>
+                <parameter key="log_performance" value="true"/>
+                <parameter key="log_all_criteria" value="true"/>
+                <parameter key="synchronize" value="false"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+                <process expanded="true">
+                  <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation (5)" origin="GENERATED_TRAINING" width="90" x="447" y="34">
+                    <parameter key="split_on_batch_attribute" value="false"/>
+                    <parameter key="leave_one_out" value="false"/>
+                    <parameter key="number_of_folds" value="10"/>
+                    <parameter key="sampling_type" value="automatic"/>
+                    <parameter key="use_local_random_seed" value="false"/>
+                    <parameter key="local_random_seed" value="1992"/>
+                    <parameter key="enable_parallel_execution" value="true"/>
+                    <process expanded="true">
+                      <operator activated="true" class="weka:W-J48" compatibility="7.3.000" expanded="true" height="82" name="W-J48" width="90" x="112" y="34">
+                        <parameter key="U" value="false"/>
+                        <parameter key="C" value="0.25"/>
+                        <parameter key="M" value="2.0"/>
+                        <parameter key="R" value="false"/>
+                        <parameter key="B" value="false"/>
+                        <parameter key="S" value="false"/>
+                        <parameter key="L" value="false"/>
+                        <parameter key="A" value="false"/>
+                      </operator>
+                      <connect from_port="training set" to_op="W-J48" to_port="training set"/>
+                      <connect from_op="W-J48" from_port="model" to_port="model"/>
+                      <portSpacing port="source_training set" spacing="0"/>
+                      <portSpacing port="sink_model" spacing="0"/>
+                      <portSpacing port="sink_through 1" spacing="0"/>
+                    </process>
+                    <process expanded="true">
+                      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (5)" origin="GENERATED_TRAINING" width="90" x="112" y="34">
+                        <list key="application_parameters"/>
+                        <parameter key="create_view" value="false"/>
+                      </operator>
+                      <operator activated="true" class="performance" compatibility="9.6.000" expanded="true" height="82" name="Performance (5)" origin="GENERATED_TRAINING" width="90" x="313" y="34">
+                        <parameter key="use_example_weights" value="true"/>
+                      </operator>
+                      <connect from_port="model" to_op="Apply Model (5)" to_port="model"/>
+                      <connect from_port="test set" to_op="Apply Model (5)" to_port="unlabelled data"/>
+                      <connect from_op="Apply Model (5)" from_port="labelled data" to_op="Performance (5)" to_port="labelled data"/>
+                      <connect from_op="Performance (5)" from_port="performance" to_port="performance 1"/>
+                      <connect from_op="Performance (5)" from_port="example set" to_port="test set results"/>
+                      <portSpacing port="source_model" spacing="0"/>
+                      <portSpacing port="source_test set" spacing="0"/>
+                      <portSpacing port="source_through 1" spacing="0"/>
+                      <portSpacing port="sink_test set results" spacing="0"/>
+                      <portSpacing port="sink_performance 1" spacing="0"/>
+                      <portSpacing port="sink_performance 2" spacing="0"/>
+                    </process>
+                  </operator>
+                  <connect from_port="input 1" to_op="Cross Validation (5)" to_port="example set"/>
+                  <connect from_op="Cross Validation (5)" from_port="performance 1" to_port="performance"/>
+                  <portSpacing port="source_input 1" spacing="0"/>
+                  <portSpacing port="source_input 2" spacing="0"/>
+                  <portSpacing port="source_input 3" spacing="0"/>
+                  <portSpacing port="sink_performance" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                  <portSpacing port="sink_output 1" spacing="0"/>
+                </process>
+              </operator>
+              <operator activated="true" class="remember" compatibility="9.6.000" expanded="true" height="68" name="Remember (5)" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+                <parameter key="name" value="J48"/>
+                <parameter key="io_object" value="ParameterSet"/>
+                <parameter key="store_which" value="1"/>
+                <parameter key="remove_from_process" value="true"/>
+              </operator>
+              <connect from_port="input 1" to_op="Optimize Parameters J48" to_port="input 1"/>
+              <connect from_port="input 3" to_op="Optimize Parameters J48" to_port="input 2"/>
+              <connect from_op="Optimize Parameters J48" from_port="performance" to_port="output 1"/>
+              <connect from_op="Optimize Parameters J48" from_port="parameter set" to_op="Remember (5)" to_port="store"/>
+              <portSpacing port="source_input 1" spacing="0"/>
+              <portSpacing port="source_input 2" spacing="0"/>
+              <portSpacing port="source_input 3" spacing="0"/>
+              <portSpacing port="source_input 4" spacing="0"/>
+              <portSpacing port="sink_output 1" spacing="0"/>
+              <portSpacing port="sink_output 2" spacing="0"/>
+            </process>
+          </operator>
+          <connect from_port="input 1" to_op="Select Subprocess" to_port="input 1"/>
+          <connect from_op="Select Subprocess" from_port="output 1" to_port="performance"/>
+          <portSpacing port="source_input 1" spacing="0"/>
+          <portSpacing port="source_input 2" spacing="0"/>
+          <portSpacing port="sink_performance" spacing="0"/>
+          <portSpacing port="sink_model" spacing="0"/>
+          <portSpacing port="sink_output 1" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="compare_rocs" compatibility="9.6.000" expanded="true" height="82" name="Compare ROCs" origin="GENERATED_TRAINING" width="90" x="514" y="187">
+        <parameter key="number_of_folds" value="10"/>
+        <parameter key="split_ratio" value="0.7"/>
+        <parameter key="sampling_type" value="stratified sampling"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_example_weights" value="true"/>
+        <parameter key="roc_bias" value="optimistic"/>
+        <process expanded="true">
+          <operator activated="true" class="recall" compatibility="9.6.000" expanded="true" height="68" name="Recall" origin="GENERATED_TRAINING" width="90" x="179" y="85">
+            <parameter key="name" value="DT"/>
+            <parameter key="io_object" value="ParameterSet"/>
+            <parameter key="remove_from_store" value="false"/>
+          </operator>
+          <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters" origin="GENERATED_TRAINING" width="90" x="313" y="85">
+            <list key="name_map">
+              <parameter key="Optimize Parameters DT" value="Decision Tree ROC"/>
+            </list>
+          </operator>
+          <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="9.4.000" expanded="true" height="103" name="Decision Tree ROC" origin="GENERATED_TRAINING" width="90" x="514" y="34">
+            <parameter key="criterion" value="gain_ratio"/>
+            <parameter key="maximal_depth" value="20"/>
+            <parameter key="apply_pruning" value="true"/>
+            <parameter key="confidence" value="0.25"/>
+            <parameter key="apply_prepruning" value="true"/>
+            <parameter key="minimal_gain" value="0.1"/>
+            <parameter key="minimal_leaf_size" value="2"/>
+            <parameter key="minimal_size_for_split" value="4"/>
+            <parameter key="number_of_prepruning_alternatives" value="3"/>
+          </operator>
+          <operator activated="true" class="recall" compatibility="9.6.000" expanded="true" height="68" name="Recall (2)" origin="GENERATED_TRAINING" width="90" x="179" y="391">
+            <parameter key="name" value="RI"/>
+            <parameter key="io_object" value="ParameterSet"/>
+            <parameter key="remove_from_store" value="false"/>
+          </operator>
+          <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters (2)" origin="GENERATED_TRAINING" width="90" x="313" y="391">
+            <list key="name_map">
+              <parameter key="Optimize Parameters RI" value="Rule Induction ROC"/>
+            </list>
+          </operator>
+          <operator activated="true" class="rule_induction" compatibility="9.6.000" expanded="true" height="82" name="Rule Induction ROC" origin="GENERATED_TRAINING" width="90" x="514" y="340">
+            <parameter key="criterion" value="information_gain"/>
+            <parameter key="sample_ratio" value="0.9"/>
+            <parameter key="pureness" value="0.9"/>
+            <parameter key="minimal_prune_benefit" value="0.25"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+          </operator>
+          <operator activated="true" class="recall" compatibility="9.6.000" expanded="true" height="68" name="Recall (3)" origin="GENERATED_TRAINING" width="90" x="179" y="697">
+            <parameter key="name" value="RF"/>
+            <parameter key="io_object" value="ParameterSet"/>
+            <parameter key="remove_from_store" value="false"/>
+          </operator>
+          <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters (3)" origin="GENERATED_TRAINING" width="90" x="313" y="697">
+            <list key="name_map">
+              <parameter key="Optimize Parameters RF" value="Random Forest ROC"/>
+            </list>
+          </operator>
+          <operator activated="true" class="concurrency:parallel_random_forest" compatibility="9.4.000" expanded="true" height="103" name="Random Forest ROC" origin="GENERATED_TRAINING" width="90" x="514" y="442">
+            <parameter key="number_of_trees" value="10"/>
+            <parameter key="criterion" value="gain_ratio"/>
+            <parameter key="maximal_depth" value="20"/>
+            <parameter key="apply_pruning" value="true"/>
+            <parameter key="confidence" value="0.25"/>
+            <parameter key="apply_prepruning" value="true"/>
+            <parameter key="minimal_gain" value="0.1"/>
+            <parameter key="minimal_leaf_size" value="2"/>
+            <parameter key="minimal_size_for_split" value="4"/>
+            <parameter key="number_of_prepruning_alternatives" value="3"/>
+            <parameter key="random_splits" value="false"/>
+            <parameter key="guess_subset_ratio" value="true"/>
+            <parameter key="subset_ratio" value="0.2"/>
+            <parameter key="voting_strategy" value="confidence vote"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+            <parameter key="enable_parallel_execution" value="true"/>
+          </operator>
+          <operator activated="true" class="recall" compatibility="9.6.000" expanded="true" height="68" name="Recall (4)" width="90" x="112" y="850">
+            <parameter key="name" value="JR"/>
+            <parameter key="io_object" value="ParameterSet"/>
+            <parameter key="remove_from_store" value="false"/>
+          </operator>
+          <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters (4)" width="90" x="313" y="850">
+            <list key="name_map">
+              <parameter key="Optimize Parameters JR" value="W-JRip ROC"/>
+            </list>
+          </operator>
+          <operator activated="true" class="recall" compatibility="9.6.000" expanded="true" height="68" name="Recall (5)" width="90" x="179" y="1003">
+            <parameter key="name" value="J48"/>
+            <parameter key="io_object" value="ParameterSet"/>
+            <parameter key="remove_from_store" value="false"/>
+          </operator>
+          <operator activated="true" class="set_parameters" compatibility="9.6.000" expanded="true" height="82" name="Set Parameters (5)" width="90" x="313" y="1003">
+            <list key="name_map">
+              <parameter key="Optimize Parameters J48" value="W-J48 ROC"/>
+            </list>
+          </operator>
+          <operator activated="true" class="weka:W-J48" compatibility="7.3.000" expanded="true" height="82" name="W-J48 ROC" width="90" x="514" y="952">
+            <parameter key="U" value="false"/>
+            <parameter key="C" value="0.25"/>
+            <parameter key="M" value="2.0"/>
+            <parameter key="R" value="false"/>
+            <parameter key="B" value="false"/>
+            <parameter key="S" value="false"/>
+            <parameter key="L" value="false"/>
+            <parameter key="A" value="false"/>
+          </operator>
+          <operator activated="true" class="naive_bayes" compatibility="9.6.000" expanded="true" height="82" name="W-JRip ROC" width="90" x="514" y="799">
+            <parameter key="laplace_correction" value="true"/>
+          </operator>
+          <connect from_port="train 1" to_op="Decision Tree ROC" to_port="training set"/>
+          <connect from_port="train 2" to_op="Rule Induction ROC" to_port="training set"/>
+          <connect from_port="train 3" to_op="Random Forest ROC" to_port="training set"/>
+          <connect from_port="train 4" to_op="W-J48 ROC" to_port="training set"/>
+          <connect from_port="train 5" to_op="W-JRip ROC" to_port="training set"/>
+          <connect from_op="Recall" from_port="result" to_op="Set Parameters" to_port="parameter set"/>
+          <connect from_op="Decision Tree ROC" from_port="model" to_port="model 1"/>
+          <connect from_op="Recall (2)" from_port="result" to_op="Set Parameters (2)" to_port="parameter set"/>
+          <connect from_op="Rule Induction ROC" from_port="model" to_port="model 2"/>
+          <connect from_op="Recall (3)" from_port="result" to_op="Set Parameters (3)" to_port="parameter set"/>
+          <connect from_op="Random Forest ROC" from_port="model" to_port="model 3"/>
+          <connect from_op="Recall (4)" from_port="result" to_op="Set Parameters (4)" to_port="parameter set"/>
+          <connect from_op="Recall (5)" from_port="result" to_op="Set Parameters (5)" to_port="parameter set"/>
+          <connect from_op="W-J48 ROC" from_port="model" to_port="model 4"/>
+          <connect from_op="W-JRip ROC" from_port="model" to_port="model 5"/>
+          <portSpacing port="source_train 1" spacing="0"/>
+          <portSpacing port="source_train 2" spacing="231"/>
+          <portSpacing port="source_train 3" spacing="252"/>
+          <portSpacing port="source_train 4" spacing="0"/>
+          <portSpacing port="source_train 5" spacing="0"/>
+          <portSpacing port="source_train 6" spacing="0"/>
+          <portSpacing port="sink_model 1" spacing="0"/>
+          <portSpacing port="sink_model 2" spacing="0"/>
+          <portSpacing port="sink_model 3" spacing="0"/>
+          <portSpacing port="sink_model 4" spacing="0"/>
+          <portSpacing port="sink_model 5" spacing="0"/>
+          <portSpacing port="sink_model 6" spacing="0"/>
+        </process>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Multiply" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Optimize Parameters (Grid)" to_port="input 1"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Compare ROCs" to_port="example set"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="performance" to_port="result 1"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="parameter set" to_port="result 2"/>
+      <connect from_op="Compare ROCs" from_port="rocComparison" to_port="result 3"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+    </process>
+  </operator>
+</process>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.6.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Klienci6" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z.3.2\3\klienci6.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="numerklienta.true.polynominal.id"/>
+          <parameter key="1" value="miesiac.true.polynominal.attribute"/>
+          <parameter key="2" value="dzientygodnia.true.polynominal.attribute"/>
+          <parameter key="3" value="przedzialczasrozmowy.true.polynominal.attribute"/>
+          <parameter key="4" value="przedstawiciel.true.polynominal.attribute"/>
+          <parameter key="5" value="region.true.polynominal.attribute"/>
+          <parameter key="6" value="oddzial.true.polynominal.attribute"/>
+          <parameter key="7" value="plec.true.polynominal.attribute"/>
+          <parameter key="8" value="przedzialkwotowy.true.polynominal.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" width="90" x="112" y="136"/>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes" width="90" x="246" y="187">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="dzientygodnia|miesiac|oddzial|plec|przedstawiciel|przedzialczasrozmowy|przedzialkwotowy|region"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.6.000" expanded="true" height="103" name="Nominal to Numerical" width="90" x="313" y="34">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="coding_type" value="dummy coding"/>
+        <parameter key="use_comparison_groups" value="false"/>
+        <list key="comparison_groups"/>
+        <parameter key="unexpected_value_handling" value="all 0 and warning"/>
+        <parameter key="use_underscore_in_name" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="kmeans(c)" width="90" x="447" y="34">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes(c)" width="90" x="581" y="34"/>
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.6.000" expanded="true" height="103" name="Nominal to Numerical (2)" width="90" x="380" y="187">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="coding_type" value="dummy coding"/>
+        <parameter key="use_comparison_groups" value="false"/>
+        <list key="comparison_groups"/>
+        <parameter key="unexpected_value_handling" value="all 0 and warning"/>
+        <parameter key="use_underscore_in_name" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="kmeans(d)" width="90" x="514" y="187">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes (d)" width="90" x="648" y="187"/>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="103" name="Write as Text (2)" width="90" x="849" y="187">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.3.2\3\228884_klienci6_wyniki2.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="103" name="Write as Text" width="90" x="849" y="34">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.3.2\3\228884_klienci6_wyniki1.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.6.000" expanded="true" height="68" name="Read CSV Klienci2" width="90" x="45" y="493">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z.3.2\3\klienci2.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value="yyyy-MM-dd"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="numer klienta.true.polynominal.id"/>
+          <parameter key="1" value="czas rozmowy.true.integer.attribute"/>
+          <parameter key="2" value="kwota zakupu.true.integer.label"/>
+          <parameter key="3" value="przedstawiciel.true.polynominal.attribute"/>
+          <parameter key="4" value="data rozmowy.true.date.attribute"/>
+          <parameter key="5" value="Oddział.true.polynominal.attribute"/>
+          <parameter key="6" value="Region.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="date_to_nominal" compatibility="9.6.000" expanded="true" height="82" name="Date to Nominal" width="90" x="179" y="493">
+        <parameter key="attribute_name" value="data rozmowy"/>
+        <parameter key="date_format" value="MM"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="keep_old_attribute" value="true"/>
+      </operator>
+      <operator activated="true" class="date_to_nominal" compatibility="9.6.000" expanded="true" height="82" name="Date to Nominal (2)" width="90" x="313" y="493">
+        <parameter key="attribute_name" value="data rozmowy"/>
+        <parameter key="date_format" value="dd"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="keep_old_attribute" value="false"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="9.6.000" expanded="true" height="82" name="Rename" width="90" x="447" y="493">
+        <parameter key="old_name" value="data rozmowy_nominal"/>
+        <parameter key="new_name" value="data rozmowy dzien"/>
+        <list key="rename_additional_attributes"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="166" name="Multiply (3)" width="90" x="581" y="493"/>
+      <operator activated="true" class="k_medoids" compatibility="9.6.000" expanded="true" height="82" name="k-metoids" width="90" x="849" y="595">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="2"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="GeneralizedIDivergence"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes" width="90" x="983" y="595"/>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="103" name="Write as Text (5)" width="90" x="1184" y="595">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.3.2\3\228884_klienci_wyniki_kmetoids.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="aggregate" compatibility="9.6.000" expanded="true" height="82" name="Aggregate Przedstawiciele" width="90" x="715" y="799">
+        <parameter key="use_default_aggregation" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default_aggregation_function" value="average"/>
+        <list key="aggregation_attributes">
+          <parameter key="czas rozmowy" value="sum"/>
+          <parameter key="kwota zakupu" value="sum"/>
+        </list>
+        <parameter key="group_by_attributes" value="przedstawiciel"/>
+        <parameter key="count_all_combinations" value="false"/>
+        <parameter key="only_distinct" value="false"/>
+        <parameter key="ignore_missings" value="true"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="9.6.000" expanded="true" height="82" name="Rename Przedstawiciel" width="90" x="849" y="799">
+        <parameter key="old_name" value="przedstawiciel"/>
+        <parameter key="new_name" value="id przedstawiciela"/>
+        <list key="rename_additional_attributes"/>
+      </operator>
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.6.000" expanded="true" height="103" name="Nominal to Numerical (5)" width="90" x="916" y="901">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="coding_type" value="dummy coding"/>
+        <parameter key="use_comparison_groups" value="false"/>
+        <list key="comparison_groups"/>
+        <parameter key="unexpected_value_handling" value="all 0 and warning"/>
+        <parameter key="use_underscore_in_name" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="Kmean Przedstawiciele Agg" width="90" x="983" y="799">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="82" name="Multiply (4)" width="90" x="1117" y="901"/>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (3)" width="90" x="1251" y="952">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="sum(czas rozmowy)|sum(kwota zakupu)"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="82" name="Multiply (2)" width="90" x="1117" y="799"/>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes Przedstawiciele" width="90" x="1251" y="799"/>
+      <operator activated="true" class="model_simulator:cluster_model_visualizer" compatibility="9.6.000" expanded="true" height="103" name="Cluster Model Visualizer" width="90" x="1385" y="901"/>
+      <operator activated="true" class="aggregate" compatibility="9.6.000" expanded="true" height="82" name="Aggregate Klienci" width="90" x="715" y="697">
+        <parameter key="use_default_aggregation" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default_aggregation_function" value="average"/>
+        <list key="aggregation_attributes">
+          <parameter key="czas rozmowy" value="sum"/>
+          <parameter key="kwota zakupu" value="sum"/>
+        </list>
+        <parameter key="group_by_attributes" value="numer klienta"/>
+        <parameter key="count_all_combinations" value="false"/>
+        <parameter key="only_distinct" value="false"/>
+        <parameter key="ignore_missings" value="true"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="9.6.000" expanded="true" height="82" name="Rename Klient" width="90" x="849" y="697">
+        <parameter key="old_name" value="numer klienta"/>
+        <parameter key="new_name" value="id klienta"/>
+        <list key="rename_additional_attributes"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="Kmean Klienci Agg" width="90" x="983" y="697">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototype Klienci" width="90" x="1117" y="697"/>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="103" name="Write as Text (3)" width="90" x="1385" y="697">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.3.2\3\228884_klienci2_Przedstawiciele_i_Klienci_wyniki.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="9.6.000" expanded="true" height="82" name="Select Attributes (2)" width="90" x="849" y="442">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="czas rozmowy|data rozmowy|data rozmowy dzien|kwota zakupu|Oddział|przedstawiciel|Region"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.6.000" expanded="true" height="103" name="Nominal to Numerical (3)" width="90" x="983" y="289">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="coding_type" value="dummy coding"/>
+        <parameter key="use_comparison_groups" value="false"/>
+        <list key="comparison_groups"/>
+        <parameter key="unexpected_value_handling" value="all 0 and warning"/>
+        <parameter key="use_underscore_in_name" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="kmeans(f)1" width="90" x="1117" y="289">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes (f) (2)" width="90" x="1251" y="289"/>
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.6.000" expanded="true" height="103" name="Nominal to Numerical (4)" width="90" x="983" y="442">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="coding_type" value="dummy coding"/>
+        <parameter key="use_comparison_groups" value="false"/>
+        <list key="comparison_groups"/>
+        <parameter key="unexpected_value_handling" value="all 0 and warning"/>
+        <parameter key="use_underscore_in_name" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:k_means" compatibility="9.6.000" expanded="true" height="82" name="kmeans(f)" width="90" x="1117" y="442">
+        <parameter key="add_cluster_attribute" value="true"/>
+        <parameter key="add_as_label" value="false"/>
+        <parameter key="remove_unlabeled" value="false"/>
+        <parameter key="k" value="5"/>
+        <parameter key="max_runs" value="10"/>
+        <parameter key="determine_good_start_values" value="true"/>
+        <parameter key="measure_types" value="BregmanDivergences"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="SquaredEuclideanDistance"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_optimization_steps" value="100"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="extract_prototypes" compatibility="9.6.000" expanded="true" height="82" name="Extract Cluster Prototypes (f)" width="90" x="1251" y="442"/>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="145" name="Write as Text (4)" width="90" x="1385" y="340">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.3.2\3\228884_klienci2_wyniki_(f).res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <connect from_op="Read CSV Klienci6" from_port="output" to_op="Multiply" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Nominal to Numerical" to_port="example set input"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Select Attributes" to_port="example set input"/>
+      <connect from_op="Select Attributes" from_port="example set output" to_op="Nominal to Numerical (2)" to_port="example set input"/>
+      <connect from_op="Nominal to Numerical" from_port="example set output" to_op="kmeans(c)" to_port="example set"/>
+      <connect from_op="kmeans(c)" from_port="cluster model" to_op="Extract Cluster Prototypes(c)" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes(c)" from_port="example set" to_op="Write as Text" to_port="input 1"/>
+      <connect from_op="Extract Cluster Prototypes(c)" from_port="model" to_op="Write as Text" to_port="input 2"/>
+      <connect from_op="Nominal to Numerical (2)" from_port="example set output" to_op="kmeans(d)" to_port="example set"/>
+      <connect from_op="kmeans(d)" from_port="cluster model" to_op="Extract Cluster Prototypes (d)" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes (d)" from_port="example set" to_op="Write as Text (2)" to_port="input 1"/>
+      <connect from_op="Extract Cluster Prototypes (d)" from_port="model" to_op="Write as Text (2)" to_port="input 2"/>
+      <connect from_op="Write as Text (2)" from_port="input 2" to_port="result 5"/>
+      <connect from_op="Write as Text" from_port="input 1" to_port="result 3"/>
+      <connect from_op="Write as Text" from_port="input 2" to_port="result 4"/>
+      <connect from_op="Read CSV Klienci2" from_port="output" to_op="Date to Nominal" to_port="example set input"/>
+      <connect from_op="Date to Nominal" from_port="example set output" to_op="Date to Nominal (2)" to_port="example set input"/>
+      <connect from_op="Date to Nominal (2)" from_port="example set output" to_op="Rename" to_port="example set input"/>
+      <connect from_op="Rename" from_port="example set output" to_op="Multiply (3)" to_port="input"/>
+      <connect from_op="Multiply (3)" from_port="output 1" to_op="Nominal to Numerical (3)" to_port="example set input"/>
+      <connect from_op="Multiply (3)" from_port="output 2" to_op="Select Attributes (2)" to_port="example set input"/>
+      <connect from_op="Multiply (3)" from_port="output 3" to_op="Aggregate Klienci" to_port="example set input"/>
+      <connect from_op="Multiply (3)" from_port="output 4" to_op="Aggregate Przedstawiciele" to_port="example set input"/>
+      <connect from_op="Multiply (3)" from_port="output 5" to_op="k-metoids" to_port="example set"/>
+      <connect from_op="k-metoids" from_port="cluster model" to_op="Extract Cluster Prototypes" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes" from_port="example set" to_op="Write as Text (5)" to_port="input 1"/>
+      <connect from_op="Extract Cluster Prototypes" from_port="model" to_op="Write as Text (5)" to_port="input 2"/>
+      <connect from_op="Write as Text (5)" from_port="input 1" to_port="result 10"/>
+      <connect from_op="Write as Text (5)" from_port="input 2" to_port="result 11"/>
+      <connect from_op="Aggregate Przedstawiciele" from_port="example set output" to_op="Rename Przedstawiciel" to_port="example set input"/>
+      <connect from_op="Rename Przedstawiciel" from_port="example set output" to_op="Nominal to Numerical (5)" to_port="example set input"/>
+      <connect from_op="Nominal to Numerical (5)" from_port="example set output" to_op="Kmean Przedstawiciele Agg" to_port="example set"/>
+      <connect from_op="Kmean Przedstawiciele Agg" from_port="cluster model" to_op="Multiply (2)" to_port="input"/>
+      <connect from_op="Kmean Przedstawiciele Agg" from_port="clustered set" to_op="Multiply (4)" to_port="input"/>
+      <connect from_op="Multiply (4)" from_port="output 1" to_op="Select Attributes (3)" to_port="example set input"/>
+      <connect from_op="Select Attributes (3)" from_port="example set output" to_op="Cluster Model Visualizer" to_port="clustered data"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="Extract Cluster Prototypes Przedstawiciele" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes Przedstawiciele" from_port="model" to_op="Cluster Model Visualizer" to_port="model"/>
+      <connect from_op="Cluster Model Visualizer" from_port="visualizer output" to_port="result 1"/>
+      <connect from_op="Cluster Model Visualizer" from_port="model output" to_port="result 2"/>
+      <connect from_op="Aggregate Klienci" from_port="example set output" to_op="Rename Klient" to_port="example set input"/>
+      <connect from_op="Rename Klient" from_port="example set output" to_op="Kmean Klienci Agg" to_port="example set"/>
+      <connect from_op="Kmean Klienci Agg" from_port="cluster model" to_op="Extract Cluster Prototype Klienci" to_port="model"/>
+      <connect from_op="Extract Cluster Prototype Klienci" from_port="example set" to_op="Write as Text (3)" to_port="input 1"/>
+      <connect from_op="Extract Cluster Prototype Klienci" from_port="model" to_op="Write as Text (3)" to_port="input 2"/>
+      <connect from_op="Write as Text (3)" from_port="input 1" to_port="result 12"/>
+      <connect from_op="Write as Text (3)" from_port="input 2" to_port="result 13"/>
+      <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Nominal to Numerical (4)" to_port="example set input"/>
+      <connect from_op="Nominal to Numerical (3)" from_port="example set output" to_op="kmeans(f)1" to_port="example set"/>
+      <connect from_op="kmeans(f)1" from_port="cluster model" to_op="Extract Cluster Prototypes (f) (2)" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes (f) (2)" from_port="example set" to_op="Write as Text (4)" to_port="input 1"/>
+      <connect from_op="Extract Cluster Prototypes (f) (2)" from_port="model" to_op="Write as Text (4)" to_port="input 2"/>
+      <connect from_op="Nominal to Numerical (4)" from_port="example set output" to_op="kmeans(f)" to_port="example set"/>
+      <connect from_op="kmeans(f)" from_port="cluster model" to_op="Extract Cluster Prototypes (f)" to_port="model"/>
+      <connect from_op="Extract Cluster Prototypes (f)" from_port="example set" to_op="Write as Text (4)" to_port="input 3"/>
+      <connect from_op="Extract Cluster Prototypes (f)" from_port="model" to_op="Write as Text (4)" to_port="input 4"/>
+      <connect from_op="Write as Text (4)" from_port="input 1" to_port="result 6"/>
+      <connect from_op="Write as Text (4)" from_port="input 2" to_port="result 8"/>
+      <connect from_op="Write as Text (4)" from_port="input 3" to_port="result 7"/>
+      <connect from_op="Write as Text (4)" from_port="input 4" to_port="result 9"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+      <portSpacing port="sink_result 5" spacing="0"/>
+      <portSpacing port="sink_result 6" spacing="0"/>
+      <portSpacing port="sink_result 7" spacing="0"/>
+      <portSpacing port="sink_result 8" spacing="0"/>
+      <portSpacing port="sink_result 9" spacing="0"/>
+      <portSpacing port="sink_result 10" spacing="0"/>
+      <portSpacing port="sink_result 11" spacing="0"/>
+      <portSpacing port="sink_result 12" spacing="0"/>
+      <portSpacing port="sink_result 13" spacing="0"/>
+      <portSpacing port="sink_result 14" spacing="0"/>
+    </process>
+  </operator>
+</process>

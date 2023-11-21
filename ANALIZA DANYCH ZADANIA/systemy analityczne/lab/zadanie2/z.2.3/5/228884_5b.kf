@@ -1,0 +1,94 @@
+{
+	"flow_name" : "228884_5b",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.SetVariables",
+			"properties" : {
+				"dynamicVarsInternalRep" : "fname@a@afiletoload@v@v @@vv@@",
+				"name" : "SetVariables",
+				"varsInternalRep" : ""
+			},
+			"connections" : {
+				"environment" : [
+					"StorePropertiesInEnvironment"
+				]
+			},
+			"coordinates" : "309,115"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.DataGrid",
+			"properties" : {
+				"data" : "@relation DataGrid\n\n@attribute fname string\n@attribute config string\n@attribute repTree string\n\n@data\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff',J48,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff',JRip,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff','weka.classifiers.bayes.NaiveBayes -D',?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff',RandomForest,''\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff',AdaBoostM1,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_klienci_2.arff',weka.classifiers.functions.Logistic,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2.arff',J48,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2.arff',JRip,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2.arff',RandomForest,''\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2.arff',AdaBoostM1,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2.arff',weka.classifiers.functions.Logistic,?\n'C:\\\\Users\\\\dell\\\\Desktop\\\\z.2.3\\\\5\\\\228884_bank2',weka.classifiers.bayes.NaiveBayes,?",
+				"name" : "DataGrid"
+			},
+			"connections" : {
+				"instance" : [
+					"SetVariables"
+				]
+			},
+			"coordinates" : "124,114"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Job",
+			"properties" : {
+				"flowFile" : "weka/gui/knowledgeflow/templates/jobSubFlow.kf",
+				"name" : "Job"
+			},
+			"connections" : {
+				"jobSuccess" : [
+					"GetDataFromResult"
+				]
+			},
+			"coordinates" : "429,246"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.StorePropertiesInEnvironment",
+			"properties" : {
+				"name" : "StorePropertiesInEnvironment",
+				"propsInternalRep" : "config@a@aZeroR@a@a @a@a @@vv@@repTree@a@aZeroR@a@aclassifier.maxDepth@a@a @@vv@@"
+			},
+			"connections" : {
+				"environment" : [
+					"Job"
+				]
+			},
+			"coordinates" : "508,113"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.GetDataFromResult",
+			"properties" : {
+				"name" : "GetDataFromResult"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "240,247"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextViewer",
+			"properties" : {
+				"name" : "TextViewer"
+			},
+			"connections" : {
+				"text" : [
+					"TextSaver"
+				]
+			},
+			"coordinates" : "64,248"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextSaver",
+			"properties" : {
+				"append" : true,
+				"file" : "C:/Users/dell/Desktop/z.2.3/5/228884_5b_wynikii",
+				"name" : "TextSaver",
+				"writeTitleString" : false
+			},
+			"connections" : {
+			},
+			"coordinates" : "65,356"
+		}
+	]
+}

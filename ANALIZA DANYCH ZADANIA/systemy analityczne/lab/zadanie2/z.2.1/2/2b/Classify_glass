@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     Glass Data
+Instances:    214
+Attributes:   12
+              ﻿Al
+              Ba
+              Ca
+              Fe
+              ID
+              K
+              Mg
+              Na
+              Number of Records
+              RI
+              Si
+              Type
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: Window, Float Processed
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          87               40.6542 %
+Incorrectly Classified Instances       127               59.3458 %
+Kappa statistic                          0     
+Mean absolute error                      0.2752
+Root mean squared error                  0.3702
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              214     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,000    ?          0,000    ?          ?        0,413     0,052     Container
+                 0,000    0,000    ?          0,000    ?          ?        0,478     0,130     Headlamp
+                 0,000    0,000    ?          0,000    ?          ?        0,443     0,040     Tableware
+                 1,000    1,000    0,407      1,000    0,578      ?        0,472     0,391     Window, Float Processed
+                 0,000    0,000    ?          0,000    ?          ?        0,478     0,344     Window, Non-float Processed
+Weighted Avg.    0,407    0,407    ?          0,407    ?          ?        0,470     0,304     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+  0  0  0 13  0 |  a = Container
+  0  0  0 29  0 |  b = Headlamp
+  0  0  0  9  0 |  c = Tableware
+  0  0  0 87  0 |  d = Window, Float Processed
+  0  0  0 76  0 |  e = Window, Non-float Processed
+

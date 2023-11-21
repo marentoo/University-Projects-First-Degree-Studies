@@ -1,0 +1,18 @@
+=== Performance information ===
+
+Scheme:   IBk
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        3921               63.4671 %
+Incorrectly Classified Instances      2257               36.5329 %
+Kappa statistic                          0.2126
+Mean absolute error                      0.3807
+Root mean squared error                  0.5873
+Total Number of Instances             6178     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2799 1003 |    a = no
+ 1254 1122 |    b = yes

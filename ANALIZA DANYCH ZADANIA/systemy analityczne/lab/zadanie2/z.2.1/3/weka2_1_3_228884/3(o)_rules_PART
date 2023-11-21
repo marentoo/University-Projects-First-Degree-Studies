@@ -1,0 +1,765 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P20.0
+Instances:    800
+Attributes:   7
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+numer klienta = 13 AND
+Region = Zachód AND
+miesi¹c = 10: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 13 AND
+Region = Zachód AND
+miesi¹c = 8: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 13 AND
+Region = Po³udnie AND
+miesi¹c = 10: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 13 AND
+Region = Po³udnie: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 13 AND
+Oddzia³ = Warszawa: '(-inf-54.166667]' (11.0/7.0)
+
+numer klienta = 13 AND
+miesi¹c = 9: '(88.333333-122.5]' (5.0/2.0)
+
+numer klienta = 5 AND
+miesi¹c = 9 AND
+przedstawiciel = P02: '(-inf-54.166667]' (6.0/2.0)
+
+numer klienta = 13: '(190.833333-inf)' (5.0/2.0)
+
+numer klienta = 5 AND
+przedstawiciel = P03 AND
+miesi¹c = 10 AND
+czas rozmowy > 60: '(190.833333-inf)' (4.0/2.0)
+
+numer klienta = 5 AND
+miesi¹c = 10 AND
+przedstawiciel = P03: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 5 AND
+przedstawiciel = P03 AND
+miesi¹c = 9: '(156.666667-190.833333]' (3.0)
+
+numer klienta = 8 AND
+Oddzia³ = £ódŸ: '(156.666667-190.833333]' (7.0/4.0)
+
+numer klienta = 14 AND
+przedstawiciel = P04: '(-inf-54.166667]' (6.0/4.0)
+
+numer klienta = 5 AND
+przedstawiciel = P03: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 8 AND
+miesi¹c = 9 AND
+Oddzia³ = Warszawa AND
+czas rozmowy > 51: '(156.666667-190.833333]' (6.0/3.0)
+
+numer klienta = 6 AND
+miesi¹c = 9 AND
+Oddzia³ = Wroc³aw: '(190.833333-inf)' (5.0/3.0)
+
+numer klienta = 6 AND
+miesi¹c = 9 AND
+Oddzia³ = Warszawa: '(122.5-156.666667]' (5.0/2.0)
+
+numer klienta = 6 AND
+miesi¹c = 9 AND
+przedstawiciel = P03: '(190.833333-inf)' (3.0/1.0)
+
+Oddzia³ = Wroc³aw AND
+numer klienta = 15 AND
+miesi¹c = 9 AND
+czas rozmowy <= 102: '(54.166667-88.333333]' (2.0)
+
+numer klienta = 6 AND
+przedstawiciel = P04 AND
+czas rozmowy > 43 AND
+miesi¹c = 8: '(190.833333-inf)' (6.0/2.0)
+
+numer klienta = 5 AND
+przedstawiciel = P01 AND
+miesi¹c = 10 AND
+czas rozmowy > 91: '(190.833333-inf)' (3.0)
+
+numer klienta = 5 AND
+miesi¹c = 10 AND
+przedstawiciel = P04: '(156.666667-190.833333]' (6.0/2.0)
+
+numer klienta = 5 AND
+przedstawiciel = P05: '(-inf-54.166667]' (7.0/4.0)
+
+numer klienta = 4 AND
+Region = Zachód AND
+miesi¹c = 9: '(88.333333-122.5]' (8.0/2.0)
+
+numer klienta = 4 AND
+przedstawiciel = P03: '(122.5-156.666667]' (13.0/8.0)
+
+numer klienta = 4 AND
+czas rozmowy <= 94 AND
+miesi¹c = 10 AND
+przedstawiciel = P04 AND
+czas rozmowy > 32: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 4 AND
+przedstawiciel = P02: '(54.166667-88.333333]' (7.0/4.0)
+
+numer klienta = 4 AND
+czas rozmowy <= 94 AND
+miesi¹c = 9 AND
+przedstawiciel = P01: '(54.166667-88.333333]' (5.0/2.0)
+
+numer klienta = 4 AND
+czas rozmowy <= 94: '(122.5-156.666667]' (20.0/12.0)
+
+numer klienta = 4 AND
+Oddzia³ = Warszawa AND
+miesi¹c = 8: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 4 AND
+miesi¹c = 9: '(190.833333-inf)' (5.0/3.0)
+
+numer klienta = 4 AND
+przedstawiciel = P01 AND
+czas rozmowy <= 175: '(54.166667-88.333333]' (2.0/1.0)
+
+numer klienta = 4 AND
+przedstawiciel = P05: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 4 AND
+przedstawiciel = P04 AND
+czas rozmowy > 152: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 4: '(122.5-156.666667]' (4.0/1.0)
+
+przedstawiciel = P02 AND
+numer klienta = 15: '(88.333333-122.5]' (6.0/3.0)
+
+numer klienta = 15 AND
+czas rozmowy <= 59 AND
+miesi¹c = 10: '(-inf-54.166667]' (5.0/1.0)
+
+numer klienta = 15 AND
+miesi¹c = 10: '(190.833333-inf)' (10.0/4.0)
+
+numer klienta = 15 AND
+przedstawiciel = P03: '(156.666667-190.833333]' (4.0/2.0)
+
+numer klienta = 15 AND
+czas rozmowy <= 70 AND
+czas rozmowy > 31: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 15 AND
+przedstawiciel = P04 AND
+miesi¹c = 8 AND
+czas rozmowy <= 131: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 15 AND
+miesi¹c = 9: '(156.666667-190.833333]' (6.0/2.0)
+
+numer klienta = 15: '(190.833333-inf)' (4.0/2.0)
+
+Region = Po³udnie AND
+numer klienta = 9 AND
+miesi¹c = 10: '(-inf-54.166667]' (3.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 9 AND
+miesi¹c = 9: '(54.166667-88.333333]' (2.0)
+
+Region = Po³udnie AND
+numer klienta = 1: '(122.5-156.666667]' (4.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 9: '(122.5-156.666667]' (2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 2 AND
+miesi¹c = 9: '(54.166667-88.333333]' (2.0)
+
+Region = Po³udnie AND
+numer klienta = 2 AND
+czas rozmowy > 160: '(54.166667-88.333333]' (3.0/1.0)
+
+Region = Po³udnie AND
+numer klienta = 2 AND
+czas rozmowy <= 107: '(88.333333-122.5]' (2.0)
+
+Region = Po³udnie AND
+numer klienta = 6 AND
+miesi¹c = 8: '(88.333333-122.5]' (5.0/3.0)
+
+przedstawiciel = P03 AND
+numer klienta = 6: '(-inf-54.166667]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 10 AND
+miesi¹c = 8: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 6 AND
+przedstawiciel = P04 AND
+czas rozmowy <= 43: '(156.666667-190.833333]' (2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 10 AND
+czas rozmowy > 46: '(156.666667-190.833333]' (7.0/2.0)
+
+numer klienta = 6 AND
+przedstawiciel = P05 AND
+miesi¹c = 10: '(156.666667-190.833333]' (5.0/3.0)
+
+numer klienta = 6 AND
+przedstawiciel = P05 AND
+miesi¹c = 8 AND
+czas rozmowy <= 81 AND
+czas rozmowy > 30: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 6 AND
+przedstawiciel = P05: '(54.166667-88.333333]' (6.0/2.0)
+
+przedstawiciel = P02 AND
+numer klienta = 8 AND
+miesi¹c = 8 AND
+czas rozmowy > 17: '(156.666667-190.833333]' (4.0/1.0)
+
+numer klienta = 6 AND
+przedstawiciel = P02 AND
+czas rozmowy <= 111 AND
+czas rozmowy > 46: '(190.833333-inf)' (4.0/2.0)
+
+przedstawiciel = P01 AND
+numer klienta = 11: '(-inf-54.166667]' (7.0/4.0)
+
+przedstawiciel = P02 AND
+numer klienta = 6: '(54.166667-88.333333]' (5.0/2.0)
+
+numer klienta = 6 AND
+przedstawiciel = P01 AND
+miesi¹c = 10 AND
+czas rozmowy > 100: '(122.5-156.666667]' (4.0/2.0)
+
+numer klienta = 6 AND
+przedstawiciel = P01 AND
+miesi¹c = 10: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 6 AND
+czas rozmowy <= 39: '(88.333333-122.5]' (2.0/1.0)
+
+numer klienta = 14 AND
+miesi¹c = 9 AND
+Region = Po³udnie: '(54.166667-88.333333]' (4.0/2.0)
+
+numer klienta = 5 AND
+przedstawiciel = P01 AND
+miesi¹c = 9: '(-inf-54.166667]' (5.0/3.0)
+
+numer klienta = 5 AND
+przedstawiciel = P04 AND
+miesi¹c = 8: '(-inf-54.166667]' (4.0/2.0)
+
+numer klienta = 12 AND
+miesi¹c = 9 AND
+przedstawiciel = P01 AND
+czas rozmowy <= 131: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 5 AND
+przedstawiciel = P01: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 5 AND
+miesi¹c = 10: '(156.666667-190.833333]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 10 AND
+miesi¹c = 10: '(122.5-156.666667]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 14 AND
+miesi¹c = 10: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 14 AND
+przedstawiciel = P05: '(-inf-54.166667]' (5.0/2.0)
+
+numer klienta = 10 AND
+miesi¹c = 10 AND
+przedstawiciel = P02: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 10 AND
+miesi¹c = 9 AND
+przedstawiciel = P02: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 10 AND
+miesi¹c = 9 AND
+przedstawiciel = P04: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 6: '(-inf-54.166667]' (2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 7 AND
+czas rozmowy <= 91: '(88.333333-122.5]' (6.0/4.0)
+
+numer klienta = 10 AND
+miesi¹c = 9 AND
+przedstawiciel = P03: '(88.333333-122.5]' (2.0)
+
+przedstawiciel = P01 AND
+numer klienta = 1 AND
+miesi¹c = 8: '(190.833333-inf)' (4.0/1.0)
+
+numer klienta = 10 AND
+miesi¹c = 9 AND
+przedstawiciel = P05 AND
+czas rozmowy <= 112: '(88.333333-122.5]' (2.0/1.0)
+
+numer klienta = 10 AND
+miesi¹c = 9: '(-inf-54.166667]' (5.0/2.0)
+
+numer klienta = 10 AND
+miesi¹c = 10 AND
+przedstawiciel = P01: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 10 AND
+czas rozmowy > 110 AND
+przedstawiciel = P02: '(-inf-54.166667]' (3.0/2.0)
+
+numer klienta = 10 AND
+przedstawiciel = P02: '(88.333333-122.5]' (4.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 3: '(156.666667-190.833333]' (11.0/7.0)
+
+przedstawiciel = P03 AND
+numer klienta = 7: '(156.666667-190.833333]' (6.0/3.0)
+
+numer klienta = 10 AND
+miesi¹c = 10 AND
+czas rozmowy > 149: '(122.5-156.666667]' (3.0/1.0)
+
+numer klienta = 10 AND
+przedstawiciel = P05 AND
+miesi¹c = 8 AND
+czas rozmowy <= 104: '(190.833333-inf)' (4.0/2.0)
+
+numer klienta = 10 AND
+miesi¹c = 8 AND
+przedstawiciel = P05: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 10 AND
+przedstawiciel = P01 AND
+czas rozmowy > 55: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 10: '(-inf-54.166667]' (7.0/4.0)
+
+przedstawiciel = P01 AND
+numer klienta = 1 AND
+czas rozmowy <= 63: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 1 AND
+czas rozmowy <= 77 AND
+przedstawiciel = P02: '(-inf-54.166667]' (4.0/2.0)
+
+przedstawiciel = P01 AND
+numer klienta = 2 AND
+miesi¹c = 10: '(190.833333-inf)' (5.0/2.0)
+
+przedstawiciel = P02 AND
+numer klienta = 1 AND
+czas rozmowy <= 133: '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P01 AND
+numer klienta = 2 AND
+czas rozmowy <= 113 AND
+czas rozmowy > 32: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 1 AND
+czas rozmowy <= 77 AND
+Oddzia³ = Warszawa: '(88.333333-122.5]' (5.0/2.0)
+
+numer klienta = 1 AND
+miesi¹c = 9: '(-inf-54.166667]' (3.0/2.0)
+
+numer klienta = 1 AND
+miesi¹c = 10: '(122.5-156.666667]' (3.0/1.0)
+
+numer klienta = 8 AND
+przedstawiciel = P04 AND
+miesi¹c = 8: '(54.166667-88.333333]' (4.0/2.0)
+
+numer klienta = 1: '(54.166667-88.333333]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 2 AND
+czas rozmowy > 22: '(156.666667-190.833333]' (3.0)
+
+miesi¹c = 9 AND
+numer klienta = 2: '(54.166667-88.333333]' (2.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 5 AND
+czas rozmowy <= 92: '(156.666667-190.833333]' (2.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 12 AND
+przedstawiciel = P03 AND
+czas rozmowy <= 102: '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 12 AND
+miesi¹c = 8: '(156.666667-190.833333]' (5.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 12 AND
+czas rozmowy <= 125: '(88.333333-122.5]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 8 AND
+miesi¹c = 10: '(190.833333-inf)' (5.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 12: '(122.5-156.666667]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 8 AND
+czas rozmowy > 61 AND
+czas rozmowy <= 126: '(122.5-156.666667]' (3.0/1.0)
+
+miesi¹c = 10 AND
+numer klienta = 2 AND
+Region = Zachód: '(-inf-54.166667]' (3.0/1.0)
+
+miesi¹c = 10 AND
+numer klienta = 2 AND
+Region = Centrum: '(156.666667-190.833333]' (3.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 8: '(-inf-54.166667]' (4.0/2.0)
+
+przedstawiciel = P03 AND
+numer klienta = 11 AND
+miesi¹c = 8 AND
+czas rozmowy <= 87: '(-inf-54.166667]' (2.0/1.0)
+
+przedstawiciel = P03 AND
+numer klienta = 11 AND
+miesi¹c = 9 AND
+czas rozmowy <= 138 AND
+czas rozmowy > 79: '(88.333333-122.5]' (5.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 12 AND
+czas rozmowy <= 161: '(122.5-156.666667]' (4.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 12: '(88.333333-122.5]' (3.0/1.0)
+
+miesi¹c = 9 AND
+Oddzia³ = Rzeszów: '(122.5-156.666667]' (6.0/3.0)
+
+przedstawiciel = P03 AND
+numer klienta = 11 AND
+czas rozmowy > 75: '(54.166667-88.333333]' (4.0/2.0)
+
+przedstawiciel = P03: '(-inf-54.166667]' (7.0/4.0)
+
+miesi¹c = 10 AND
+numer klienta = 12: '(54.166667-88.333333]' (6.0/4.0)
+
+miesi¹c = 9 AND
+numer klienta = 8 AND
+Oddzia³ = Wroc³aw: '(-inf-54.166667]' (3.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 8: '(122.5-156.666667]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 3 AND
+przedstawiciel = P04 AND
+czas rozmowy <= 38: '(190.833333-inf)' (2.0)
+
+miesi¹c = 9 AND
+numer klienta = 3 AND
+przedstawiciel = P05 AND
+czas rozmowy > 86: '(122.5-156.666667]' (4.0/2.0)
+
+miesi¹c = 9 AND
+Oddzia³ = £ódŸ AND
+numer klienta = 11 AND
+czas rozmowy > 57: '(-inf-54.166667]' (5.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 11 AND
+przedstawiciel = P02 AND
+czas rozmowy <= 132: '(54.166667-88.333333]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 11 AND
+przedstawiciel = P02: '(88.333333-122.5]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 11: '(54.166667-88.333333]' (5.0/2.0)
+
+miesi¹c = 9 AND
+przedstawiciel = P04 AND
+numer klienta = 9 AND
+czas rozmowy <= 143: '(88.333333-122.5]' (2.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 3 AND
+przedstawiciel = P05: '(-inf-54.166667]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 3 AND
+przedstawiciel = P01 AND
+czas rozmowy <= 125: '(88.333333-122.5]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 3 AND
+przedstawiciel = P01 AND
+czas rozmowy <= 147: '(190.833333-inf)' (2.0)
+
+miesi¹c = 9 AND
+numer klienta = 9 AND
+przedstawiciel = P02 AND
+czas rozmowy <= 82: '(54.166667-88.333333]' (4.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 9 AND
+przedstawiciel = P02: '(-inf-54.166667]' (4.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 9 AND
+Oddzia³ = Warszawa: '(156.666667-190.833333]' (5.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 9 AND
+czas rozmowy <= 81: '(-inf-54.166667]' (4.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 7 AND
+czas rozmowy <= 40: '(54.166667-88.333333]' (6.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 9: '(122.5-156.666667]' (4.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 3: '(122.5-156.666667]' (4.0/1.0)
+
+miesi¹c = 9 AND
+przedstawiciel = P05: '(-inf-54.166667]' (3.0/2.0)
+
+miesi¹c = 9 AND
+czas rozmowy <= 49: '(-inf-54.166667]' (5.0/2.0)
+
+miesi¹c = 9 AND
+numer klienta = 14 AND
+czas rozmowy <= 88: '(156.666667-190.833333]' (3.0/1.0)
+
+miesi¹c = 9 AND
+numer klienta = 14: '(122.5-156.666667]' (3.0/1.0)
+
+numer klienta = 12 AND
+przedstawiciel = P01: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 9 AND
+Oddzia³ = Wroc³aw: '(88.333333-122.5]' (8.0/4.0)
+
+numer klienta = 14 AND
+przedstawiciel = P01: '(-inf-54.166667]' (6.0/4.0)
+
+numer klienta = 14 AND
+miesi¹c = 10: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 3 AND
+miesi¹c = 10 AND
+przedstawiciel = P02 AND
+czas rozmowy <= 88: '(54.166667-88.333333]' (6.0/2.0)
+
+numer klienta = 7 AND
+czas rozmowy <= 122 AND
+miesi¹c = 10 AND
+czas rozmowy <= 92: '(88.333333-122.5]' (5.0/1.0)
+
+numer klienta = 7 AND
+miesi¹c = 10 AND
+Oddzia³ = Warszawa: '(54.166667-88.333333]' (5.0/2.0)
+
+numer klienta = 7 AND
+miesi¹c = 10: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 7 AND
+przedstawiciel = P01: '(88.333333-122.5]' (4.0/2.0)
+
+numer klienta = 7 AND
+czas rozmowy <= 122: '(122.5-156.666667]' (8.0/3.0)
+
+numer klienta = 7 AND
+Region = Centrum: '(190.833333-inf)' (5.0/2.0)
+
+numer klienta = 7 AND
+miesi¹c = 9: '(122.5-156.666667]' (4.0/2.0)
+
+numer klienta = 9 AND
+Oddzia³ = £ódŸ AND
+miesi¹c = 10 AND
+czas rozmowy > 66: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 8 AND
+przedstawiciel = P02: '(122.5-156.666667]' (5.0/2.0)
+
+miesi¹c = 10 AND
+numer klienta = 3: '(156.666667-190.833333]' (8.0/5.0)
+
+miesi¹c = 10 AND
+przedstawiciel = P02: '(-inf-54.166667]' (4.0/2.0)
+
+miesi¹c = 10 AND
+numer klienta = 11 AND
+przedstawiciel = P04: '(122.5-156.666667]' (5.0/2.0)
+
+numer klienta = 3 AND
+przedstawiciel = P01: '(190.833333-inf)' (6.0/3.0)
+
+numer klienta = 3 AND
+przedstawiciel = P05 AND
+czas rozmowy <= 111: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 11 AND
+czas rozmowy > 145: '(156.666667-190.833333]' (5.0/2.0)
+
+numer klienta = 11 AND
+przedstawiciel = P05 AND
+miesi¹c = 10: '(-inf-54.166667]' (4.0/2.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 9: '(54.166667-88.333333]' (8.0/4.0)
+
+numer klienta = 11 AND
+przedstawiciel = P02: '(54.166667-88.333333]' (5.0/3.0)
+
+numer klienta = 11 AND
+przedstawiciel = P04: '(-inf-54.166667]' (4.0/2.0)
+
+numer klienta = 9 AND
+czas rozmowy > 45 AND
+czas rozmowy <= 124: '(156.666667-190.833333]' (4.0/1.0)
+
+numer klienta = 9 AND
+czas rozmowy <= 125: '(88.333333-122.5]' (4.0/2.0)
+
+numer klienta = 11: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 12 AND
+przedstawiciel = P02: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 12 AND
+czas rozmowy > 94: '(88.333333-122.5]' (4.0/2.0)
+
+numer klienta = 12: '(54.166667-88.333333]' (2.0/1.0)
+
+miesi¹c = 10 AND
+czas rozmowy <= 127: '(122.5-156.666667]' (4.0/2.0)
+
+miesi¹c = 10: '(54.166667-88.333333]' (3.0/2.0)
+
+numer klienta = 8 AND
+czas rozmowy > 67: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 9: '(-inf-54.166667]' (2.0)
+
+numer klienta = 7: '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P01 AND
+numer klienta = 2 AND
+czas rozmowy <= 70: '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P01: '(156.666667-190.833333]' (4.0/1.0)
+
+numer klienta = 2 AND
+przedstawiciel = P04 AND
+czas rozmowy <= 117: '(190.833333-inf)' (2.0)
+
+przedstawiciel = P05 AND
+numer klienta = 3: '(54.166667-88.333333]' (3.0/2.0)
+
+numer klienta = 3 AND
+czas rozmowy <= 73: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 2 AND
+przedstawiciel = P02 AND
+czas rozmowy > 72: '(-inf-54.166667]' (3.0/2.0)
+
+numer klienta = 3: '(88.333333-122.5]' (2.0/1.0)
+
+numer klienta = 2 AND
+przedstawiciel = P02: '(122.5-156.666667]' (2.0)
+
+numer klienta = 2 AND
+czas rozmowy <= 134: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 2: '(-inf-54.166667]' (3.0/2.0)
+
+czas rozmowy > 159: '(190.833333-inf)' (4.0/2.0)
+
+czas rozmowy > 117 AND
+przedstawiciel = P02 AND
+czas rozmowy > 135: '(156.666667-190.833333]' (3.0/1.0)
+
+czas rozmowy > 117: '(-inf-54.166667]' (4.0/1.0)
+
+: '(54.166667-88.333333]' (3.0/2.0)
+
+Number of Rules  : 	195
+
+
+Time taken to build model: 0.13 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         138               17.25   %
+Incorrectly Classified Instances       662               82.75   %
+Kappa statistic                          0.0066
+Mean absolute error                      0.2781
+Root mean squared error                  0.4339
+Relative absolute error                100.1441 %
+Root relative squared error            116.4242 %
+Total Number of Instances              800     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,204    0,253    0,143      0,204    0,168      -0,043   0,460     0,163     '(-inf-54.166667]'
+                 0,187    0,167    0,184      0,187    0,185      0,020    0,476     0,168     '(54.166667-88.333333]'
+                 0,157    0,149    0,167      0,157    0,162      0,009    0,516     0,175     '(88.333333-122.5]'
+                 0,148    0,152    0,157      0,148    0,153      -0,003   0,482     0,156     '(122.5-156.666667]'
+                 0,159    0,136    0,196      0,159    0,176      0,026    0,502     0,181     '(156.666667-190.833333]'
+                 0,176    0,137    0,209      0,176    0,191      0,042    0,546     0,186     '(190.833333-inf)'
+Weighted Avg.    0,173    0,166    0,176      0,173    0,173      0,008    0,497     0,172     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 28 25 19 28 14 23 |  a = '(-inf-54.166667]'
+ 34 25 28 14 16 17 |  b = '(54.166667-88.333333]'
+ 29 29 20 12 20 17 |  c = '(88.333333-122.5]'
+ 30 19 16 19 24 20 |  d = '(122.5-156.666667]'
+ 39 19 21 23 22 14 |  e = '(156.666667-190.833333]'
+ 36 19 16 25 16 24 |  f = '(190.833333-inf)'
+

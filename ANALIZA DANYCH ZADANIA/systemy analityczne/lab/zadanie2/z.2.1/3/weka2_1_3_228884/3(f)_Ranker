@@ -1,0 +1,40 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.InfoGainAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R9
+Instances:    1000
+Attributes:   9
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              data rozmowy
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial_czas rozmowy
+              przedzial
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 9 przedzial):
+	Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.04694   1 numer klienta
+ 0.01754   3 przedstawiciel
+ 0.01615   5 Oddzia³
+ 0.01304   6 Region
+ 0.01086   8 przedzial_czas rozmowy
+ 0.00569   7 miesi¹c
+ 0         2 czas rozmowy
+ 0         4 data rozmowy
+
+Selected attributes: 1,3,5,6,8,7,2,4 : 8
+

@@ -1,0 +1,104 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Glass Data3-weka.filters.unsupervised.attribute.Remove-R5-weka.filters.unsupervised.attribute.Remove-R8
+Instances:    214
+Attributes:   10
+              ﻿Al
+              Ba
+              Ca
+              Fe
+              K
+              Mg
+              Na
+              RI
+              Si
+              Type
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mg <= 2.68
+|   Na <= 13.78
+|   |   ﻿Al <= 1.38: Window. Non-float Processed (8.0/1.0)
+|   |   ﻿Al > 1.38
+|   |   |   Fe <= 0.08: Container (10.0)
+|   |   |   Fe > 0.08
+|   |   |   |   Fe <= 0.22: Window. Non-float Processed (2.0)
+|   |   |   |   Fe > 0.22
+|   |   |   |   |   Ca <= 12.24: Container (2.0)
+|   |   |   |   |   Ca > 12.24: Window. Non-float Processed (2.0)
+|   Na > 13.78
+|   |   ﻿Al <= 1.76
+|   |   |   Fe <= 0.03: Tableware (9.0/1.0)
+|   |   |   Fe > 0.03: Window. Non-float Processed (2.0)
+|   |   ﻿Al > 1.76: Headlamp (26.0/2.0)
+Mg > 2.68
+|   ﻿Al <= 1.41
+|   |   Mg <= 3.86
+|   |   |   Fe <= 0.11
+|   |   |   |   RI <= 1.523: Window. Float Processed (65.0/5.0)
+|   |   |   |   RI > 1.523
+|   |   |   |   |   Ca <= 10.17: Headlamp (2.0/1.0)
+|   |   |   |   |   Ca > 10.17: Window. Non-float Processed (2.0)
+|   |   |   Fe > 0.11
+|   |   |   |   K <= 0.23: Window. Float Processed (6.0)
+|   |   |   |   K > 0.23
+|   |   |   |   |   Mg <= 3.59
+|   |   |   |   |   |   K <= 0.45: Window. Non-float Processed (2.0)
+|   |   |   |   |   |   K > 0.45
+|   |   |   |   |   |   |   Mg <= 3.26: Window. Non-float Processed (3.0/1.0)
+|   |   |   |   |   |   |   Mg > 3.26: Window. Float Processed (7.0)
+|   |   |   |   |   Mg > 3.59: Window. Non-float Processed (6.0)
+|   |   Mg > 3.86
+|   |   |   RI <= 1.51969: Window. Non-float Processed (6.0)
+|   |   |   RI > 1.51969: Window. Float Processed (2.0)
+|   ﻿Al > 1.41
+|   |   Ba <= 0
+|   |   |   RI <= 1.51732: Window. Non-float Processed (40.0/4.0)
+|   |   |   RI > 1.51732
+|   |   |   |   RI <= 1.51797: Window. Float Processed (5.0)
+|   |   |   |   RI > 1.51797: Window. Non-float Processed (5.0/1.0)
+|   |   Ba > 0: Headlamp (2.0)
+
+Number of Leaves  : 	22
+
+Size of the tree : 	43
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         161               75.2336 %
+Incorrectly Classified Instances        53               24.7664 %
+Kappa statistic                          0.6379
+Mean absolute error                      0.1105
+Root mean squared error                  0.304 
+Relative absolute error                 40.145  %
+Root relative squared error             82.1127 %
+Total Number of Instances              214     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,692    0,020    0,692      0,692    0,692      0,672    0,866     0,619     Container
+                 0,793    0,027    0,821      0,793    0,807      0,778    0,884     0,649     Headlamp
+                 0,667    0,015    0,667      0,667    0,667      0,652    0,912     0,449     Tableware
+                 0,793    0,134    0,802      0,793    0,798      0,660    0,838     0,734     Window. Float Processed
+                 0,711    0,174    0,692      0,711    0,701      0,534    0,784     0,619     Window. Non-float Processed
+Weighted Avg.    0,752    0,122    0,753      0,752    0,753      0,632    0,830     0,663     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+  9  1  0  0  3 |  a = Container
+  0 23  2  1  3 |  b = Headlamp
+  0  3  6  0  0 |  c = Tableware
+  0  0  0 69 18 |  d = Window. Float Processed
+  4  1  1 16 54 |  e = Window. Non-float Processed
+

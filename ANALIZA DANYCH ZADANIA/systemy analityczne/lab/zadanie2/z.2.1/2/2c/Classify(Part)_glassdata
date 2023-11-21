@@ -1,0 +1,103 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     Glass Data3-weka.filters.unsupervised.attribute.Remove-R5-weka.filters.unsupervised.attribute.Remove-R8
+Instances:    214
+Attributes:   10
+              ﻿Al
+              Ba
+              Ca
+              Fe
+              K
+              Mg
+              Na
+              RI
+              Si
+              Type
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+Mg > 2.68 AND
+﻿Al <= 1.41 AND
+Mg <= 3.86 AND
+Fe <= 0.11 AND
+RI <= 1.523: Window. Float Processed (65.0/5.0)
+
+Mg > 2.68 AND
+Ba <= 0 AND
+RI <= 1.51911 AND
+Mg <= 3.61 AND
+RI <= 1.51732 AND
+Fe <= 0.15: Window. Non-float Processed (30.0/1.0)
+
+Mg > 2.68 AND
+Ba <= 0 AND
+RI <= 1.51911 AND
+Mg > 3.61: Window. Non-float Processed (18.0)
+
+Mg > 3.26 AND
+﻿Al <= 1.41: Window. Float Processed (17.0/1.0)
+
+Na > 13.83 AND
+﻿Al > 1.76: Headlamp (27.0/2.0)
+
+K <= 0.03 AND
+Na > 13.75: Tableware (8.0)
+
+Mg > 1.88 AND
+K > 0.53 AND
+K <= 0.67 AND
+Mg > 3.26: Window. Float Processed (10.0/1.0)
+
+Ba <= 0 AND
+﻿Al <= 1.47 AND
+Si <= 73.61: Window. Non-float Processed (17.0/1.0)
+
+Ba <= 0 AND
+Mg <= 1.88 AND
+﻿Al > 1.35: Container (13.0/2.0)
+
+Fe > 0.08: Window. Non-float Processed (5.0/1.0)
+
+: Headlamp (4.0/1.0)
+
+Number of Rules  : 	11
+
+
+Time taken to build model: 0.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         163               76.1682 %
+Incorrectly Classified Instances        51               23.8318 %
+Kappa statistic                          0.6472
+Mean absolute error                      0.108 
+Root mean squared error                  0.2959
+Relative absolute error                 39.2453 %
+Root relative squared error             79.9274 %
+Total Number of Instances              214     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,538    0,015    0,700      0,538    0,609      0,593    0,780     0,481     Container
+                 0,828    0,022    0,857      0,828    0,842      0,818    0,905     0,699     Headlamp
+                 0,667    0,010    0,750      0,667    0,706      0,695    0,874     0,602     Tableware
+                 0,862    0,181    0,765      0,862    0,811      0,671    0,854     0,728     Window. Float Processed
+                 0,671    0,138    0,729      0,671    0,699      0,544    0,788     0,670     Window. Non-float Processed
+Weighted Avg.    0,762    0,127    0,760      0,762    0,759      0,642    0,834     0,683     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+  7  1  0  0  5 |  a = Container
+  1 24  0  2  2 |  b = Headlamp
+  0  2  6  0  1 |  c = Tableware
+  0  0  1 75 11 |  d = Window. Float Processed
+  2  1  1 21 51 |  e = Window. Non-float Processed
+

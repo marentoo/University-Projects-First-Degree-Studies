@@ -1,0 +1,41 @@
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Glass
+
+=== Summary ===
+
+Correctly Classified Instances         143               66.8224 %
+Incorrectly Classified Instances        71               33.1776 %
+Kappa statistic                          0.55  
+Mean absolute error                      0.1026
+Root mean squared error                  0.2897
+Relative absolute error                 48.4507 %
+Root relative squared error             89.2727 %
+Coverage of cases (0.95 level)          78.972  %
+Mean rel. region size (0.95 level)      21.4286 %
+Total Number of Instances              214     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,714    0,174    0,667      0,714    0,690      0,532    0,806     0,667     build wind float
+                 0,618    0,181    0,653      0,618    0,635      0,443    0,768     0,606     build wind non-float
+                 0,353    0,046    0,400      0,353    0,375      0,325    0,766     0,251     vehic wind float
+                 ?        0,000    ?          ?        ?          ?        ?         ?         vehic wind non-float
+                 0,769    0,010    0,833      0,769    0,800      0,788    0,872     0,575     containers
+                 0,778    0,029    0,538      0,778    0,636      0,629    0,930     0,527     tableware
+                 0,793    0,022    0,852      0,793    0,821      0,795    0,869     0,738     headlamps
+Weighted Avg.    0,668    0,130    0,670      0,668    0,668      0,539    0,807     0,611     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g   <-- classified as
+ 50 15  3  0  0  1  1 |  a = build wind float
+ 16 47  6  0  2  3  2 |  b = build wind non-float
+  5  5  6  0  0  1  0 |  c = vehic wind float
+  0  0  0  0  0  0  0 |  d = vehic wind non-float
+  0  2  0  0 10  0  1 |  e = containers
+  1  1  0  0  0  7  0 |  f = tableware
+  3  2  0  0  0  1 23 |  g = headlamps

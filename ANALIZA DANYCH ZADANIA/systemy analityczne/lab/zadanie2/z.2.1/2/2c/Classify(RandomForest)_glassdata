@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     Glass Data3-weka.filters.unsupervised.attribute.Remove-R5-weka.filters.unsupervised.attribute.Remove-R8
+Instances:    214
+Attributes:   10
+              ﻿Al
+              Ba
+              Ca
+              Fe
+              K
+              Mg
+              Na
+              RI
+              Si
+              Type
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         174               81.3084 %
+Incorrectly Classified Instances        40               18.6916 %
+Kappa statistic                          0.7266
+Mean absolute error                      0.1181
+Root mean squared error                  0.2296
+Relative absolute error                 42.9329 %
+Root relative squared error             62.0327 %
+Total Number of Instances              214     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,769    0,025    0,667      0,769    0,714      0,696    0,985     0,859     Container
+                 0,828    0,016    0,889      0,828    0,857      0,836    0,978     0,929     Headlamp
+                 0,778    0,010    0,778      0,778    0,778      0,768    0,997     0,933     Tableware
+                 0,908    0,126    0,832      0,908    0,868      0,773    0,950     0,911     Window. Float Processed
+                 0,711    0,101    0,794      0,711    0,750      0,626    0,913     0,857     Window. Non-float Processed
+Weighted Avg.    0,813    0,091    0,814      0,813    0,812      0,725    0,945     0,892     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 10  1  0  0  2 |  a = Container
+  1 24  0  1  3 |  b = Headlamp
+  0  1  7  0  1 |  c = Tableware
+  0  0  0 79  8 |  d = Window. Float Processed
+  4  1  2 15 54 |  e = Window. Non-float Processed
+

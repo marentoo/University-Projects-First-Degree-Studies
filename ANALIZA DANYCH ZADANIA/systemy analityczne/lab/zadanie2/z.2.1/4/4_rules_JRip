@@ -1,0 +1,94 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21
+Instances:    43188
+Attributes:   29
+              EMP.VAR.RATE
+              CONS.PRICE.IDX
+              CONS.CONF.IDX
+              EURIBOR3M
+              NR.EMPLOYED
+              miesiac
+              DataRokMiesi¹c
+              kategorie nieliczbowe
+              age
+              campaign
+              contact
+              default
+              duration
+              education
+              job
+              marital
+              month
+              pdays
+              poutcome
+              previous
+              Rok
+              przedzial_czas rozmowy
+              przedzial_wiek
+              przedzial_emp.var.rate
+              przedzial_cons.price.idx
+              przedzial_cons.conf.idx
+              przedzial_euribor3m
+              przedzial_nr.employed
+              y
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(NR.EMPLOYED <= 5076.2) and (duration >= 209) and (pdays <= 27) => y=yes (1270.0/208.0)
+(duration >= 854) => y=yes (1480.0/603.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 385) and (DataRokMiesi¹c >= 1259622000000) => y=yes (524.0/146.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 163) and (pdays <= 16) and (przedzial_wiek = '(30.5-44]') => y=yes (87.0/7.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 167) and (pdays <= 15) => y=yes (183.0/58.0)
+(duration >= 837) and (contact = cellular) and (miesiac <= 6) => y=yes (16.0/2.0)
+(duration >= 645) and (contact = cellular) and (CONS.PRICE.IDX <= 92.963) and (duration <= 750) => y=yes (165.0/60.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 190) and (poutcome = nonexistent) and (DataRokMiesi¹c >= 1259622000000) and (przedzial_wiek = '(30.5-44]') and (campaign <= 1) => y=yes (94.0/22.0)
+(EURIBOR3M >= 4.858) and (duration >= 751) and (age <= 34) => y=yes (81.0/34.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 265) and (przedzial_cons.conf.idx = '(-42.833333--38.85]') and (CONS.PRICE.IDX >= 94.215) and (age >= 29) and (campaign >= 2) => y=yes (28.0/2.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 265) and (previous <= 1) and (przedzial_cons.price.idx = '(93.911667-94.339333]') and (duration <= 328) => y=yes (124.0/36.0)
+(NR.EMPLOYED <= 5076.2) and (duration >= 251) and (EURIBOR3M <= 0.851) and (contact = cellular) and (age <= 39) => y=yes (216.0/87.0)
+(duration >= 199) and (NR.EMPLOYED <= 5076.2) and (poutcome = nonexistent) => y=yes (991.0/495.0)
+(duration >= 553) and (EURIBOR3M <= 1.372) and (EURIBOR3M >= 1.354) => y=yes (43.0/5.0)
+(NR.EMPLOYED <= 5176.3) and (CONS.PRICE.IDX <= 92.843) and (CONS.PRICE.IDX >= 92.843) and (duration >= 174) => y=yes (115.0/32.0)
+(NR.EMPLOYED <= 5099.1) and (CONS.CONF.IDX >= -40.8) and (duration >= 173) and (CONS.CONF.IDX <= -40.3) and (age >= 59) and (EURIBOR3M <= 0.889) => y=yes (20.0/4.0)
+(duration >= 560) and (przedzial_cons.price.idx = '(92.628667-93.056333]') and (EURIBOR3M <= 1.291) and (age >= 30) and (duration <= 689) and (age <= 39) => y=yes (33.0/12.0)
+(contact = cellular) and (duration >= 645) and (age <= 35) and (campaign <= 1) and (EURIBOR3M <= 4.076) => y=yes (31.0/11.0)
+(NR.EMPLOYED <= 5076.2) and (CONS.PRICE.IDX <= 93.876) and (duration >= 273) and (duration <= 301) => y=yes (32.0/9.0)
+(duration >= 608) and (przedzial_cons.price.idx = '(92.628667-93.056333]') and (age >= 43) => y=yes (39.0/16.0)
+ => y=no (37616.0/1953.0)
+
+Number of Rules : 21
+
+
+Time taken to build model: 70.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       39143               90.634  %
+Incorrectly Classified Instances      4045                9.366  %
+Kappa statistic                          0.5686
+Mean absolute error                      0.1478
+Root mean squared error                  0.2754
+Relative absolute error                 64.7448 %
+Root relative squared error             81.5123 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,955    0,414    0,938      0,955    0,947      0,570    0,780     0,940     no
+                 0,586    0,045    0,662      0,586    0,622      0,570    0,780     0,523     yes
+Weighted Avg.    0,906    0,366    0,902      0,906    0,904      0,570    0,780     0,885     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 35818  1694 |     a = no
+  2351  3325 |     b = yes
+

@@ -1,0 +1,1275 @@
+=== Classifier model ===
+
+Scheme:   J48
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+J48 pruned tree
+------------------
+
+pdays <= 27
+|   poutcome = nonexistent: yes (0.0)
+|   poutcome = failure
+|   |   cons.price.idx = <92.7
+|   |   |   campaign <= 3: yes (44.0/19.0)
+|   |   |   campaign > 3: no (4.0)
+|   |   cons.price.idx = 92.7-93.2: no (8.0/1.0)
+|   |   cons.price.idx = 93.2-93.7: no (8.0/4.0)
+|   |   cons.price.idx = 93.7-94.2: yes (51.0/18.0)
+|   |   cons.price.idx = >94.2: no (18.0/6.0)
+|   poutcome = success
+|   |   nr.employed = <5016.5: yes (648.0/149.0)
+|   |   nr.employed = 5016.5-5069.4: yes (256.0/75.0)
+|   |   nr.employed = 5069.4-5122.3
+|   |   |   emp.var.rate = <-2.44
+|   |   |   |   campaign <= 1
+|   |   |   |   |   job = housemaid: yes (3.0/1.0)
+|   |   |   |   |   job = services: yes (4.0)
+|   |   |   |   |   job = admin.
+|   |   |   |   |   |   default = no: yes (37.0/16.0)
+|   |   |   |   |   |   default = unknown: no (2.0)
+|   |   |   |   |   |   default = yes: yes (0.0)
+|   |   |   |   |   job = blue-collar: no (8.0/3.0)
+|   |   |   |   |   job = technician
+|   |   |   |   |   |   previous <= 1
+|   |   |   |   |   |   |   pdays <= 12: no (14.0/3.0)
+|   |   |   |   |   |   |   pdays > 12: yes (2.0)
+|   |   |   |   |   |   previous > 1: yes (2.0)
+|   |   |   |   |   job = retired
+|   |   |   |   |   |   month = may: no (0.0)
+|   |   |   |   |   |   month = jun: no (1.0)
+|   |   |   |   |   |   month = jul: no (2.0)
+|   |   |   |   |   |   month = aug: yes (12.0/5.0)
+|   |   |   |   |   |   month = oct: no (0.0)
+|   |   |   |   |   |   month = nov: no (0.0)
+|   |   |   |   |   |   month = dec: no (0.0)
+|   |   |   |   |   |   month = mar: no (0.0)
+|   |   |   |   |   |   month = apr: no (0.0)
+|   |   |   |   |   |   month = sep: no (0.0)
+|   |   |   |   |   job = management: yes (4.0/1.0)
+|   |   |   |   |   job = unemployed: no (3.0/1.0)
+|   |   |   |   |   job = self-employed: yes (4.0/1.0)
+|   |   |   |   |   job = unknown: no (2.0/1.0)
+|   |   |   |   |   job = entrepreneur: no (1.0)
+|   |   |   |   |   job = student
+|   |   |   |   |   |   pdays <= 3: no (6.0/1.0)
+|   |   |   |   |   |   pdays > 3: yes (3.0)
+|   |   |   |   campaign > 1: yes (103.0/35.0)
+|   |   |   emp.var.rate = -2.44--1.48: no (54.0/16.0)
+|   |   |   emp.var.rate = -1.48--0.52: yes (0.0)
+|   |   |   emp.var.rate = -0.52-0.44: yes (0.0)
+|   |   |   emp.var.rate = >0.44: yes (0.0)
+|   |   nr.employed = 5122.3-5175.2: yes (0.0)
+|   |   nr.employed = >5175.2: yes (0.0)
+pdays > 27
+|   cons.conf.idx = <-46.02
+|   |   duration = 0-984: no (1330.0/200.0)
+|   |   duration = 984-1967: yes (30.0/11.0)
+|   |   duration = 1967-2951: yes (1.0)
+|   |   duration = 2951-3934: no (0.0)
+|   |   duration = >3934: no (0.0)
+|   cons.conf.idx = -46.02--41.24: no (0.0)
+|   cons.conf.idx = -41.24--36.46
+|   |   duration = 0-984
+|   |   |   contact = telephone: no (292.0/42.0)
+|   |   |   contact = cellular
+|   |   |   |   cons.price.idx = <92.7: no (0.0)
+|   |   |   |   cons.price.idx = 92.7-93.2: no (573.0/201.0)
+|   |   |   |   cons.price.idx = 93.2-93.7: no (0.0)
+|   |   |   |   cons.price.idx = 93.7-94.2
+|   |   |   |   |   poutcome = nonexistent
+|   |   |   |   |   |   job = housemaid: no (7.0/2.0)
+|   |   |   |   |   |   job = services: yes (15.0/3.0)
+|   |   |   |   |   |   job = admin.: yes (108.0/41.0)
+|   |   |   |   |   |   job = blue-collar: yes (16.0/7.0)
+|   |   |   |   |   |   job = technician
+|   |   |   |   |   |   |   education = basic.4y: no (0.0)
+|   |   |   |   |   |   |   education = high.school: no (1.0)
+|   |   |   |   |   |   |   education = basic.6y: no (0.0)
+|   |   |   |   |   |   |   education = basic.9y
+|   |   |   |   |   |   |   |   campaign <= 1: yes (2.0)
+|   |   |   |   |   |   |   |   campaign > 1: no (2.0)
+|   |   |   |   |   |   |   education = professional.course: no (18.0/5.0)
+|   |   |   |   |   |   |   education = unknown: no (3.0/1.0)
+|   |   |   |   |   |   |   education = university.degree: yes (19.0/7.0)
+|   |   |   |   |   |   |   education = illiterate: no (0.0)
+|   |   |   |   |   |   job = retired
+|   |   |   |   |   |   |   day_of_week = mon: no (14.0/4.0)
+|   |   |   |   |   |   |   day_of_week = tue: yes (13.0/3.0)
+|   |   |   |   |   |   |   day_of_week = wed: yes (9.0/3.0)
+|   |   |   |   |   |   |   day_of_week = thu: no (11.0/4.0)
+|   |   |   |   |   |   |   day_of_week = fri: no (10.0/2.0)
+|   |   |   |   |   |   job = management: yes (19.0/7.0)
+|   |   |   |   |   |   job = unemployed
+|   |   |   |   |   |   |   day_of_week = mon: yes (3.0)
+|   |   |   |   |   |   |   day_of_week = tue: yes (2.0)
+|   |   |   |   |   |   |   day_of_week = wed: yes (1.0)
+|   |   |   |   |   |   |   day_of_week = thu: no (3.0/1.0)
+|   |   |   |   |   |   |   day_of_week = fri: no (5.0/1.0)
+|   |   |   |   |   |   job = self-employed
+|   |   |   |   |   |   |   emp.var.rate = <-2.44: yes (0.0)
+|   |   |   |   |   |   |   emp.var.rate = -2.44--1.48: yes (9.0/2.0)
+|   |   |   |   |   |   |   emp.var.rate = -1.48--0.52: no (2.0)
+|   |   |   |   |   |   |   emp.var.rate = -0.52-0.44: yes (0.0)
+|   |   |   |   |   |   |   emp.var.rate = >0.44: yes (0.0)
+|   |   |   |   |   |   job = unknown: no (4.0/2.0)
+|   |   |   |   |   |   job = entrepreneur
+|   |   |   |   |   |   |   day_of_week = mon: no (0.0)
+|   |   |   |   |   |   |   day_of_week = tue: no (2.0)
+|   |   |   |   |   |   |   day_of_week = wed: no (0.0)
+|   |   |   |   |   |   |   day_of_week = thu: yes (2.0)
+|   |   |   |   |   |   |   day_of_week = fri: no (1.0)
+|   |   |   |   |   |   job = student: yes (23.0/8.0)
+|   |   |   |   |   poutcome = failure: no (245.0/86.0)
+|   |   |   |   |   poutcome = success: no (0.0)
+|   |   |   |   cons.price.idx = >94.2: no (0.0)
+|   |   duration = 984-1967: yes (29.0/5.0)
+|   |   duration = 1967-2951: no (2.0/1.0)
+|   |   duration = 2951-3934: no (1.0)
+|   |   duration = >3934: no (0.0)
+|   cons.conf.idx = -36.46--31.68
+|   |   duration = 0-984
+|   |   |   poutcome = nonexistent
+|   |   |   |   job = housemaid
+|   |   |   |   |   campaign <= 2: no (8.0/3.0)
+|   |   |   |   |   campaign > 2: yes (4.0/1.0)
+|   |   |   |   job = services
+|   |   |   |   |   age = 0-33: yes (7.0/2.0)
+|   |   |   |   |   age = 33-50: no (4.0/2.0)
+|   |   |   |   |   age = 50-66: no (3.0)
+|   |   |   |   |   age = 66-82: no (1.0)
+|   |   |   |   |   age = >82: no (0.0)
+|   |   |   |   job = admin.
+|   |   |   |   |   campaign <= 5
+|   |   |   |   |   |   emp.var.rate = <-2.44
+|   |   |   |   |   |   |   education = basic.4y: no (0.0)
+|   |   |   |   |   |   |   education = high.school: yes (15.0/6.0)
+|   |   |   |   |   |   |   education = basic.6y: no (0.0)
+|   |   |   |   |   |   |   education = basic.9y: no (0.0)
+|   |   |   |   |   |   |   education = professional.course: no (1.0)
+|   |   |   |   |   |   |   education = unknown: yes (5.0/1.0)
+|   |   |   |   |   |   |   education = university.degree
+|   |   |   |   |   |   |   |   day_of_week = mon: no (10.0/2.0)
+|   |   |   |   |   |   |   |   day_of_week = tue: no (11.0/4.0)
+|   |   |   |   |   |   |   |   day_of_week = wed
+|   |   |   |   |   |   |   |   |   contact = telephone: yes (2.0)
+|   |   |   |   |   |   |   |   |   contact = cellular
+|   |   |   |   |   |   |   |   |   |   marital = married: no (2.0)
+|   |   |   |   |   |   |   |   |   |   marital = single: yes (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   marital = divorced: no (1.0)
+|   |   |   |   |   |   |   |   |   |   marital = unknown: no (0.0)
+|   |   |   |   |   |   |   |   day_of_week = thu
+|   |   |   |   |   |   |   |   |   age = 0-33: no (2.0)
+|   |   |   |   |   |   |   |   |   age = 33-50
+|   |   |   |   |   |   |   |   |   |   contact = telephone: no (2.0)
+|   |   |   |   |   |   |   |   |   |   contact = cellular: yes (7.0/1.0)
+|   |   |   |   |   |   |   |   |   age = 50-66: yes (3.0)
+|   |   |   |   |   |   |   |   |   age = 66-82: yes (0.0)
+|   |   |   |   |   |   |   |   |   age = >82: yes (0.0)
+|   |   |   |   |   |   |   |   day_of_week = fri
+|   |   |   |   |   |   |   |   |   contact = telephone: no (3.0)
+|   |   |   |   |   |   |   |   |   contact = cellular: yes (6.0/2.0)
+|   |   |   |   |   |   |   education = illiterate: no (0.0)
+|   |   |   |   |   |   emp.var.rate = -2.44--1.48
+|   |   |   |   |   |   |   contact = telephone: yes (6.0)
+|   |   |   |   |   |   |   contact = cellular
+|   |   |   |   |   |   |   |   age = 0-33
+|   |   |   |   |   |   |   |   |   marital = married: yes (2.0)
+|   |   |   |   |   |   |   |   |   marital = single
+|   |   |   |   |   |   |   |   |   |   day_of_week = mon
+|   |   |   |   |   |   |   |   |   |   |   month = may: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = jun: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = jul: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = aug: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = oct: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = nov: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = dec: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = mar
+|   |   |   |   |   |   |   |   |   |   |   |   campaign <= 1: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   campaign > 1: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   month = apr: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   month = sep: no (0.0)
+|   |   |   |   |   |   |   |   |   |   day_of_week = tue: yes (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   day_of_week = wed: no (0.0)
+|   |   |   |   |   |   |   |   |   |   day_of_week = thu
+|   |   |   |   |   |   |   |   |   |   |   month = may: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = jun: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = jul: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = aug: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = oct: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = nov: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = dec: no (0.0)
+|   |   |   |   |   |   |   |   |   |   |   month = mar: no (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   month = apr: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   month = sep: no (0.0)
+|   |   |   |   |   |   |   |   |   |   day_of_week = fri: no (2.0)
+|   |   |   |   |   |   |   |   |   marital = divorced: no (1.0)
+|   |   |   |   |   |   |   |   |   marital = unknown: yes (0.0)
+|   |   |   |   |   |   |   |   age = 33-50
+|   |   |   |   |   |   |   |   |   education = basic.4y: yes (0.0)
+|   |   |   |   |   |   |   |   |   education = high.school
+|   |   |   |   |   |   |   |   |   |   marital = married: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   marital = single: no (0.0)
+|   |   |   |   |   |   |   |   |   |   marital = divorced: no (2.0)
+|   |   |   |   |   |   |   |   |   |   marital = unknown: no (0.0)
+|   |   |   |   |   |   |   |   |   education = basic.6y: yes (0.0)
+|   |   |   |   |   |   |   |   |   education = basic.9y: yes (0.0)
+|   |   |   |   |   |   |   |   |   education = professional.course: yes (0.0)
+|   |   |   |   |   |   |   |   |   education = unknown: no (2.0)
+|   |   |   |   |   |   |   |   |   education = university.degree: yes (14.0/1.0)
+|   |   |   |   |   |   |   |   |   education = illiterate: yes (0.0)
+|   |   |   |   |   |   |   |   age = 50-66: yes (4.0)
+|   |   |   |   |   |   |   |   age = 66-82: yes (0.0)
+|   |   |   |   |   |   |   |   age = >82: yes (0.0)
+|   |   |   |   |   |   emp.var.rate = -1.48--0.52: yes (0.0)
+|   |   |   |   |   |   emp.var.rate = -0.52-0.44: yes (0.0)
+|   |   |   |   |   |   emp.var.rate = >0.44: yes (0.0)
+|   |   |   |   |   campaign > 5: no (12.0/2.0)
+|   |   |   |   job = blue-collar
+|   |   |   |   |   campaign <= 4: yes (25.0/10.0)
+|   |   |   |   |   campaign > 4: no (2.0)
+|   |   |   |   job = technician
+|   |   |   |   |   nr.employed = <5016.5
+|   |   |   |   |   |   age = 0-33: no (12.0/3.0)
+|   |   |   |   |   |   age = 33-50: yes (5.0/1.0)
+|   |   |   |   |   |   age = 50-66
+|   |   |   |   |   |   |   day_of_week = mon: no (5.0/1.0)
+|   |   |   |   |   |   |   day_of_week = tue: yes (1.0)
+|   |   |   |   |   |   |   day_of_week = wed: no (2.0/1.0)
+|   |   |   |   |   |   |   day_of_week = thu: no (0.0)
+|   |   |   |   |   |   |   day_of_week = fri: yes (2.0)
+|   |   |   |   |   |   age = 66-82: no (0.0)
+|   |   |   |   |   |   age = >82: no (0.0)
+|   |   |   |   |   nr.employed = 5016.5-5069.4: yes (10.0/4.0)
+|   |   |   |   |   nr.employed = 5069.4-5122.3: no (22.0/2.0)
+|   |   |   |   |   nr.employed = 5122.3-5175.2: no (0.0)
+|   |   |   |   |   nr.employed = >5175.2: no (0.0)
+|   |   |   |   job = retired
+|   |   |   |   |   education = basic.4y
+|   |   |   |   |   |   marital = married: no (14.0/5.0)
+|   |   |   |   |   |   marital = single: no (0.0)
+|   |   |   |   |   |   marital = divorced
+|   |   |   |   |   |   |   campaign <= 1: no (5.0/2.0)
+|   |   |   |   |   |   |   campaign > 1: yes (5.0)
+|   |   |   |   |   |   marital = unknown: no (0.0)
+|   |   |   |   |   education = high.school: yes (12.0/5.0)
+|   |   |   |   |   education = basic.6y: no (0.0)
+|   |   |   |   |   education = basic.9y: no (5.0/1.0)
+|   |   |   |   |   education = professional.course
+|   |   |   |   |   |   contact = telephone: yes (2.0)
+|   |   |   |   |   |   contact = cellular: no (5.0/1.0)
+|   |   |   |   |   education = unknown: yes (3.0/1.0)
+|   |   |   |   |   education = university.degree
+|   |   |   |   |   |   month = may: no (0.0)
+|   |   |   |   |   |   month = jun: no (0.0)
+|   |   |   |   |   |   month = jul: no (0.0)
+|   |   |   |   |   |   month = aug: no (0.0)
+|   |   |   |   |   |   month = oct: no (0.0)
+|   |   |   |   |   |   month = nov: no (0.0)
+|   |   |   |   |   |   month = dec: no (2.0)
+|   |   |   |   |   |   month = mar: no (0.0)
+|   |   |   |   |   |   month = apr: yes (2.0)
+|   |   |   |   |   |   month = sep: no (0.0)
+|   |   |   |   |   education = illiterate: no (0.0)
+|   |   |   |   job = management: no (21.0/7.0)
+|   |   |   |   job = unemployed: no (15.0/6.0)
+|   |   |   |   job = self-employed: yes (15.0/3.0)
+|   |   |   |   job = unknown: no (2.0)
+|   |   |   |   job = entrepreneur: yes (6.0/1.0)
+|   |   |   |   job = student: no (35.0/12.0)
+|   |   |   poutcome = failure: no (179.0/57.0)
+|   |   |   poutcome = success: no (0.0)
+|   |   duration = 984-1967: yes (9.0/1.0)
+|   |   duration = 1967-2951: yes (1.0)
+|   |   duration = 2951-3934: no (0.0)
+|   |   duration = >3934: no (0.0)
+|   cons.conf.idx = >-31.68: no (1452.0/470.0)
+
+Number of Leaves  : 	220
+
+Size of the tree : 	278
+=== Classifier model ===
+
+Scheme:   JRip
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+JRIP rules:
+===========
+
+(pdays <= 27) and (nr.employed = <5016.5) => y=yes (725.0/183.0)
+(pdays <= 15) and (nr.employed = 5016.5-5069.4) => y=yes (286.0/89.0)
+(emp.var.rate = <-2.44) and (pdays <= 15) => y=yes (232.0/99.0)
+(nr.employed = <5016.5) and (contact = cellular) and (previous <= 0) and (campaign <= 1) => y=yes (264.0/94.0)
+(nr.employed = <5016.5) and (contact = cellular) and (previous <= 0) and (cons.price.idx = 93.7-94.2) and (day_of_week = wed) => y=yes (36.0/13.0)
+(emp.var.rate = <-2.44) and (day_of_week = fri) and (job = technician) and (campaign <= 1) => y=yes (27.0/9.0)
+(emp.var.rate = <-2.44) and (age = 66-82) and (month = nov) => y=yes (32.0/10.0)
+ => y=no (4576.0/1271.0)
+
+Number of Rules : 8
+=== Classifier model ===
+
+Scheme:   NaiveBayes
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+Naive Bayes Classifier
+
+                         Class
+Attribute                   no    yes
+                        (0.62) (0.38)
+======================================
+age
+  0-33                   1487.0  910.0
+  33-50                  1339.0  737.0
+  50-66                   709.0  481.0
+  66-82                   235.0  211.0
+  >82                      37.0   42.0
+  [total]                3807.0 2381.0
+
+job
+  housemaid                90.0   65.0
+  services                253.0  121.0
+  admin.                 1191.0  764.0
+  blue-collar             392.0  155.0
+  technician              546.0  359.0
+  retired                 394.0  321.0
+  management              267.0  163.0
+  unemployed              145.0   99.0
+  self-employed           140.0   65.0
+  unknown                  41.0   23.0
+  entrepreneur             86.0   41.0
+  student                 269.0  212.0
+  [total]                3814.0 2388.0
+
+marital
+  married                1927.0 1246.0
+  single                 1482.0  892.0
+  divorced                390.0  235.0
+  unknown                   7.0    7.0
+  [total]                3806.0 2380.0
+
+education
+  basic.4y                299.0  236.0
+  high.school             900.0  520.0
+  basic.6y                 95.0   55.0
+  basic.9y                335.0  147.0
+  professional.course     474.0  319.0
+  unknown                 209.0  165.0
+  university.degree      1495.0  939.0
+  illiterate                3.0    3.0
+  [total]                3810.0 2384.0
+
+default
+  no                     3646.0 2305.0
+  unknown                 158.0   73.0
+  yes                       1.0    1.0
+  [total]                3805.0 2379.0
+
+contact
+  telephone               574.0  204.0
+  cellular               3230.0 2174.0
+  [total]                3804.0 2378.0
+
+month
+  may                    1138.0  290.0
+  jun                     574.0  372.0
+  jul                     248.0  243.0
+  aug                     620.0  385.0
+  oct                     379.0  274.0
+  nov                     260.0  227.0
+  dec                      85.0   89.0
+  mar                     115.0  151.0
+  apr                      78.0   98.0
+  sep                     315.0  257.0
+  [total]                3812.0 2386.0
+
+day_of_week
+  mon                    1120.0  441.0
+  tue                     698.0  540.0
+  wed                     548.0  454.0
+  thu                     548.0  476.0
+  fri                     893.0  470.0
+  [total]                3807.0 2381.0
+
+duration
+  0-984                  3754.0 2289.0
+  984-1967                 45.0   84.0
+  1967-2951                 4.0    6.0
+  2951-3934                 3.0    1.0
+  >3934                     1.0    1.0
+  [total]                3807.0 2381.0
+
+campaign
+  '(-inf-4.5]'           3462.0 2286.0
+  '(4.5-inf)'             342.0   92.0
+  [total]                3804.0 2378.0
+
+pdays
+  '(-inf-513]'            416.0  890.0
+  '(513-inf)'            3388.0 1488.0
+  [total]                3804.0 2378.0
+
+previous
+  '(-inf-0.5]'           2403.0 1114.0
+  '(0.5-1.5]'             992.0  755.0
+  '(1.5-inf)'             410.0  510.0
+  [total]                3805.0 2379.0
+
+poutcome
+  nonexistent            2403.0 1114.0
+  failure                1050.0  444.0
+  success                 352.0  821.0
+  [total]                3805.0 2379.0
+
+emp.var.rate
+  <-2.44                 1771.0 1137.0
+  -2.44--1.48            1699.0  940.0
+  -1.48--0.52             335.0  302.0
+  -0.52-0.44                1.0    1.0
+  >0.44                     1.0    1.0
+  [total]                3807.0 2381.0
+
+cons.price.idx
+  <92.7                  1320.0  873.0
+  92.7-93.2              1499.0  432.0
+  93.2-93.7               115.0  151.0
+  93.7-94.2               691.0  773.0
+  >94.2                   182.0  152.0
+  [total]                3807.0 2381.0
+
+cons.conf.idx
+  <-46.02                1229.0  319.0
+  -46.02--41.24             1.0    1.0
+  -41.24--36.46          1065.0  940.0
+  -36.46--31.68           388.0  402.0
+  >-31.68                1124.0  719.0
+  [total]                3807.0 2381.0
+
+euribor3m
+  <1.52                  3803.0 2377.0
+  1.52-2.4                  1.0    1.0
+  2.4-3.28                  1.0    1.0
+  3.28-4.16                 1.0    1.0
+  >4.16                     1.0    1.0
+  [total]                3807.0 2381.0
+
+nr.employed
+  <5016.5                 986.0 1074.0
+  5016.5-5069.4           702.0  543.0
+  5069.4-5122.3          2117.0  762.0
+  5122.3-5175.2             1.0    1.0
+  >5175.2                   1.0    1.0
+  [total]                3807.0 2381.0
+
+Rok
+  2008                      1.0    1.0
+  2009                   2818.0 1304.0
+  2010                    986.0 1074.0
+  [total]                3805.0 2379.0
+
+=== Classifier model ===
+
+Scheme:   RandomForest
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities=== Classifier model ===
+
+Scheme:   AdaBoostM1
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+AdaBoostM1: Base classifiers and their weights: 
+
+Decision Stump
+
+Classifications
+
+pdays <= 513.0 : yes
+pdays > 513.0 : no
+pdays is missing : no
+
+Class distributions
+
+pdays <= 513.0
+no	yes	
+0.3182515337423313	0.6817484662576687	
+pdays > 513.0
+no	yes	
+0.694911776774723	0.30508822322527696	
+pdays is missing
+no	yes	
+0.6154095176432502	0.38459048235674975	
+
+
+Weight: 0.81
+
+Decision Stump
+
+Classifications
+
+cons.conf.idx = <-46.02 : no
+cons.conf.idx != <-46.02 : yes
+cons.conf.idx is missing : no
+
+Class distributions
+
+cons.conf.idx = <-46.02
+no	yes	
+0.6928261716780568	0.3071738283219431	
+cons.conf.idx != <-46.02
+no	yes	
+0.4504725642503077	0.5495274357496923	
+cons.conf.idx is missing
+no	yes	
+0.505143396887136	0.494856603112864	
+
+
+Weight: 0.33
+
+Decision Stump
+
+Classifications
+
+nr.employed = 5069.4-5122.3 : no
+nr.employed != 5069.4-5122.3 : yes
+nr.employed is missing : no
+
+Class distributions
+
+nr.employed = 5069.4-5122.3
+no	yes	
+0.6238751954302469	0.37612480456975306	
+nr.employed != 5069.4-5122.3
+no	yes	
+0.49347760716602657	0.5065223928339734	
+nr.employed is missing
+no	yes	
+0.5514459605672187	0.4485540394327812	
+
+
+Weight: 0.24
+
+Decision Stump
+
+Classifications
+
+contact = telephone : no
+contact != telephone : no
+contact is missing : no
+
+Class distributions
+
+contact = telephone
+no	yes	
+0.7019371588569792	0.29806284114302084	
+contact != telephone
+no	yes	
+0.5385426157904434	0.46145738420955656	
+contact is missing
+no	yes	
+0.5587644794854691	0.4412355205145308	
+
+
+Weight: 0.24
+
+Decision Stump
+
+Classifications
+
+contact = telephone : no
+contact != telephone : yes
+contact is missing : no
+
+Class distributions
+
+contact = telephone
+no	yes	
+0.6503073054338332	0.3496926945661667	
+contact != telephone
+no	yes	
+0.4795932563701951	0.520406743629805	
+contact is missing
+no	yes	
+0.5000000000000008	0.4999999999999993	
+
+
+Weight: 0.14
+
+Decision Stump
+
+Classifications
+
+day_of_week = mon : no
+day_of_week != mon : no
+day_of_week is missing : no
+
+Class distributions
+
+day_of_week = mon
+no	yes	
+0.6109332972154138	0.3890667027845862	
+day_of_week != mon
+no	yes	
+0.5006047774920308	0.4993952225079692	
+day_of_week is missing
+no	yes	
+0.5274856073104243	0.4725143926895757	
+
+
+Weight: 0.11
+
+Decision Stump
+
+Classifications
+
+day_of_week = mon : no
+day_of_week != mon : yes
+day_of_week is missing : no
+
+Class distributions
+
+day_of_week = mon
+no	yes	
+0.5844780070096176	0.4155219929903825	
+day_of_week != mon
+no	yes	
+0.4731173827374225	0.5268826172625775	
+day_of_week is missing
+no	yes	
+0.5000000000000338	0.4999999999999663	
+
+
+Weight: 0.16
+
+Decision Stump
+
+Classifications
+
+duration = 0-984 : no
+duration != 0-984 : yes
+duration is missing : no
+
+Class distributions
+
+duration = 0-984
+no	yes	
+0.5289111680360975	0.4710888319639025	
+duration != 0-984
+no	yes	
+0.26587953388989344	0.7341204661101066	
+duration is missing
+no	yes	
+0.5212358228231331	0.478764177176867	
+
+
+Weight: 0.14
+
+Decision Stump
+
+Classifications
+
+previous <= 0.5 : yes
+previous > 0.5 : no
+previous is missing : yes
+
+Class distributions
+
+previous <= 0.5
+no	yes	
+0.4564404714370342	0.5435595285629659	
+previous > 0.5
+no	yes	
+0.5305694808188038	0.4694305191811961	
+previous is missing
+no	yes	
+0.48831640433742285	0.5116835956625773	
+
+
+Weight: 0.15
+
+Decision Stump
+
+Classifications
+
+contact = cellular : yes
+contact != cellular : no
+contact is missing : yes
+
+Class distributions
+
+contact = cellular
+no	yes	
+0.4799701192874611	0.520029880712539	
+contact != cellular
+no	yes	
+0.5965268824157022	0.4034731175842979	
+contact is missing
+no	yes	
+0.4935953137495721	0.506404686250428	
+
+
+Weight: 0.12
+
+Number of performed Iterations: 10
+=== Classifier model ===
+
+Scheme:   Logistic
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                               Class
+Variable                                          no
+====================================================
+age=0-33                                     -0.0174
+age=33-50                                     0.0693
+age=50-66                                     0.0169
+age=66-82                                    -0.1758
+age=>82                                      -0.1804
+job=housemaid                                 0.1286
+job=services                                 -0.0333
+job=admin.                                   -0.0766
+job=blue-collar                               0.1332
+job=technician                               -0.0627
+job=retired                                   0.1312
+job=management                               -0.0023
+job=unemployed                               -0.0055
+job=self-employed                             0.0835
+job=unknown                                   0.4469
+job=entrepreneur                             -0.0076
+job=student                                  -0.1051
+marital=married                              -0.0603
+marital=single                                0.0721
+marital=divorced                             -0.0128
+marital=unknown                              -0.4361
+education=basic.4y                           -0.1125
+education=high.school                         0.0068
+education=basic.6y                           -0.1105
+education=basic.9y                            0.1215
+education=professional.course                -0.0549
+education=unknown                            -0.0529
+education=university.degree                   0.0477
+education=illiterate                         -1.0943
+default=no                                     0.009
+default=unknown                               -0.009
+default=yes                                        0
+contact=cellular                             -0.8649
+month=may                                     -0.116
+month=jun                                     0.2945
+month=jul                                     -0.169
+month=aug                                     0.0787
+month=oct                                     0.0869
+month=nov                                    -0.1238
+month=dec                                    -0.3185
+month=mar                                    -0.2919
+month=apr                                    -0.4922
+month=sep                                     0.2255
+day_of_week=mon                                0.341
+day_of_week=tue                              -0.1111
+day_of_week=wed                              -0.1374
+day_of_week=thu                              -0.0771
+day_of_week=fri                              -0.1005
+duration=0-984                                0.4592
+duration=984-1967                            -0.9009
+duration=1967-2951                           -1.0184
+duration=2951-3934                           29.3508
+duration=>3934                                     0
+campaign                                      0.0823
+pdays                                          0.001
+previous                                      0.0969
+poutcome=nonexistent                          0.0213
+poutcome=failure                              0.3127
+poutcome=success                             -0.4069
+emp.var.rate=<-2.44                          -0.3448
+emp.var.rate=-2.44--1.48                      0.2499
+emp.var.rate=-1.48--0.52                      0.2685
+emp.var.rate=-0.52-0.44                            0
+emp.var.rate=>0.44                                 0
+cons.price.idx=<92.7                          0.1081
+cons.price.idx=92.7-93.2                      0.0784
+cons.price.idx=93.2-93.7                     -0.2919
+cons.price.idx=93.7-94.2                     -0.0052
+cons.price.idx=>94.2                         -0.5643
+cons.conf.idx=<-46.02                         0.5265
+cons.conf.idx=-46.02--41.24                        0
+cons.conf.idx=-41.24--36.46                  -0.4478
+cons.conf.idx=-36.46--31.68                  -0.0458
+cons.conf.idx=>-31.68                         0.0211
+nr.employed=<5016.5                          -0.1872
+nr.employed=5016.5-5069.4                    -0.0949
+nr.employed=5069.4-5122.3                     0.2284
+nr.employed=5122.3-5175.2                          0
+nr.employed=>5175.2                                0
+Rok=2008                                           0
+Rok=2009                                      0.1872
+Rok=2010                                     -0.1872
+Intercept                                    -0.1964
+
+
+Odds Ratios...
+                                               Class
+Variable                                          no
+====================================================
+age=0-33                                      0.9828
+age=33-50                                     1.0717
+age=50-66                                      1.017
+age=66-82                                     0.8388
+age=>82                                       0.8349
+job=housemaid                                 1.1373
+job=services                                  0.9672
+job=admin.                                    0.9262
+job=blue-collar                               1.1425
+job=technician                                0.9392
+job=retired                                   1.1401
+job=management                                0.9977
+job=unemployed                                0.9945
+job=self-employed                             1.0871
+job=unknown                                   1.5634
+job=entrepreneur                              0.9924
+job=student                                   0.9002
+marital=married                               0.9415
+marital=single                                1.0748
+marital=divorced                              0.9873
+marital=unknown                               0.6465
+education=basic.4y                            0.8936
+education=high.school                         1.0068
+education=basic.6y                            0.8954
+education=basic.9y                            1.1291
+education=professional.course                 0.9466
+education=unknown                             0.9485
+education=university.degree                   1.0488
+education=illiterate                          0.3348
+default=no                                     1.009
+default=unknown                               0.9911
+default=yes                                        1
+contact=cellular                              0.4211
+month=may                                     0.8905
+month=jun                                     1.3425
+month=jul                                     0.8445
+month=aug                                     1.0819
+month=oct                                     1.0908
+month=nov                                     0.8835
+month=dec                                     0.7273
+month=mar                                     0.7468
+month=apr                                     0.6113
+month=sep                                     1.2529
+day_of_week=mon                               1.4063
+day_of_week=tue                               0.8948
+day_of_week=wed                               0.8717
+day_of_week=thu                               0.9258
+day_of_week=fri                               0.9044
+duration=0-984                                1.5828
+duration=984-1967                             0.4062
+duration=1967-2951                            0.3612
+duration=2951-3934               5.58321420048632E12
+duration=>3934                                     1
+campaign                                      1.0858
+pdays                                          1.001
+previous                                      1.1017
+poutcome=nonexistent                          1.0216
+poutcome=failure                              1.3671
+poutcome=success                              0.6657
+emp.var.rate=<-2.44                           0.7084
+emp.var.rate=-2.44--1.48                      1.2839
+emp.var.rate=-1.48--0.52                       1.308
+emp.var.rate=-0.52-0.44                            1
+emp.var.rate=>0.44                                 1
+cons.price.idx=<92.7                          1.1142
+cons.price.idx=92.7-93.2                      1.0815
+cons.price.idx=93.2-93.7                      0.7468
+cons.price.idx=93.7-94.2                      0.9948
+cons.price.idx=>94.2                          0.5688
+cons.conf.idx=<-46.02                          1.693
+cons.conf.idx=-46.02--41.24                        1
+cons.conf.idx=-41.24--36.46                    0.639
+cons.conf.idx=-36.46--31.68                   0.9553
+cons.conf.idx=>-31.68                         1.0214
+nr.employed=<5016.5                           0.8293
+nr.employed=5016.5-5069.4                     0.9094
+nr.employed=5069.4-5122.3                     1.2566
+nr.employed=5122.3-5175.2                          1
+nr.employed=>5175.2                                1
+Rok=2008                                           1
+Rok=2009                                      1.2058
+Rok=2010                                      0.8293
+=== Classifier model ===
+
+Scheme:   J48
+Relation: klienci6
+
+J48 pruned tree
+------------------
+
+numerklienta = 6: 50-150 (85.0/50.0)
+numerklienta = 12: 50-150 (48.0/22.0)
+numerklienta = 9: 50-150 (69.0/34.0)
+numerklienta = 3
+|   przedzialczasrozmowy = 121-140: 150-250 (11.0/4.0)
+|   przedzialczasrozmowy = 141-160: 150-250 (7.0/3.0)
+|   przedzialczasrozmowy = 161-180: 50-150 (3.0)
+|   przedzialczasrozmowy = 1-20: 150-250 (10.0/2.0)
+|   przedzialczasrozmowy = 61-80
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 50-150 (5.0/2.0)
+|   |   oddzial = Wroclaw: 150-250 (2.0)
+|   |   oddzial = Rzeszow: 150-250 (2.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (6.0/1.0)
+|   przedzialczasrozmowy = 81-100
+|   |   miesiac = 8: 0-50 (4.0/1.0)
+|   |   miesiac = 9: 50-150 (2.0/1.0)
+|   |   miesiac = 10: 50-150 (5.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (8.0)
+|   przedzialczasrozmowy = 41-60: 50-150 (5.0)
+numerklienta = 7
+|   przedzialczasrozmowy = 121-140: 150-250 (14.0/4.0)
+|   przedzialczasrozmowy = 141-160
+|   |   plec = K: 150-250 (4.0)
+|   |   plec = M: 50-150 (6.0/3.0)
+|   przedzialczasrozmowy = 161-180: 150-250 (6.0/1.0)
+|   przedzialczasrozmowy = 1-20: 150-250 (4.0/1.0)
+|   przedzialczasrozmowy = 61-80: 50-150 (6.0/3.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (13.0/6.0)
+|   przedzialczasrozmowy = 81-100: 50-150 (10.0/2.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (9.0)
+|   przedzialczasrozmowy = 41-60
+|   |   miesiac = 8: 50-150 (0.0)
+|   |   miesiac = 9: 0-50 (2.0)
+|   |   miesiac = 10: 50-150 (3.0/1.0)
+numerklienta = 11: 50-150 (89.0/48.0)
+numerklienta = 2
+|   oddzial = Lodz: 50-150 (11.0/5.0)
+|   oddzial = Warszawa: 150-250 (23.0/6.0)
+|   oddzial = Wroclaw: 50-150 (13.0/6.0)
+|   oddzial = Rzeszow: 50-150 (11.0/3.0)
+numerklienta = 5
+|   dzientygodnia = poniedzialek: 0-50 (12.0/7.0)
+|   dzientygodnia = wtorek
+|   |   region = Poludnie: 50-150 (2.0/1.0)
+|   |   region = Zachod: 150-250 (3.0)
+|   |   region = Centrum
+|   |   |   miesiac = 8: 50-150 (4.0)
+|   |   |   miesiac = 9: 50-150 (1.0)
+|   |   |   miesiac = 10: 150-250 (2.0)
+|   dzientygodnia = sroda
+|   |   miesiac = 8: 50-150 (6.0/2.0)
+|   |   miesiac = 9: 150-250 (4.0/2.0)
+|   |   miesiac = 10: 50-150 (2.0)
+|   dzientygodnia = czwartek: 150-250 (18.0/7.0)
+|   dzientygodnia = piatek
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 50-150 (6.0/1.0)
+|   |   oddzial = Wroclaw: 50-150 (0.0)
+|   |   oddzial = Rzeszow: 150-250 (2.0)
+|   dzientygodnia = sobota: 150-250 (7.0/4.0)
+|   dzientygodnia = niedziela
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 150-250 (3.0/1.0)
+|   |   oddzial = Wroclaw: 50-150 (4.0/1.0)
+|   |   oddzial = Rzeszow: 150-250 (3.0/1.0)
+numerklienta = 10: 50-150 (75.0/37.0)
+numerklienta = 1: 50-150 (41.0/19.0)
+numerklienta = 8
+|   dzientygodnia = poniedzialek
+|   |   przedzialczasrozmowy = 121-140: 50-150 (1.0)
+|   |   przedzialczasrozmowy = 141-160: 0-50 (1.0)
+|   |   przedzialczasrozmowy = 161-180: 0-50 (3.0/1.0)
+|   |   przedzialczasrozmowy = 1-20: 50-150 (2.0)
+|   |   przedzialczasrozmowy = 61-80: 50-150 (2.0)
+|   |   przedzialczasrozmowy = 101-120: 150-250 (1.0)
+|   |   przedzialczasrozmowy = 81-100: 150-250 (1.0)
+|   |   przedzialczasrozmowy = 21-40: 50-150 (0.0)
+|   |   przedzialczasrozmowy = 41-60: 50-150 (0.0)
+|   dzientygodnia = wtorek: 150-250 (9.0/2.0)
+|   dzientygodnia = sroda: 50-150 (6.0/3.0)
+|   dzientygodnia = czwartek: 50-150 (12.0/6.0)
+|   dzientygodnia = piatek: 150-250 (9.0/4.0)
+|   dzientygodnia = sobota: 50-150 (9.0/3.0)
+|   dzientygodnia = niedziela: 150-250 (11.0/4.0)
+numerklienta = 4: 50-150 (93.0/39.0)
+numerklienta = 15
+|   oddzial = Lodz
+|   |   miesiac = 8: 50-150 (1.0)
+|   |   miesiac = 9: 150-250 (2.0)
+|   |   miesiac = 10: 0-50 (4.0/2.0)
+|   oddzial = Warszawa: 150-250 (27.0/13.0)
+|   oddzial = Wroclaw: 50-150 (11.0/2.0)
+|   oddzial = Rzeszow: 150-250 (10.0/2.0)
+numerklienta = 13
+|   dzientygodnia = poniedzialek: 50-150 (5.0/3.0)
+|   dzientygodnia = wtorek: 150-250 (6.0/1.0)
+|   dzientygodnia = sroda: 50-150 (4.0/2.0)
+|   dzientygodnia = czwartek: 0-50 (3.0/1.0)
+|   dzientygodnia = piatek
+|   |   miesiac = 8: 150-250 (2.0)
+|   |   miesiac = 9: 50-150 (2.0/1.0)
+|   |   miesiac = 10: 50-150 (5.0/1.0)
+|   dzientygodnia = sobota
+|   |   przedstawiciel = P03: 150-250 (1.0)
+|   |   przedstawiciel = P02: 50-150 (2.0)
+|   |   przedstawiciel = P05: 150-250 (1.0)
+|   |   przedstawiciel = P01: 50-150 (2.0)
+|   |   przedstawiciel = P04: 150-250 (1.0)
+|   dzientygodnia = niedziela: 50-150 (7.0/2.0)
+numerklienta = 14
+|   przedzialczasrozmowy = 121-140: 50-150 (6.0/2.0)
+|   przedzialczasrozmowy = 141-160: 0-50 (5.0/2.0)
+|   przedzialczasrozmowy = 161-180: 0-50 (5.0/2.0)
+|   przedzialczasrozmowy = 1-20: 0-50 (4.0/1.0)
+|   przedzialczasrozmowy = 61-80: 150-250 (3.0/1.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (7.0/2.0)
+|   przedzialczasrozmowy = 81-100
+|   |   plec = K: 50-150 (3.0/1.0)
+|   |   plec = M: 150-250 (2.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (5.0/2.0)
+|   przedzialczasrozmowy = 41-60: 150-250 (10.0/5.0)
+
+Number of Leaves  : 	100
+
+Size of the tree : 	123
+=== Classifier model ===
+
+Scheme:   JRip
+Relation: klienci6
+
+JRIP rules:
+===========
+
+(region = Centrum) and (numerklienta = 8) => przedzialkwotowy=150-250 (37.0/16.0)
+(miesiac = 8) and (przedzialczasrozmowy = 41-60) => przedzialkwotowy=150-250 (34.0/13.0)
+(miesiac = 10) and (region = Centrum) and (dzientygodnia = wtorek) => przedzialkwotowy=150-250 (32.0/14.0)
+(region = Centrum) and (dzientygodnia = czwartek) and (miesiac = 8) => przedzialkwotowy=150-250 (27.0/12.0)
+(oddzial = Warszawa) and (numerklienta = 2) => przedzialkwotowy=150-250 (20.0/5.0)
+(dzientygodnia = sobota) and (przedzialczasrozmowy = 81-100) => przedzialkwotowy=150-250 (11.0/4.0)
+ => przedzialkwotowy=50-150 (839.0/413.0)
+
+Number of Rules : 7
+=== Classifier model ===
+
+Scheme:   NaiveBayes
+Relation: klienci6
+
+Naive Bayes Classifier
+
+                         Class
+Attribute               50-150 150-250    0-50
+                        (0.48)  (0.38)  (0.14)
+===============================================
+numerklienta
+  6                        36.0    36.0    16.0
+  12                       27.0    17.0     7.0
+  9                        36.0    26.0    10.0
+  3                        38.0    28.0     8.0
+  7                        37.0    32.0    11.0
+  11                       42.0    33.0    17.0
+  2                        28.0    28.0     5.0
+  5                        34.0    34.0    16.0
+  10                       39.0    26.0    13.0
+  1                        23.0    13.0     8.0
+  8                        28.0    33.0     9.0
+  4                        55.0    31.0    10.0
+  15                       26.0    28.0     4.0
+  13                       20.0    15.0     9.0
+  14                       22.0    17.0    14.0
+  [total]                 491.0   397.0   157.0
+
+miesiac
+  8                       160.0   143.0    45.0
+  9                       164.0   114.0    54.0
+  10                      155.0   128.0    46.0
+  [total]                 479.0   385.0   145.0
+
+dzientygodnia
+  poniedzialek             69.0    45.0    32.0
+  wtorek                   76.0    54.0    17.0
+  sroda                    66.0    44.0    15.0
+  czwartek                 78.0    66.0    22.0
+  piatek                   66.0    56.0    23.0
+  sobota                   66.0    61.0    18.0
+  niedziela                62.0    63.0    22.0
+  [total]                 483.0   389.0   149.0
+
+przedzialczasrozmowy
+  121-140                  60.0    61.0    19.0
+  141-160                  47.0    47.0    20.0
+  161-180                  58.0    39.0    17.0
+  1-20                     49.0    40.0    14.0
+  61-80                    40.0    44.0    15.0
+  101-120                  65.0    35.0    13.0
+  81-100                   57.0    41.0    17.0
+  21-40                    61.0    40.0    15.0
+  41-60                    48.0    44.0    21.0
+  [total]                 485.0   391.0   151.0
+
+przedstawiciel
+  P03                     101.0    76.0    33.0
+  P02                     121.0    69.0    31.0
+  P05                      89.0    79.0    35.0
+  P01                      84.0    82.0    26.0
+  P04                      86.0    81.0    22.0
+  [total]                 481.0   387.0   147.0
+
+region
+  Poludnie                101.0    76.0    33.0
+  Zachod                  121.0    69.0    31.0
+  Centrum                 257.0   240.0    81.0
+  [total]                 479.0   385.0   145.0
+
+oddzial
+  Lodz                     89.0    79.0    35.0
+  Warszawa                169.0   162.0    47.0
+  Wroclaw                 121.0    69.0    31.0
+  Rzeszow                 101.0    76.0    33.0
+  [total]                 480.0   386.0   146.0
+
+plec
+  K                       174.0   159.0    56.0
+  M                       304.0   225.0    88.0
+  [total]                 478.0   384.0   144.0
+
+=== Classifier model ===
+
+Scheme:   RandomForest
+Relation: klienci6
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities=== Classifier model ===
+
+Scheme:   AdaBoostM1
+Relation: klienci6
+
+AdaBoostM1: No boosting possible, one classifier used!
+Decision Stump
+
+Classifications
+
+dzientygodnia = poniedzialek : 50-150
+dzientygodnia != poniedzialek : 50-150
+dzientygodnia is missing : 50-150
+
+Class distributions
+
+dzientygodnia = poniedzialek
+50-150	150-250	0-50	
+0.4755244755244755	0.3076923076923077	0.21678321678321677	
+dzientygodnia != poniedzialek
+50-150	150-250	0-50	
+0.47607934655775963	0.3943990665110852	0.1295215869311552	
+dzientygodnia is missing
+50-150	150-250	0-50	
+0.476	0.382	0.142	
+
+=== Classifier model ===
+
+Scheme:   Logistic
+Relation: klienci6
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                  Class
+Variable                         50-150  150-250
+================================================
+numerklienta=6                  -0.3642  -0.1849
+numerklienta=12                  0.2033  -0.0139
+numerklienta=9                   0.2405   0.1247
+numerklienta=3                   0.3974    0.246
+numerklienta=7                  -0.0529   0.0601
+numerklienta=11                 -0.3304  -0.3978
+numerklienta=2                   0.6371   0.8395
+numerklienta=5                  -0.5581  -0.2871
+numerklienta=10                 -0.1273  -0.2839
+numerklienta=1                  -0.1312  -0.5673
+numerklienta=8                  -0.1041   0.3306
+numerklienta=4                   0.5549   0.1951
+numerklienta=15                  0.8021   1.1209
+numerklienta=13                 -0.3869  -0.5117
+numerklienta=14                 -0.8028   -0.821
+miesiac=8                         0.033   0.1225
+miesiac=9                       -0.0546  -0.1806
+miesiac=10                       0.0209   0.0555
+dzientygodnia=poniedzialek       -0.504  -0.6801
+dzientygodnia=wtorek             0.3369     0.19
+dzientygodnia=sroda              0.3378   0.0875
+dzientygodnia=czwartek           0.0813   0.1203
+dzientygodnia=piatek            -0.1675  -0.1046
+dzientygodnia=sobota             0.1092   0.2757
+dzientygodnia=niedziela         -0.1617   0.1078
+przedzialczasrozmowy=121-140     0.0331   0.2757
+przedzialczasrozmowy=141-160     -0.325  -0.0993
+przedzialczasrozmowy=161-180     0.0509  -0.0955
+przedzialczasrozmowy=1-20        0.0425   0.1171
+przedzialczasrozmowy=61-80      -0.2932   0.0623
+przedzialczasrozmowy=101-120     0.5154   0.0397
+przedzialczasrozmowy=81-100       0.003  -0.1335
+przedzialczasrozmowy=21-40       0.2423  -0.0148
+przedzialczasrozmowy=41-60      -0.3094  -0.1885
+przedstawiciel=P03              -0.0078  -0.0242
+przedstawiciel=P02               0.0527  -0.0478
+przedstawiciel=P05              -0.1389  -0.1085
+przedstawiciel=P01              -0.0389   0.0511
+przedstawiciel=P04               0.1354    0.143
+region=Poludnie                 -0.0078  -0.0242
+region=Zachod                    0.0527  -0.0478
+region=Centrum                  -0.0315   0.0496
+oddzial=Lodz                    -0.1389  -0.1085
+oddzial=Warszawa                  0.062   0.1258
+oddzial=Wroclaw                  0.0527  -0.0478
+oddzial=Rzeszow                 -0.0078  -0.0242
+plec=M                           0.0073  -0.0181
+Intercept                        1.3022   1.0588
+
+
+Odds Ratios...
+                                  Class
+Variable                         50-150  150-250
+================================================
+numerklienta=6                   0.6948   0.8312
+numerklienta=12                  1.2254   0.9861
+numerklienta=9                   1.2719   1.1328
+numerklienta=3                    1.488   1.2789
+numerklienta=7                   0.9485    1.062
+numerklienta=11                  0.7186   0.6718
+numerklienta=2                    1.891   2.3153
+numerklienta=5                   0.5723   0.7505
+numerklienta=10                  0.8805   0.7529
+numerklienta=1                    0.877    0.567
+numerklienta=8                   0.9012   1.3918
+numerklienta=4                   1.7417   1.2155
+numerklienta=15                  2.2302   3.0677
+numerklienta=13                  0.6791   0.5995
+numerklienta=14                  0.4481     0.44
+miesiac=8                        1.0336   1.1303
+miesiac=9                        0.9469   0.8348
+miesiac=10                       1.0211   1.0571
+dzientygodnia=poniedzialek       0.6041   0.5065
+dzientygodnia=wtorek             1.4005   1.2093
+dzientygodnia=sroda              1.4018   1.0914
+dzientygodnia=czwartek           1.0847   1.1279
+dzientygodnia=piatek             0.8458   0.9007
+dzientygodnia=sobota             1.1154   1.3175
+dzientygodnia=niedziela          0.8507   1.1138
+przedzialczasrozmowy=121-140     1.0337   1.3175
+przedzialczasrozmowy=141-160     0.7225   0.9055
+przedzialczasrozmowy=161-180     1.0523   0.9089
+przedzialczasrozmowy=1-20        1.0434   1.1242
+przedzialczasrozmowy=61-80       0.7459   1.0643
+przedzialczasrozmowy=101-120     1.6743   1.0405
+przedzialczasrozmowy=81-100       1.003   0.8751
+przedzialczasrozmowy=21-40       1.2741   0.9853
+przedzialczasrozmowy=41-60       0.7339   0.8282
+przedstawiciel=P03               0.9922    0.976
+przedstawiciel=P02               1.0541   0.9533
+przedstawiciel=P05               0.8703   0.8972
+przedstawiciel=P01               0.9618   1.0525
+przedstawiciel=P04                1.145   1.1537
+region=Poludnie                  0.9922    0.976
+region=Zachod                    1.0541   0.9533
+region=Centrum                    0.969   1.0509
+oddzial=Lodz                     0.8703   0.8972
+oddzial=Warszawa                 1.0639   1.1341
+oddzial=Wroclaw                  1.0541   0.9533
+oddzial=Rzeszow                  0.9922    0.976
+plec=M                           1.0073   0.9821

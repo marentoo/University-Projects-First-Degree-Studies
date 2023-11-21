@@ -1,0 +1,29 @@
+11.05.2020 17:02:15 Results of ResultWriter 'Write as Text' [1]: 
+11.05.2020 17:02:15 ConditionedExampleSet:
+34 examples,
+19 regular attributes,
+special attributes = {
+    confidence_No = #21: confidence(No) (real/single_value)
+    confidence_Yes = #22: confidence(Yes) (real/single_value)
+    prediction = #20: prediction(Default) (polynominal/single_value)/values=[No, Yes]
+}
+11.05.2020 17:02:15 PerformanceVector:
+accuracy: 95.64% +/- 3.43% (micro average: 95.64%)
+ConfusionMatrix:
+True:	No	Yes
+No:	286	10
+Yes:	7	87
+precision: 93.55% +/- 7.53% (micro average: 92.55%) (positive class: Yes)
+ConfusionMatrix:
+True:	No	Yes
+No:	286	10
+Yes:	7	87
+recall: 89.56% +/- 14.70% (micro average: 89.69%) (positive class: Yes)
+ConfusionMatrix:
+True:	No	Yes
+No:	286	10
+Yes:	7	87
+AUC (optimistic): 0.990 +/- 0.013 (micro average: 0.990) (positive class: Yes)
+AUC: 0.990 +/- 0.013 (micro average: 0.990) (positive class: Yes)
+AUC (pessimistic): 0.990 +/- 0.013 (micro average: 0.990) (positive class: Yes)
+

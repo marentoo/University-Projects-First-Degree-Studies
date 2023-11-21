@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.rules.JRip -- -F 3 -N 2.0 -O 2 -S 1
+Relation:     228884_klienci6newwynik-weka.filters.unsupervised.attribute.Remove-R9,11-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzialkwotowy-R9
+Instances:    247
+Attributes:   9
+              numerklienta
+              miesiac
+              dzientygodnia
+              przedzialczasrozmowy
+              przedstawiciel
+              region
+              oddzial
+              plec
+              przedzialkwotowy
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+JRIP rules:
+===========
+
+(region = Centrum) and (dzientygodnia = wtorek) and (miesiac >= 10) => przedzialkwotowy=150-250 (14.0/0.0)
+(oddzial = Warszawa) and (numerklienta <= 8) and (numerklienta >= 8) => przedzialkwotowy=150-250 (10.0/0.0)
+(przedstawiciel = P01) and (numerklienta <= 2) => przedzialkwotowy=150-250 (7.0/1.0)
+(miesiac <= 8) and (dzientygodnia = czwartek) and (region = Centrum) => przedzialkwotowy=150-250 (4.0/0.0)
+(przedzialczasrozmowy = 41-60) and (miesiac <= 8) => przedzialkwotowy=150-250 (10.0/0.0)
+(przedzialczasrozmowy = 81-100) and (dzientygodnia = sobota) => przedzialkwotowy=150-250 (3.0/0.0)
+ => przedzialkwotowy=50-150 (199.0/0.0)
+
+Number of Rules : 7
+
+Attribute mappings:
+
+Model attributes                	    Incoming attributes
+--------------------------------	    ----------------
+(numeric) numerklienta          	--> 1 missing (type mis-match)
+(numeric) miesiac               	--> 2 missing (type mis-match)
+(nominal) dzientygodnia         	--> 3 (nominal) dzientygodnia
+(nominal) przedzialczasrozmowy  	--> 4 (nominal) przedzialczasrozmowy
+(nominal) przedstawiciel        	--> 5 (nominal) przedstawiciel
+(nominal) region                	--> 6 (nominal) region
+(nominal) oddzial               	--> 7 (nominal) oddzial
+(nominal) plec                  	--> 8 (nominal) plec
+(nominal) przedzialkwotowy      	--> 9 (nominal) przedzialkwotowy
+
+
+Time taken to build model: 0.34 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.08 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         117               54.4186 %
+Incorrectly Classified Instances        98               45.5814 %
+Kappa statistic                         -0.0278
+Mean absolute error                      0.4558
+Root mean squared error                  0.6751
+Relative absolute error                 98.1774 %
+Root relative squared error            121.5206 %
+Total Number of Instances              215     
+Ignored Class Unknown Instances                 32     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,025    0,000      0,000    0,000      -0,106   0,484     0,385     150-250
+                 0,975    1,000    0,552      0,975    0,705      -0,106   0,495     0,484     50-150
+Weighted Avg.    0,544    0,569    0,308      0,544    0,393      -0,106   0,490     0,440     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  95 |   a = 150-250
+   3 117 |   b = 50-150
+

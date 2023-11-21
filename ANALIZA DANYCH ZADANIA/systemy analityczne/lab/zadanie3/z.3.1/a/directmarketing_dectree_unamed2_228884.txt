@@ -1,0 +1,192 @@
+25.04.2020 15:09:45 Results of ResultWriter 'Write as Text' [1]: 
+25.04.2020 15:09:45 Model simulator for model: Tree
+25.04.2020 15:09:45 PerformanceVector:
+accuracy: 96.14% +/- 0.78% (micro average: 96.14%)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+classification_error: 3.86% +/- 0.78% (micro average: 3.86%)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+AUC: 0.979 +/- 0.006 (micro average: 0.979) (positive class: premium)
+precision: 93.83% +/- 5.82% (micro average: 93.10%) (positive class: premium)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+recall: 87.50% +/- 7.31% (micro average: 88.52%) (positive class: premium)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+f_measure: 90.21% +/- 2.83% (micro average: 90.76%) (positive class: premium)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+sensitivity: 87.50% +/- 7.31% (micro average: 88.52%) (positive class: premium)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+specificity: 98.18% +/- 1.97% (micro average: 98.21%) (positive class: premium)
+ConfusionMatrix:
+True:	free	premium
+free:	220	7
+premium:	4	54
+
+25.04.2020 15:09:45 
+confidence(no) > 0.456: free {free=333, premium=0}
+confidence(no) ? 0.456
+|   confidence(no) > 0.104: premium {free=0, premium=113}
+|   confidence(no) ? 0.104: free {free=83, premium=11}
+25.04.2020 15:09:45 Local explanations for the data below.
+400 explained rows.
+
+SimpleExampleSet:
+400 examples,
+10 regular attributes,
+special attributes = {
+    label = #10: Email (nominal/single_value)/values=[free, premium]
+    confidence_free = #11: confidence(free) (real/single_value)
+    confidence_premium = #12: confidence(premium) (real/single_value)
+    prediction = #13: prediction(Email) (nominal/single_value)/values=[free, premium]
+    cost = #14: cost (real/single_value)
+}
+25.04.2020 15:09:45 1 objects:
+Feature Set
+Gender = [Gender] {1}
+Area = [Area] {1}
+Mobile = [Mobile] {1}
+Age = [Age] {1}
+Logins 4 weeks = [Logins 4 weeks] {1}
+Logins 6 months = [Logins 6 months] {1}
+Sales 6 months = [Sales 6 months] {1}
+Sales total = [Sales total] {1}
+confidence(no) = [confidence(no)] {1}
+confidence(yes) = [confidence(yes)] {1}
+
+
+25.04.2020 15:09:45 SimpleExampleSet:
+0 examples,
+5 regular attributes,
+no special attributes
+
+25.04.2020 15:09:45 Feature Set
+Gender = [Gender] {1}
+Area = [Area] {1}
+Mobile = [Mobile] {1}
+Age = [Age] {1}
+Logins 4 weeks = [Logins 4 weeks] {1}
+Logins 6 months = [Logins 6 months] {1}
+Sales 6 months = [Sales 6 months] {1}
+Sales total = [Sales total] {1}
+confidence(no) = [confidence(no)] {1}
+confidence(yes) = [confidence(yes)] {1}
+
+25.04.2020 15:09:45 Text Vectorization Model for 0 attributes:
+
+25.04.2020 15:09:45 SimpleExampleSet:
+600 examples,
+10 regular attributes,
+special attributes = {
+    label = #10: Email (nominal/single_value)/values=[free, premium]
+}
+25.04.2020 15:09:45 AttributeWeights:
+Sales total: 0.012
+confidence(no): 0.206
+Gender: 0.022
+Area: 0.028
+Mobile: 0.013
+Logins 4 weeks: 0.018
+Sales 6 months: 0.011
+confidence(yes): 0.027
+Logins 6 months: 0.011
+Age: 0.002
+
+25.04.2020 15:09:45 SimpleExampleSet:
+1 examples,
+6 regular attributes,
+no special attributes
+
+25.04.2020 15:09:45 MissingValuesPreprocessing
+
+Model covering 11 attributes:
+ - Age
+ - Logins 4 weeks
+ - Logins 6 months
+ - Sales 6 months
+ - Sales total
+ - confidence(no)
+ - confidence(yes)
+ - Name
+ - Gender
+ - Area
+ - Mobile
+
+25.04.2020 15:09:45 
+confidence(no) > 0.456: free {free=554, premium=0}
+confidence(no) ? 0.456
+|   confidence(no) > 0.104: premium {free=0, premium=188}
+|   confidence(no) ? 0.104: free {free=139, premium=19}
+25.04.2020 15:09:45 SimpleExampleSet:
+6 examples,
+2 regular attributes,
+no special attributes
+
+25.04.2020 15:09:45 Parameter set:
+
+Performance: 
+PerformanceVector [
+-----classification_error: 2.33% +/- 0.58% (micro average: 2.33%)
+ConfusionMatrix:
+True:	free	premium
+free:	459	11
+premium:	3	127
+]
+Model PO.maximal_depth	= 4
+
+25.04.2020 15:09:45 Known values for 4 attributes:
+
+   - Area (2)
+   - Gender (2)
+   - Mobile (3)
+   - Name (460)
+
+25.04.2020 15:09:45 One-Hot Encoding Model
+
+1 attributes will be removed because of too many values.
+
+ - Name
+
+Perform Encoding: no
+
+
+25.04.2020 15:09:45 SimpleExampleSet:
+1000 examples,
+10 regular attributes,
+special attributes = {
+    label = #10: Email (nominal/single_value)/values=[free, premium]
+}
+25.04.2020 15:09:45 SimpleExampleSet:
+1 examples,
+11 regular attributes,
+no special attributes
+
+25.04.2020 15:09:45 Statistics
+25.04.2020 15:09:45 Lift chart for: premium.
+
+Test data:
+SimpleExampleSet:
+400 examples,
+10 regular attributes,
+special attributes = {
+    label = #10: Email (nominal/single_value)/values=[free, premium]
+    confidence_free = #12: confidence(free) (real/single_value)
+    confidence_premium = #13: confidence(premium) (real/single_value)
+    prediction = #11: prediction(Email) (nominal/single_value)/values=[free, premium]
+    cost = #14: cost (real/single_value)
+}

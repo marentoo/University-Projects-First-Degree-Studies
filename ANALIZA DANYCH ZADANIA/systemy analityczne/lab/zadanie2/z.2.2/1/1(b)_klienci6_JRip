@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     klienci6
+Instances:    1000
+Attributes:   9
+              numerklienta
+              miesiac
+              dzientygodnia
+              przedzialczasrozmowy
+              przedstawiciel
+              region
+              oddzial
+              plec
+              przedzialkwotowy
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(region = Centrum) and (numerklienta = 8) => przedzialkwotowy=150-250 (37.0/16.0)
+(miesiac = 8) and (przedzialczasrozmowy = 41-60) => przedzialkwotowy=150-250 (34.0/13.0)
+(miesiac = 10) and (region = Centrum) and (dzientygodnia = wtorek) => przedzialkwotowy=150-250 (32.0/14.0)
+(region = Centrum) and (dzientygodnia = czwartek) and (miesiac = 8) => przedzialkwotowy=150-250 (27.0/12.0)
+(oddzial = Warszawa) and (numerklienta = 2) => przedzialkwotowy=150-250 (20.0/5.0)
+(dzientygodnia = sobota) and (przedzialczasrozmowy = 81-100) => przedzialkwotowy=150-250 (11.0/4.0)
+ => przedzialkwotowy=50-150 (839.0/413.0)
+
+Number of Rules : 7
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         459               45.9    %
+Incorrectly Classified Instances       541               54.1    %
+Kappa statistic                         -0.0068
+Mean absolute error                      0.4059
+Root mean squared error                  0.4562
+Relative absolute error                100.2178 %
+Root relative squared error            101.3998 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,866    0,870    0,475      0,866    0,613      -0,007   0,499     0,474     50-150
+                 0,123    0,131    0,367      0,123    0,184      -0,012   0,497     0,380     150-250
+                 0,000    0,005    0,000      0,000    0,000      -0,026   0,497     0,143     0-50
+Weighted Avg.    0,459    0,465    0,366      0,459    0,362      -0,011   0,498     0,391     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 412  62   2 |   a = 50-150
+ 333  47   2 |   b = 150-250
+ 123  19   0 |   c = 0-50
+

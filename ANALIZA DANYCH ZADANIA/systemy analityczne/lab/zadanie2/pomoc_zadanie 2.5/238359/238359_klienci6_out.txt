@@ -1,0 +1,358 @@
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: klienci6
+
+
+Correctly Classified Instances         458               45.8    %
+Incorrectly Classified Instances       542               54.2    %
+Kappa statistic                          0.0231
+Mean absolute error                      0.3942
+Root mean squared error                  0.4759
+Relative absolute error                 97.3331 %
+Root relative squared error            105.7641 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,761    0,739    0,483      0,761    0,591      0,025    0,522     0,513     50-150
+                 0,230    0,215    0,398      0,230    0,292      0,018    0,522     0,408     150-250
+                 0,056    0,026    0,267      0,056    0,093      0,063    0,553     0,167     0-50
+Weighted Avg.    0,458    0,437    0,420      0,458    0,406      0,028    0,526     0,424     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 362 102  12 |   a = 50-150
+ 284  88  10 |   b = 150-250
+ 103  31   8 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: klienci6
+
+
+Correctly Classified Instances         452               45.2    %
+Incorrectly Classified Instances       548               54.8    %
+Kappa statistic                          0.0402
+Mean absolute error                      0.401 
+Root mean squared error                  0.465 
+Relative absolute error                 99.0117 %
+Root relative squared error            103.3421 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,548    0,515    0,492      0,548    0,518      0,033    0,510     0,504     50-150
+                 0,492    0,435    0,411      0,492    0,448      0,055    0,533     0,396     150-250
+                 0,021    0,010    0,250      0,021    0,039      0,034    0,504     0,148     0-50
+Weighted Avg.    0,452    0,413    0,427      0,452    0,423      0,042    0,518     0,412     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 261 210   5 |   a = 50-150
+ 190 188   4 |   b = 150-250
+  80  59   3 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: klienci6
+
+
+Correctly Classified Instances         459               45.9    %
+Incorrectly Classified Instances       541               54.1    %
+Kappa statistic                         -0.0068
+Mean absolute error                      0.4059
+Root mean squared error                  0.4562
+Relative absolute error                100.2178 %
+Root relative squared error            101.3998 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,866    0,870    0,475      0,866    0,613      -0,007   0,499     0,474     50-150
+                 0,123    0,131    0,367      0,123    0,184      -0,012   0,497     0,380     150-250
+                 0,000    0,005    0,000      0,000    0,000      -0,026   0,497     0,143     0-50
+Weighted Avg.    0,459    0,465    0,366      0,459    0,362      -0,011   0,498     0,391     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 412  62   2 |   a = 50-150
+ 333  47   2 |   b = 150-250
+ 123  19   0 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: klienci6
+
+
+Correctly Classified Instances         466               46.6    %
+Incorrectly Classified Instances       534               53.4    %
+Kappa statistic                         -0.0131
+Mean absolute error                      0.4058
+Root mean squared error                  0.4519
+Relative absolute error                100.1838 %
+Root relative squared error            100.4392 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,958    0,975    0,472      0,958    0,632      -0,048   0,475     0,459     50-150
+                 0,026    0,037    0,303      0,026    0,048      -0,030   0,479     0,365     150-250
+                 0,000    0,000    ?          0,000    ?          ?        0,486     0,136     0-50
+Weighted Avg.    0,466    0,478    ?          0,466    ?          ?        0,478     0,377     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 456  20   0 |   a = 50-150
+ 372  10   0 |   b = 150-250
+ 139   3   0 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: klienci6
+
+
+Correctly Classified Instances         437               43.7    %
+Incorrectly Classified Instances       563               56.3    %
+Kappa statistic                          0.0241
+Mean absolute error                      0.3999
+Root mean squared error                  0.4757
+Relative absolute error                 98.7244 %
+Root relative squared error            105.7157 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,611    0,567    0,495      0,611    0,547      0,045    0,538     0,531     50-150
+                 0,359    0,350    0,388      0,359    0,373      0,009    0,497     0,395     150-250
+                 0,063    0,058    0,153      0,063    0,090      0,008    0,521     0,152     0-50
+Weighted Avg.    0,437    0,412    0,405      0,437    0,415      0,026    0,520     0,425     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 291 159  26 |   a = 50-150
+ 221 137  24 |   b = 150-250
+  76  57   9 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: klienci6
+
+
+Correctly Classified Instances         432               43.2    %
+Incorrectly Classified Instances       568               56.8    %
+Kappa statistic                         -0.0174
+Mean absolute error                      0.4038
+Root mean squared error                  0.4587
+Relative absolute error                 99.6991 %
+Root relative squared error            101.9494 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,647    0,674    0,466      0,647    0,542      -0,028   0,501     0,491     50-150
+                 0,319    0,335    0,371      0,319    0,343      -0,016   0,517     0,393     150-250
+                 0,014    0,009    0,200      0,014    0,026      0,017    0,517     0,152     0-50
+Weighted Avg.    0,432    0,450    0,392      0,432    0,393      -0,017   0,509     0,405     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 308 163   5 |   a = 50-150
+ 257 122   3 |   b = 150-250
+  96  44   2 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: klienci6
+
+
+Correctly Classified Instances         458               45.8    %
+Incorrectly Classified Instances       542               54.2    %
+Kappa statistic                          0.0231
+Mean absolute error                      0.3942
+Root mean squared error                  0.4759
+Relative absolute error                 97.3331 %
+Root relative squared error            105.7641 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,761    0,739    0,483      0,761    0,591      0,025    0,522     0,513     50-150
+                 0,230    0,215    0,398      0,230    0,292      0,018    0,522     0,408     150-250
+                 0,056    0,026    0,267      0,056    0,093      0,063    0,553     0,167     0-50
+Weighted Avg.    0,458    0,437    0,420      0,458    0,406      0,028    0,526     0,424     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 362 102  12 |   a = 50-150
+ 284  88  10 |   b = 150-250
+ 103  31   8 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: klienci6
+
+
+Correctly Classified Instances         459               45.9    %
+Incorrectly Classified Instances       541               54.1    %
+Kappa statistic                         -0.0068
+Mean absolute error                      0.4059
+Root mean squared error                  0.4562
+Relative absolute error                100.2178 %
+Root relative squared error            101.3998 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,866    0,870    0,475      0,866    0,613      -0,007   0,499     0,474     50-150
+                 0,123    0,131    0,367      0,123    0,184      -0,012   0,497     0,380     150-250
+                 0,000    0,005    0,000      0,000    0,000      -0,026   0,497     0,143     0-50
+Weighted Avg.    0,459    0,465    0,366      0,459    0,362      -0,011   0,498     0,391     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 412  62   2 |   a = 50-150
+ 333  47   2 |   b = 150-250
+ 123  19   0 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: klienci6
+
+
+Correctly Classified Instances         452               45.2    %
+Incorrectly Classified Instances       548               54.8    %
+Kappa statistic                          0.0402
+Mean absolute error                      0.401 
+Root mean squared error                  0.465 
+Relative absolute error                 99.0117 %
+Root relative squared error            103.3421 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,548    0,515    0,492      0,548    0,518      0,033    0,510     0,504     50-150
+                 0,492    0,435    0,411      0,492    0,448      0,055    0,533     0,396     150-250
+                 0,021    0,010    0,250      0,021    0,039      0,034    0,504     0,148     0-50
+Weighted Avg.    0,452    0,413    0,427      0,452    0,423      0,042    0,518     0,412     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 261 210   5 |   a = 50-150
+ 190 188   4 |   b = 150-250
+  80  59   3 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: klienci6
+
+
+Correctly Classified Instances         466               46.6    %
+Incorrectly Classified Instances       534               53.4    %
+Kappa statistic                         -0.0131
+Mean absolute error                      0.4058
+Root mean squared error                  0.4519
+Relative absolute error                100.1838 %
+Root relative squared error            100.4392 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,958    0,975    0,472      0,958    0,632      -0,048   0,475     0,459     50-150
+                 0,026    0,037    0,303      0,026    0,048      -0,030   0,479     0,365     150-250
+                 0,000    0,000    ?          0,000    ?          ?        0,486     0,136     0-50
+Weighted Avg.    0,466    0,478    ?          0,466    ?          ?        0,478     0,377     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 456  20   0 |   a = 50-150
+ 372  10   0 |   b = 150-250
+ 139   3   0 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: klienci6
+
+
+Correctly Classified Instances         437               43.7    %
+Incorrectly Classified Instances       563               56.3    %
+Kappa statistic                          0.0241
+Mean absolute error                      0.3999
+Root mean squared error                  0.4757
+Relative absolute error                 98.7244 %
+Root relative squared error            105.7157 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,611    0,567    0,495      0,611    0,547      0,045    0,538     0,531     50-150
+                 0,359    0,350    0,388      0,359    0,373      0,009    0,497     0,395     150-250
+                 0,063    0,058    0,153      0,063    0,090      0,008    0,521     0,152     0-50
+Weighted Avg.    0,437    0,412    0,405      0,437    0,415      0,026    0,520     0,425     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 291 159  26 |   a = 50-150
+ 221 137  24 |   b = 150-250
+  76  57   9 |   c = 0-50
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: klienci6
+
+
+Correctly Classified Instances         432               43.2    %
+Incorrectly Classified Instances       568               56.8    %
+Kappa statistic                         -0.0174
+Mean absolute error                      0.4038
+Root mean squared error                  0.4587
+Relative absolute error                 99.6991 %
+Root relative squared error            101.9494 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,647    0,674    0,466      0,647    0,542      -0,028   0,501     0,491     50-150
+                 0,319    0,335    0,371      0,319    0,343      -0,016   0,517     0,393     150-250
+                 0,014    0,009    0,200      0,014    0,026      0,017    0,517     0,152     0-50
+Weighted Avg.    0,432    0,450    0,392      0,432    0,393      -0,017   0,509     0,405     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 308 163   5 |   a = 50-150
+ 257 122   3 |   b = 150-250
+  96  44   2 |   c = 0-50

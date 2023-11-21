@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P20.0
+Instances:    800
+Attributes:   7
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.64 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         141               17.625  %
+Incorrectly Classified Instances       659               82.375  %
+Kappa statistic                          0.0113
+Mean absolute error                      0.2767
+Root mean squared error                  0.427 
+Relative absolute error                 99.637  %
+Root relative squared error            114.5774 %
+Total Number of Instances              800     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,168    0,179    0,162      0,168    0,165      -0,011   0,483     0,168     '(-inf-54.166667]'
+                 0,201    0,156    0,206      0,201    0,204      0,046    0,507     0,181     '(54.166667-88.333333]'
+                 0,157    0,156    0,160      0,157    0,159      0,001    0,495     0,166     '(88.333333-122.5]'
+                 0,148    0,167    0,145      0,148    0,147      -0,018   0,458     0,150     '(122.5-156.666667]'
+                 0,138    0,169    0,145      0,138    0,141      -0,032   0,484     0,169     '(156.666667-190.833333]'
+                 0,243    0,161    0,236      0,243    0,239      0,081    0,552     0,198     '(190.833333-inf)'
+Weighted Avg.    0,176    0,165    0,176      0,176    0,176      0,011    0,497     0,172     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 23 22 12 27 22 31 |  a = '(-inf-54.166667]'
+ 22 27 25 18 22 20 |  b = '(54.166667-88.333333]'
+ 20 25 20 21 25 16 |  c = '(88.333333-122.5]'
+ 25 20 25 19 20 19 |  d = '(122.5-156.666667]'
+ 28 23 25 22 19 21 |  e = '(156.666667-190.833333]'
+ 24 14 18 24 23 33 |  f = '(190.833333-inf)'
+

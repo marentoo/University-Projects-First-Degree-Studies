@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.6.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process" origin="GENERATED_SAMPLE">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve Historical Sentiments" origin="GENERATED_SAMPLE" width="90" x="45" y="187">
+        <parameter key="repository_entry" value="//Samples/Templates/Sentiment Analysis/Historical Sentiments"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.6.000" expanded="true" height="82" name="Set Role" origin="GENERATED_SAMPLE" width="90" x="179" y="187">
+        <parameter key="attribute_name" value="Sentiment"/>
+        <parameter key="target_role" value="label"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="sample" compatibility="9.6.000" expanded="true" height="82" name="Sample" width="90" x="246" y="289">
+        <parameter key="sample" value="absolute"/>
+        <parameter key="balance_data" value="false"/>
+        <parameter key="sample_size" value="100"/>
+        <parameter key="sample_ratio" value="0.1"/>
+        <parameter key="sample_probability" value="0.1"/>
+        <list key="sample_size_per_class"/>
+        <list key="sample_ratio_per_class"/>
+        <list key="sample_probability_per_class"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="nominal_to_text" compatibility="9.6.000" expanded="true" height="82" name="Nominal to Text" origin="GENERATED_SAMPLE" width="90" x="313" y="187">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="nominal"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="file_path"/>
+        <parameter key="block_type" value="single_value"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="single_value"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="text:process_document_from_data" compatibility="8.1.000" expanded="true" height="82" name="Process Documents from Data" origin="GENERATED_SAMPLE" width="90" x="447" y="187">
+        <parameter key="create_word_vector" value="true"/>
+        <parameter key="vector_creation" value="TF-IDF"/>
+        <parameter key="add_meta_information" value="true"/>
+        <parameter key="keep_text" value="true"/>
+        <parameter key="prune_method" value="none"/>
+        <parameter key="prune_below_percent" value="3.0"/>
+        <parameter key="prune_above_percent" value="30.0"/>
+        <parameter key="prune_below_rank" value="0.05"/>
+        <parameter key="prune_above_rank" value="0.95"/>
+        <parameter key="datamanagement" value="double_sparse_array"/>
+        <parameter key="data_management" value="auto"/>
+        <parameter key="select_attributes_and_weights" value="false"/>
+        <list key="specify_weights"/>
+        <process expanded="true">
+          <operator activated="true" class="text:tokenize" compatibility="9.3.001" expanded="true" height="68" name="Tokenize" origin="GENERATED_SAMPLE" width="90" x="45" y="30">
+            <parameter key="mode" value="non letters"/>
+            <parameter key="characters" value=".:"/>
+            <parameter key="language" value="English"/>
+            <parameter key="max_token_length" value="3"/>
+          </operator>
+          <operator activated="true" class="text:transform_cases" compatibility="9.3.001" expanded="true" height="68" name="Transform Cases" origin="GENERATED_SAMPLE" width="90" x="246" y="34">
+            <parameter key="transform_to" value="lower case"/>
+          </operator>
+          <operator activated="true" class="text:filter_stopwords_english" compatibility="9.3.001" expanded="true" height="68" name="Filter Stopwords (English)" origin="GENERATED_SAMPLE" width="90" x="380" y="30"/>
+          <connect from_port="document" to_op="Tokenize" to_port="document"/>
+          <connect from_op="Tokenize" from_port="document" to_op="Transform Cases" to_port="document"/>
+          <connect from_op="Transform Cases" from_port="document" to_op="Filter Stopwords (English)" to_port="document"/>
+          <connect from_op="Filter Stopwords (English)" from_port="document" to_port="document 1"/>
+          <portSpacing port="source_document" spacing="0"/>
+          <portSpacing port="sink_document 1" spacing="0"/>
+          <portSpacing port="sink_document 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Cross Validation" origin="GENERATED_TEMPLATE" width="90" x="648" y="187">
+        <parameter key="split_on_batch_attribute" value="false"/>
+        <parameter key="leave_one_out" value="false"/>
+        <parameter key="number_of_folds" value="10"/>
+        <parameter key="sampling_type" value="automatic"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+        <process expanded="true">
+          <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="9.4.000" expanded="true" height="103" name="Decision Tree" width="90" x="179" y="34">
+            <parameter key="criterion" value="gain_ratio"/>
+            <parameter key="maximal_depth" value="10"/>
+            <parameter key="apply_pruning" value="true"/>
+            <parameter key="confidence" value="0.1"/>
+            <parameter key="apply_prepruning" value="false"/>
+            <parameter key="minimal_gain" value="0.01"/>
+            <parameter key="minimal_leaf_size" value="2"/>
+            <parameter key="minimal_size_for_split" value="4"/>
+            <parameter key="number_of_prepruning_alternatives" value="3"/>
+          </operator>
+          <connect from_port="training set" to_op="Decision Tree" to_port="training set"/>
+          <connect from_op="Decision Tree" from_port="model" to_port="model"/>
+          <portSpacing port="source_training set" spacing="0"/>
+          <portSpacing port="sink_model" spacing="0"/>
+          <portSpacing port="sink_through 1" spacing="0"/>
+        </process>
+        <process expanded="true">
+          <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model" origin="GENERATED_TEMPLATE" width="90" x="112" y="34">
+            <list key="application_parameters"/>
+            <parameter key="create_view" value="false"/>
+          </operator>
+          <operator activated="true" class="performance_binominal_classification" compatibility="9.6.000" expanded="true" height="82" name="Performance" origin="GENERATED_TEMPLATE" width="90" x="313" y="34">
+            <parameter key="manually_set_positive_class" value="false"/>
+            <parameter key="main_criterion" value="first"/>
+            <parameter key="accuracy" value="true"/>
+            <parameter key="classification_error" value="false"/>
+            <parameter key="kappa" value="true"/>
+            <parameter key="AUC (optimistic)" value="false"/>
+            <parameter key="AUC" value="true"/>
+            <parameter key="AUC (pessimistic)" value="false"/>
+            <parameter key="precision" value="false"/>
+            <parameter key="recall" value="false"/>
+            <parameter key="lift" value="false"/>
+            <parameter key="fallout" value="false"/>
+            <parameter key="f_measure" value="false"/>
+            <parameter key="false_positive" value="false"/>
+            <parameter key="false_negative" value="false"/>
+            <parameter key="true_positive" value="false"/>
+            <parameter key="true_negative" value="false"/>
+            <parameter key="sensitivity" value="false"/>
+            <parameter key="specificity" value="false"/>
+            <parameter key="youden" value="false"/>
+            <parameter key="positive_predictive_value" value="false"/>
+            <parameter key="negative_predictive_value" value="false"/>
+            <parameter key="psep" value="false"/>
+            <parameter key="skip_undefined_labels" value="true"/>
+            <parameter key="use_example_weights" value="true"/>
+          </operator>
+          <connect from_port="model" to_op="Apply Model" to_port="model"/>
+          <connect from_port="test set" to_op="Apply Model" to_port="unlabelled data"/>
+          <connect from_op="Apply Model" from_port="labelled data" to_op="Performance" to_port="labelled data"/>
+          <connect from_op="Performance" from_port="performance" to_port="performance 1"/>
+          <connect from_op="Performance" from_port="example set" to_port="test set results"/>
+          <portSpacing port="source_model" spacing="0"/>
+          <portSpacing port="source_test set" spacing="0"/>
+          <portSpacing port="source_through 1" spacing="0"/>
+          <portSpacing port="sink_test set results" spacing="0"/>
+          <portSpacing port="sink_performance 1" spacing="0"/>
+          <portSpacing port="sink_performance 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.6.000" expanded="true" height="68" name="Store" width="90" x="849" y="85">
+        <parameter key="repository_entry" value="//Local Repository/data/228884_store_model"/>
+      </operator>
+      <operator activated="true" class="write_as_text" compatibility="9.6.000" expanded="true" height="82" name="Write as Text" width="90" x="1117" y="391">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.4.2\228884_d(gwiazdka)_crossvalidation_wyniki.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="text:create_document" compatibility="9.3.001" expanded="true" height="68" name="Create Document" origin="GENERATED_SAMPLE" width="90" x="112" y="391">
+        <parameter key="text" value="Watching the movie , i vowed to subtract half a star from the review because the filmmakers &#10;included a saccharine syrup , cute 'n cuddly, computer-generated monkey. If the monkey died,&#10;the movie got an extra half star. Alas, the monkey showed up at the end , unharmed , to the &#10;wet sickly sound of gagging and rolling eyeballs . what that means is that lost in space &#10;actually deserved 2 stars . that's pretty generous , considering the movie's camp lacked &#10;any hint of tongue in cheek . when will robinson ( jack johnson ) teaches his pet robot &#10;about friendship , you are actually supposed to buy it . so why such a seemingly high rating?&#10; there are a few reasons that made me unable to throw away the experience with the garbage . &#10;Nobody in the country enjoyed the movie as much as my audience did &#10;( and i don't necessarily mean that in a good way ) . &#10;This is overlaid on a cool jumpy credit sequence with interesting distorted clips from &#10;the movie . but if that's the best part of the movie , i can't in good conscience recommend it."/>
+        <parameter key="add label" value="false"/>
+        <parameter key="label_type" value="nominal"/>
+      </operator>
+      <operator activated="true" class="text:process_documents" compatibility="9.3.001" expanded="true" height="103" name="Process Documents" origin="GENERATED_SAMPLE" width="90" x="313" y="391">
+        <parameter key="create_word_vector" value="true"/>
+        <parameter key="vector_creation" value="TF-IDF"/>
+        <parameter key="add_meta_information" value="true"/>
+        <parameter key="keep_text" value="true"/>
+        <parameter key="prune_method" value="none"/>
+        <parameter key="prune_below_percent" value="3.0"/>
+        <parameter key="prune_above_percent" value="30.0"/>
+        <parameter key="prune_below_rank" value="0.05"/>
+        <parameter key="prune_above_rank" value="0.95"/>
+        <parameter key="datamanagement" value="double_sparse_array"/>
+        <parameter key="data_management" value="auto"/>
+        <process expanded="true">
+          <operator activated="true" class="text:tokenize" compatibility="9.3.001" expanded="true" height="68" name="Tokenize (2)" origin="GENERATED_SAMPLE" width="90" x="112" y="34">
+            <parameter key="mode" value="non letters"/>
+            <parameter key="characters" value=".:"/>
+            <parameter key="language" value="English"/>
+            <parameter key="max_token_length" value="3"/>
+          </operator>
+          <operator activated="true" class="text:transform_cases" compatibility="9.3.001" expanded="true" height="68" name="Transform Cases (2)" origin="GENERATED_SAMPLE" width="90" x="246" y="34">
+            <parameter key="transform_to" value="lower case"/>
+          </operator>
+          <operator activated="true" class="text:filter_stopwords_english" compatibility="9.3.001" expanded="true" height="68" name="Filter Stopwords (2)" origin="GENERATED_SAMPLE" width="90" x="380" y="30"/>
+          <connect from_port="document" to_op="Tokenize (2)" to_port="document"/>
+          <connect from_op="Tokenize (2)" from_port="document" to_op="Transform Cases (2)" to_port="document"/>
+          <connect from_op="Transform Cases (2)" from_port="document" to_op="Filter Stopwords (2)" to_port="document"/>
+          <connect from_op="Filter Stopwords (2)" from_port="document" to_port="document 1"/>
+          <portSpacing port="source_document" spacing="0"/>
+          <portSpacing port="sink_document 1" spacing="0"/>
+          <portSpacing port="sink_document 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve" width="90" x="916" y="493">
+        <parameter key="repository_entry" value="//Local Repository/data/228884_store_model"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.6.000" expanded="true" height="103" name="Multiply" width="90" x="782" y="646"/>
+      <operator activated="true" class="operator_toolbox:extract_sentiment" compatibility="2.4.000" expanded="true" height="103" name="Extract Sentiment (2)" width="90" x="916" y="850">
+        <parameter key="model" value="vader"/>
+        <parameter key="text_attribute" value="text"/>
+        <parameter key="show_advanced_output" value="true"/>
+        <parameter key="use_default_tokenization_regex" value="true"/>
+        <list key="additional_words"/>
+      </operator>
+      <operator activated="true" class="operator_toolbox:extract_sentiment" compatibility="2.4.000" expanded="true" height="103" name="Extract Sentiment" width="90" x="916" y="646">
+        <parameter key="model" value="sentiwordnet"/>
+        <parameter key="text_attribute" value="text"/>
+        <parameter key="show_advanced_output" value="true"/>
+        <parameter key="use_default_tokenization_regex" value="true"/>
+        <list key="additional_words"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (2)" origin="GENERATED_SAMPLE" width="90" x="1050" y="544">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV" width="90" x="1184" y="544">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z.4.2\228884_d(gwiazdka)_csvWynikowe2.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.6.000" expanded="true" height="68" name="Retrieve (2)" width="90" x="983" y="748">
+        <parameter key="repository_entry" value="//Local Repository/data/228884_store_model"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.6.000" expanded="true" height="82" name="Apply Model (3)" origin="GENERATED_SAMPLE" width="90" x="1117" y="748">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV (2)" width="90" x="1251" y="748">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z.4.2\228884_d(zgwiazdka)_csvWynikowe3.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="operator_toolbox:extract_sentiment" compatibility="2.4.000" expanded="true" height="103" name="Extract Sentiment (3)" width="90" x="849" y="340">
+        <parameter key="model" value="vader"/>
+        <parameter key="text_attribute" value="text"/>
+        <parameter key="show_advanced_output" value="false"/>
+        <parameter key="use_default_tokenization_regex" value="true"/>
+        <list key="additional_words"/>
+      </operator>
+      <operator activated="false" class="weight_by_information_gain" compatibility="9.6.000" expanded="true" height="82" name="Weight by Information Gain" width="90" x="983" y="136">
+        <parameter key="normalize_weights" value="false"/>
+        <parameter key="sort_weights" value="true"/>
+        <parameter key="sort_direction" value="ascending"/>
+      </operator>
+      <operator activated="false" class="write_as_text" compatibility="9.6.000" expanded="true" height="68" name="Write as Text (2)" width="90" x="1117" y="187">
+        <parameter key="result_file" value="C:\Users\dell\Desktop\z.4.2\228884_d_weight_wyniki.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="9.6.000" expanded="true" height="82" name="Write CSV (3)" width="90" x="1050" y="442">
+        <parameter key="csv_file" value="C:\Users\dell\Desktop\z.4.2\228884_d(zgwiazdka)_CrossVal_z_ExtractSent_wyniki..csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <connect from_op="Retrieve Historical Sentiments" from_port="output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Sample" to_port="example set input"/>
+      <connect from_op="Sample" from_port="example set output" to_op="Nominal to Text" to_port="example set input"/>
+      <connect from_op="Nominal to Text" from_port="example set output" to_op="Process Documents from Data" to_port="example set"/>
+      <connect from_op="Process Documents from Data" from_port="example set" to_op="Cross Validation" to_port="example set"/>
+      <connect from_op="Process Documents from Data" from_port="word list" to_op="Process Documents" to_port="word list"/>
+      <connect from_op="Cross Validation" from_port="model" to_op="Store" to_port="input"/>
+      <connect from_op="Cross Validation" from_port="example set" to_op="Extract Sentiment (3)" to_port="exa"/>
+      <connect from_op="Cross Validation" from_port="test result set" to_port="result 3"/>
+      <connect from_op="Cross Validation" from_port="performance 1" to_op="Write as Text" to_port="input 1"/>
+      <connect from_op="Store" from_port="through" to_port="result 4"/>
+      <connect from_op="Write as Text" from_port="input 1" to_port="result 1"/>
+      <connect from_op="Create Document" from_port="output" to_op="Process Documents" to_port="documents 1"/>
+      <connect from_op="Process Documents" from_port="example set" to_op="Multiply" to_port="input"/>
+      <connect from_op="Retrieve" from_port="output" to_op="Apply Model (2)" to_port="model"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Extract Sentiment" to_port="exa"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Extract Sentiment (2)" to_port="exa"/>
+      <connect from_op="Extract Sentiment (2)" from_port="exa" to_op="Apply Model (3)" to_port="unlabelled data"/>
+      <connect from_op="Extract Sentiment" from_port="exa" to_op="Apply Model (2)" to_port="unlabelled data"/>
+      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Write CSV" to_port="input"/>
+      <connect from_op="Write CSV" from_port="through" to_port="result 2"/>
+      <connect from_op="Retrieve (2)" from_port="output" to_op="Apply Model (3)" to_port="model"/>
+      <connect from_op="Apply Model (3)" from_port="labelled data" to_op="Write CSV (2)" to_port="input"/>
+      <connect from_op="Write CSV (2)" from_port="through" to_port="result 5"/>
+      <connect from_op="Extract Sentiment (3)" from_port="exa" to_op="Write CSV (3)" to_port="input"/>
+      <connect from_op="Write CSV (3)" from_port="through" to_port="result 6"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="210"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+      <portSpacing port="sink_result 5" spacing="0"/>
+      <portSpacing port="sink_result 6" spacing="0"/>
+      <portSpacing port="sink_result 7" spacing="0"/>
+      <description align="left" color="green" colored="true" height="264" resized="true" width="551" x="21" y="82">Step 1. Import text data with some assessment of the sentiment related to it. It is processed to extract the words and deliver a word-vector (a numerical representation of the text).</description>
+      <description align="left" color="red" colored="true" height="264" resized="true" width="300" x="576" y="84">Step 2. Train a SVM model and validate it to collect the performance data.</description>
+      <description align="left" color="blue" colored="true" height="252" resized="true" width="435" x="21" y="355">&lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; Step 3. Create a new document from text (add your own text and try), then process it as the initial ones. The initial word list is an additional input.</description>
+      <description align="left" color="orange" colored="true" height="254" resized="true" width="412" x="464" y="355">Step 4. The model trained with the old&lt;br&gt;texts is applied to the new document.&lt;br&gt;</description>
+      <description align="left" color="yellow" colored="false" height="50" resized="true" width="856" x="21" y="29">SENTIMENT ANALYSIS: Detect sentiment in texts using a classification model trained on categorized user reviews.</description>
+    </process>
+  </operator>
+</process>

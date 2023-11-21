@@ -1,0 +1,20 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Kappa_statistic
+Datasets:   1
+Resultsets: 2
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       08.04.2020, 19:05
+
+
+Dataset                   (1) functio | (2) func
+------------------------------------------------
+'xxxxxxx_bank-weka.filter (20)   0.38 |   0.37  
+------------------------------------------------
+                              (v/ /*) |  (0/1/0)
+
+
+Key:
+(1) functions.SimpleLogistic '-I 0 -M 50 -H 50 -W 0.0' 7397710626304705500
+(2) functions.MultilayerPerceptron '-L 0.3 -M 0.2 -N 50 -V 10 -S 0 -E 10 -H a' -5990607817048210400
+

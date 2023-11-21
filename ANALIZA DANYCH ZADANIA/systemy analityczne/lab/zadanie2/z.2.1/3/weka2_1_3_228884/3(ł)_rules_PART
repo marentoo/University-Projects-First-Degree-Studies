@@ -1,0 +1,793 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    1000
+Attributes:   10
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              data rozmowy
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial_czas rozmowy
+              DzienTygodnia
+              przedzial
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+DzienTygodnia = "?r." AND
+numer klienta = 9: '(88.333333-122.5]' (7.0/3.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 11 AND
+Region = Centrum: '(122.5-156.666667]' (5.0/1.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "pt." AND
+miesi¹c = 10: '(54.166667-88.333333]' (5.0/1.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 7 AND
+Oddzia³ = Wroc³aw: '(156.666667-190.833333]' (4.0/2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 11: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "niedz.": '(54.166667-88.333333]' (7.0/3.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 7 AND
+przedzial_czas rozmowy = 60-90: '(88.333333-122.5]' (2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 7: '(190.833333-inf)' (5.0/1.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "wt.": '(190.833333-inf)' (6.0/3.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 1: '(-inf-54.166667]' (5.0/1.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 14: '(54.166667-88.333333]' (5.0/2.0)
+
+numer klienta = 13 AND
+przedzial_czas rozmowy = 0-31: '(190.833333-inf)' (5.0/2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 4 AND
+Oddzia³ = Warszawa: '(122.5-156.666667]' (4.0/1.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 10: '(122.5-156.666667]' (10.0/6.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 4: '(156.666667-190.833333]' (7.0/4.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "czw.": '(-inf-54.166667]' (3.0/1.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 5 AND
+miesi¹c = 9: '(-inf-54.166667]' (4.0/2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 5 AND
+przedzial_czas rozmowy = 120-150: '(-inf-54.166667]' (3.0/1.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 6: '(-inf-54.166667]' (6.0/4.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 1: '(-inf-54.166667]' (3.0/2.0)
+
+DzienTygodnia = "?r." AND
+przedzial_czas rozmowy = 150-inf: '(88.333333-122.5]' (11.0/6.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "?r.": '(-inf-54.166667]' (3.0/1.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 2: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 8 AND
+DzienTygodnia = "?r." AND
+Oddzia³ = Wroc³aw: '(122.5-156.666667]' (2.0/1.0)
+
+numer klienta = 14 AND
+przedzial_czas rozmowy = 150-inf: '(-inf-54.166667]' (6.0/2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 12: '(88.333333-122.5]' (6.0/3.0)
+
+DzienTygodnia = "?r." AND
+przedzial_czas rozmowy = 120-150: '(190.833333-inf)' (8.0/4.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 5: '(-inf-54.166667]' (5.0/2.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "pon." AND
+przedzial_czas rozmowy = 31-60: '(88.333333-122.5]' (3.0/1.0)
+
+Oddzia³ = Wroc³aw AND
+numer klienta = 3: '(54.166667-88.333333]' (11.0/6.0)
+
+numer klienta = 2 AND
+przedzial_czas rozmowy = 0-31: '(54.166667-88.333333]' (8.0/3.0)
+
+numer klienta = 2 AND
+Region = Po³udnie: '(54.166667-88.333333]' (9.0/5.0)
+
+numer klienta = 2 AND
+DzienTygodnia = "czw." AND
+data rozmowy <= 1381615200000: '(190.833333-inf)' (4.0/1.0)
+
+numer klienta = 2 AND
+przedzial_czas rozmowy = 120-150: '(156.666667-190.833333]' (7.0/3.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 12 AND
+czas rozmowy <= 106: '(54.166667-88.333333]' (2.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 12: '(88.333333-122.5]' (2.0/1.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 1 AND
+miesi¹c = 9: '(156.666667-190.833333]' (2.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 1: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 1 AND
+DzienTygodnia = "pt.": '(54.166667-88.333333]' (5.0/2.0)
+
+numer klienta = 1 AND
+DzienTygodnia = "pon.": '(190.833333-inf)' (5.0/2.0)
+
+numer klienta = 1 AND
+przedzial_czas rozmowy = 120-150: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 1 AND
+DzienTygodnia = "sob.": '(88.333333-122.5]' (5.0/2.0)
+
+numer klienta = 1 AND
+data rozmowy > 1379368800000 AND
+DzienTygodnia = "niedz.": '(156.666667-190.833333]' (4.0/2.0)
+
+numer klienta = 1: '(88.333333-122.5]' (6.0/4.0)
+
+DzienTygodnia = "?r." AND
+Oddzia³ = Rzeszów AND
+miesi¹c = 8: '(190.833333-inf)' (3.0/1.0)
+
+DzienTygodnia = "?r." AND
+przedzial_czas rozmowy = 60-90: '(88.333333-122.5]' (4.0/2.0)
+
+DzienTygodnia = "?r." AND
+przedzial_czas rozmowy = 90-120: '(122.5-156.666667]' (4.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 14: '(54.166667-88.333333]' (3.0/2.0)
+
+DzienTygodnia = "?r." AND
+numer klienta = 3 AND
+czas rozmowy <= 23: '(156.666667-190.833333]' (2.0/1.0)
+
+DzienTygodnia = "?r." AND
+data rozmowy > 1376690400000: '(-inf-54.166667]' (6.0/3.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 2: '(156.666667-190.833333]' (4.0/1.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 5 AND
+miesi¹c = 9 AND
+czas rozmowy > 45: '(-inf-54.166667]' (4.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "czw." AND
+data rozmowy <= 1377381600000: '(190.833333-inf)' (6.0/2.0)
+
+Oddzia³ = £ódŸ AND
+numer klienta = 4 AND
+przedzial_czas rozmowy = 0-31 AND
+data rozmowy > 1375999200000: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "pon.": '(190.833333-inf)' (5.0/2.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "czw." AND
+przedstawiciel = P03: '(156.666667-190.833333]' (4.0/2.0)
+
+Oddzia³ = Rzeszów AND
+numer klienta = 15: '(156.666667-190.833333]' (7.0/4.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 15: '(54.166667-88.333333]' (5.0/2.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 14: '(-inf-54.166667]' (5.0/2.0)
+
+numer klienta = 14 AND
+przedzial_czas rozmowy = 0-31 AND
+czas rozmowy <= 12: '(-inf-54.166667]' (2.0)
+
+numer klienta = 14 AND
+przedzial_czas rozmowy = 0-31: '(88.333333-122.5]' (2.0/1.0)
+
+Region = Po³udnie AND
+numer klienta = 14: '(122.5-156.666667]' (5.0/2.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 7 AND
+przedstawiciel = P03: '(-inf-54.166667]' (4.0/1.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "czw." AND
+przedstawiciel = P02 AND
+czas rozmowy <= 63: '(54.166667-88.333333]' (2.0/1.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "czw." AND
+przedstawiciel = P02: '(156.666667-190.833333]' (2.0/1.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "czw." AND
+przedstawiciel = P01: '(54.166667-88.333333]' (2.0)
+
+numer klienta = 5 AND
+DzienTygodnia = "niedz.": '(156.666667-190.833333]' (10.0/6.0)
+
+numer klienta = 5 AND
+przedstawiciel = P02: '(156.666667-190.833333]' (5.0/2.0)
+
+numer klienta = 5 AND
+przedstawiciel = P03 AND
+miesi¹c = 10: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 8 AND
+DzienTygodnia = "wt." AND
+przedzial_czas rozmowy = 31-60: '(156.666667-190.833333]' (3.0)
+
+Oddzia³ = Rzeszów AND
+numer klienta = 4: '(122.5-156.666667]' (14.0/9.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 12: '(156.666667-190.833333]' (4.0/2.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 4 AND
+miesi¹c = 9: '(88.333333-122.5]' (3.0/1.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 4: '(122.5-156.666667]' (8.0/4.0)
+
+DzienTygodnia = "wt." AND
+przedzial_czas rozmowy = 150-inf: '(54.166667-88.333333]' (12.0/7.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 3 AND
+przedzial_czas rozmowy = 90-120: '(54.166667-88.333333]' (3.0/1.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 3 AND
+przedzial_czas rozmowy = 0-31: '(190.833333-inf)' (2.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 3 AND
+czas rozmowy <= 84: '(88.333333-122.5]' (2.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 12: '(156.666667-190.833333]' (5.0/3.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 8 AND
+Region = Centrum: '(156.666667-190.833333]' (4.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 7 AND
+data rozmowy > 1378936800000: '(88.333333-122.5]' (3.0)
+
+przedstawiciel = P05 AND
+numer klienta = 15 AND
+czas rozmowy <= 59: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 15 AND
+DzienTygodnia = "sob." AND
+czas rozmowy > 38: '(190.833333-inf)' (3.0)
+
+przedstawiciel = P05 AND
+numer klienta = 13: '(54.166667-88.333333]' (3.0/2.0)
+
+DzienTygodnia = "pon." AND
+numer klienta = 10 AND
+miesi¹c = 8: '(-inf-54.166667]' (4.0/2.0)
+
+przedstawiciel = P05 AND
+numer klienta = 14 AND
+czas rozmowy <= 122: '(156.666667-190.833333]' (2.0/1.0)
+
+numer klienta = 15 AND
+DzienTygodnia = "pt.": '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P05 AND
+numer klienta = 6: '(54.166667-88.333333]' (20.0/13.0)
+
+numer klienta = 15 AND
+DzienTygodnia = "sob.": '(122.5-156.666667]' (2.0/1.0)
+
+numer klienta = 15 AND
+przedzial_czas rozmowy = 31-60: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 15 AND
+DzienTygodnia = "pon." AND
+przedstawiciel = P02: '(54.166667-88.333333]' (3.0/1.0)
+
+przedstawiciel = P05 AND
+numer klienta = 4 AND
+przedzial_czas rozmowy = 31-60: '(-inf-54.166667]' (3.0/2.0)
+
+przedstawiciel = P05 AND
+numer klienta = 4 AND
+przedzial_czas rozmowy = 60-90: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 15 AND
+przedstawiciel = P02: '(88.333333-122.5]' (3.0/2.0)
+
+numer klienta = 15 AND
+przedstawiciel = P01: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 15 AND
+miesi¹c = 9: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 15 AND
+miesi¹c = 10: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 15 AND
+czas rozmowy <= 109: '(122.5-156.666667]' (2.0/1.0)
+
+numer klienta = 14 AND
+przedzial_czas rozmowy = 90-120: '(54.166667-88.333333]' (5.0/3.0)
+
+numer klienta = 6 AND
+przedzial_czas rozmowy = 60-90: '(88.333333-122.5]' (9.0/5.0)
+
+numer klienta = 6 AND
+przedzial_czas rozmowy = 90-120: '(-inf-54.166667]' (9.0/4.0)
+
+numer klienta = 13 AND
+DzienTygodnia = "sob.": '(54.166667-88.333333]' (5.0/3.0)
+
+numer klienta = 13: '(-inf-54.166667]' (4.0/2.0)
+
+numer klienta = 7 AND
+miesi¹c = 10 AND
+przedzial_czas rozmowy = 90-120: '(54.166667-88.333333]' (3.0/1.0)
+
+przedstawiciel = P05 AND
+numer klienta = 4 AND
+czas rozmowy <= 122: '(122.5-156.666667]' (3.0)
+
+przedstawiciel = P05 AND
+przedzial_czas rozmowy = 0-31 AND
+DzienTygodnia = "sob.": '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 5 AND
+przedstawiciel = P01: '(88.333333-122.5]' (6.0/4.0)
+
+numer klienta = 5 AND
+miesi¹c = 10: '(156.666667-190.833333]' (5.0/1.0)
+
+numer klienta = 6 AND
+miesi¹c = 9 AND
+przedstawiciel = P02: '(190.833333-inf)' (7.0/4.0)
+
+przedstawiciel = P02 AND
+numer klienta = 14 AND
+data rozmowy <= 1380837600000: '(156.666667-190.833333]' (2.0)
+
+numer klienta = 5: '(-inf-54.166667]' (7.0/4.0)
+
+przedstawiciel = P04 AND
+numer klienta = 6 AND
+czas rozmowy <= 46: '(156.666667-190.833333]' (2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 12 AND
+data rozmowy <= 1378159200000: '(54.166667-88.333333]' (4.0/2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 7 AND
+przedzial_czas rozmowy = 31-60: '(-inf-54.166667]' (3.0/2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 6: '(-inf-54.166667]' (2.0/1.0)
+
+przedstawiciel = P04 AND
+numer klienta = 12: '(88.333333-122.5]' (2.0/1.0)
+
+przedstawiciel = P04 AND
+numer klienta = 7 AND
+przedzial_czas rozmowy = 0-31: '(54.166667-88.333333]' (2.0/1.0)
+
+przedstawiciel = P04 AND
+numer klienta = 7 AND
+przedzial_czas rozmowy = 60-90: '(122.5-156.666667]' (2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 7 AND
+czas rozmowy <= 140: '(54.166667-88.333333]' (2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 8 AND
+przedzial_czas rozmowy = 90-120: '(54.166667-88.333333]' (3.0/2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 8: '(122.5-156.666667]' (8.0/5.0)
+
+przedstawiciel = P02 AND
+numer klienta = 2 AND
+miesi¹c = 10: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 14 AND
+miesi¹c = 9: '(-inf-54.166667]' (4.0/2.0)
+
+numer klienta = 15: '(54.166667-88.333333]' (2.0)
+
+przedstawiciel = P04 AND
+DzienTygodnia = "wt." AND
+data rozmowy <= 1378418400000: '(88.333333-122.5]' (2.0)
+
+przedstawiciel = P04 AND
+DzienTygodnia = "czw." AND
+przedzial_czas rozmowy = 150-inf: '(190.833333-inf)' (3.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 3: '(156.666667-190.833333]' (2.0/1.0)
+
+przedstawiciel = P04 AND
+DzienTygodnia = "czw.": '(122.5-156.666667]' (8.0/5.0)
+
+DzienTygodnia = "niedz." AND
+przedstawiciel = P05: '(190.833333-inf)' (12.0/7.0)
+
+przedzial_czas rozmowy = 60-90 AND
+numer klienta = 7: '(88.333333-122.5]' (4.0/1.0)
+
+DzienTygodnia = "niedz." AND
+przedzial_czas rozmowy = 31-60: '(-inf-54.166667]' (9.0/6.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 2 AND
+czas rozmowy <= 94: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 14 AND
+przedstawiciel = P02: '(54.166667-88.333333]' (2.0/1.0)
+
+numer klienta = 2 AND
+DzienTygodnia = "pt." AND
+czas rozmowy <= 126: '(88.333333-122.5]' (2.0)
+
+numer klienta = 2 AND
+DzienTygodnia = "sob." AND
+data rozmowy <= 1378764000000: '(190.833333-inf)' (3.0/1.0)
+
+numer klienta = 2: '(156.666667-190.833333]' (9.0/5.0)
+
+przedzial_czas rozmowy = 60-90 AND
+przedstawiciel = P04: '(-inf-54.166667]' (5.0/2.0)
+
+przedstawiciel = P04 AND
+miesi¹c = 8 AND
+DzienTygodnia = "niedz.": '(-inf-54.166667]' (4.0/2.0)
+
+przedstawiciel = P04 AND
+DzienTygodnia = "pt." AND
+czas rozmowy > 80: '(122.5-156.666667]' (7.0/3.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 9: '(190.833333-inf)' (6.0/3.0)
+
+DzienTygodnia = "niedz." AND
+przedzial_czas rozmowy = 0-31: '(156.666667-190.833333]' (8.0/3.0)
+
+numer klienta = 7 AND
+miesi¹c = 10 AND
+czas rozmowy <= 137: '(156.666667-190.833333]' (2.0)
+
+DzienTygodnia = "niedz." AND
+numer klienta = 6: '(-inf-54.166667]' (2.0/1.0)
+
+DzienTygodnia = "niedz." AND
+przedzial_czas rozmowy = 150-inf AND
+numer klienta = 11: '(122.5-156.666667]' (2.0)
+
+DzienTygodnia = "niedz." AND
+przedzial_czas rozmowy = 120-150: '(156.666667-190.833333]' (7.0/3.0)
+
+przedstawiciel = P04 AND
+numer klienta = 11: '(190.833333-inf)' (7.0/4.0)
+
+numer klienta = 7 AND
+miesi¹c = 8 AND
+przedzial_czas rozmowy = 120-150 AND
+data rozmowy <= 1376776800000: '(122.5-156.666667]' (3.0/1.0)
+
+Oddzia³ = Wroc³aw AND
+DzienTygodnia = "wt." AND
+data rozmowy <= 1381442400000: '(54.166667-88.333333]' (4.0)
+
+DzienTygodnia = "niedz." AND
+przedstawiciel = P02 AND
+miesi¹c = 8: '(156.666667-190.833333]' (4.0/2.0)
+
+numer klienta = 7 AND
+miesi¹c = 8 AND
+przedzial_czas rozmowy = 90-120: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 7 AND
+Region = Centrum AND
+miesi¹c = 9: '(-inf-54.166667]' (7.0/3.0)
+
+numer klienta = 7 AND
+przedstawiciel = P03: '(156.666667-190.833333]' (4.0/1.0)
+
+numer klienta = 7 AND
+miesi¹c = 9 AND
+przedzial_czas rozmowy = 120-150: '(122.5-156.666667]' (3.0/1.0)
+
+numer klienta = 7 AND
+miesi¹c = 9: '(54.166667-88.333333]' (4.0/1.0)
+
+numer klienta = 7 AND
+miesi¹c = 8: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 9 AND
+przedstawiciel = P01: '(156.666667-190.833333]' (8.0/4.0)
+
+numer klienta = 4 AND
+przedstawiciel = P02 AND
+miesi¹c = 9: '(88.333333-122.5]' (7.0/2.0)
+
+numer klienta = 4 AND
+przedzial_czas rozmowy = 31-60: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 7: '(-inf-54.166667]' (2.0/1.0)
+
+numer klienta = 4 AND
+przedzial_czas rozmowy = 0-31 AND
+data rozmowy <= 1380664800000: '(54.166667-88.333333]' (2.0/1.0)
+
+DzienTygodnia = "wt." AND
+numer klienta = 11 AND
+czas rozmowy > 79: '(88.333333-122.5]' (4.0/1.0)
+
+DzienTygodnia = "wt." AND
+przedzial_czas rozmowy = 120-150: '(190.833333-inf)' (10.0/5.0)
+
+przedstawiciel = P02 AND
+numer klienta = 4 AND
+miesi¹c = 10: '(54.166667-88.333333]' (3.0/1.0)
+
+przedstawiciel = P04 AND
+miesi¹c = 10: '(88.333333-122.5]' (7.0/4.0)
+
+przedstawiciel = P04 AND
+numer klienta = 4: '(122.5-156.666667]' (3.0/2.0)
+
+przedstawiciel = P04 AND
+numer klienta = 3: '(156.666667-190.833333]' (2.0/1.0)
+
+przedstawiciel = P04: '(54.166667-88.333333]' (3.0/1.0)
+
+przedstawiciel = P02 AND
+numer klienta = 12 AND
+przedzial_czas rozmowy = 60-90: '(-inf-54.166667]' (2.0)
+
+przedstawiciel = P02 AND
+numer klienta = 12: '(54.166667-88.333333]' (3.0/2.0)
+
+numer klienta = 4 AND
+przedstawiciel = P01: '(54.166667-88.333333]' (12.0/7.0)
+
+numer klienta = 4 AND
+przedstawiciel = P02: '(122.5-156.666667]' (2.0)
+
+przedzial_czas rozmowy = 150-inf AND
+miesi¹c = 10 AND
+czas rozmowy > 166: '(88.333333-122.5]' (8.0/4.0)
+
+przedzial_czas rozmowy = 150-inf AND
+miesi¹c = 9: '(-inf-54.166667]' (16.0/11.0)
+
+przedstawiciel = P02 AND
+DzienTygodnia = "sob.": '(156.666667-190.833333]' (9.0/4.0)
+
+DzienTygodnia = "niedz." AND
+czas rozmowy <= 93: '(88.333333-122.5]' (2.0/1.0)
+
+DzienTygodnia = "sob." AND
+miesi¹c = 8: '(54.166667-88.333333]' (13.0/6.0)
+
+DzienTygodnia = "sob." AND
+numer klienta = 11: '(122.5-156.666667]' (4.0/2.0)
+
+numer klienta = 3 AND
+przedzial_czas rozmowy = 0-31: '(190.833333-inf)' (4.0/2.0)
+
+numer klienta = 3 AND
+przedzial_czas rozmowy = 120-150: '(190.833333-inf)' (4.0/1.0)
+
+numer klienta = 3 AND
+miesi¹c = 10: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 3 AND
+przedstawiciel = P05 AND
+czas rozmowy <= 94: '(-inf-54.166667]' (3.0)
+
+numer klienta = 3 AND
+przedstawiciel = P01 AND
+data rozmowy > 1376604000000: '(88.333333-122.5]' (3.0)
+
+numer klienta = 3 AND
+Region = Centrum: '(122.5-156.666667]' (4.0/2.0)
+
+numer klienta = 12 AND
+przedzial_czas rozmowy = 90-120: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 12 AND
+przedzial_czas rozmowy = 60-90: '(54.166667-88.333333]' (2.0/1.0)
+
+numer klienta = 12 AND
+miesi¹c = 9: '(88.333333-122.5]' (2.0/1.0)
+
+numer klienta = 12 AND
+przedzial_czas rozmowy = 120-150: '(-inf-54.166667]' (3.0/2.0)
+
+numer klienta = 6 AND
+DzienTygodnia = "czw.": '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 6 AND
+miesi¹c = 8: '(156.666667-190.833333]' (5.0/2.0)
+
+numer klienta = 6: '(190.833333-inf)' (9.0/5.0)
+
+numer klienta = 8 AND
+DzienTygodnia = "czw." AND
+data rozmowy <= 1376172000000: '(88.333333-122.5]' (5.0/2.0)
+
+numer klienta = 8 AND
+DzienTygodnia = "czw.": '(156.666667-190.833333]' (5.0/1.0)
+
+numer klienta = 8 AND
+przedzial_czas rozmowy = 0-31: '(54.166667-88.333333]' (3.0/2.0)
+
+numer klienta = 8 AND
+DzienTygodnia = "pt." AND
+data rozmowy > 1376258400000: '(-inf-54.166667]' (4.0/1.0)
+
+numer klienta = 8: '(122.5-156.666667]' (11.0/7.0)
+
+numer klienta = 9 AND
+DzienTygodnia = "wt.": '(88.333333-122.5]' (4.0/2.0)
+
+Region = Po³udnie AND
+numer klienta = 9 AND
+czas rozmowy > 64: '(122.5-156.666667]' (3.0)
+
+numer klienta = 9 AND
+DzienTygodnia = "pt." AND
+przedstawiciel = P05: '(54.166667-88.333333]' (3.0/1.0)
+
+numer klienta = 9 AND
+przedzial_czas rozmowy = 31-60: '(156.666667-190.833333]' (4.0/2.0)
+
+numer klienta = 9 AND
+przedzial_czas rozmowy = 90-120: '(156.666667-190.833333]' (3.0/1.0)
+
+numer klienta = 9: '(-inf-54.166667]' (7.0/4.0)
+
+numer klienta = 11 AND
+przedstawiciel = P02 AND
+czas rozmowy <= 132: '(54.166667-88.333333]' (5.0/1.0)
+
+numer klienta = 11 AND
+przedzial_czas rozmowy = 60-90: '(-inf-54.166667]' (3.0/1.0)
+
+numer klienta = 11 AND
+miesi¹c = 10: '(54.166667-88.333333]' (3.0/2.0)
+
+numer klienta = 11 AND
+przedzial_czas rozmowy = 120-150 AND
+DzienTygodnia = "czw.": '(156.666667-190.833333]' (5.0/3.0)
+
+numer klienta = 11 AND
+przedzial_czas rozmowy = 0-31: '(-inf-54.166667]' (3.0/2.0)
+
+numer klienta = 11 AND
+przedzial_czas rozmowy = 90-120: '(88.333333-122.5]' (3.0/1.0)
+
+numer klienta = 11: '(-inf-54.166667]' (8.0/4.0)
+
+numer klienta = 12: '(122.5-156.666667]' (2.0)
+
+DzienTygodnia = "sob.": '(122.5-156.666667]' (3.0/1.0)
+
+przedzial_czas rozmowy = 60-90 AND
+miesi¹c = 9: '(-inf-54.166667]' (2.0)
+
+DzienTygodnia = "pon." AND
+data rozmowy <= 1380492000000: '(54.166667-88.333333]' (3.0/1.0)
+
+DzienTygodnia = "czw." AND
+przedstawiciel = P02: '(88.333333-122.5]' (3.0/1.0)
+
+przedzial_czas rozmowy = 90-120 AND
+przedstawiciel = P03: '(-inf-54.166667]' (3.0/1.0)
+
+przedzial_czas rozmowy = 0-31 AND
+przedstawiciel = P03: '(122.5-156.666667]' (4.0/2.0)
+
+numer klienta = 10 AND
+przedzial_czas rozmowy = 31-60: '(122.5-156.666667]' (6.0/3.0)
+
+przedzial_czas rozmowy = 0-31: '(190.833333-inf)' (4.0/1.0)
+
+numer klienta = 10 AND
+DzienTygodnia = "czw.": '(156.666667-190.833333]' (3.0/1.0)
+
+DzienTygodnia = "czw.": '(88.333333-122.5]' (3.0/1.0)
+
+DzienTygodnia = "pt." AND
+czas rozmowy <= 117: '(88.333333-122.5]' (3.0)
+
+: '(156.666667-190.833333]' (6.0/3.0)
+
+Number of Rules  : 	221
+
+
+Time taken to build model: 1.59 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         181               18.1    %
+Incorrectly Classified Instances       819               81.9    %
+Kappa statistic                          0.0171
+Mean absolute error                      0.2773
+Root mean squared error                  0.4352
+Relative absolute error                 99.8576 %
+Root relative squared error            116.802  %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,168    0,202    0,143      0,168    0,154      -0,032   0,449     0,152     '(-inf-54.166667]'
+                 0,287    0,168    0,261      0,287    0,273      0,115    0,558     0,203     '(54.166667-88.333333]'
+                 0,161    0,151    0,163      0,161    0,162      0,010    0,482     0,151     '(88.333333-122.5]'
+                 0,188    0,161    0,182      0,188    0,185      0,026    0,504     0,165     '(122.5-156.666667]'
+                 0,138    0,154    0,166      0,138    0,151      -0,017   0,478     0,176     '(156.666667-190.833333]'
+                 0,145    0,147    0,163      0,145    0,153      -0,003   0,517     0,178     '(190.833333-inf)'
+Weighted Avg.    0,181    0,164    0,180      0,181    0,180      0,016    0,498     0,171     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 28 23 28 29 30 29 |  a = '(-inf-54.166667]'
+ 28 49 21 24 26 23 |  b = '(54.166667-88.333333]'
+ 36 24 25 28 23 19 |  c = '(88.333333-122.5]'
+ 34 25 24 30 23 24 |  d = '(122.5-156.666667]'
+ 36 35 29 28 25 28 |  e = '(156.666667-190.833333]'
+ 34 32 26 26 24 24 |  f = '(190.833333-inf)'
+

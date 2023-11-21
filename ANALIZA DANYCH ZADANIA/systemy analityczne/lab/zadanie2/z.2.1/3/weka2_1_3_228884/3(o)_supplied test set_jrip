@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R4-weka.filters.unsupervised.attribute.Remove-R7-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P20.0
+Instances:    800
+Attributes:   7
+              numer klienta
+              czas rozmowy
+              przedstawiciel
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(numer klienta = 14) and (czas rozmowy >= 138) => przedzial='(-inf-54.166667]' (9.0/3.0)
+ => przedzial='(156.666667-190.833333]' (791.0/654.0)
+
+Number of Rules : 2
+
+
+Time taken to build model: 0.89 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          44               22      %
+Incorrectly Classified Instances       156               78      %
+Kappa statistic                          0.0072
+Mean absolute error                      0.2769
+Root mean squared error                  0.3722
+Relative absolute error                 99.7166 %
+Root relative squared error             99.9036 %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,033    0,006    0,500      0,033    0,063      0,099    0,514     0,162     '(-inf-54.166667]'
+                 0,000    0,000    ?          0,000    ?          ?        0,506     0,187     '(54.166667-88.333333]'
+                 0,000    0,000    ?          0,000    ?          ?        0,506     0,141     '(88.333333-122.5]'
+                 0,000    0,000    ?          0,000    ?          ?        0,487     0,157     '(122.5-156.666667]'
+                 1,000    0,987    0,217      1,000    0,357      0,053    0,506     0,217     '(156.666667-190.833333]'
+                 0,000    0,000    ?          0,000    ?          ?        0,506     0,152     '(190.833333-inf)'
+Weighted Avg.    0,220    0,213    ?          0,220    ?          ?        0,504     0,173     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+  1  0  0  0 29  0 |  a = '(-inf-54.166667]'
+  0  0  0  0 37  0 |  b = '(54.166667-88.333333]'
+  0  0  0  0 28  0 |  c = '(88.333333-122.5]'
+  1  0  0  0 31  0 |  d = '(122.5-156.666667]'
+  0  0  0  0 43  0 |  e = '(156.666667-190.833333]'
+  0  0  0  0 30  0 |  f = '(190.833333-inf)'
+

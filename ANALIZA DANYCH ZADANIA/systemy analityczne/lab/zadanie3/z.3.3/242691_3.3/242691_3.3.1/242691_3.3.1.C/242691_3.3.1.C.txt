@@ -1,0 +1,25 @@
+12.05.2020 00:11:44 Results of ResultWriter 'Write as Text' [1]: 
+12.05.2020 00:11:44 SimpleExampleSet:
+247 examples,
+32 regular attributes,
+special attributes = {
+    label = #8: przedzialkwotowy (polynominal/single_value)/values=[]
+    confidence_50-150 = #3: confidence(50-150) (real/single_value)
+    confidence_150-250 = #4: confidence(150-250) (real/single_value)
+    confidence_0-50 = #5: confidence(0-50) (real/single_value)
+    prediction = #2: prediction(przedzialkwotowy) (polynominal/single_value)/values=[50-150, 150-250, 0-50]
+}
+12.05.2020 00:11:44 PerformanceVector:
+accuracy: 48.40% +/- 5.68% (micro average: 48.40%)
+ConfusionMatrix:
+True:	50-150	150-250	0-50
+50-150:	312	210	83
+150-250:	158	172	59
+0-50:	6	0	0
+kappa: 0.083 +/- 0.099 (micro average: 0.083)
+ConfusionMatrix:
+True:	50-150	150-250	0-50
+50-150:	312	210	83
+150-250:	158	172	59
+0-50:	6	0	0
+

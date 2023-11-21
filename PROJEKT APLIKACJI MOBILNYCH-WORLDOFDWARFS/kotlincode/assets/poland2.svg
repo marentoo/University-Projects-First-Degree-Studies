@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="713" height="231" viewBox="0 0 713 231">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #541111;
+      }
+
+      .cls-2 {
+        fill: #f0f0f0;
+      }
+
+      .cls-3 {
+        fill: #d80027;
+      }
+
+      .cls-4 {
+        filter: url(#Rectangle_895);
+      }
+    </style>
+    <filter id="Rectangle_895" x="0" y="0" width="713" height="231" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#585252"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="poland" transform="translate(88.971 40.818)">
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -88.97, -40.82)">
+      <rect id="Rectangle_895-2" data-name="Rectangle 895" class="cls-1" width="668" height="186" rx="93" transform="translate(17.5 17.5)"/>
+    </g>
+    <circle id="Ellipse_25" data-name="Ellipse 25" class="cls-2" cx="69.393" cy="69.393" r="69.393" transform="translate(0.186 0.289)"/>
+    <path id="Path_295" data-name="Path 295" class="cls-3" d="M138.972,256A69.486,69.486,0,1,1,0,256" transform="translate(0 -186.411)"/>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21
+Instances:    43188
+Attributes:   29
+              EMP.VAR.RATE
+              CONS.PRICE.IDX
+              CONS.CONF.IDX
+              EURIBOR3M
+              NR.EMPLOYED
+              miesiac
+              DataRokMiesi¹c
+              kategorie nieliczbowe
+              age
+              campaign
+              contact
+              default
+              duration
+              education
+              job
+              marital
+              month
+              pdays
+              poutcome
+              previous
+              Rok
+              przedzial_czas rozmowy
+              przedzial_wiek
+              przedzial_emp.var.rate
+              przedzial_cons.price.idx
+              przedzial_cons.conf.idx
+              przedzial_euribor3m
+              przedzial_nr.employed
+              y
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 44.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       39540               91.5532 %
+Incorrectly Classified Instances      3648                8.4468 %
+Kappa statistic                          0.5901
+Mean absolute error                      0.1185
+Root mean squared error                  0.2424
+Relative absolute error                 51.9129 %
+Root relative squared error             71.7326 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,969    0,436    0,936      0,969    0,952      0,596    0,944     0,990     no
+                 0,564    0,031    0,732      0,564    0,637      0,596    0,944     0,744     yes
+Weighted Avg.    0,916    0,383    0,909      0,916    0,911      0,596    0,944     0,958     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 36340  1172 |     a = no
+  2476  3200 |     b = yes
+

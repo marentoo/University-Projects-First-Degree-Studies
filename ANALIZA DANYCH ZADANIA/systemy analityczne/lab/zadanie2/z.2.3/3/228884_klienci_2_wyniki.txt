@@ -1,0 +1,225 @@
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         170               17      %
+Incorrectly Classified Instances       830               83      %
+Kappa statistic                          0.0041
+Mean absolute error                      0.2761
+Root mean squared error                  0.3815
+Relative absolute error                 99.4607 %
+Root relative squared error            102.3845 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,114    0,150    0,132      0,114    0,122      -0,039   0,495     0,164     '(-inf-54.166667]'
+                 0,240    0,182    0,214      0,240    0,226      0,055    0,542     0,211     '(54.166667-88.333333]'
+                 0,174    0,161    0,166      0,174    0,170      0,013    0,536     0,166     '(88.333333-122.5]'
+                 0,131    0,114    0,179      0,131    0,152      0,019    0,483     0,158     '(122.5-156.666667]'
+                 0,099    0,140    0,135      0,099    0,115      -0,046   0,461     0,169     '(156.666667-190.833333]'
+                 0,265    0,248    0,175      0,265    0,211      0,014    0,546     0,189     '(190.833333-inf)'
+Weighted Avg.    0,170    0,166    0,167      0,170    0,165      0,002    0,510     0,177     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 19 31 35 21 19 42 |  a = '(-inf-54.166667]'
+ 32 41 28 14 21 35 |  b = '(54.166667-88.333333]'
+ 21 32 27 19 14 42 |  c = '(88.333333-122.5]'
+ 25 27 26 21 26 35 |  d = '(122.5-156.666667]'
+ 27 38 23 22 18 53 |  e = '(156.666667-190.833333]'
+ 20 23 24 20 35 44 |  f = '(190.833333-inf)'
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         166               16.6    %
+Incorrectly Classified Instances       834               83.4    %
+Kappa statistic                         -0.0013
+Mean absolute error                      0.2792
+Root mean squared error                  0.4388
+Relative absolute error                100.5608 %
+Root relative squared error            117.7824 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,198    0,216    0,155      0,198    0,174      -0,017   0,496     0,171     '(-inf-54.166667]'
+                 0,275    0,227    0,200      0,275    0,232      0,043    0,531     0,187     '(54.166667-88.333333]'
+                 0,181    0,151    0,179      0,181    0,180      0,029    0,494     0,159     '(88.333333-122.5]'
+                 0,113    0,139    0,133      0,113    0,122      -0,029   0,466     0,146     '(122.5-156.666667]'
+                 0,110    0,155    0,136      0,110    0,122      -0,048   0,465     0,169     '(156.666667-190.833333]'
+                 0,120    0,113    0,175      0,120    0,143      0,009    0,494     0,169     '(190.833333-inf)'
+Weighted Avg.    0,166    0,167    0,163      0,166    0,162      -0,003   0,491     0,167     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 33 30 26 23 31 24 |  a = '(-inf-54.166667]'
+ 35 47 26 23 23 17 |  b = '(54.166667-88.333333]'
+ 34 34 28 21 27 11 |  c = '(88.333333-122.5]'
+ 32 45 25 18 18 22 |  d = '(122.5-156.666667]'
+ 45 43 30 23 20 20 |  e = '(156.666667-190.833333]'
+ 34 36 21 27 28 20 |  f = '(190.833333-inf)'
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         187               18.7    %
+Incorrectly Classified Instances       813               81.3    %
+Kappa statistic                          0.0239
+Mean absolute error                      0.2759
+Root mean squared error                  0.3972
+Relative absolute error                 99.3647 %
+Root relative squared error            106.6177 %
+Coverage of cases (0.95 level)          84.3    %
+Mean rel. region size (0.95 level)      85.0667 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,216    0,182    0,191      0,216    0,203      0,032    0,493     0,164     '(-inf-54.166667]'
+                 0,234    0,159    0,233      0,234    0,233      0,075    0,586     0,229     '(54.166667-88.333333]'
+                 0,129    0,153    0,134      0,129    0,132      -0,024   0,530     0,178     '(88.333333-122.5]'
+                 0,156    0,158    0,158      0,156    0,157      -0,002   0,416     0,142     '(122.5-156.666667]'
+                 0,182    0,171    0,191      0,182    0,186      0,012    0,471     0,177     '(156.666667-190.833333]'
+                 0,199    0,152    0,206      0,199    0,202      0,047    0,514     0,191     '(190.833333-inf)'
+Weighted Avg.    0,187    0,163    0,187      0,187    0,187      0,024    0,502     0,181     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 36 21 26 25 34 25 |  a = '(-inf-54.166667]'
+ 19 40 30 33 18 31 |  b = '(54.166667-88.333333]'
+ 33 31 20 23 30 18 |  c = '(88.333333-122.5]'
+ 33 26 23 25 31 22 |  d = '(122.5-156.666667]'
+ 35 25 30 27 33 31 |  e = '(156.666667-190.833333]'
+ 32 29 20 25 27 33 |  f = '(190.833333-inf)'
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         187               18.7    %
+Incorrectly Classified Instances       813               81.3    %
+Kappa statistic                          0.0079
+Mean absolute error                      0.277 
+Root mean squared error                  0.3746
+Relative absolute error                 99.7807 %
+Root relative squared error            100.5511 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,001    0,000      0,000    0,000      -0,014   0,487     0,163     '(-inf-54.166667]'
+                 0,029    0,024    0,200      0,029    0,051      0,012    0,506     0,173     '(54.166667-88.333333]'
+                 0,026    0,005    0,500      0,026    0,049      0,086    0,513     0,170     '(88.333333-122.5]'
+                 0,000    0,000    ?          0,000    ?          ?        0,481     0,156     '(122.5-156.666667]'
+                 0,983    0,962    0,184      0,983    0,310      0,045    0,513     0,184     '(156.666667-190.833333]'
+                 0,000    0,000    ?          0,000    ?          ?        0,498     0,169     '(190.833333-inf)'
+Weighted Avg.    0,187    0,179    ?          0,187    ?          ?        0,500     0,169     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   <-- classified as
+   0   6   1   0 160   0 |   a = '(-inf-54.166667]'
+   0   5   0   0 166   0 |   b = '(54.166667-88.333333]'
+   0   2   4   0 149   0 |   c = '(88.333333-122.5]'
+   1   5   2   0 152   0 |   d = '(122.5-156.666667]'
+   0   3   0   0 178   0 |   e = '(156.666667-190.833333]'
+   0   4   1   0 161   0 |   f = '(190.833333-inf)'
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         182               18.2    %
+Incorrectly Classified Instances       818               81.8    %
+Kappa statistic                          0.0124
+Mean absolute error                      0.2767
+Root mean squared error                  0.3721
+Relative absolute error                 99.6467 %
+Root relative squared error             99.869  %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,000    ?          0,000    ?          ?        0,494     0,163     '(-inf-54.166667]'
+                 0,655    0,609    0,182      0,655    0,284      0,035    0,527     0,177     '(54.166667-88.333333]'
+                 0,161    0,101    0,227      0,161    0,189      0,070    0,515     0,166     '(88.333333-122.5]'
+                 0,006    0,013    0,083      0,006    0,012      -0,023   0,506     0,164     '(122.5-156.666667]'
+                 0,243    0,265    0,169      0,243    0,199      -0,019   0,490     0,175     '(156.666667-190.833333]'
+                 0,000    0,000    ?          0,000    ?          ?        0,497     0,166     '(190.833333-inf)'
+Weighted Avg.    0,182    0,170    ?          0,182    ?          ?        0,505     0,169     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   <-- classified as
+   0 104  13   3  47   0 |   a = '(-inf-54.166667]'
+   0 112   8   0  51   0 |   b = '(54.166667-88.333333]'
+   0  88  25   5  37   0 |   c = '(88.333333-122.5]'
+   0  94  26   1  39   0 |   d = '(122.5-156.666667]'
+   0 119  17   1  44   0 |   e = '(156.666667-190.833333]'
+   0 100  21   2  43   0 |   f = '(190.833333-inf)'
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: 01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+
+=== Summary ===
+
+Correctly Classified Instances         186               18.6    %
+Incorrectly Classified Instances       814               81.4    %
+Kappa statistic                          0.0216
+Mean absolute error                      0.2768
+Root mean squared error                  0.3784
+Relative absolute error                 99.6778 %
+Root relative squared error            101.5688 %
+Coverage of cases (0.95 level)          98.2    %
+Mean rel. region size (0.95 level)      97.9    %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,180    0,163    0,181      0,180    0,180      0,016    0,517     0,176     '(-inf-54.166667]'
+                 0,263    0,194    0,218      0,263    0,239      0,064    0,544     0,205     '(54.166667-88.333333]'
+                 0,129    0,130    0,154      0,129    0,140      -0,001   0,526     0,169     '(88.333333-122.5]'
+                 0,138    0,140    0,157      0,138    0,147      -0,003   0,480     0,161     '(122.5-156.666667]'
+                 0,215    0,208    0,187      0,215    0,200      0,007    0,470     0,182     '(156.666667-190.833333]'
+                 0,181    0,143    0,201      0,181    0,190      0,040    0,519     0,178     '(190.833333-inf)'
+Weighted Avg.    0,186    0,164    0,184      0,186    0,184      0,021    0,509     0,179     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f   <-- classified as
+ 30 35 24 24 33 21 |  a = '(-inf-54.166667]'
+ 27 45 20 25 33 21 |  b = '(54.166667-88.333333]'
+ 29 29 20 23 25 29 |  c = '(88.333333-122.5]'
+ 29 36 22 22 33 18 |  d = '(122.5-156.666667]'
+ 29 37 25 21 39 30 |  e = '(156.666667-190.833333]'
+ 22 24 19 25 46 30 |  f = '(190.833333-inf)'

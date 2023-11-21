@@ -1,0 +1,94 @@
+{
+	"flow_name" : "238359_zadanie e4",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.SetVariables",
+			"properties" : {
+				"dynamicVarsInternalRep" : "fname@a@afiletoload@v@v@@vv@@",
+				"name" : "SetVariables",
+				"varsInternalRep" : ""
+			},
+			"connections" : {
+				"environment" : [
+					"StorePropertiesInEnvironment"
+				]
+			},
+			"coordinates" : "266,220"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.DataGrid",
+			"properties" : {
+				"data" : "@relation DataGrid\n\n@attribute fname string\n@attribute config string\n@attribute repTree string\n\n@data\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff',J48,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff',JRip,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff','weka.classifiers.bayes.NaiveBayes -D',?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff',RandomForest,''\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff',AdaBoostM1,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_bank.arff',weka.classifiers.functions.Logistic,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff',J48,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff',JRip,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff','weka.classifiers.bayes.NaiveBayes -D',?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff',RandomForest,''\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff',AdaBoostM1,?\n'C:\\\\Users\\\\Monisia\\\\Desktop\\\\studia\\\\semestr VI\\\\Systemy analityczne\\\\zadanie 2.5\\\\238359\\\\238359_klienci6.arff',weka.classifiers.functions.Logistic,?",
+				"name" : "DataGrid"
+			},
+			"connections" : {
+				"instance" : [
+					"SetVariables"
+				]
+			},
+			"coordinates" : "34,221"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Job",
+			"properties" : {
+				"flowFile" : "weka/gui/knowledgeflow/templates/jobSubFlow.kf",
+				"name" : "Job"
+			},
+			"connections" : {
+				"jobSuccess" : [
+					"GetDataFromResult"
+				]
+			},
+			"coordinates" : "386,351"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.StorePropertiesInEnvironment",
+			"properties" : {
+				"name" : "StorePropertiesInEnvironment",
+				"propsInternalRep" : "config@a@aZeroR@a@a @a@a @@vv@@repTree@a@aZeroR@a@aclassifier.maxDepth@a@a @@vv@@"
+			},
+			"connections" : {
+				"environment" : [
+					"Job"
+				]
+			},
+			"coordinates" : "465,218"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.GetDataFromResult",
+			"properties" : {
+				"name" : "GetDataFromResult"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "197,352"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextViewer",
+			"properties" : {
+				"name" : "TextViewer"
+			},
+			"connections" : {
+				"text" : [
+					"TextSaver"
+				]
+			},
+			"coordinates" : "21,353"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextSaver",
+			"properties" : {
+				"append" : true,
+				"file" : "C:/Users/Monisia/Desktop/238359_zadanie_e4",
+				"name" : "TextSaver",
+				"writeTitleString" : false
+			},
+			"connections" : {
+			},
+			"coordinates" : "22,465"
+		}
+	]
+}

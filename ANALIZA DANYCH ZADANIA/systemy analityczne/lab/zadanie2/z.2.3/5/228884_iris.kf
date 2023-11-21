@@ -1,0 +1,110 @@
+{
+	"flow_name" : "228884_iris",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.Loader",
+			"properties" : {
+				"loader" : {
+					"type" : "loader",
+					"class" : "weka.core.converters.ArffLoader",
+					"filePath" : "C:/Users/dell/Desktop/z.2.3/5/iris.arff",
+					"useRelativePath" : false
+				},
+				"name" : "ArffLoader"
+			},
+			"connections" : {
+				"instance" : [
+					"ClassAssigner"
+				]
+			},
+			"coordinates" : "40,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.ClassAssigner",
+			"properties" : {
+				"classColumn" : "class",
+				"name" : "ClassAssigner"
+			},
+			"connections" : {
+				"instance" : [
+					"IBk"
+				]
+			},
+			"coordinates" : "240,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.IncrementalClassifierEvaluator",
+			"properties" : {
+				"chartingEvalWindowSize" : 0,
+				"name" : "IncrementalClassifierEvaluator",
+				"outputPerClassInfoRetrievalStats" : false,
+				"statusFrequency" : 100
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				],
+				"chart" : [
+					"StripChart"
+				]
+			},
+			"coordinates" : "658,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.StripChart",
+			"properties" : {
+				"XLabelFreq" : 500,
+				"name" : "StripChart",
+				"refreshFreq" : 5,
+				"refreshWidth" : 1
+			},
+			"connections" : {
+			},
+			"coordinates" : "683,241"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextViewer",
+			"properties" : {
+				"name" : "TextViewer"
+			},
+			"connections" : {
+				"text" : [
+					"TextSaver"
+				]
+			},
+			"coordinates" : "499,241"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Classifier",
+			"properties" : {
+				"classifier" : {
+					"type" : "optionHandler",
+					"class" : "weka.classifiers.lazy.IBk",
+					"options" : "-K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\""
+				},
+				"loadClassifierFileName" : "",
+				"name" : "IBk",
+				"resetIncrementalClassifier" : false,
+				"updateIncrementalClassifier" : true
+			},
+			"connections" : {
+				"incrementalClassifier" : [
+					"IncrementalClassifierEvaluator"
+				]
+			},
+			"coordinates" : "411,40"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextSaver",
+			"properties" : {
+				"append" : true,
+				"file" : "C:/Users/dell/Desktop/z.2.3/5/228884_iris_wynik",
+				"name" : "TextSaver",
+				"writeTitleString" : false
+			},
+			"connections" : {
+			},
+			"coordinates" : "499,349"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     01_klienci4-weka.filters.unsupervised.attribute.Reorder-R1-2,4-8,3-weka.filters.unsupervised.attribute.Copy-R8-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial-R9-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R9-precision6-weka.filters.unsupervised.attribute.InterquartileRange-R2-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R10-11-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R10-weka.filters.unsupervised.attribute.Copy-R10-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R10-precision6-weka.filters.supervised.attribute.Discretize-R11-precision6-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy_supervised-R11-weka.filters.unsupervised.attribute.Reorder-R1-7,10-11,8,9-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceDzienTygodnia-R12-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-FEEE-weka.filters.unsupervised.attribute.ChangeDateFormat-C12-F"EEE"-weka.filters.unsupervised.attribute.NumericToNominal-R12-weka.filters.unsupervised.attribute.Reorder-R1-9,12,10-11-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Remove-R3
+Instances:    1000
+Attributes:   8
+              numer klienta
+              przedstawiciel
+              Oddzia³
+              Region
+              miesi¹c
+              przedzial_czas rozmowy
+              DzienTygodnia
+              kwota zakupu
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+kwota zakupu =
+
+     11.0463 * numer klienta=1,9,11,10,12,6,5,4,3,7,8,2,15 +
+     10.6515 * numer klienta=8,2,15 +
+      8.0234 * przedstawiciel=P03,P05,P04,P01 +
+      6.5877 * przedstawiciel=P04,P01 +
+      6.3248 * miesi¹c=10,8 +
+      6.4753 * przedzial_czas rozmowy=31-60,120-150 +
+      8.5855 * DzienTygodnia="pt.","wt.","sob.","czw.","niedz.","?r." +
+      7.9146 * DzienTygodnia="sob.","czw.","niedz.","?r." +
+     83.6706
+
+Time taken to build model: 0.12 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.039 
+Mean absolute error                     51.3947
+Root mean squared error                 59.5594
+Relative absolute error                100.5667 %
+Root relative squared error            100.9268 %
+Total Number of Instances             1000     
+

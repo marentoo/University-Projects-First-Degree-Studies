@@ -1,0 +1,263 @@
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         169               43.0025 %
+Incorrectly Classified Instances       224               56.9975 %
+Kappa statistic                          0.3359
+Mean absolute error                      0.1207
+Root mean squared error                  0.2765
+Relative absolute error                 69.6894 %
+Root relative squared error             93.9999 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,375    0,033    0,500      0,375    0,429      0,390    0,886     0,429     '(-inf-13.66]'
+                 0,636    0,110    0,538      0,636    0,583      0,493    0,882     0,517     '(13.66-17.32]'
+                 0,528    0,081    0,594      0,528    0,559      0,468    0,807     0,569     '(17.32-20.98]'
+                 0,414    0,101    0,414      0,414    0,414      0,312    0,821     0,391     '(20.98-24.64]'
+                 0,508    0,169    0,356      0,508    0,419      0,296    0,814     0,401     '(24.64-28.3]'
+                 0,256    0,073    0,278      0,256    0,267      0,190    0,770     0,260     '(28.3-31.96]'
+                 0,242    0,050    0,308      0,242    0,271      0,215    0,799     0,287     '(31.96-35.62]'
+                 0,174    0,038    0,222      0,174    0,195      0,153    0,803     0,196     '(35.62-39.28]'
+                 0,000    0,000    ?          0,000    ?          ?        0,792     0,057     '(39.28-42.94]'
+                 0,000    0,005    0,000      0,000    0,000      -0,009   0,683     0,044     '(42.94-inf)'
+Weighted Avg.    0,430    0,091    ?          0,430    ?          ?        0,823     0,408     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 12 19  1  0  0  0  0  0  0  0 |  a = '(-inf-13.66]'
+ 11 42 12  1  0  0  0  0  0  0 |  b = '(13.66-17.32]'
+  1 16 38 14  3  0  0  0  0  0 |  c = '(17.32-20.98]'
+  0  1  8 24 24  1  0  0  0  0 |  d = '(20.98-24.64]'
+  0  0  3 18 31  6  3  0  0  0 |  e = '(24.64-28.3]'
+  0  0  0  1 19 10  4  4  0  1 |  f = '(28.3-31.96]'
+  0  0  1  0  6 10  8  8  0  0 |  g = '(31.96-35.62]'
+  0  0  1  0  4  7  7  4  0  0 |  h = '(35.62-39.28]'
+  0  0  0  0  0  1  0  1  0  1 |  i = '(39.28-42.94]'
+  0  0  0  0  0  1  4  1  0  0 |  j = '(42.94-inf)'
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         173               44.0204 %
+Incorrectly Classified Instances       220               55.9796 %
+Kappa statistic                          0.3456
+Mean absolute error                      0.1277
+Root mean squared error                  0.2751
+Relative absolute error                 73.7012 %
+Root relative squared error             93.5137 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,438    0,022    0,636      0,438    0,519      0,494    0,890     0,449     '(-inf-13.66]'
+                 0,758    0,092    0,625      0,758    0,685      0,618    0,899     0,575     '(13.66-17.32]'
+                 0,597    0,259    0,341      0,597    0,434      0,281    0,786     0,388     '(17.32-20.98]'
+                 0,328    0,057    0,500      0,328    0,396      0,325    0,803     0,377     '(20.98-24.64]'
+                 0,279    0,078    0,395      0,279    0,327      0,232    0,777     0,341     '(24.64-28.3]'
+                 0,205    0,054    0,296      0,205    0,242      0,179    0,723     0,218     '(28.3-31.96]'
+                 0,333    0,042    0,423      0,333    0,373      0,325    0,777     0,306     '(31.96-35.62]'
+                 0,391    0,032    0,429      0,391    0,409      0,375    0,802     0,309     '(35.62-39.28]'
+                 0,000    0,003    0,000      0,000    0,000      -0,004   0,547     0,018     '(39.28-42.94]'
+                 0,333    0,018    0,222      0,333    0,267      0,258    0,728     0,103     '(42.94-inf)'
+Weighted Avg.    0,440    0,096    0,448      0,440    0,429      0,350    0,806     0,380     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 14 15  3  0  0  0  0  0  0  0 |  a = '(-inf-13.66]'
+  8 50  8  0  0  0  0  0  0  0 |  b = '(13.66-17.32]'
+  0 14 43 14  1  0  0  0  0  0 |  c = '(17.32-20.98]'
+  0  0 24 19 10  2  1  0  1  1 |  d = '(20.98-24.64]'
+  0  1 28  5 17  7  2  0  0  1 |  e = '(24.64-28.3]'
+  0  0  9  0 10  8  6  3  0  3 |  f = '(28.3-31.96]'
+  0  0  5  0  5  5 11  6  0  1 |  g = '(31.96-35.62]'
+  0  0  6  0  0  4  4  9  0  0 |  h = '(35.62-39.28]'
+  0  0  0  0  0  0  1  1  0  1 |  i = '(39.28-42.94]'
+  0  0  0  0  0  1  1  2  0  2 |  j = '(42.94-inf)'
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         166               42.2392 %
+Incorrectly Classified Instances       227               57.7608 %
+Kappa statistic                          0.3346
+Mean absolute error                      0.115 
+Root mean squared error                  0.2844
+Relative absolute error                 66.4063 %
+Root relative squared error             96.6703 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,750    0,050    0,571      0,750    0,649      0,620    0,966     0,764     '(-inf-13.66]'
+                 0,500    0,067    0,600      0,500    0,545      0,466    0,916     0,582     '(13.66-17.32]'
+                 0,639    0,112    0,561      0,639    0,597      0,501    0,873     0,593     '(17.32-20.98]'
+                 0,103    0,057    0,240      0,103    0,145      0,068    0,805     0,347     '(20.98-24.64]'
+                 0,443    0,136    0,375      0,443    0,406      0,287    0,844     0,476     '(24.64-28.3]'
+                 0,385    0,099    0,300      0,385    0,337      0,256    0,826     0,276     '(28.3-31.96]'
+                 0,303    0,086    0,244      0,303    0,270      0,197    0,855     0,270     '(31.96-35.62]'
+                 0,087    0,030    0,154      0,087    0,111      0,075    0,878     0,242     '(35.62-39.28]'
+                 0,000    0,013    0,000      0,000    0,000      -0,010   0,803     0,064     '(39.28-42.94]'
+                 0,500    0,013    0,375      0,500    0,429      0,423    0,959     0,530     '(42.94-inf)'
+Weighted Avg.    0,422    0,084    0,409      0,422    0,407      0,328    0,868     0,466     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 24  8  0  0  0  0  0  0  0  0 |  a = '(-inf-13.66]'
+ 18 33 15  0  0  0  0  0  0  0 |  b = '(13.66-17.32]'
+  0 13 46  7  4  1  1  0  0  0 |  c = '(17.32-20.98]'
+  0  1 16  6 25  4  6  0  0  0 |  d = '(20.98-24.64]'
+  0  0  3 10 27 14  7  0  0  0 |  e = '(24.64-28.3]'
+  0  0  1  1  9 15  7  2  2  2 |  f = '(28.3-31.96]'
+  0  0  0  1  5  8 10  8  1  0 |  g = '(31.96-35.62]'
+  0  0  1  0  2  6  8  2  1  3 |  h = '(35.62-39.28]'
+  0  0  0  0  0  1  1  1  0  0 |  i = '(39.28-42.94]'
+  0  0  0  0  0  1  1  0  1  3 |  j = '(42.94-inf)'
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 20 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         181               46.056  %
+Incorrectly Classified Instances       212               53.944  %
+Kappa statistic                          0.373 
+Mean absolute error                      0.1243
+Root mean squared error                  0.2672
+Relative absolute error                 71.7626 %
+Root relative squared error             90.8224 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,469    0,036    0,536      0,469    0,500      0,460    0,937     0,598     '(-inf-13.66]'
+                 0,591    0,080    0,600      0,591    0,595      0,515    0,907     0,618     '(13.66-17.32]'
+                 0,639    0,118    0,548      0,639    0,590      0,491    0,860     0,562     '(17.32-20.98]'
+                 0,362    0,110    0,362      0,362    0,362      0,252    0,755     0,297     '(20.98-24.64]'
+                 0,508    0,111    0,456      0,508    0,481      0,380    0,834     0,438     '(24.64-28.3]'
+                 0,333    0,065    0,361      0,333    0,347      0,278    0,769     0,326     '(28.3-31.96]'
+                 0,242    0,061    0,267      0,242    0,254      0,189    0,752     0,235     '(31.96-35.62]'
+                 0,217    0,032    0,294      0,217    0,250      0,213    0,778     0,207     '(35.62-39.28]'
+                 0,000    0,003    0,000      0,000    0,000      -0,004   0,791     0,101     '(39.28-42.94]'
+                 0,500    0,008    0,500      0,500    0,500      0,492    0,785     0,523     '(42.94-inf)'
+Weighted Avg.    0,461    0,085    0,452      0,461    0,455      0,373    0,830     0,440     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 15 15  2  0  0  0  0  0  0  0 |  a = '(-inf-13.66]'
+ 12 39 13  1  0  1  0  0  0  0 |  b = '(13.66-17.32]'
+  1  9 46  9  6  0  1  0  0  0 |  c = '(17.32-20.98]'
+  0  1 14 21 16  4  2  0  0  0 |  d = '(20.98-24.64]'
+  0  0  7 18 31  4  1  0  0  0 |  e = '(24.64-28.3]'
+  0  1  0  4  7 13  8  4  0  2 |  f = '(28.3-31.96]'
+  0  0  1  4  3  9  8  7  0  1 |  g = '(31.96-35.62]'
+  0  0  1  1  5  3  7  5  1  0 |  h = '(35.62-39.28]'
+  0  0  0  0  0  1  1  1  0  0 |  i = '(39.28-42.94]'
+  0  0  0  0  0  1  2  0  0  3 |  j = '(42.94-inf)'
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         119               30.2799 %
+Incorrectly Classified Instances       274               69.7201 %
+Kappa statistic                          0.1694
+Mean absolute error                      0.1555
+Root mean squared error                  0.2801
+Relative absolute error                 89.7633 %
+Root relative squared error             95.2283 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,000    ?          0,000    ?          ?        0,816     0,194     '(-inf-13.66]'
+                 0,955    0,315    0,380      0,955    0,543      0,484    0,837     0,409     '(13.66-17.32]'
+                 0,000    0,000    ?          0,000    ?          ?        0,673     0,280     '(17.32-20.98]'
+                 0,000    0,000    ?          0,000    ?          ?        0,657     0,214     '(20.98-24.64]'
+                 0,918    0,515    0,247      0,918    0,389      0,295    0,717     0,251     '(24.64-28.3]'
+                 0,000    0,000    ?          0,000    ?          ?        0,726     0,169     '(28.3-31.96]'
+                 0,000    0,000    ?          0,000    ?          ?        0,714     0,140     '(31.96-35.62]'
+                 0,000    0,000    ?          0,000    ?          ?        0,660     0,082     '(35.62-39.28]'
+                 0,000    0,000    ?          0,000    ?          ?        0,515     0,010     '(39.28-42.94]'
+                 0,000    0,000    ?          0,000    ?          ?        0,592     0,021     '(42.94-inf)'
+Weighted Avg.    0,303    0,133    ?          0,303    ?          ?        0,722     0,240     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+  0 32  0  0  0  0  0  0  0  0 |  a = '(-inf-13.66]'
+  0 63  0  0  3  0  0  0  0  0 |  b = '(13.66-17.32]'
+  0 50  0  0 22  0  0  0  0  0 |  c = '(17.32-20.98]'
+  0 13  0  0 45  0  0  0  0  0 |  d = '(20.98-24.64]'
+  0  5  0  0 56  0  0  0  0  0 |  e = '(24.64-28.3]'
+  0  1  0  0 38  0  0  0  0  0 |  f = '(28.3-31.96]'
+  0  1  0  0 32  0  0  0  0  0 |  g = '(31.96-35.62]'
+  0  1  0  0 22  0  0  0  0  0 |  h = '(35.62-39.28]'
+  0  0  0  0  3  0  0  0  0  0 |  i = '(39.28-42.94]'
+  0  0  0  0  6  0  0  0  0  0 |  j = '(42.94-inf)'
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: Auto MPG Data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R8-precision6
+
+
+Correctly Classified Instances         179               45.5471 %
+Incorrectly Classified Instances       214               54.4529 %
+Kappa statistic                          0.3738
+Mean absolute error                      0.1162
+Root mean squared error                  0.2902
+Relative absolute error                 67.0726 %
+Root relative squared error             98.6472 %
+Total Number of Instances              393     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,531    0,039    0,548      0,531    0,540      0,500    0,912     0,531     '(-inf-13.66]'
+                 0,591    0,070    0,629      0,591    0,609      0,534    0,860     0,547     '(13.66-17.32]'
+                 0,681    0,106    0,590      0,681    0,632      0,545    0,866     0,532     '(17.32-20.98]'
+                 0,310    0,090    0,375      0,310    0,340      0,239    0,736     0,313     '(20.98-24.64]'
+                 0,443    0,075    0,519      0,443    0,478      0,393    0,806     0,475     '(24.64-28.3]'
+                 0,282    0,090    0,256      0,282    0,268      0,184    0,633     0,230     '(28.3-31.96]'
+                 0,303    0,050    0,357      0,303    0,328      0,273    0,753     0,237     '(31.96-35.62]'
+                 0,217    0,035    0,278      0,217    0,244      0,205    0,720     0,226     '(35.62-39.28]'
+                 0,333    0,044    0,056      0,333    0,095      0,121    0,884     0,057     '(39.28-42.94]'
+                 0,333    0,021    0,200      0,333    0,250      0,243    0,603     0,083     '(42.94-inf)'
+Weighted Avg.    0,455    0,075    0,469      0,455    0,459      0,384    0,795     0,410     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j   <-- classified as
+ 17 11  3  0  0  1  0  0  0  0 |  a = '(-inf-13.66]'
+ 13 39 13  1  0  0  0  0  0  0 |  b = '(13.66-17.32]'
+  1  9 49 12  0  0  1  0  0  0 |  c = '(17.32-20.98]'
+  0  0 16 18 13  5  0  1  5  0 |  d = '(20.98-24.64]'
+  0  2  1 15 27  9  1  0  6  0 |  e = '(24.64-28.3]'
+  0  1  0  0  9 11  8  4  2  4 |  f = '(28.3-31.96]'
+  0  0  1  1  2  9 10  6  2  2 |  g = '(31.96-35.62]'
+  0  0  0  1  1  5  8  5  1  2 |  h = '(35.62-39.28]'
+  0  0  0  0  0  1  0  1  1  0 |  i = '(39.28-42.94]'
+  0  0  0  0  0  2  0  1  1  2 |  j = '(42.94-inf)'

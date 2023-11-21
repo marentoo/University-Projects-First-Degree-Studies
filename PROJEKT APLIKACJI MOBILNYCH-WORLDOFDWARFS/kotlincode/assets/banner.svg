@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080.323" height="332.548" viewBox="0 0 1080.323 332.548">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="18" y="460" width="1080.323" height="332.548" fill="none"/>
+    </clipPath>
+    <filter id="Path_252" x="-18" y="-460" width="1126.323" height="792.548" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(-18 -460)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g transform="matrix(1, 0, 0, 1, 18, 460)" filter="url(#Path_252)">
+      <path id="Path_252-2" data-name="Path 252" d="M-1167.791,630.247c.656,0-45.684,92.984,117.474,86.459s281.147,50.872,475.931,0c102.6-42.27,221.2-2.065,271.63,0,109.515,4.485,180.561,44.427,239.545-26.1,0-137.224-7.412-538.811-6.406-729.219H-1165.854Z" transform="translate(1158.53 -418.39)" fill="#541111" stroke="#634747" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

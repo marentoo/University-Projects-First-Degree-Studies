@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     228884_klienci6newwynik-weka.filters.unsupervised.attribute.Remove-R9,11-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzialkwotowy-R9
+Instances:    247
+Attributes:   9
+              numerklienta
+              miesiac
+              dzientygodnia
+              przedzialczasrozmowy
+              przedstawiciel
+              region
+              oddzial
+              plec
+              przedzialkwotowy
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+J48 pruned tree
+------------------
+
+region = Centrum
+|   dzientygodnia = poniedzialek: 50-150 (23.0/6.0)
+|   dzientygodnia = wtorek
+|   |   miesiac <= 9: 50-150 (2.0)
+|   |   miesiac > 9: 150-250 (14.0)
+|   dzientygodnia = sroda: 50-150 (24.0/6.0)
+|   dzientygodnia = czwartek
+|   |   miesiac <= 8: 150-250 (5.0)
+|   |   miesiac > 8: 50-150 (16.0/1.0)
+|   dzientygodnia = piatek: 50-150 (14.0)
+|   dzientygodnia = sobota: 50-150 (23.0/6.0)
+|   dzientygodnia = niedziela: 50-150 (17.0/6.0)
+region = Zachod: 50-150 (47.0/1.0)
+region = Poludnie: 50-150 (62.0/2.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	15
+
+Attribute mappings:
+
+Model attributes                	    Incoming attributes
+--------------------------------	    ----------------
+(numeric) numerklienta          	--> 1 missing (type mis-match)
+(numeric) miesiac               	--> 2 missing (type mis-match)
+(nominal) dzientygodnia         	--> 3 (nominal) dzientygodnia
+(nominal) przedzialczasrozmowy  	--> 4 (nominal) przedzialczasrozmowy
+(nominal) przedstawiciel        	--> 5 (nominal) przedstawiciel
+(nominal) region                	--> 6 (nominal) region
+(nominal) oddzial               	--> 7 (nominal) oddzial
+(nominal) plec                  	--> 8 (nominal) plec
+(nominal) przedzialkwotowy      	--> 9 (nominal) przedzialkwotowy
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         118               54.8837 %
+Incorrectly Classified Instances        97               45.1163 %
+Kappa statistic                         -0.0014
+Mean absolute error                      0.467 
+Root mean squared error                  0.6021
+Relative absolute error                100.5888 %
+Root relative squared error            108.3727 %
+Total Number of Instances              215     
+Ignored Class Unknown Instances                 32     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,074    0,075    0,438      0,074    0,126      -0,002   0,486     0,377     150-250
+                 0,925    0,926    0,558      0,925    0,696      -0,002   0,494     0,482     50-150
+Weighted Avg.    0,549    0,550    0,505      0,549    0,444      -0,002   0,491     0,436     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   7  88 |   a = 150-250
+   9 111 |   b = 50-150
+

@@ -1,0 +1,1172 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0221.0754                               -->
+<workbook source-build='2019.4.4 (20194.20.0221.0754)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='KosztMinutyRozmowy' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2200'>
+        <calculation class='tableau' formula='2200' />
+        <range granularity='100' max='10000' min='0' />
+      </column>
+      <column caption='PrzychódZLokaty' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='4200'>
+        <calculation class='tableau' formula='4200' />
+        <range granularity='100' max='10000' min='0' />
+      </column>
+      <column caption='Wybierz Kategorię Danych' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;job&quot;'>
+        <calculation class='tableau' formula='&quot;job&quot;' />
+        <members>
+          <member value='&quot;job&quot;' />
+          <member value='&quot;education&quot;' />
+          <member value='&quot;day_of_week&quot;' />
+          <member value='&quot;housing&quot;' />
+          <member value='&quot;loan&quot;' />
+          <member value='&quot;marital&quot;' />
+          <member value='&quot;poutcome&quot;' />
+          <member value='&quot;campaign&quot;' />
+          <member value='&quot;Wiek [przedział]&quot;' />
+          <member value='&quot;previous&quot;' />
+          <member value='&quot;pdays&quot;' />
+          <member value='&quot;duration&quot;' />
+        </members>
+      </column>
+      <column caption='Wybierz Miarę KPI' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;ProcentYesLokat&quot;'>
+        <calculation class='tableau' formula='&quot;ProcentYesLokat&quot;' />
+        <members>
+          <member value='&quot;ZyskNaLokatach&quot;' />
+          <member value='&quot;Liczba Lokat&quot;' />
+          <member value='&quot;ProcentYesLokat&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='bank-additional-full — dodane n (bank-additional-full — dodane nowe2)' inline='true' name='federated.0bawxtu1t74iqd1guyk7c0h1jt0a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='bank-additional-full — dodane nowe2' name='excel-direct.00pum2o12w145i16rbrao0sb0aie'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='Data/zbiory/bank-additional-full — dodane nowe2.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.00pum2o12w145i16rbrao0sb0aie' name='bank-additional-full — dodane n' table='[&apos;bank-additional-full — dodane n$&apos;]' type='table'>
+          <columns gridOrigin='A1:W10001:no:A1:W10001:0' header='yes' outcome='2'>
+            <column datatype='integer' name='age' ordinal='0' />
+            <column datatype='string' name='job' ordinal='1' />
+            <column datatype='string' name='marital' ordinal='2' />
+            <column datatype='string' name='education' ordinal='3' />
+            <column datatype='string' name='default' ordinal='4' />
+            <column datatype='string' name='housing' ordinal='5' />
+            <column datatype='string' name='loan' ordinal='6' />
+            <column datatype='string' name='contact' ordinal='7' />
+            <column datatype='string' name='month' ordinal='8' />
+            <column datatype='integer' name='year' ordinal='9' />
+            <column datatype='string' name='day_of_week' ordinal='10' />
+            <column datatype='integer' name='duration' ordinal='11' />
+            <column datatype='integer' name='campaign' ordinal='12' />
+            <column datatype='integer' name='pdays' ordinal='13' />
+            <column datatype='integer' name='previous' ordinal='14' />
+            <column datatype='string' name='poutcome' ordinal='15' />
+            <column datatype='integer' name='emp.var.rate' ordinal='16' />
+            <column datatype='string' name='cons.price.idx' ordinal='17' />
+            <column datatype='string' name='cons.conf.idx' ordinal='18' />
+            <column datatype='string' name='euribor3m' ordinal='19' />
+            <column datatype='string' name='nr.employed' ordinal='20' />
+            <column datatype='string' name='y' ordinal='21' />
+            <column datatype='integer' name='ID klienta' ordinal='22' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>job</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[job]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>job</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marital</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[marital]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>marital</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>education</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[education]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>education</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>default</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[default]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>default</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>housing</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[housing]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>housing</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[loan]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>loan</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[contact]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>contact</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>campaign</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[campaign]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>campaign</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pdays</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pdays]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>pdays</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>previous</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[previous]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>previous</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>poutcome</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[poutcome]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>poutcome</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>emp.var.rate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[emp.var.rate]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>emp.var.rate</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cons.price.idx</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[cons.price.idx]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>cons.price.idx</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cons.conf.idx</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[cons.conf.idx]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>cons.conf.idx</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>euribor3m</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[euribor3m]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>euribor3m</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nr.employed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[nr.employed]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>nr.employed</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[y]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID klienta</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID klienta]</local-name>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias>ID klienta</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[bank-additional-full — dodane n]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:W10001:no:A1:W10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='CONS.CONF.IDX (bin)' datatype='integer' name='[CONS.CONF.IDX (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Calculation_240098186572275716]' peg='0' size='5' />
+        <aliases>
+          <alias key='-11' value='od -50 do -55' />
+          <alias key='-10' value='od -45 do -50' />
+          <alias key='-9' value='od -40 do -45' />
+          <alias key='-8' value='od -35 do -40' />
+          <alias key='-7' value='od -30 do -35' />
+          <alias key='-6' value='od -25 do -30' />
+        </aliases>
+      </column>
+      <column aggregation='None' caption='CONS.PRICE.IDX (bin)' datatype='integer' name='[CONS.PRICE.IDX (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[Calculation_240098186572144643]' peg='0' size='0.5' />
+        <aliases>
+          <alias key='184' value='od 92,0 do 92,5' />
+          <alias key='185' value='od 92,5 do 93,0' />
+          <alias key='186' value='od 93,0 do 93,5' />
+          <alias key='187' value='od 93,5 do 94,0' />
+          <alias key='188' value='od 94,0 do 94,5' />
+          <alias key='189' value='od 94,5 do 95,0' />
+        </aliases>
+      </column>
+      <column caption='EMP.VAR.RATE' datatype='integer' name='[Calculation_240098186572021762]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[emp.var.rate]' />
+      </column>
+      <column caption='CONS.PRICE.IDX' datatype='real' name='[Calculation_240098186572144643]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([cons.price.idx])' />
+      </column>
+      <column caption='CONS.CONF.IDX' datatype='real' name='[Calculation_240098186572275716]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([cons.conf.idx])' />
+      </column>
+      <column caption='EURIBOR3M' datatype='real' name='[Calculation_240098186572394501]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([euribor3m])' />
+      </column>
+      <column caption='NR.EMPLOYED' datatype='real' name='[Calculation_240098186572488710]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT([nr.employed])' />
+      </column>
+      <column caption='miesiac' datatype='integer' name='[Calculation_240098186573123592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='If [month] = &quot;jan&quot; then&#13;&#10;&#13;&#10;1&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;feb&quot; then&#13;&#10;&#13;&#10;2&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;mar&quot; then&#13;&#10;&#13;&#10;3&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;apr&quot; then&#13;&#10;&#13;&#10;4&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;may&quot; then&#13;&#10;&#13;&#10;5&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;jun&quot; then&#13;&#10;&#13;&#10;6&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;jul&quot; then&#13;&#10;&#13;&#10;7&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;aug&quot; then&#13;&#10;&#13;&#10;8&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;sep&quot; then&#13;&#10;&#13;&#10;9&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;oct&quot; then&#13;&#10;&#13;&#10;10&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;nov&quot; then&#13;&#10;&#13;&#10;11&#13;&#10;&#13;&#10;ELSEIF [month] = &quot;dec&quot; then&#13;&#10;&#13;&#10;12&#13;&#10;END' />
+      </column>
+      <column caption='date' datatype='date' name='[Calculation_240098186574471177]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(str([month])+&quot;/1/&quot;+str([year]))' />
+      </column>
+      <column caption='DURATION-MIN' datatype='real' name='[Calculation_240098186575880202]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ROUND(([duration]/60),2)' />
+      </column>
+      <column caption='DataRokMiesiąc' datatype='date' name='[Calculation_240098186576261131]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE([year],(IF [month]=&quot;jan&quot; THEN 1 &#13;&#10;ELSEIF [month]=&quot;feb&quot; THEN 2  &#13;&#10;ELSEIF [month]=&quot;mar&quot; THEN 3&#13;&#10;ELSEIF [month]=&quot;apr&quot; THEN 4&#13;&#10;ELSEIF [month]=&quot;may&quot; THEN 5&#13;&#10;ELSEIF [month]=&quot;jun&quot; THEN 6&#13;&#10;ELSEIF [month]=&quot;jul&quot; THEN 7&#13;&#10;ELSEIF [month]=&quot;aug&quot; THEN 8&#13;&#10;ELSEIF [month]=&quot;sep&quot; THEN 9&#13;&#10;ELSEIF [month]=&quot;oct&quot; THEN 10&#13;&#10;ELSEIF [month]=&quot;nov&quot; THEN 11&#13;&#10;ELSEIF [month]=&quot;dec&quot; THEN 12 end ),1)' />
+      </column>
+      <column caption='Liczba Lokat' datatype='integer' name='[Calculation_240098186596118543]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+      </column>
+      <column caption='NumberYesLokat' datatype='real' name='[Calculation_240098186597040144]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/[Number of Records]' />
+      </column>
+      <column caption='ZyskNaLokatach' datatype='integer' name='[Calculation_240098186606587933]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_971933126251253760]-[Calculation_971933126253010945]' />
+      </column>
+      <column caption='T/F%YesLokata' datatype='boolean' name='[Calculation_240098186613051423]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='AVG([Calculation_240098186596118543]/[Number of Records]) &gt; WINDOW_AVG(AVG( [Calculation_240098186596118543]/[Number of Records]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Target%Yes' datatype='real' name='[Calculation_240098186613338144]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF Attr([year]) = 2008 THEN 0.1 ELSEIF attr([year]) = 2009 THEN 0.4 ELSE 0.5 END' />
+      </column>
+      <column caption='ŚredniProcentLokat' datatype='real' name='[Calculation_240098186615177255]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Calculation_240098186596118543]/([Calculation_240098186596118543]+[Liczba Lokat (copy)_240098186614816806]))' />
+      </column>
+      <column caption='MinimalnaLiczbaLokat' datatype='integer' name='[Calculation_240098186615545896]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [job]=&apos;student&apos; THEN 100 ELSEIF [job]= &apos;admin.&apos; THEN 1000 ELSEIF [job]= &apos;retired&apos; THEN&#13;&#10;150 ELSEIF [job]= &apos;management&apos; THEN 600 ELSEIF [job]= &apos;services&apos; THEN 100 ELSE 300 END' />
+      </column>
+      <column caption='miaraKPI' datatype='real' name='[Calculation_240098186615918633]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 4] &#13;&#10;WHEN &apos;ProcentYesLokat&apos; THEN [NumberYesLokat (copy)_240098186600108051]&#13;&#10;WHEN &apos;Liczba Lokat&apos; THEN SUM([Calculation_240098186596118543]) &#13;&#10;WHEN &apos;ZyskNaLokatach&apos; THEN SUM([Calculation_240098186606587933])  &#13;&#10;END' />
+      </column>
+      <column caption='kategorie nieliczbowe' datatype='string' name='[Calculation_240098186616131626]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 3] &#13;&#10;WHEN &apos;job&apos; THEN [job] &#13;&#10;WHEN &apos;education&apos; THEN[education]&#13;&#10;WHEN &apos;marital&apos; THEN [marital]&#13;&#10;WHEN &apos;Wiek [przedział]&apos; THEN [Calculation_240098186617962540]&#13;&#10;WHEN &apos;housing&apos; THEN [housing]&#13;&#10;WHEN &apos;loan&apos; THEN [loan]&#13;&#10;ELSE NULL &#13;&#10;end' />
+      </column>
+      <column caption='Wiek [przedział]' datatype='string' name='[Calculation_240098186617962540]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [age]&lt;20 THEN &apos;do 20&apos; &#13;&#10;ELSEIF [age]&lt;30 THEN &apos;20-30&apos; &#13;&#10;ELSEIF [age]&lt;40 THEN &apos;30-40&apos; &#13;&#10;ELSEIF [age]&lt;50 THEN &apos;40-50&apos;&#13;&#10;ELSEIF [age]&lt;60 THEN &apos;50-60&apos;&#13;&#10;ELSEIF [age]&lt;70 THEN &apos;60-70&apos;&#13;&#10;ELSEIF [age]&lt;80 THEN &apos;70-80&apos;&#13;&#10;ELSEIF [age]&lt;90 THEN &apos;80-90&apos;&#13;&#10;ELSE &apos;ponad 90&apos; END' />
+      </column>
+      <column caption='kategorie liczbowe' datatype='integer' name='[Calculation_240098186622124077]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 3] &#13;&#10;WHEN &apos;previous&apos; THEN [previous] &#13;&#10;WHEN &apos;campaign&apos; THEN[campaign] &#13;&#10;WHEN &apos;pdays&apos; THEN [pdays]  &#13;&#10;WHEN &apos;duration&apos; THEN [duration] &#13;&#10;ELSE NULL &#13;&#10;end' />
+      </column>
+      <column caption='ProcentLokat' datatype='real' name='[Calculation_240098186622746670]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/[Number of Records]' />
+      </column>
+      <column caption='przychody z lokaty' datatype='integer' name='[Calculation_971933126251253760]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [y]=&quot;yes&quot; THEN [Parameters].[Parameter 2] + (IF [job]=&quot;management&quot; OR [job]=&quot;entrepreneur&quot; OR [job]= &quot;admin&quot; THEN 60000 ELSE 30000 END)&#13;&#10;ELSE 0 END' />
+      </column>
+      <column caption='koszty minuty rozmowy' datatype='integer' name='[Calculation_971933126253010945]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]+(IF [job]=&quot;management&quot; OR [job]=&quot;entrepreneur&quot; OR [job]= &quot;admin&quot; THEN 2000 ELSE 1000 END)' />
+      </column>
+      <column aggregation='None' caption='DURATION_min (bin)' datatype='integer' name='[DURATION-MIN (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Calculation_240098186575880202]' peg='0' size='5' />
+        <aliases>
+          <alias key='0' value='0-5' />
+          <alias key='1' value='5-10' />
+          <alias key='2' value='10-15' />
+          <alias key='3' value='15-20' />
+          <alias key='4' value='20-25' />
+          <alias key='5' value='25-30' />
+          <alias key='6' value='30-35' />
+          <alias key='7' value='35-40' />
+          <alias key='8' value='40-45' />
+          <alias key='9' value='45-50' />
+          <alias key='10' value='50-55' />
+          <alias key='11' value='55-60' />
+          <alias key='12' value='60-65' />
+          <alias key='13' value='65-70' />
+          <alias key='16' value='70-' />
+        </aliases>
+      </column>
+      <column aggregation='None' caption='EURIBOR3M (bin)' datatype='integer' name='[EURIBOR3M (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[Calculation_240098186572394501]' peg='0' size='0.5' />
+        <aliases>
+          <alias key='1' value='do 0,5' />
+          <alias key='2' value='od 0,5 do 1' />
+          <alias key='3' value='od 1,0 do 2,5' />
+          <alias key='6' value='od 2,5 do 3,5' />
+          <alias key='7' value='od 3,5 do 4,0' />
+          <alias key='8' value='od 4,0 do 4,5' />
+          <alias key='9' value='od 4,5 do 5,0' />
+          <alias key='10' value='od 5,0' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[ID klienta]' role='dimension' type='ordinal' />
+      <column caption='Liczba Lokat Okres Wstecz' datatype='integer' name='[Liczba Lokat (copy)_240098186613960738]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+      </column>
+      <column caption='LiczbaRozmówBezLokaty' datatype='integer' name='[Liczba Lokat (copy)_240098186614816806]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='If [y] = &quot;no&quot; THEN 1 else 0 END' />
+      </column>
+      <column aggregation='None' caption='NR.EMPLOYED (bin)' datatype='integer' name='[NR.EMPLOYED (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='2' formula='[Calculation_240098186572488710]' peg='0' size='100' />
+        <aliases>
+          <alias key='49' value='do 5063,6' />
+          <alias key='50' value='od 5063,6 do 5163,6' />
+          <alias key='51' value='od 5163,6 do 5263,6' />
+          <alias key='52' value='od 5263,6' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='ProcentYesLokat' datatype='real' name='[NumberYesLokat (copy)_240098186600108051]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/COUNT([y])' />
+      </column>
+      <column caption='ProcentLokatOkresWstecz' datatype='real' name='[ProcentYesLokat (copy)_240098186614177827]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/COUNT([y])' />
+      </column>
+      <column caption='ZyskOkresWstecz' datatype='integer' name='[ZyskNaLokatach (copy)_240098186624811055]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 2]-[Parameters].[Parameter 1]' />
+      </column>
+      <column aggregation='None' caption='WIEK(bin)' datatype='integer' name='[age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[age]' peg='0' size='20' />
+        <aliases>
+          <alias key='0' value='0-19' />
+          <alias key='1' value='20-39' />
+          <alias key='2' value='40-59' />
+          <alias key='3' value='60-79' />
+          <alias key='4' value='80-100' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column datatype='string' name='[month]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.357037' measure-ordering='alphabetic' measure-percentage='0.459259' parameter-percentage='0.183704' show-aliased-fields='true' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:month:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;dec&quot;</bucket>
+            </map>
+            <map to='#386592'>
+              <bucket>&quot;nov&quot;</bucket>
+            </map>
+            <map to='#4472a0'>
+              <bucket>&quot;oct&quot;</bucket>
+            </map>
+            <map to='#5081ae'>
+              <bucket>&quot;sep&quot;</bucket>
+            </map>
+            <map to='#5f90ba'>
+              <bucket>&quot;aug&quot;</bucket>
+            </map>
+            <map to='#6e9fc7'>
+              <bucket>&quot;jul&quot;</bucket>
+            </map>
+            <map to='#7eaed3'>
+              <bucket>&quot;jun&quot;</bucket>
+            </map>
+            <map to='#90bede'>
+              <bucket>&quot;may&quot;</bucket>
+            </map>
+            <map to='#a4cee9'>
+              <bucket>&quot;apr&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;mar&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Poland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='age' />
+        <field-sort-custom-order field='Calculation_240098186617962540' />
+        <field-sort-custom-order field='job' />
+        <field-sort-custom-order field='marital' />
+        <field-sort-custom-order field='education' />
+        <field-sort-custom-order field='default' />
+        <field-sort-custom-order field='housing' />
+        <field-sort-custom-order field='loan' />
+        <field-sort-custom-order field='contact' />
+        <field-sort-custom-order field='month' />
+        <field-sort-custom-order field='Calculation_240098186573123592' />
+        <field-sort-custom-order field='year' />
+        <field-sort-custom-order field='Calculation_240098186576261131' />
+        <field-sort-custom-order field='DataRokMiesiąc (copy)_240098186605019164' />
+        <field-sort-custom-order field='Calculation_240098186574471177' />
+        <field-sort-custom-order field='Calculation_240098186571489281' />
+        <field-sort-custom-order field='day_of_week' />
+        <field-sort-custom-order field='duration' />
+        <field-sort-custom-order field='Calculation_240098186575880202' />
+        <field-sort-custom-order field='campaign' />
+        <field-sort-custom-order field='pdays' />
+        <field-sort-custom-order field='previous' />
+        <field-sort-custom-order field='poutcome' />
+        <field-sort-custom-order field='emp.var.rate' />
+        <field-sort-custom-order field='Calculation_240098186572021762' />
+        <field-sort-custom-order field='cons.price.idx' />
+        <field-sort-custom-order field='Calculation_240098186572144643' />
+        <field-sort-custom-order field='cons.conf.idx' />
+        <field-sort-custom-order field='Calculation_240098186572275716' />
+        <field-sort-custom-order field='euribor3m' />
+        <field-sort-custom-order field='Calculation_240098186572394501' />
+        <field-sort-custom-order field='nr.employed' />
+        <field-sort-custom-order field='Calculation_240098186572488710' />
+        <field-sort-custom-order field='y' />
+        <field-sort-custom-order field='Calculation_240098186597040144' />
+        <field-sort-custom-order field='NumberYesLokat (copy)_240098186600108051' />
+        <field-sort-custom-order field='ProcentYesLokat (copy)_240098186614177827' />
+        <field-sort-custom-order field='Calculation_240098186596118543' />
+        <field-sort-custom-order field='Liczba Lokat (copy)_240098186614816806' />
+        <field-sort-custom-order field='Liczba Lokat (copy)_240098186613960738' />
+        <field-sort-custom-order field='ID klienta' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='KosztMinutyRozmowy' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2200'>
+          <calculation class='tableau' formula='2200' />
+          <range granularity='100' max='10000' min='0' />
+        </column>
+        <column caption='PrzychódZLokaty' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='4200'>
+          <calculation class='tableau' formula='4200' />
+          <range granularity='100' max='10000' min='0' />
+        </column>
+        <column caption='Wybierz Kategorię Danych' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;job&quot;'>
+          <calculation class='tableau' formula='&quot;job&quot;' />
+        </column>
+        <column caption='Wybierz Miarę KPI' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;ProcentYesLokat&quot;'>
+          <calculation class='tableau' formula='&quot;ProcentYesLokat&quot;' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='2f(1)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bank-additional-full — dodane n (bank-additional-full — dodane nowe2)' name='federated.0bawxtu1t74iqd1guyk7c0h1jt0a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bawxtu1t74iqd1guyk7c0h1jt0a'>
+            <column caption='Liczba Lokat' datatype='integer' name='[Calculation_240098186596118543]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+            </column>
+            <column caption='ProcentYesLokat' datatype='real' name='[NumberYesLokat (copy)_240098186600108051]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/COUNT([y])' />
+            </column>
+            <column datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NumberYesLokat (copy)_240098186600108051]' derivation='User' name='[usr:NumberYesLokat (copy)_240098186600108051:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[y]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:month:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]</rows>
+        <cols>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:month:nk]</cols>
+      </table>
+      <simple-id uuid='{C4BF758E-4D39-4121-88C8-EA491F52EB51}' />
+    </worksheet>
+    <worksheet name='2f(2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bank-additional-full — dodane n (bank-additional-full — dodane nowe2)' name='federated.0bawxtu1t74iqd1guyk7c0h1jt0a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bawxtu1t74iqd1guyk7c0h1jt0a'>
+            <column caption='DataRokMiesiąc' datatype='date' name='[Calculation_240098186576261131]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([year],(IF [month]=&quot;jan&quot; THEN 1 &#13;&#10;ELSEIF [month]=&quot;feb&quot; THEN 2  &#13;&#10;ELSEIF [month]=&quot;mar&quot; THEN 3&#13;&#10;ELSEIF [month]=&quot;apr&quot; THEN 4&#13;&#10;ELSEIF [month]=&quot;may&quot; THEN 5&#13;&#10;ELSEIF [month]=&quot;jun&quot; THEN 6&#13;&#10;ELSEIF [month]=&quot;jul&quot; THEN 7&#13;&#10;ELSEIF [month]=&quot;aug&quot; THEN 8&#13;&#10;ELSEIF [month]=&quot;sep&quot; THEN 9&#13;&#10;ELSEIF [month]=&quot;oct&quot; THEN 10&#13;&#10;ELSEIF [month]=&quot;nov&quot; THEN 11&#13;&#10;ELSEIF [month]=&quot;dec&quot; THEN 12 end ),1)' />
+            </column>
+            <column caption='Liczba Lokat' datatype='integer' name='[Calculation_240098186596118543]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+            </column>
+            <column caption='NumberYesLokat' datatype='real' name='[Calculation_240098186597040144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/[Number of Records]' />
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Calculation_240098186576261131]' derivation='Month' name='[mn:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_240098186597040144]' derivation='User' name='[usr:Calculation_240098186597040144:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[y]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_240098186576261131]' derivation='Year' name='[yr:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok]' value='34' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:Calculation_240098186597040144:qk]</rows>
+        <cols>([federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok] / [federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok])</cols>
+      </table>
+      <simple-id uuid='{8035E64C-5FD4-403F-A8AE-EBE58E73792F}' />
+    </worksheet>
+    <worksheet name='2f(3)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bank-additional-full — dodane n (bank-additional-full — dodane nowe2)' name='federated.0bawxtu1t74iqd1guyk7c0h1jt0a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bawxtu1t74iqd1guyk7c0h1jt0a'>
+            <column caption='DataRokMiesiąc' datatype='date' name='[Calculation_240098186576261131]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([year],(IF [month]=&quot;jan&quot; THEN 1 &#13;&#10;ELSEIF [month]=&quot;feb&quot; THEN 2  &#13;&#10;ELSEIF [month]=&quot;mar&quot; THEN 3&#13;&#10;ELSEIF [month]=&quot;apr&quot; THEN 4&#13;&#10;ELSEIF [month]=&quot;may&quot; THEN 5&#13;&#10;ELSEIF [month]=&quot;jun&quot; THEN 6&#13;&#10;ELSEIF [month]=&quot;jul&quot; THEN 7&#13;&#10;ELSEIF [month]=&quot;aug&quot; THEN 8&#13;&#10;ELSEIF [month]=&quot;sep&quot; THEN 9&#13;&#10;ELSEIF [month]=&quot;oct&quot; THEN 10&#13;&#10;ELSEIF [month]=&quot;nov&quot; THEN 11&#13;&#10;ELSEIF [month]=&quot;dec&quot; THEN 12 end ),1)' />
+            </column>
+            <column caption='Liczba Lokat' datatype='integer' name='[Calculation_240098186596118543]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+            </column>
+            <column caption='ProcentYesLokat' datatype='real' name='[NumberYesLokat (copy)_240098186600108051]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/COUNT([y])' />
+            </column>
+            <column-instance column='[Calculation_240098186576261131]' derivation='Month' name='[mn:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NumberYesLokat (copy)_240098186600108051]' derivation='User' name='[usr:NumberYesLokat (copy)_240098186600108051:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[y]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_240098186576261131]' derivation='Year' name='[yr:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:month:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]</rows>
+        <cols>([federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok] / [federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok])</cols>
+      </table>
+      <simple-id uuid='{DF577D1F-8A02-443A-B667-2037FD00549C}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='bank-additional-full — dodane n (bank-additional-full — dodane nowe2)' name='federated.0bawxtu1t74iqd1guyk7c0h1jt0a' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='KosztMinutyRozmowy' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2200'>
+              <calculation class='tableau' formula='2200' />
+              <range granularity='100' max='10000' min='0' />
+            </column>
+            <column caption='PrzychódZLokaty' datatype='integer' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='4200'>
+              <calculation class='tableau' formula='4200' />
+              <range granularity='100' max='10000' min='0' />
+            </column>
+            <column caption='Wybierz Kategorię Danych' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;job&quot;'>
+              <calculation class='tableau' formula='&quot;job&quot;' />
+            </column>
+            <column caption='Wybierz Miarę KPI' datatype='string' name='[Parameter 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;ProcentYesLokat&quot;'>
+              <calculation class='tableau' formula='&quot;ProcentYesLokat&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0bawxtu1t74iqd1guyk7c0h1jt0a'>
+            <column caption='DataRokMiesiąc' datatype='date' name='[Calculation_240098186576261131]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([year],(IF [month]=&quot;jan&quot; THEN 1 &#13;&#10;ELSEIF [month]=&quot;feb&quot; THEN 2  &#13;&#10;ELSEIF [month]=&quot;mar&quot; THEN 3&#13;&#10;ELSEIF [month]=&quot;apr&quot; THEN 4&#13;&#10;ELSEIF [month]=&quot;may&quot; THEN 5&#13;&#10;ELSEIF [month]=&quot;jun&quot; THEN 6&#13;&#10;ELSEIF [month]=&quot;jul&quot; THEN 7&#13;&#10;ELSEIF [month]=&quot;aug&quot; THEN 8&#13;&#10;ELSEIF [month]=&quot;sep&quot; THEN 9&#13;&#10;ELSEIF [month]=&quot;oct&quot; THEN 10&#13;&#10;ELSEIF [month]=&quot;nov&quot; THEN 11&#13;&#10;ELSEIF [month]=&quot;dec&quot; THEN 12 end ),1)' />
+            </column>
+            <column caption='Liczba Lokat' datatype='integer' name='[Calculation_240098186596118543]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [y] = &quot;yes&quot; THEN 1 else 0 END' />
+            </column>
+            <column caption='ZyskNaLokatach' datatype='integer' name='[Calculation_240098186606587933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_971933126251253760]-[Calculation_971933126253010945]' />
+            </column>
+            <column caption='miaraKPI' datatype='real' name='[Calculation_240098186615918633]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 4] &#13;&#10;WHEN &apos;ProcentYesLokat&apos; THEN [NumberYesLokat (copy)_240098186600108051]&#13;&#10;WHEN &apos;Liczba Lokat&apos; THEN SUM([Calculation_240098186596118543]) &#13;&#10;WHEN &apos;ZyskNaLokatach&apos; THEN SUM([Calculation_240098186606587933])  &#13;&#10;END' />
+            </column>
+            <column caption='kategorie nieliczbowe' datatype='string' name='[Calculation_240098186616131626]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 3] &#13;&#10;WHEN &apos;job&apos; THEN [job] &#13;&#10;WHEN &apos;education&apos; THEN[education]&#13;&#10;WHEN &apos;marital&apos; THEN [marital]&#13;&#10;WHEN &apos;Wiek [przedział]&apos; THEN [Calculation_240098186617962540]&#13;&#10;WHEN &apos;housing&apos; THEN [housing]&#13;&#10;WHEN &apos;loan&apos; THEN [loan]&#13;&#10;ELSE NULL &#13;&#10;end' />
+            </column>
+            <column caption='Wiek [przedział]' datatype='string' name='[Calculation_240098186617962540]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [age]&lt;20 THEN &apos;do 20&apos; &#13;&#10;ELSEIF [age]&lt;30 THEN &apos;20-30&apos; &#13;&#10;ELSEIF [age]&lt;40 THEN &apos;30-40&apos; &#13;&#10;ELSEIF [age]&lt;50 THEN &apos;40-50&apos;&#13;&#10;ELSEIF [age]&lt;60 THEN &apos;50-60&apos;&#13;&#10;ELSEIF [age]&lt;70 THEN &apos;60-70&apos;&#13;&#10;ELSEIF [age]&lt;80 THEN &apos;70-80&apos;&#13;&#10;ELSEIF [age]&lt;90 THEN &apos;80-90&apos;&#13;&#10;ELSE &apos;ponad 90&apos; END' />
+            </column>
+            <column caption='przychody z lokaty' datatype='integer' name='[Calculation_971933126251253760]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [y]=&quot;yes&quot; THEN [Parameters].[Parameter 2] + (IF [job]=&quot;management&quot; OR [job]=&quot;entrepreneur&quot; OR [job]= &quot;admin&quot; THEN 60000 ELSE 30000 END)&#13;&#10;ELSE 0 END' />
+            </column>
+            <column caption='koszty minuty rozmowy' datatype='integer' name='[Calculation_971933126253010945]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]+(IF [job]=&quot;management&quot; OR [job]=&quot;entrepreneur&quot; OR [job]= &quot;admin&quot; THEN 2000 ELSE 1000 END)' />
+            </column>
+            <column caption='ProcentYesLokat' datatype='real' name='[NumberYesLokat (copy)_240098186600108051]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_240098186596118543])/COUNT([y])' />
+            </column>
+            <column datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column datatype='string' name='[education]' role='dimension' type='nominal' />
+            <column datatype='string' name='[housing]' role='dimension' type='nominal' />
+            <column datatype='string' name='[job]' role='dimension' type='nominal' />
+            <column datatype='string' name='[loan]' role='dimension' type='nominal' />
+            <column datatype='string' name='[marital]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_240098186576261131]' derivation='Month' name='[mn:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[month]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_240098186616131626]' derivation='None' name='[none:Calculation_240098186616131626:nk]' pivot='key' type='nominal' />
+            <column-instance column='[job]' derivation='None' name='[none:job:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_240098186596118543]' derivation='Sum' name='[sum:Calculation_240098186596118543:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_240098186615918633]' derivation='User' name='[usr:Calculation_240098186615918633:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NumberYesLokat (copy)_240098186600108051]' derivation='User' name='[usr:NumberYesLokat (copy)_240098186600108051:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[y]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_240098186576261131]' derivation='Year' name='[yr:Calculation_240098186576261131:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok]'>
+            <groupfilter from='3' function='range' level='[mn:Calculation_240098186576261131:ok]' to='12' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:Calculation_240098186616131626:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;admin.&quot;</bucket>
+              <bucket>&quot;entrepreneur&quot;</bucket>
+              <bucket>&quot;blue-collar&quot;</bucket>
+              <bucket>&quot;housemaid&quot;</bucket>
+              <bucket>&quot;management&quot;</bucket>
+              <bucket>&quot;retired&quot;</bucket>
+              <bucket>&quot;self-employed&quot;</bucket>
+              <bucket>&quot;services&quot;</bucket>
+              <bucket>&quot;student&quot;</bucket>
+              <bucket>&quot;technician&quot;</bucket>
+              <bucket>&quot;unemployed&quot;</bucket>
+              <bucket>&quot;unknown&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:job:nk]'>
+            <groupfilter from='&quot;admin.&quot;' function='range' level='[none:job:nk]' to='&quot;unknown&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok]'>
+            <groupfilter function='member' level='[yr:Calculation_240098186576261131:ok]' member='2010' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok]</column>
+            <column>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok]</column>
+            <column>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[:Measure Names]</column>
+            <column>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:job:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:Calculation_240098186616131626:nk]' value='99' />
+            <format attr='height' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok]' value='42' />
+            <format attr='text-format' field='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:Calculation_240098186615918633:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]' />
+              <text column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:Calculation_240098186615918633:qk]' />
+              <lod column='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[sum:Calculation_240098186596118543:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:Calculation_240098186615918633:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>([federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok] / [federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[mn:Calculation_240098186576261131:ok])</rows>
+        <cols total='true'>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:Calculation_240098186616131626:nk]</cols>
+        <subtotals>
+          <column>[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok]</column>
+        </subtotals>
+      </table>
+      <simple-id uuid='{B473591D-294B-4DE7-B454-F8EE1EDA9809}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{52FF4059-30DA-4AC8-8361-1AB5EB5990D3}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' name='2f(1)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:month:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{856EDA40-C441-415E-8658-661521702659}' />
+    </window>
+    <window class='worksheet' name='2f(2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{19D664E4-D684-47FE-8509-2E3CA14858E1}' />
+    </window>
+    <window class='worksheet' name='2f(3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[none:month:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D6574EE6-6F75-4E33-BE20-5B02C145C063}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[yr:Calculation_240098186576261131:ok]' type='filter' />
+            <card mode='compact' param='[Parameters].[Parameter 4]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 3]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0bawxtu1t74iqd1guyk7c0h1jt0a].[usr:NumberYesLokat (copy)_240098186600108051:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBD7611A-3302-430F-8E7B-2B49C37D1F1D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='30'>
+            <card type='columns' />
+          </strip>
+          <strip size='30'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{99C7D6B4-0483-4346-87B7-457C1107E885}' />
+    </window>
+  </windows>
+</workbook>

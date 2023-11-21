@@ -1,0 +1,80 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.InfoGainAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21
+Instances:    43188
+Attributes:   29
+              EMP.VAR.RATE
+              CONS.PRICE.IDX
+              CONS.CONF.IDX
+              EURIBOR3M
+              NR.EMPLOYED
+              miesiac
+              DataRokMiesi¹c
+              kategorie nieliczbowe
+              age
+              campaign
+              contact
+              default
+              duration
+              education
+              job
+              marital
+              month
+              pdays
+              poutcome
+              previous
+              Rok
+              przedzial_czas rozmowy
+              przedzial_wiek
+              przedzial_emp.var.rate
+              przedzial_cons.price.idx
+              przedzial_cons.conf.idx
+              przedzial_euribor3m
+              przedzial_nr.employed
+              y
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 29 y):
+	Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.1245     2 CONS.PRICE.IDX
+ 0.12422    3 CONS.CONF.IDX
+ 0.12142    7 DataRokMiesi¹c
+ 0.11662   13 duration
+ 0.11632    5 NR.EMPLOYED
+ 0.11422   28 przedzial_nr.employed
+ 0.11001    4 EURIBOR3M
+ 0.09994   21 Rok
+ 0.06602   27 przedzial_euribor3m
+ 0.06365   18 pdays
+ 0.0629    19 poutcome
+ 0.04542   26 przedzial_cons.conf.idx
+ 0.044     17 month
+ 0.04391    6 miesiac
+ 0.04169   20 previous
+ 0.03053   25 przedzial_cons.price.idx
+ 0.02376    9 age
+ 0.02131   11 contact
+ 0.01921   15 job
+ 0.01921    8 kategorie nieliczbowe
+ 0.01698   23 przedzial_wiek
+ 0.01131   12 default
+ 0.01128   22 przedzial_czas rozmowy
+ 0.00571   10 campaign
+ 0.00502   14 education
+ 0.00241   16 marital
+ 0.00239    1 EMP.VAR.RATE
+ 0.00217   24 przedzial_emp.var.rate
+
+Selected attributes: 2,3,7,13,5,28,4,21,27,18,19,26,17,6,20,25,9,11,15,8,23,12,22,10,14,16,1,24 : 28
+

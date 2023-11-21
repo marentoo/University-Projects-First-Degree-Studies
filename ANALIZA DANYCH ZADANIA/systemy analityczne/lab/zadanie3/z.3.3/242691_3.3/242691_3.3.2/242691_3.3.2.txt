@@ -1,0 +1,46 @@
+12.05.2020 09:28:19 Results of ResultWriter 'Write as Text' [1]: 
+12.05.2020 09:28:19 PerformanceVector:
+accuracy: 84.89% +/- 4.42% (micro average: 84.89%)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+precision: 79.77% +/- 7.86% (micro average: 79.25%) (positive class: churn)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+recall: 78.29% +/- 5.13% (micro average: 78.26%) (positive class: churn)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+AUC (optimistic): 0.940 +/- 0.031 (micro average: 0.940) (positive class: churn)
+AUC: 0.838 +/- 0.052 (micro average: 0.838) (positive class: churn)
+AUC (pessimistic): 0.736 +/- 0.075 (micro average: 0.736) (positive class: churn)
+
+12.05.2020 09:28:19 Parameter set:
+
+Performance: 
+PerformanceVector [
+-----accuracy: 84.89% +/- 4.42% (micro average: 84.89%)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+-----precision: 79.77% +/- 7.86% (micro average: 79.25%) (positive class: churn)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+-----recall: 78.29% +/- 5.13% (micro average: 78.26%) (positive class: churn)
+ConfusionMatrix:
+True:	loyal	churn
+loyal:	512	70
+churn:	66	252
+-----AUC (optimistic): 0.940 +/- 0.031 (micro average: 0.940) (positive class: churn)
+-----AUC: 0.838 +/- 0.052 (micro average: 0.838) (positive class: churn)
+-----AUC (pessimistic): 0.736 +/- 0.075 (micro average: 0.736) (positive class: churn)
+]
+Select Subprocess.select_which	= 1
+

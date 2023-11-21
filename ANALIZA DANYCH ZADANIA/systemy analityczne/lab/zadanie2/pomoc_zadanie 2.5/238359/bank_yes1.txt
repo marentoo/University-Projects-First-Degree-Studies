@@ -1,0 +1,167 @@
+=== Evaluation result ===
+
+Scheme: J48
+Options: -C 0.25 -M 2
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4288               69.4076 %
+Incorrectly Classified Instances      1890               30.5924 %
+Kappa statistic                          0.3168
+Mean absolute error                      0.395 
+Root mean squared error                  0.4606
+Relative absolute error                 83.4339 %
+Root relative squared error             94.673  %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,458    0,159    0,644      0,458    0,535      0,327    0,697     0,566     yes
+                 0,841    0,542    0,713      0,841    0,772      0,327    0,697     0,748     no
+Weighted Avg.    0,694    0,394    0,686      0,694    0,681      0,327    0,697     0,678     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1089 1287 |    a = yes
+  603 3199 |    b = no
+=== Evaluation result ===
+
+Scheme: NaiveBayes
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4138               66.9796 %
+Incorrectly Classified Instances      2040               33.0204 %
+Kappa statistic                          0.2989
+Mean absolute error                      0.3486
+Root mean squared error                  0.5048
+Relative absolute error                 73.6404 %
+Root relative squared error            103.7654 %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,557    0,260    0,573      0,557    0,565      0,299    0,713     0,614     yes
+                 0,740    0,443    0,728      0,740    0,734      0,299    0,713     0,786     no
+Weighted Avg.    0,670    0,372    0,668      0,670    0,669      0,299    0,713     0,720     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1324 1052 |    a = yes
+  988 2814 |    b = no
+=== Evaluation result ===
+
+Scheme: JRip
+Options: -F 3 -N 2.0 -O 2 -S 1
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4335               70.1683 %
+Incorrectly Classified Instances      1843               29.8317 %
+Kappa statistic                          0.339 
+Mean absolute error                      0.4105
+Root mean squared error                  0.4542
+Relative absolute error                 86.7144 %
+Root relative squared error             93.3556 %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,488    0,165    0,649      0,488    0,557      0,347    0,672     0,576     yes
+                 0,835    0,512    0,723      0,835    0,775      0,347    0,672     0,718     no
+Weighted Avg.    0,702    0,379    0,695      0,702    0,691      0,347    0,672     0,663     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1159 1217 |    a = yes
+  626 3176 |    b = no
+=== Evaluation result ===
+
+Scheme: AdaBoostM1
+Options: -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4289               69.4238 %
+Incorrectly Classified Instances      1889               30.5762 %
+Kappa statistic                          0.2944
+Mean absolute error                      0.404 
+Root mean squared error                  0.4486
+Relative absolute error                 85.3552 %
+Root relative squared error             92.2124 %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,377    0,108    0,687      0,377    0,487      0,321    0,721     0,617     yes
+                 0,892    0,623    0,696      0,892    0,782      0,321    0,721     0,792     no
+Weighted Avg.    0,694    0,425    0,693      0,694    0,669      0,321    0,721     0,724     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  896 1480 |    a = yes
+  409 3393 |    b = no
+=== Evaluation result ===
+
+Scheme: Logistic
+Options: -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4351               70.4273 %
+Incorrectly Classified Instances      1827               29.5727 %
+Kappa statistic                          0.3344
+Mean absolute error                      0.3897
+Root mean squared error                  0.4438
+Relative absolute error                 82.3338 %
+Root relative squared error             91.2146 %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,452    0,138    0,672      0,452    0,540      0,349    0,737     0,633     yes
+                 0,862    0,548    0,716      0,862    0,782      0,349    0,737     0,806     no
+Weighted Avg.    0,704    0,390    0,699      0,704    0,689      0,349    0,737     0,739     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1074 1302 |    a = yes
+  525 3277 |    b = no
+=== Evaluation result ===
+
+Scheme: RandomForest
+Options: -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation: 238359_bank3data-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R16-20-precision6-weka.filters.unsupervised.attribute.Copy-R22-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R23-weka.filters.unsupervised.attribute.ChangeDateFormat-C23-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R23-weka.filters.unsupervised.attribute.Reorder-R1-20,22-23,21-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.InterquartileRange-R9-O3.0-E6.0-weka.filters.unsupervised.attribute.Remove-R22-23-weka.filters.unsupervised.instance.RemovePercentage-P85.0-weka.filters.unsupervised.attribute.Remove-R19
+
+
+Correctly Classified Instances        4107               66.4778 %
+Incorrectly Classified Instances      2071               33.5222 %
+Kappa statistic                          0.2747
+Mean absolute error                      0.3884
+Root mean squared error                  0.4679
+Relative absolute error                 82.0442 %
+Root relative squared error             96.1737 %
+Total Number of Instances             6178     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,501    0,233    0,573      0,501    0,535      0,276    0,697     0,587     yes
+                 0,767    0,499    0,711      0,767    0,738      0,276    0,697     0,768     no
+Weighted Avg.    0,665    0,397    0,658      0,665    0,660      0,276    0,697     0,698     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1191 1185 |    a = yes
+  886 2916 |    b = no

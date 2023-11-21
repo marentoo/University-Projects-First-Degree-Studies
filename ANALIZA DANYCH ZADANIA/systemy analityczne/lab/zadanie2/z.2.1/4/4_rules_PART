@@ -1,0 +1,7470 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.PART -C 0.25 -M 2
+Relation:     xxxxxxx_bank-weka.filters.unsupervised.attribute.Copy-R7-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceRok-R26-weka.filters.unsupervised.attribute.ChangeDateFormat-C26-Fyyyy-weka.filters.unsupervised.attribute.NumericToNominal-R26-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.Remove-R15-weka.filters.unsupervised.attribute.Remove-R16-weka.filters.unsupervised.attribute.Copy-R13-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_czas rozmowy-R23-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R23-precision6-weka.filters.unsupervised.attribute.Copy-R9-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_wiek-R24-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R24-precision6-weka.filters.unsupervised.attribute.Copy-R1-weka.filters.unsupervised.attribute.Copy-R2-weka.filters.unsupervised.attribute.Copy-R3-weka.filters.unsupervised.attribute.Copy-R4-weka.filters.unsupervised.attribute.Copy-R5-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_emp.var.rate-R25-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.price.idx-R26-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_cons.conf.idx-R27-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_euribor3m-R28-weka.filters.unsupervised.attribute.RenameAttribute-find([\s\S]+)-replaceprzedzial_nr.employed-R29-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R26-precision6-weka.filters.unsupervised.attribute.Discretize-B6-M-1.0-R27-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R28-precision6-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-R29-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R25-precision6-weka.filters.unsupervised.attribute.Reorder-R1-20,22-29,21
+Instances:    43188
+Attributes:   29
+              EMP.VAR.RATE
+              CONS.PRICE.IDX
+              CONS.CONF.IDX
+              EURIBOR3M
+              NR.EMPLOYED
+              miesiac
+              DataRokMiesi¹c
+              kategorie nieliczbowe
+              age
+              campaign
+              contact
+              default
+              duration
+              education
+              job
+              marital
+              month
+              pdays
+              poutcome
+              previous
+              Rok
+              przedzial_czas rozmowy
+              przedzial_wiek
+              przedzial_emp.var.rate
+              przedzial_cons.price.idx
+              przedzial_cons.conf.idx
+              przedzial_euribor3m
+              przedzial_nr.employed
+              y
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+PART decision list
+------------------
+
+pdays > 27 AND
+duration <= 393 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 4 AND
+DataRokMiesi¹c <= 1217541600000 AND
+duration <= 277: no (17080.0/7.0)
+
+pdays > 27 AND
+duration <= 525 AND
+NR.EMPLOYED > 5076.2 AND
+CONS.PRICE.IDX > 92.843 AND
+miesiac > 4 AND
+duration <= 389 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+contact = cellular AND
+duration <= 275: no (2308.0/2.0)
+
+pdays > 27 AND
+duration <= 525 AND
+NR.EMPLOYED > 5076.2 AND
+CONS.PRICE.IDX > 92.843 AND
+miesiac > 4 AND
+duration <= 393 AND
+miesiac <= 9 AND
+age > 22 AND
+duration <= 152: no (2314.0/5.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 525 AND
+NR.EMPLOYED > 5076.2 AND
+CONS.PRICE.IDX > 92.843 AND
+miesiac > 4 AND
+duration <= 413 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+EMP.VAR.RATE <= 43831: no (1202.0/3.0)
+
+pdays > 27 AND
+duration <= 614 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 474 AND
+miesiac > 4 AND
+przedzial_cons.price.idx = '(94.339333-inf)': no (673.0/10.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 614 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 474 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+duration <= 348: no (497.0/2.0)
+
+pdays > 27 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 474 AND
+age > 26 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+campaign <= 4 AND
+education = high.school: no (164.0/1.0)
+
+pdays > 27 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 474 AND
+age > 26 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+education = basic.9y: no (130.0/3.0)
+
+pdays > 27 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 472 AND
+age > 26 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+default = unknown: no (126.0/2.0)
+
+pdays > 27 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 428 AND
+age > 26 AND
+CONS.PRICE.IDX <= 93.444 AND
+duration > 75 AND
+miesiac > 4 AND
+duration <= 383 AND
+EURIBOR3M > 1.264 AND
+contact = cellular AND
+EURIBOR3M <= 1.344: no (1784.22/23.18)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 134 AND
+duration <= 77 AND
+przedzial_cons.price.idx = '(93.056333-93.484]': no (460.0/1.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 522 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = single: no (222.0/12.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+duration <= 134 AND
+duration <= 77 AND
+Rok = 2010: no (160.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = divorced: no (92.0/2.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.4y: no (32.0/1.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+default = no AND
+kategorie nieliczbowe = technician: no (67.0/4.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = admin.: no (74.0/5.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 428 AND
+CONS.PRICE.IDX <= 93.444 AND
+Rok = 2008 AND
+contact = cellular AND
+kategorie nieliczbowe = admin.: no (273.9/7.35)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 183 AND
+duration <= 92 AND
+duration <= 62: no (280.0/1.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = retired: no (15.0/1.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 446 AND
+CONS.PRICE.IDX <= 93.444 AND
+default = unknown AND
+contact = cellular AND
+CONS.CONF.IDX <= -47.1: no (211.0/2.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 183 AND
+DataRokMiesi¹c > 1222812000000 AND
+CONS.PRICE.IDX <= 94.215 AND
+miesiac > 3 AND
+duration <= 123 AND
+previous <= 1 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+duration <= 77: no (128.18/3.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = housemaid: no (14.0/1.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = self-employed: no (11.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = unemployed: no (8.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = entrepreneur AND
+default = unknown: no (7.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 428 AND
+CONS.PRICE.IDX <= 93.444 AND
+Rok = 2008 AND
+contact = cellular AND
+kategorie nieliczbowe = blue-collar: no (128.28/3.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 186 AND
+DataRokMiesi¹c > 1222812000000 AND
+miesiac > 3 AND
+NR.EMPLOYED <= 4963.6 AND
+campaign > 2: no (58.0)
+
+pdays <= 27 AND
+duration > 162 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+kategorie nieliczbowe = unemployed AND
+education = university.degree: yes (18.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 186 AND
+DataRokMiesi¹c > 1222812000000 AND
+miesiac > 3 AND
+age <= 61 AND
+poutcome = failure AND
+miesiac <= 5 AND
+kategorie nieliczbowe = admin.: no (63.04)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+duration <= 518 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(44-57.5]': no (23.0)
+
+pdays <= 27 AND
+duration > 162 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+kategorie nieliczbowe = housemaid AND
+przedzial_wiek = '(44-57.5]': yes (14.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 59 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+age > 30 AND
+EURIBOR3M > 1.392 AND
+duration <= 471 AND
+poutcome = failure: no (312.06/10.93)
+
+pdays <= 27 AND
+duration > 162 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+kategorie nieliczbowe = retired AND
+previous <= 2 AND
+duration > 271: yes (87.0/3.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 186 AND
+DataRokMiesi¹c > 1222812000000 AND
+miesiac > 3 AND
+duration <= 134 AND
+przedzial_euribor3m = '(3.574667-inf)': no (73.1/2.66)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 186 AND
+DataRokMiesi¹c > 1222812000000 AND
+duration <= 105 AND
+przedzial_cons.price.idx = '(93.056333-93.484]': no (179.19/7.94)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+EMP.VAR.RATE <= 43831 AND
+marital = married AND
+przedzial_wiek = 0-30.5: no (29.0)
+
+pdays <= 27 AND
+duration > 162 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+campaign <= 1 AND
+przedzial_wiek = '(30.5-44]' AND
+EURIBOR3M > 0.822: yes (100.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+education = high.school AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+age > 35: no (8.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+education = high.school: yes (17.0/2.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+age <= 60 AND
+duration <= 525 AND
+month = aug AND
+duration <= 371: no (197.82/4.0)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 198 AND
+miesiac > 3 AND
+previous > 1 AND
+duration <= 126: no (74.95)
+
+pdays > 27 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 198 AND
+miesiac > 3 AND
+CONS.CONF.IDX <= -46.2 AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]': no (186.28/6.69)
+
+pdays > 27 AND
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 606 AND
+age <= 56 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.4y: no (35.0)
+
+pdays > 27 AND
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 606 AND
+age <= 56 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = divorced AND
+default = no AND
+kategorie nieliczbowe = blue-collar: no (10.0/1.0)
+
+pdays <= 15 AND
+duration > 162 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = management AND
+contact = cellular AND
+pdays <= 8: yes (58.0/1.0)
+
+pdays > 27 AND
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 606 AND
+age <= 59 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+contact = telephone AND
+education = basic.9y: no (29.0/3.0)
+
+pdays > 27 AND
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 606 AND
+age <= 59 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = technician: no (29.0/3.0)
+
+pdays > 27 AND
+duration <= 835 AND
+duration <= 157 AND
+NR.EMPLOYED <= 4991.6 AND
+marital = single: no (95.88)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1251756000000 AND
+miesiac > 3 AND
+duration <= 614 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+EMP.VAR.RATE <= 43831 AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 2: no (84.0/4.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1251756000000 AND
+CONS.CONF.IDX > -49.5 AND
+duration <= 614 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+przedzial_wiek = '(44-57.5]': no (66.0/6.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1251756000000 AND
+CONS.CONF.IDX > -49.5 AND
+duration <= 614 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+age > 30 AND
+EURIBOR3M > 1.392 AND
+duration <= 471 AND
+age <= 53 AND
+education = basic.9y AND
+EURIBOR3M <= 4.191: no (117.75)
+
+pdays <= 15 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = unemployed AND
+education = basic.9y: yes (9.0)
+
+pdays <= 15 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = student AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+duration > 200 AND
+przedzial_wiek = 0-30.5 AND
+education = unknown AND
+NR.EMPLOYED > 4963.6: yes (21.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1251756000000 AND
+CONS.CONF.IDX > -49.5 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+duration <= 518 AND
+month = nov AND
+EURIBOR3M <= 4.191 AND
+duration <= 418: no (239.82/5.89)
+
+duration <= 159 AND
+campaign > 3 AND
+contact = cellular AND
+pdays <= 27: no (50.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = services AND
+age <= 44: yes (35.0/1.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = housemaid AND
+CONS.CONF.IDX <= -34.8: yes (17.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = unemployed AND
+education = professional.course: yes (11.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+month = aug AND
+pdays <= 16: yes (20.0/1.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_czas rozmowy = 0-1229.5 AND
+miesiac <= 5: yes (24.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1251756000000 AND
+miesiac > 3 AND
+duration <= 644 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+duration <= 512 AND
+contact = cellular AND
+EURIBOR3M <= 1.344 AND
+EURIBOR3M > 1.286: no (286.46/25.96)
+
+duration <= 166 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+NR.EMPLOYED <= 4963.6 AND
+month = oct: no (39.0)
+
+duration <= 158 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+duration <= 94 AND
+marital = married AND
+education = university.degree AND
+previous <= 0: no (38.03/1.0)
+
+duration <= 158 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+contact = cellular AND
+campaign <= 1 AND
+education = high.school: no (58.69/3.98)
+
+duration <= 158 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+poutcome = failure AND
+contact = cellular AND
+Rok = 2011 AND
+marital = married: no (42.98/1.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = student AND
+przedzial_czas rozmowy = 0-1229.5 AND
+month = sep AND
+contact = cellular AND
+age <= 31: yes (22.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+poutcome = success AND
+kategorie nieliczbowe = retired AND
+previous > 2: yes (37.0)
+
+duration <= 158 AND
+duration <= 133 AND
+pdays > 3 AND
+miesiac > 3 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+education = university.degree AND
+DataRokMiesi¹c > 1246399200000: no (83.0/1.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = admin. AND
+campaign <= 4 AND
+education = high.school AND
+month = jul: yes (20.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+CONS.PRICE.IDX <= 94.199 AND
+previous > 1 AND
+NR.EMPLOYED > 4963.6 AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+przedzial_cons.price.idx = '(93.911667-94.339333]': yes (32.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1257030000000 AND
+CONS.PRICE.IDX > 92.963 AND
+duration <= 644 AND
+age <= 60 AND
+EURIBOR3M > 1.392 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+age > 30 AND
+education = basic.6y AND
+campaign <= 1: no (29.62)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = technician AND
+default = no AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+contact = cellular AND
+previous <= 2 AND
+duration > 172 AND
+education = professional.course AND
+CONS.PRICE.IDX > 94.199: yes (38.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+campaign > 1 AND
+education = high.school AND
+duration <= 550 AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 2: no (29.97)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+campaign > 1 AND
+education = basic.6y AND
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+Rok = 2008: no (22.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+campaign > 1 AND
+education = high.school AND
+duration <= 550 AND
+kategorie nieliczbowe = services AND
+CONS.PRICE.IDX <= 93.444: no (83.71/4.0)
+
+duration <= 172 AND
+pdays > 6 AND
+NR.EMPLOYED <= 5099.1 AND
+contact = telephone AND
+campaign > 3: no (35.88)
+
+duration <= 148 AND
+month = may AND
+marital = married: no (41.0/1.0)
+
+pdays <= 27 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+CONS.CONF.IDX > -40.3 AND
+contact = cellular AND
+kategorie nieliczbowe = technician AND
+default = no AND
+previous > 2: yes (30.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 607 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = management: no (32.0/5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = entrepreneur: no (21.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 59 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = technician: no (20.0/3.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+duration <= 134 AND
+Rok = 2009 AND
+education = unknown: no (41.87/2.94)
+
+pdays <= 27 AND
+duration > 164 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+NR.EMPLOYED <= 5076.2 AND
+previous <= 3 AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+CONS.PRICE.IDX <= 94.199 AND
+przedzial_wiek = '(30.5-44]' AND
+EURIBOR3M <= 0.75: yes (59.35)
+
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 644 AND
+pdays > 3 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+education = university.degree: yes (16.0/2.0)
+
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+duration <= 644 AND
+pdays > 3 AND
+age <= 60 AND
+przedzial_wiek = '(44-57.5]' AND
+default = unknown AND
+poutcome = nonexistent AND
+education = basic.9y: no (30.13/2.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+NR.EMPLOYED <= 5008.7 AND
+contact = cellular AND
+pdays > 27: yes (30.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 10 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+education = basic.4y AND
+kategorie nieliczbowe = entrepreneur: no (10.02/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 10 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+education = basic.4y AND
+kategorie nieliczbowe = admin.: no (7.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 10 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+education = basic.4y AND
+kategorie nieliczbowe = services AND
+default = no: no (6.57)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 10 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+education = professional.course AND
+EURIBOR3M > 1.384 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+contact = cellular AND
+kategorie nieliczbowe = technician AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_euribor3m = '(-inf-2.104333]': no (46.43/0.34)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+duration <= 134 AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = admin.: no (15.89/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+campaign > 1 AND
+education = basic.4y AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+przedzial_wiek = '(44-57.5]': no (31.14/6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+campaign > 1 AND
+education = basic.4y AND
+CONS.PRICE.IDX <= 94.215 AND
+przedzial_wiek = '(30.5-44]': no (45.3/1.2)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+duration <= 134 AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = technician: no (14.94)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+CONS.CONF.IDX > -39.8 AND
+duration <= 517 AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+marital = married: no (26.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 8 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+education = basic.9y AND
+kategorie nieliczbowe = entrepreneur AND
+campaign <= 3: no (11.63)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 10 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+pdays <= 27 AND
+kategorie nieliczbowe = blue-collar: no (12.0)
+
+pdays > 27 AND
+duration <= 835 AND
+DataRokMiesi¹c <= 1257030000000 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+duration <= 580: no (30.0/1.0)
+
+pdays <= 27 AND
+NR.EMPLOYED > 5099.1 AND
+duration <= 405: no (28.0)
+
+pdays <= 27 AND
+duration > 164 AND
+CONS.CONF.IDX > -45.9 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+previous <= 3 AND
+przedzial_wiek = '(57.5-71]' AND
+EURIBOR3M > 0.644 AND
+kategorie nieliczbowe = admin.: yes (26.0/1.0)
+
+pdays <= 13 AND
+duration <= 148 AND
+CONS.PRICE.IDX > 94.027: no (58.0/2.0)
+
+pdays <= 13 AND
+duration > 164 AND
+NR.EMPLOYED <= 5076.2 AND
+duration > 435 AND
+education = professional.course AND
+marital = married: yes (21.0)
+
+pdays <= 13 AND
+duration > 164 AND
+CONS.CONF.IDX > -45.9 AND
+przedzial_wiek = '(71-84.5]': yes (22.0/3.0)
+
+pdays <= 13 AND
+duration > 213 AND
+pdays > 12: yes (26.0/1.0)
+
+pdays <= 7 AND
+duration > 164 AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = admin. AND
+month = apr: yes (10.0)
+
+pdays <= 7 AND
+duration > 164 AND
+przedzial_wiek = '(44-57.5]' AND
+month = oct AND
+campaign <= 5: yes (19.0/1.0)
+
+pdays <= 7 AND
+duration > 124 AND
+kategorie nieliczbowe = student AND
+EURIBOR3M <= 1.037 AND
+month = jul: yes (10.0)
+
+pdays <= 7 AND
+duration > 124 AND
+kategorie nieliczbowe = student AND
+EURIBOR3M <= 1.037 AND
+contact = cellular AND
+month = oct AND
+previous <= 3: yes (9.0)
+
+pdays <= 7 AND
+duration > 124 AND
+kategorie nieliczbowe = technician AND
+default = no AND
+previous > 1 AND
+marital = single: yes (16.0)
+
+pdays <= 7 AND
+duration <= 121 AND
+poutcome = success AND
+month = may: no (11.0/1.0)
+
+pdays <= 7 AND
+duration > 164 AND
+CONS.CONF.IDX > -40.3 AND
+marital = divorced: yes (28.0/3.0)
+
+duration <= 835 AND
+pdays > 7 AND
+DataRokMiesi¹c <= 1257030000000 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+education = basic.9y: no (30.0/4.0)
+
+pdays <= 7 AND
+duration > 164 AND
+CONS.CONF.IDX > -45.9 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = blue-collar AND
+EURIBOR3M > 0.731: yes (31.67/2.0)
+
+duration <= 835 AND
+DataRokMiesi¹c <= 1254348000000 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+poutcome = failure AND
+contact = telephone: no (23.1/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = self-employed: yes (10.0/1.0)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+miesiac > 3 AND
+kategorie nieliczbowe = blue-collar AND
+Rok = 2009 AND
+month = apr: no (35.35/3.0)
+
+duration <= 835 AND
+DataRokMiesi¹c <= 1254348000000 AND
+pdays > 11 AND
+miesiac > 3 AND
+duration <= 134 AND
+default = no AND
+kategorie nieliczbowe = services: no (19.88/1.0)
+
+duration <= 835 AND
+pdays > 7 AND
+DataRokMiesi¹c <= 1257030000000 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 60 AND
+CONS.CONF.IDX > -39.8 AND
+kategorie nieliczbowe = management: no (27.35/2.0)
+
+duration <= 835 AND
+pdays > 7 AND
+DataRokMiesi¹c <= 1257030000000 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = retired AND
+default = unknown: no (14.0/1.0)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+duration <= 93 AND
+kategorie nieliczbowe = blue-collar: no (20.83/1.0)
+
+duration <= 835 AND
+pdays > 7 AND
+DataRokMiesi¹c <= 1257030000000 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 606 AND
+age <= 59 AND
+education = high.school AND
+kategorie nieliczbowe = management: no (23.32/1.0)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+previous > 1 AND
+kategorie nieliczbowe = retired: no (13.0)
+
+duration <= 835 AND
+DataRokMiesi¹c <= 1254348000000 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = failure AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = 0-30.5: no (15.77)
+
+duration <= 835 AND
+DataRokMiesi¹c <= 1254348000000 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = failure AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+campaign <= 3 AND
+education = high.school: no (11.39/1.0)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(3.574667-inf)' AND
+EURIBOR3M <= 4.959: yes (14.16/1.81)
+
+duration <= 208 AND
+pdays > 6 AND
+miesiac > 3 AND
+EURIBOR3M > 0.644 AND
+contact = telephone AND
+previous <= 0 AND
+NR.EMPLOYED > 4991.6 AND
+education = university.degree: no (47.61/9.0)
+
+duration <= 208 AND
+pdays > 6 AND
+miesiac > 3 AND
+EURIBOR3M > 0.644 AND
+contact = telephone AND
+previous > 0: no (37.0/3.0)
+
+duration <= 835 AND
+pdays > 7 AND
+DataRokMiesi¹c <= 1257030000000 AND
+CONS.PRICE.IDX > 92.963 AND
+age <= 60 AND
+EURIBOR3M > 1.392 AND
+duration <= 644 AND
+age > 30 AND
+Rok = 2009 AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school AND
+duration > 165: no (52.76)
+
+duration <= 835 AND
+DataRokMiesi¹c <= 1254348000000 AND
+pdays > 11 AND
+CONS.PRICE.IDX > 92.963 AND
+age <= 60 AND
+EURIBOR3M > 1.392 AND
+age > 35 AND
+NR.EMPLOYED <= 5195.8 AND
+age <= 55 AND
+Rok = 2009 AND
+kategorie nieliczbowe = entrepreneur: no (18.34)
+
+duration <= 191 AND
+pdays > 6 AND
+EURIBOR3M > 0.644 AND
+kategorie nieliczbowe = housemaid: no (28.82/2.01)
+
+duration > 835 AND
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = technician: yes (16.0)
+
+duration <= 191 AND
+pdays > 6 AND
+kategorie nieliczbowe = entrepreneur AND
+przedzial_wiek = '(30.5-44]' AND
+duration <= 163: no (15.92)
+
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+pdays > 11 AND
+duration <= 644 AND
+Rok = 2008 AND
+kategorie nieliczbowe = housemaid: no (23.06/3.0)
+
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+pdays > 11 AND
+duration <= 644 AND
+Rok = 2008 AND
+kategorie nieliczbowe = self-employed AND
+education = university.degree AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+default = no AND
+marital = married: no (10.05/2.0)
+
+duration <= 835 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+pdays > 11 AND
+duration <= 606 AND
+miesiac > 4 AND
+poutcome = nonexistent AND
+duration <= 517 AND
+month = aug AND
+kategorie nieliczbowe = technician AND
+EURIBOR3M <= 4.964: no (42.86/1.0)
+
+duration <= 191 AND
+pdays > 6 AND
+kategorie nieliczbowe = blue-collar AND
+poutcome = failure: no (24.99/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = self-employed: no (19.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = failure AND
+kategorie nieliczbowe = blue-collar: no (32.89/7.13)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+age <= 65 AND
+campaign > 4 AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX > 92.469: no (22.99/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+campaign <= 7 AND
+kategorie nieliczbowe = retired: no (18.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+duration <= 609 AND
+poutcome = nonexistent AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+contact = cellular AND
+education = professional.course AND
+kategorie nieliczbowe = technician AND
+default = no AND
+CONS.PRICE.IDX > 93.2 AND
+marital = married AND
+duration <= 539: no (15.2/1.0)
+
+pdays <= 7 AND
+duration > 124 AND
+kategorie nieliczbowe = student AND
+EURIBOR3M <= 1.007 AND
+contact = cellular AND
+month = aug AND
+CONS.PRICE.IDX > 93.075: yes (12.0)
+
+duration <= 208 AND
+pdays > 6 AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+miesiac > 3 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+contact = cellular AND
+age > 31: no (37.96)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+default = no AND
+duration <= 401 AND
+campaign <= 4 AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]': no (30.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = failure AND
+education = high.school AND
+default = no AND
+kategorie nieliczbowe = services: no (22.52/6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = nonexistent AND
+Rok = 2008 AND
+marital = divorced AND
+age <= 56 AND
+kategorie nieliczbowe = technician AND
+education = professional.course: no (15.8/1.0)
+
+duration <= 191 AND
+pdays > 6 AND
+education = basic.9y AND
+marital = married AND
+Rok = 2009 AND
+kategorie nieliczbowe = retired AND
+campaign > 1: no (8.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+CONS.PRICE.IDX > 93.918 AND
+kategorie nieliczbowe = unemployed AND
+duration <= 745: no (14.0/1.0)
+
+duration <= 191 AND
+pdays > 6 AND
+kategorie nieliczbowe = self-employed AND
+education = university.degree AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+campaign <= 1: no (15.99/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 609 AND
+age <= 60 AND
+poutcome = nonexistent AND
+Rok = 2008 AND
+marital = married AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = admin.: no (15.0/3.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+poutcome = nonexistent AND
+EURIBOR3M > 1.372 AND
+NR.EMPLOYED <= 5195.8 AND
+kategorie nieliczbowe = entrepreneur AND
+CONS.PRICE.IDX > 93.075: no (7.96/0.04)
+
+duration <= 191 AND
+pdays > 6 AND
+kategorie nieliczbowe = self-employed AND
+month = jun AND
+EURIBOR3M > 0.731: no (16.75/1.88)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+age <= 60 AND
+duration <= 609 AND
+poutcome = nonexistent AND
+Rok = 2008 AND
+kategorie nieliczbowe = self-employed: no (28.05/5.0)
+
+duration <= 191 AND
+pdays > 6 AND
+kategorie nieliczbowe = technician AND
+contact = cellular AND
+przedzial_cons.price.idx = '(93.056333-93.484]': no (40.98/7.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+contact = telephone AND
+miesiac <= 7 AND
+kategorie nieliczbowe = technician AND
+przedzial_wiek = '(30.5-44]' AND
+Rok = 2008 AND
+default = no AND
+marital = married AND
+education = professional.course AND
+EURIBOR3M <= 4.912: no (10.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+poutcome = nonexistent AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+przedzial_wiek = 0-30.5: no (17.0/1.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+poutcome = nonexistent AND
+EURIBOR3M > 1.372 AND
+Rok = 2009 AND
+contact = cellular: no (127.97/24.03)
+
+duration <= 191 AND
+pdays > 6 AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+przedzial_wiek = '(30.5-44]' AND
+pdays > 14 AND
+poutcome = failure: no (13.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+Rok = 2008 AND
+month = may AND
+marital = married AND
+kategorie nieliczbowe = management: no (22.0/3.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+month = may AND
+marital = divorced AND
+kategorie nieliczbowe = blue-collar AND
+duration > 639: no (8.0/1.0)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+month = may AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school: no (14.0/1.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+month = nov AND
+kategorie nieliczbowe = services AND
+przedzial_wiek = '(30.5-44]': no (17.09/2.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+month = may AND
+education = basic.4y AND
+przedzial_wiek = '(44-57.5]': no (17.0/3.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+duration <= 643 AND
+marital = single AND
+kategorie nieliczbowe = student AND
+duration <= 611: no (7.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+duration <= 525 AND
+contact = cellular AND
+marital = married AND
+default = no AND
+education = high.school: no (27.15/4.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+duration <= 208 AND
+contact = telephone: no (55.39/9.98)
+
+NR.EMPLOYED <= 5008.7 AND
+duration > 261 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+previous <= 0 AND
+campaign <= 3 AND
+przedzial_wiek = '(44-57.5]' AND
+EURIBOR3M > 0.643 AND
+month = jul: yes (22.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = technician AND
+campaign <= 5 AND
+education = professional.course AND
+marital = single: no (10.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = admin. AND
+campaign <= 8 AND
+education = university.degree AND
+marital = married: no (7.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = single AND
+default = no AND
+education = unknown: no (11.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = technician: no (20.0/5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = blue-collar AND
+marital = single: no (8.09)
+
+NR.EMPLOYED > 5008.7 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+duration <= 250 AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]' AND
+EURIBOR3M <= 1.244: no (30.06/0.35)
+
+duration <= 191 AND
+pdays > 6 AND
+duration <= 93 AND
+month = mar AND
+kategorie nieliczbowe = admin.: no (14.01)
+
+duration <= 191 AND
+pdays > 6 AND
+miesiac > 4 AND
+kategorie nieliczbowe = unemployed AND
+campaign <= 5 AND
+education = high.school: no (11.93/1.0)
+
+duration <= 191 AND
+pdays > 6 AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+campaign <= 2 AND
+przedzial_wiek = '(57.5-71]': no (13.0)
+
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 261 AND
+previous <= 2 AND
+duration > 385 AND
+kategorie nieliczbowe = management AND
+campaign <= 3: yes (13.0)
+
+NR.EMPLOYED <= 5008.7 AND
+duration > 261 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = nonexistent AND
+campaign <= 3 AND
+przedzial_wiek = '(44-57.5]' AND
+EURIBOR3M > 0.643 AND
+kategorie nieliczbowe = admin.: yes (30.0)
+
+duration <= 191 AND
+pdays > 6 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+default = no AND
+campaign <= 1 AND
+pdays > 13 AND
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+CONS.PRICE.IDX <= 93.369: no (11.85)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2009 AND
+CONS.CONF.IDX > -30.1 AND
+contact = cellular AND
+duration <= 1642: no (5.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2009 AND
+month = apr: yes (29.0/8.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = housemaid: yes (5.0/1.0)
+
+pdays <= 7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 124 AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+previous <= 4 AND
+month = nov AND
+contact = cellular: yes (10.0/1.0)
+
+duration <= 184 AND
+pdays > 6 AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+education = high.school: no (12.0)
+
+DataRokMiesi¹c <= 1257030000000 AND
+duration <= 835 AND
+pdays > 11 AND
+miesiac > 3 AND
+duration <= 133 AND
+default = no AND
+przedzial_wiek = '(44-57.5]': no (28.99/4.0)
+
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 385 AND
+previous <= 2 AND
+kategorie nieliczbowe = housemaid: yes (12.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = management AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+campaign > 2: yes (5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = single AND
+education = basic.4y: no (10.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = retired AND
+marital = married AND
+education = professional.course: no (6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 835 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = housemaid: no (16.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX <= 93.2 AND
+contact = cellular AND
+education = high.school: no (17.0/2.0)
+
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 261 AND
+previous <= 2 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = self-employed AND
+NR.EMPLOYED > 4963.6: yes (16.0)
+
+duration > 836 AND
+DataRokMiesi¹c > 1209592800000 AND
+miesiac <= 8 AND
+przedzial_wiek = '(57.5-71]' AND
+CONS.CONF.IDX <= -34.8 AND
+EURIBOR3M <= 4.963: yes (23.64/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+campaign > 1: no (13.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+contact = telephone AND
+EMP.VAR.RATE <= 43831 AND
+education = professional.course: no (10.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = 0-30.5 AND
+default = no AND
+EMP.VAR.RATE > 43831 AND
+duration <= 618: no (12.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+default = unknown AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+contact = cellular AND
+kategorie nieliczbowe = technician: no (14.56/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX <= 93.2 AND
+contact = cellular AND
+EURIBOR3M > 4.021 AND
+education = university.degree AND
+default = no AND
+przedzial_wiek = '(30.5-44]': no (22.26/2.98)
+
+duration <= 212 AND
+pdays > 6 AND
+duration <= 123 AND
+contact = telephone AND
+education = high.school AND
+EURIBOR3M <= 0.7: yes (4.0)
+
+duration <= 212 AND
+pdays > 6 AND
+duration <= 114 AND
+contact = cellular AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+month = jun: no (50.83/8.67)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+marital = single: no (29.0/7.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+NR.EMPLOYED > 5076.2 AND
+duration <= 644 AND
+age <= 60 AND
+kategorie nieliczbowe = management AND
+poutcome = nonexistent AND
+education = university.degree AND
+marital = married AND
+contact = cellular AND
+przedzial_wiek = '(30.5-44]' AND
+age > 36: no (22.79/1.0)
+
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+campaign > 6 AND
+duration <= 370 AND
+EURIBOR3M > 0.644: no (26.0)
+
+DataRokMiesi¹c > 1257030000000 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 261 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+CONS.PRICE.IDX > 93.444: yes (20.0)
+
+NR.EMPLOYED <= 5008.7 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 385 AND
+previous <= 2 AND
+kategorie nieliczbowe = unemployed AND
+przedzial_wiek = 0-30.5: yes (8.0)
+
+duration <= 208 AND
+pdays > 6 AND
+duration <= 93 AND
+previous > 0: no (20.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+marital = married AND
+kategorie nieliczbowe = unemployed: no (10.0/1.0)
+
+pdays <= 27 AND
+duration > 213 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+previous <= 3 AND
+previous > 1 AND
+default = no AND
+przedzial_wiek = '(57.5-71]': yes (26.0/4.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+contact = telephone AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+campaign <= 8 AND
+EMP.VAR.RATE > 43831 AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5: no (10.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+default = unknown AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+contact = telephone: no (12.0)
+
+duration <= 208 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+miesiac > 3 AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+contact = cellular AND
+education = high.school AND
+CONS.PRICE.IDX > 92.201: no (37.99/5.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = entrepreneur AND
+CONS.PRICE.IDX > 92.649: yes (8.0)
+
+duration > 853 AND
+contact = cellular AND
+miesiac <= 10 AND
+pdays <= 18: yes (31.0/4.0)
+
+przedzial_czas rozmowy = '(2459-3688.5]' AND
+month = may AND
+default = no: yes (4.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+Rok = 2009: yes (6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+contact = telephone AND
+campaign <= 8 AND
+education = unknown: no (11.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = self-employed: no (5.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = blue-collar AND
+education = unknown: yes (6.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(30.5-44]' AND
+education = basic.4y: no (7.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(30.5-44]' AND
+CONS.PRICE.IDX <= 93.2 AND
+education = basic.9y AND
+marital = married AND
+duration <= 739: no (7.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = unknown: no (4.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.484-93.911667]': yes (4.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_wiek = '(57.5-71]' AND
+marital = married AND
+duration <= 517: no (14.07)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+Rok = 2008 AND
+przedzial_wiek = '(44-57.5]' AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+duration <= 799 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': no (8.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+default = no AND
+education = university.degree AND
+EMP.VAR.RATE > 43831 AND
+EURIBOR3M > 4.965: no (5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 7 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+marital = married AND
+kategorie nieliczbowe = services AND
+NR.EMPLOYED > 5195.8 AND
+education = high.school AND
+EURIBOR3M <= 4.963: no (7.0/1.0)
+
+pdays <= 7 AND
+EURIBOR3M <= 0.715 AND
+kategorie nieliczbowe = retired AND
+age <= 87: yes (18.0/1.0)
+
+duration <= 242 AND
+pdays > 6 AND
+miesiac > 3 AND
+przedzial_wiek = '(30.5-44]' AND
+NR.EMPLOYED > 4963.6 AND
+kategorie nieliczbowe = blue-collar: no (33.79/2.0)
+
+duration <= 208 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+education = basic.9y AND
+previous > 1: no (10.0)
+
+duration <= 208 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]': no (15.27/2.12)
+
+duration <= 191 AND
+NR.EMPLOYED > 4963.6 AND
+contact = telephone AND
+poutcome = success: no (14.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+kategorie nieliczbowe = unknown AND
+pdays > 27: yes (9.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+kategorie nieliczbowe = entrepreneur AND
+contact = cellular: no (6.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+kategorie nieliczbowe = technician AND
+CONS.PRICE.IDX > 94.215: yes (20.0)
+
+pdays <= 12 AND
+duration <= 124 AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+kategorie nieliczbowe = admin. AND
+previous <= 1: yes (7.0/2.0)
+
+duration <= 191 AND
+NR.EMPLOYED > 4963.6 AND
+previous <= 1 AND
+poutcome = failure AND
+education = basic.4y AND
+kategorie nieliczbowe = retired AND
+przedzial_wiek = '(71-84.5]' AND
+duration > 157: yes (7.0)
+
+duration <= 191 AND
+NR.EMPLOYED > 4963.6 AND
+previous <= 1 AND
+poutcome = failure AND
+education = university.degree AND
+kategorie nieliczbowe = admin. AND
+age <= 55: no (28.99/4.99)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+poutcome = success: no (6.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = unemployed AND
+age <= 49: yes (5.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+marital = single: yes (13.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+kategorie nieliczbowe = unemployed AND
+month = may AND
+duration > 346: yes (6.0)
+
+pdays <= 27 AND
+duration <= 124 AND
+NR.EMPLOYED > 5017.5: no (37.99/5.0)
+
+pdays <= 12 AND
+EURIBOR3M <= 0.9 AND
+kategorie nieliczbowe = student AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+education = high.school AND
+pdays > 2: yes (20.0)
+
+pdays <= 7 AND
+education = unknown AND
+age > 19 AND
+campaign <= 2 AND
+age <= 84: yes (28.0)
+
+previous > 3 AND
+duration > 174 AND
+kategorie nieliczbowe = student: no (11.0)
+
+pdays <= 27 AND
+EURIBOR3M <= 0.903 AND
+kategorie nieliczbowe = self-employed AND
+przedzial_cons.conf.idx = '(-30.883333-inf)': yes (6.0)
+
+pdays <= 27 AND
+month = dec AND
+duration <= 330: yes (9.0)
+
+duration <= 191 AND
+NR.EMPLOYED > 4963.6 AND
+pdays > 4 AND
+month = dec: no (16.0/3.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+poutcome = nonexistent AND
+marital = divorced AND
+kategorie nieliczbowe = services AND
+campaign <= 4: no (12.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(30.5-44]' AND
+duration <= 524 AND
+poutcome = nonexistent AND
+education = unknown: no (8.34)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac > 3 AND
+pdays > 11 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(30.5-44]' AND
+duration <= 327 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician: no (15.82/2.66)
+
+duration <= 208 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+month = sep AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician: no (7.0/1.0)
+
+duration <= 208 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+education = university.degree AND
+CONS.CONF.IDX > -39.8 AND
+kategorie nieliczbowe = self-employed: no (20.0/3.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 261 AND
+previous <= 2 AND
+kategorie nieliczbowe = technician AND
+education = university.degree AND
+month = sep: yes (16.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = blue-collar AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+education = basic.9y AND
+marital = married AND
+campaign <= 4 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+duration <= 1405: yes (6.0)
+
+pdays <= 27 AND
+month = mar AND
+duration > 366 AND
+EURIBOR3M <= 0.649: no (8.0)
+
+miesiac <= 3 AND
+campaign > 4 AND
+pdays > 27 AND
+CONS.PRICE.IDX <= 93.075 AND
+duration <= 251: no (13.0/1.0)
+
+miesiac <= 3 AND
+duration > 169 AND
+pdays <= 7 AND
+contact = cellular: yes (22.0)
+
+miesiac <= 3 AND
+duration > 169 AND
+EURIBOR3M > 0.651 AND
+education = high.school AND
+default = no AND
+duration > 184: yes (28.51/1.0)
+
+duration > 836 AND
+DataRokMiesi¹c > 1209592800000 AND
+miesiac <= 9 AND
+przedzial_wiek = 0-30.5 AND
+previous <= 0 AND
+contact = cellular AND
+NR.EMPLOYED > 5023.5 AND
+education = high.school AND
+marital = single: yes (26.0/7.0)
+
+przedzial_czas rozmowy = '(2459-3688.5]': yes (18.0/8.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = management AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]': yes (5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 870 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_wiek = '(44-57.5]' AND
+marital = married AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+kategorie nieliczbowe = admin. AND
+default = no: no (15.05/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(30.5-44]' AND
+duration <= 524 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = blue-collar AND
+age > 33: no (42.84/4.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = unknown AND
+education = high.school: no (2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 870 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = married AND
+NR.EMPLOYED <= 5195.8 AND
+przedzial_wiek = '(57.5-71]': no (11.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+contact = telephone: no (12.0/3.0)
+
+duration <= 261 AND
+pdays > 12 AND
+poutcome = failure AND
+kategorie nieliczbowe = self-employed AND
+previous <= 2: no (17.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = entrepreneur AND
+przedzial_wiek = '(30.5-44]': no (5.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = technician AND
+contact = cellular AND
+default = no AND
+education = university.degree AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+przedzial_wiek = '(30.5-44]' AND
+age > 31 AND
+CONS.PRICE.IDX > 93.2 AND
+campaign > 2: yes (7.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = technician AND
+contact = cellular AND
+duration <= 756 AND
+default = no AND
+poutcome = nonexistent AND
+education = university.degree AND
+CONS.PRICE.IDX > 93.2: no (13.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = married AND
+NR.EMPLOYED <= 5195.8 AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+default = no AND
+education = university.degree AND
+CONS.PRICE.IDX <= 93.444: no (9.82/2.02)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = married AND
+NR.EMPLOYED <= 5195.8 AND
+kategorie nieliczbowe = admin. AND
+age > 29 AND
+campaign <= 1: no (14.0)
+
+duration <= 261 AND
+pdays > 12 AND
+kategorie nieliczbowe = self-employed AND
+NR.EMPLOYED <= 5023.5: yes (19.0)
+
+duration <= 261 AND
+pdays > 12 AND
+poutcome = failure AND
+kategorie nieliczbowe = student AND
+przedzial_cons.price.idx = '(93.911667-94.339333]': no (8.0)
+
+duration <= 261 AND
+pdays > 12 AND
+kategorie nieliczbowe = housemaid AND
+poutcome = nonexistent AND
+education = basic.4y AND
+default = no: yes (10.06/4.06)
+
+duration <= 261 AND
+pdays > 12 AND
+kategorie nieliczbowe = housemaid AND
+przedzial_nr.employed = '(-inf-5029.725]': no (13.0)
+
+duration <= 261 AND
+pdays > 12 AND
+month = dec: no (13.0/4.0)
+
+miesiac > 11 AND
+marital = married AND
+education = high.school: yes (10.0)
+
+duration <= 212 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+education = university.degree AND
+contact = telephone AND
+EURIBOR3M > 0.713: yes (6.01)
+
+duration <= 212 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+contact = telephone AND
+kategorie nieliczbowe = retired: no (6.0)
+
+duration <= 212 AND
+pdays > 6 AND
+NR.EMPLOYED > 4963.6 AND
+education = university.degree AND
+campaign > 1 AND
+poutcome = failure AND
+kategorie nieliczbowe = management: no (11.0/2.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+duration > 385 AND
+previous <= 2 AND
+marital = divorced AND
+miesiac <= 6: yes (31.0/1.0)
+
+duration <= 212 AND
+poutcome = failure AND
+education = high.school AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+previous > 1: no (16.0/2.0)
+
+duration <= 183 AND
+pdays > 27 AND
+kategorie nieliczbowe = services AND
+campaign > 2: no (15.0)
+
+pdays <= 27 AND
+education = basic.6y AND
+kategorie nieliczbowe = services: yes (6.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = blue-collar AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+education = basic.6y AND
+contact = telephone AND
+duration > 1492: yes (6.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac <= 3 AND
+default = unknown AND
+campaign <= 1: no (5.99)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+miesiac <= 3 AND
+duration > 186 AND
+education = professional.course: yes (13.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = technician AND
+contact = cellular AND
+default = no AND
+education = professional.course AND
+campaign <= 3 AND
+NR.EMPLOYED > 5195.8 AND
+przedzial_wiek = '(30.5-44]' AND
+CONS.PRICE.IDX <= 93.444 AND
+campaign <= 1: no (7.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+default = unknown AND
+przedzial_nr.employed = '(-inf-5029.725]': yes (8.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+default = unknown AND
+kategorie nieliczbowe = unemployed: no (9.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+default = unknown AND
+kategorie nieliczbowe = unknown AND
+CONS.PRICE.IDX <= 94.215: no (6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+default = unknown AND
+kategorie nieliczbowe = technician AND
+duration <= 704 AND
+marital = married AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+przedzial_wiek = '(30.5-44]': no (10.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 186 AND
+kategorie nieliczbowe = management AND
+age > 29: no (15.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 184 AND
+kategorie nieliczbowe = technician AND
+age <= 45: no (13.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 127 AND
+kategorie nieliczbowe = admin.: no (15.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+contact = cellular AND
+kategorie nieliczbowe = management AND
+CONS.CONF.IDX <= -40: yes (11.99)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+contact = cellular AND
+kategorie nieliczbowe = self-employed AND
+NR.EMPLOYED <= 5017.5: no (4.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+contact = cellular AND
+duration > 266 AND
+kategorie nieliczbowe = student AND
+duration > 540: yes (23.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+contact = telephone AND
+miesiac > 4 AND
+education = university.degree AND
+duration <= 366: no (7.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = married AND
+contact = telephone AND
+kategorie nieliczbowe = technician: yes (7.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+month = apr AND
+campaign <= 3: yes (14.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = housemaid AND
+NR.EMPLOYED > 4963.6: yes (12.0/2.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = single AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+przedzial_wiek = 0-30.5 AND
+default = no AND
+campaign > 2: no (6.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+Rok = 2008 AND
+marital = married AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = technician AND
+contact = cellular AND
+age <= 49: no (12.25)
+
+pdays <= 27 AND
+kategorie nieliczbowe = unknown AND
+previous <= 1: no (8.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = entrepreneur AND
+przedzial_nr.employed = '(-inf-5029.725]': yes (7.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = technician AND
+default = no AND
+education = basic.9y: yes (9.0/2.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+campaign > 2: yes (7.0/1.0)
+
+contact = telephone AND
+pdays <= 8 AND
+education = high.school AND
+CONS.PRICE.IDX <= 94.601: yes (9.0)
+
+contact = telephone AND
+kategorie nieliczbowe = housemaid: no (18.0/6.0)
+
+contact = telephone AND
+month = dec AND
+marital = married: yes (5.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unknown: yes (8.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+EURIBOR3M <= 0.683 AND
+previous <= 2: yes (20.0/2.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.484-93.911667]': no (8.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_wiek = 0-30.5 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+month = may: no (6.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = student AND
+duration > 192 AND
+duration <= 387: no (25.0/1.0)
+
+contact = telephone AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+month = sep AND
+age > 39: no (14.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = self-employed AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': yes (8.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+contact = telephone: no (18.0/5.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX > 92.649 AND
+education = high.school AND
+EURIBOR3M > 0.683 AND
+month = jun AND
+campaign > 1: yes (10.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+przedzial_czas rozmowy = 0-1229.5 AND
+CONS.PRICE.IDX > 92.649 AND
+education = university.degree AND
+marital = married AND
+age <= 51 AND
+age > 28 AND
+age > 36: yes (20.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = unknown: yes (4.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = entrepreneur AND
+default = unknown: yes (4.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_wiek = '(44-57.5]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+month = may AND
+EURIBOR3M <= 4.857: no (16.06/2.76)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+previous > 1 AND
+education = university.degree AND
+marital = single: no (9.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 870 AND
+pdays > 11 AND
+miesiac > 3 AND
+contact = telephone AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+kategorie nieliczbowe = management: no (7.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 870 AND
+pdays > 11 AND
+miesiac > 3 AND
+default = unknown AND
+kategorie nieliczbowe = self-employed AND
+age > 35: no (7.57)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(71-84.5]' AND
+duration > 206: yes (8.0/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 702 AND
+pdays > 7 AND
+Rok = 2008 AND
+marital = single AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+default = no AND
+contact = cellular AND
+campaign <= 1: no (9.7/1.0)
+
+DataRokMiesi¹c <= 1254348000000 AND
+duration <= 826 AND
+pdays > 11 AND
+miesiac > 3 AND
+NR.EMPLOYED > 5076.2 AND
+przedzial_wiek = '(30.5-44]' AND
+duration <= 327 AND
+poutcome = nonexistent AND
+month = apr AND
+campaign <= 2 AND
+education = university.degree AND
+duration > 178: no (38.07/4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+kategorie nieliczbowe = blue-collar AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+education = unknown: yes (4.0/1.0)
+
+poutcome = success AND
+education = unknown AND
+kategorie nieliczbowe = student AND
+duration <= 174: yes (7.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+campaign > 2 AND
+campaign <= 8 AND
+duration <= 1487: yes (15.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+EURIBOR3M > 4.859 AND
+education = high.school AND
+przedzial_czas rozmowy = 0-1229.5 AND
+default = no AND
+campaign > 1: yes (5.44/2.15)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+EURIBOR3M > 4.859 AND
+education = basic.9y: yes (3.76/0.5)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = unemployed: no (5.0/1.0)
+
+contact = telephone AND
+kategorie nieliczbowe = self-employed AND
+marital = married AND
+duration <= 1056: no (6.0/1.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+Rok = 2009 AND
+education = university.degree AND
+duration <= 708: yes (4.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+marital = married AND
+campaign <= 9: no (20.0/2.0)
+
+poutcome = success AND
+education = unknown AND
+CONS.CONF.IDX <= -34.8: no (13.0)
+
+pdays <= 27 AND
+month = aug AND
+kategorie nieliczbowe = retired: yes (15.0/2.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = unknown AND
+pdays > 27: no (7.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = housemaid AND
+default = no AND
+przedzial_wiek = '(57.5-71]' AND
+EURIBOR3M > 0.638: no (11.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = housemaid AND
+NR.EMPLOYED > 4963.6: yes (9.0)
+
+duration <= 181 AND
+previous <= 1 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+age <= 73 AND
+campaign <= 1: no (18.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = blue-collar AND
+campaign > 3: yes (10.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+campaign <= 1 AND
+poutcome = success AND
+pdays <= 13 AND
+CONS.PRICE.IDX <= 94.027 AND
+education = university.degree AND
+CONS.PRICE.IDX <= 93.444 AND
+EURIBOR3M <= 0.717 AND
+EURIBOR3M > 0.651 AND
+pdays <= 6: yes (17.0/1.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+kategorie nieliczbowe = self-employed AND
+NR.EMPLOYED <= 4991.6: no (6.0)
+
+NR.EMPLOYED <= 5008.7 AND
+kategorie nieliczbowe = admin. AND
+duration > 753 AND
+age > 26 AND
+marital = single: no (18.0)
+
+NR.EMPLOYED <= 5008.7 AND
+kategorie nieliczbowe = admin. AND
+education = professional.course: yes (17.0/1.0)
+
+NR.EMPLOYED <= 5008.7 AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5 AND
+age <= 24: yes (12.0)
+
+duration > 807 AND
+Rok = 2010 AND
+campaign <= 2: yes (11.0)
+
+duration <= 261 AND
+previous <= 1 AND
+month = apr AND
+education = basic.9y: no (12.97/3.0)
+
+duration > 828 AND
+Rok = 2011 AND
+campaign <= 2: yes (7.0)
+
+poutcome = success AND
+kategorie nieliczbowe = services AND
+duration > 98 AND
+przedzial_nr.employed = '(-inf-5029.725]': no (10.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = self-employed AND
+duration > 232: yes (7.0)
+
+DataRokMiesi¹c > 1254348000000 AND
+poutcome = nonexistent AND
+campaign <= 1 AND
+month = may AND
+age <= 61: yes (13.0)
+
+poutcome = success AND
+kategorie nieliczbowe = retired AND
+EURIBOR3M > 0.982: no (15.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = services AND
+EURIBOR3M <= 1.252: yes (9.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = services: no (6.0/1.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = unemployed AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+pdays <= 8: yes (6.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = unemployed: no (12.0/1.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = technician AND
+default = no AND
+pdays <= 2: yes (8.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = admin. AND
+miesiac > 9 AND
+contact = cellular AND
+poutcome = success AND
+marital = single AND
+pdays <= 6 AND
+campaign <= 1 AND
+previous <= 2: no (9.0/1.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = admin. AND
+contact = telephone AND
+NR.EMPLOYED <= 4991.6: no (6.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = admin. AND
+month = sep AND
+education = high.school: yes (11.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = admin. AND
+education = basic.9y AND
+EURIBOR3M <= 1.286: yes (8.0)
+
+pdays <= 27 AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = sep AND
+campaign <= 2 AND
+przedzial_wiek = '(30.5-44]': yes (6.0/1.0)
+
+poutcome = success AND
+kategorie nieliczbowe = entrepreneur AND
+campaign <= 1: no (5.0/1.0)
+
+pdays <= 27 AND
+default = no AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = sep AND
+pdays <= 7 AND
+EURIBOR3M <= 0.881: yes (15.0/1.0)
+
+duration > 728 AND
+DataRokMiesi¹c <= 1209592800000 AND
+kategorie nieliczbowe = entrepreneur: yes (10.94/3.0)
+
+poutcome = success AND
+kategorie nieliczbowe = technician AND
+default = no AND
+marital = married AND
+pdays > 8: yes (8.0)
+
+duration <= 728 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+poutcome = failure AND
+contact = cellular AND
+kategorie nieliczbowe = services AND
+default = no: no (10.02/1.0)
+
+duration <= 728 AND
+NR.EMPLOYED > 5076.2 AND
+miesiac > 3 AND
+poutcome = failure AND
+contact = cellular AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+campaign <= 3 AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]': no (6.61)
+
+duration <= 264 AND
+default = unknown AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]': no (9.0/3.0)
+
+campaign > 1 AND
+previous > 2 AND
+CONS.CONF.IDX <= -34.8 AND
+duration > 200 AND
+month = jun AND
+age > 27: no (9.0)
+
+duration <= 175 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+duration <= 169: yes (8.01/0.01)
+
+duration <= 175 AND
+kategorie nieliczbowe = entrepreneur AND
+marital = married: yes (4.0/0.01)
+
+duration <= 174 AND
+kategorie nieliczbowe = unemployed AND
+Rok = 2009 AND
+NR.EMPLOYED <= 5076.2: no (13.99)
+
+duration <= 172 AND
+kategorie nieliczbowe = admin. AND
+previous <= 1 AND
+education = high.school AND
+age <= 53 AND
+Rok = 2009 AND
+przedzial_cons.conf.idx = '(-30.883333-inf)': no (10.0/1.0)
+
+contact = telephone AND
+kategorie nieliczbowe = entrepreneur AND
+month = may AND
+age <= 38: no (4.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+EURIBOR3M > 4.859 AND
+kategorie nieliczbowe = blue-collar: yes (6.71/1.53)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+education = basic.9y AND
+duration > 612 AND
+kategorie nieliczbowe = services AND
+marital = single: no (6.0)
+
+campaign > 1 AND
+campaign > 11 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': no (20.0/4.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = student AND
+campaign > 2: no (5.0)
+
+duration <= 264 AND
+previous <= 1 AND
+kategorie nieliczbowe = entrepreneur AND
+marital = married: no (14.42/2.0)
+
+duration <= 172 AND
+kategorie nieliczbowe = technician AND
+education = high.school: no (8.0/2.0)
+
+campaign > 1 AND
+previous > 2 AND
+CONS.CONF.IDX <= -34.8 AND
+month = nov AND
+age <= 42: no (8.0)
+
+duration <= 172 AND
+kategorie nieliczbowe = admin. AND
+previous <= 1 AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+marital = single AND
+duration > 111: no (23.99/1.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = management AND
+marital = married: no (9.0/3.0)
+
+contact = telephone AND
+kategorie nieliczbowe = student AND
+campaign <= 3 AND
+month = may AND
+age > 27: yes (3.0)
+
+contact = telephone AND
+month = may AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = management AND
+marital = divorced: no (6.0)
+
+default = unknown AND
+month = apr: no (19.27/6.0)
+
+duration > 828 AND
+Rok = 2009 AND
+month = apr AND
+kategorie nieliczbowe = admin. AND
+education = university.degree: yes (8.0)
+
+contact = telephone AND
+kategorie nieliczbowe = services AND
+przedzial_nr.employed = '(-inf-5029.725]': no (7.0/1.0)
+
+Rok = 2008 AND
+duration <= 749 AND
+poutcome = nonexistent AND
+marital = single AND
+kategorie nieliczbowe = technician AND
+default = unknown: no (7.0)
+
+Rok = 2011 AND
+education = basic.6y AND
+marital = single: yes (5.0)
+
+Rok = 2008 AND
+duration <= 749 AND
+poutcome = nonexistent AND
+marital = single AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+default = no AND
+month = aug: no (21.0/4.0)
+
+contact = telephone AND
+Rok = 2011 AND
+marital = married: yes (21.0/6.0)
+
+contact = telephone AND
+poutcome = failure AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+campaign <= 3 AND
+campaign > 1: yes (7.0)
+
+contact = telephone AND
+poutcome = failure: no (42.0/13.0)
+
+contact = telephone AND
+kategorie nieliczbowe = services AND
+przedzial_nr.employed = '(5029.725-5095.85]': no (6.0)
+
+contact = telephone AND
+kategorie nieliczbowe = management AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+education = university.degree AND
+marital = married AND
+przedzial_wiek = '(30.5-44]' AND
+campaign > 1: yes (6.0/2.0)
+
+contact = telephone AND
+Rok = 2010: yes (21.0/9.0)
+
+contact = telephone AND
+przedzial_wiek = '(30.5-44]' AND
+month = apr: no (5.0/1.0)
+
+contact = telephone AND
+przedzial_wiek = '(30.5-44]' AND
+month = sep AND
+duration <= 433: yes (5.0)
+
+contact = telephone AND
+month = sep AND
+education = professional.course: no (3.0)
+
+contact = telephone AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+campaign > 1: no (7.0)
+
+contact = telephone AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+education = professional.course: yes (7.0/3.0)
+
+contact = telephone AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+education = high.school: yes (4.0)
+
+contact = telephone AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_nr.employed = '(5095.85-5161.975]': no (14.85/4.93)
+
+contact = telephone AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+education = unknown: yes (5.0/1.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = may AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.9y AND
+marital = married AND
+przedzial_wiek = '(30.5-44]': no (18.54/4.89)
+
+duration > 728 AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+contact = cellular AND
+default = no AND
+education = basic.6y: yes (20.0/3.0)
+
+poutcome = success AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = aug AND
+CONS.PRICE.IDX > 93.075: yes (8.0)
+
+campaign > 1 AND
+month = dec AND
+EURIBOR3M <= 0.717 AND
+previous <= 1 AND
+przedzial_wiek = '(30.5-44]': yes (5.0)
+
+campaign > 1 AND
+month = apr AND
+poutcome = failure AND
+previous <= 1 AND
+kategorie nieliczbowe = technician AND
+CONS.PRICE.IDX > 93.369: no (8.0)
+
+campaign > 1 AND
+month = dec AND
+EURIBOR3M > 0.716: no (5.0)
+
+przedzial_nr.employed = '(5161.975-inf)' AND
+duration <= 749 AND
+poutcome = nonexistent AND
+marital = single AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+campaign > 3: no (8.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = sep: no (8.0/2.0)
+
+przedzial_nr.employed = '(5161.975-inf)' AND
+duration <= 748 AND
+poutcome = nonexistent AND
+marital = married AND
+kategorie nieliczbowe = self-employed AND
+age > 34: no (4.0)
+
+przedzial_nr.employed = '(5161.975-inf)' AND
+duration <= 748 AND
+poutcome = nonexistent AND
+marital = married AND
+kategorie nieliczbowe = unemployed AND
+NR.EMPLOYED > 5195.8: no (4.0)
+
+duration > 728 AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+duration <= 759: yes (20.0)
+
+duration > 828 AND
+Rok = 2009 AND
+contact = telephone: yes (7.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = oct AND
+marital = married: no (8.0/1.0)
+
+month = dec AND
+poutcome = nonexistent AND
+campaign > 1: yes (9.0/1.0)
+
+poutcome = success AND
+kategorie nieliczbowe = management AND
+duration <= 270: no (16.0/3.0)
+
+poutcome = success AND
+kategorie nieliczbowe = technician AND
+default = no AND
+marital = married AND
+pdays <= 6 AND
+campaign <= 1 AND
+przedzial_nr.employed = '(-inf-5029.725]': yes (10.0)
+
+poutcome = success AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = may AND
+CONS.PRICE.IDX > 93.369: yes (10.0)
+
+duration > 828 AND
+Rok = 2009 AND
+month = oct AND
+campaign <= 1: no (6.0)
+
+duration > 828 AND
+Rok = 2009 AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+age <= 69: yes (12.0)
+
+month = dec AND
+education = university.degree: no (9.0/3.0)
+
+month = mar AND
+przedzial_wiek = 84.5-100 AND
+duration > 114: yes (6.0)
+
+month = dec AND
+education = unknown: yes (3.0)
+
+month = mar AND
+przedzial_wiek = '(44-57.5]' AND
+education = university.degree AND
+previous <= 1 AND
+age <= 53: no (13.99/2.0)
+
+month = mar AND
+education = university.degree AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+marital = single AND
+CONS.PRICE.IDX > 93.075 AND
+campaign <= 1 AND
+EURIBOR3M > 0.636: yes (14.0)
+
+month = nov AND
+previous > 1 AND
+przedzial_wiek = 0-30.5 AND
+marital = single: yes (13.0/2.0)
+
+month = dec: no (10.0/3.0)
+
+duration > 828 AND
+Rok = 2009 AND
+month = may AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+poutcome = nonexistent AND
+education = university.degree: yes (8.09)
+
+month = nov AND
+campaign > 2 AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = technician: no (8.66/1.0)
+
+month = nov AND
+przedzial_wiek = '(71-84.5]' AND
+duration > 130 AND
+campaign <= 2: yes (11.0)
+
+month = nov AND
+przedzial_wiek = '(57.5-71]' AND
+previous <= 1 AND
+age <= 65 AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+education = basic.4y: no (8.0/1.0)
+
+month = nov AND
+przedzial_wiek = '(57.5-71]' AND
+education = university.degree AND
+duration <= 462: yes (7.0/1.0)
+
+month = nov AND
+przedzial_wiek = '(57.5-71]': yes (18.0/5.0)
+
+previous > 2 AND
+NR.EMPLOYED > 5008.7: yes (12.0/2.0)
+
+previous > 2 AND
+kategorie nieliczbowe = technician AND
+CONS.PRICE.IDX > 94.027: no (10.0)
+
+previous > 2 AND
+kategorie nieliczbowe = services: no (6.0)
+
+month = nov AND
+przedzial_wiek = '(44-57.5]' AND
+marital = married AND
+default = no AND
+kategorie nieliczbowe = technician: no (15.0/4.0)
+
+month = nov AND
+przedzial_wiek = '(30.5-44]' AND
+marital = married AND
+CONS.PRICE.IDX > 93.918 AND
+pdays > 27: no (15.99)
+
+NR.EMPLOYED <= 4991.6 AND
+education = basic.6y AND
+duration <= 334: yes (8.0)
+
+previous > 3 AND
+kategorie nieliczbowe = admin. AND
+age > 32: no (14.0)
+
+NR.EMPLOYED <= 4991.6 AND
+education = basic.4y AND
+campaign <= 5 AND
+EURIBOR3M > 0.881 AND
+EURIBOR3M <= 1.008: no (28.0)
+
+NR.EMPLOYED <= 4991.6 AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+duration > 243 AND
+poutcome = failure AND
+CONS.PRICE.IDX > 94.027: yes (20.0)
+
+NR.EMPLOYED <= 4991.6 AND
+previous <= 0 AND
+kategorie nieliczbowe = admin. AND
+campaign > 3 AND
+campaign <= 4: no (6.0)
+
+NR.EMPLOYED <= 4991.6 AND
+previous <= 0 AND
+kategorie nieliczbowe = admin. AND
+miesiac > 6 AND
+marital = single AND
+duration > 333: yes (18.0)
+
+NR.EMPLOYED <= 4991.6 AND
+previous <= 0 AND
+przedzial_wiek = 84.5-100: yes (8.0)
+
+age > 82 AND
+przedzial_nr.employed = '(-inf-5029.725]': no (14.0)
+
+month = nov AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = single: no (6.0)
+
+duration > 828 AND
+Rok = 2009 AND
+month = may AND
+poutcome = failure AND
+education = high.school: yes (11.0/2.0)
+
+month = nov AND
+przedzial_wiek = '(44-57.5]' AND
+age <= 56 AND
+kategorie nieliczbowe = retired: no (6.0/1.0)
+
+month = mar AND
+kategorie nieliczbowe = management AND
+education = university.degree AND
+CONS.PRICE.IDX <= 93.075 AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 2 AND
+duration <= 165: no (6.0/2.0)
+
+month = mar AND
+kategorie nieliczbowe = management AND
+education = university.degree: yes (12.99/1.0)
+
+duration > 835 AND
+Rok = 2009 AND
+kategorie nieliczbowe = technician AND
+campaign <= 1: yes (12.0)
+
+NR.EMPLOYED <= 4991.6 AND
+previous <= 0 AND
+month = aug AND
+EURIBOR3M > 0.903: yes (16.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = student AND
+CONS.PRICE.IDX > 94.027: no (8.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = management: yes (7.0/1.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = student AND
+CONS.CONF.IDX > -40.4 AND
+education = university.degree: yes (7.0/1.0)
+
+month = may AND
+age <= 27 AND
+pdays > 27 AND
+default = no AND
+EURIBOR3M <= 1.286 AND
+education = high.school AND
+poutcome = nonexistent: no (22.53/2.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]': no (6.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = jun AND
+duration <= 306: yes (9.33)
+
+month = nov AND
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+contact = cellular AND
+poutcome = nonexistent AND
+marital = married AND
+duration > 1380: yes (8.0/2.0)
+
+month = nov AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = services AND
+campaign <= 2: yes (7.0/1.0)
+
+month = nov AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = blue-collar AND
+contact = cellular AND
+education = basic.9y AND
+campaign <= 2: no (6.0/1.0)
+
+month = nov AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = management AND
+education = high.school: no (7.0/2.0)
+
+month = nov AND
+przedzial_wiek = '(71-84.5]': no (5.0)
+
+month = nov AND
+marital = married AND
+przedzial_czas rozmowy = 0-1229.5 AND
+education = professional.course AND
+kategorie nieliczbowe = technician: no (9.07/2.05)
+
+month = apr AND
+przedzial_wiek = '(57.5-71]' AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+previous > 0: yes (6.0)
+
+month = apr AND
+poutcome = failure AND
+marital = single: no (37.19/9.07)
+
+contact = telephone AND
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+CONS.PRICE.IDX > 92.431: yes (4.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = oct AND
+EURIBOR3M <= 0.737: yes (3.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(-inf-5029.725]': no (7.0/2.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = jul AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+EURIBOR3M > 4.959: no (3.6)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = jul AND
+kategorie nieliczbowe = technician AND
+przedzial_czas rozmowy = 0-1229.5: no (5.0/1.0)
+
+EMP.VAR.RATE <= 43831 AND
+contact = telephone AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+marital = married AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+EURIBOR3M <= 4.856: no (5.57/0.27)
+
+month = may AND
+previous > 1 AND
+kategorie nieliczbowe = admin. AND
+poutcome = failure: no (9.2/1.2)
+
+Rok = 2011 AND
+education = unknown AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]': no (11.0/4.0)
+
+Rok = 2011 AND
+education = professional.course AND
+marital = single AND
+campaign > 2: yes (8.0)
+
+przedzial_wiek = '(71-84.5]' AND
+kategorie nieliczbowe = retired AND
+marital = divorced AND
+age <= 81 AND
+campaign <= 3 AND
+duration > 216: no (17.0)
+
+Rok = 2011 AND
+kategorie nieliczbowe = management: no (22.0/9.0)
+
+Rok = 2011 AND
+education = university.degree AND
+kategorie nieliczbowe = retired AND
+marital = married: yes (7.0/1.0)
+
+Rok = 2011 AND
+education = basic.4y AND
+default = no AND
+marital = divorced: yes (7.0/1.0)
+
+Rok = 2011 AND
+education = unknown AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+campaign <= 2 AND
+poutcome = nonexistent AND
+CONS.PRICE.IDX > 93.444: no (6.0/1.0)
+
+Rok = 2011 AND
+education = university.degree AND
+kategorie nieliczbowe = admin. AND
+campaign > 2: yes (30.0/7.0)
+
+duration > 835 AND
+EMP.VAR.RATE > 43831 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school AND
+default = no AND
+kategorie nieliczbowe = admin. AND
+marital = single: yes (11.01/1.75)
+
+month = nov AND
+education = basic.4y AND
+CONS.PRICE.IDX > 92.893: no (6.0)
+
+przedzial_wiek = 84.5-100: no (11.93/3.0)
+
+month = may AND
+duration <= 428 AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = student AND
+EURIBOR3M <= 1.313: no (11.76/1.3)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = nov AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+marital = married: yes (3.0/1.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = nov AND
+kategorie nieliczbowe = admin.: no (6.0/2.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+month = may AND
+kategorie nieliczbowe = retired AND
+campaign <= 1: yes (5.0/1.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = retired AND
+CONS.PRICE.IDX <= 94.215: no (10.0)
+
+EMP.VAR.RATE <= 43831 AND
+contact = telephone AND
+kategorie nieliczbowe = management: yes (4.36/0.18)
+
+EMP.VAR.RATE <= 43831 AND
+contact = telephone AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.4y AND
+marital = married AND
+duration > 1422: no (4.0)
+
+EMP.VAR.RATE <= 43831 AND
+contact = telephone AND
+kategorie nieliczbowe = technician AND
+education = basic.9y: no (9.53/2.36)
+
+month = mar AND
+marital = divorced AND
+education = university.degree: yes (7.0)
+
+kategorie nieliczbowe = unknown AND
+marital = married: no (17.0/4.0)
+
+kategorie nieliczbowe = unknown: yes (10.0/2.0)
+
+duration <= 264 AND
+default = unknown AND
+CONS.PRICE.IDX > 92.843: no (9.25)
+
+kategorie nieliczbowe = housemaid AND
+default = no AND
+Rok = 2009 AND
+education = university.degree AND
+previous <= 0: yes (4.0)
+
+duration > 835 AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_nr.employed = '(5029.725-5095.85]': no (12.25/4.25)
+
+duration > 835 AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+EMP.VAR.RATE > 43831 AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]' AND
+kategorie nieliczbowe = blue-collar AND
+marital = married: yes (9.86/3.03)
+
+duration > 835 AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+EURIBOR3M > 4.964 AND
+contact = cellular AND
+default = no: yes (27.0/3.21)
+
+poutcome = success AND
+previous > 1 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+pdays > 4: yes (10.0)
+
+kategorie nieliczbowe = management AND
+education = basic.4y: no (8.0)
+
+education = unknown AND
+kategorie nieliczbowe = blue-collar AND
+marital = married: no (25.67/6.9)
+
+duration <= 264 AND
+default = no AND
+Rok = 2009 AND
+kategorie nieliczbowe = management AND
+education = university.degree AND
+month = aug: no (10.0/1.0)
+
+month = mar AND
+previous > 1 AND
+duration <= 360: yes (11.49/1.0)
+
+month = nov AND
+education = basic.6y AND
+default = no: no (12.9/1.9)
+
+duration <= 264 AND
+default = no AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = admin. AND
+marital = single: no (6.99/1.0)
+
+EMP.VAR.RATE <= 43831 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+contact = telephone AND
+kategorie nieliczbowe = services AND
+marital = single: no (6.0/1.0)
+
+duration <= 264 AND
+default = no AND
+campaign <= 3 AND
+month = apr AND
+education = professional.course AND
+przedzial_wiek = '(30.5-44]': no (9.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+przedzial_wiek = '(44-57.5]': no (4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+marital = married AND
+campaign <= 3: no (15.0/5.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_nr.employed = '(5095.85-5161.975]': yes (16.0/4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+Rok = 2008 AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = admin. AND
+campaign <= 6: no (8.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5: yes (16.0/4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+education = basic.4y AND
+duration > 1353: yes (11.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_wiek = '(44-57.5]' AND
+education = high.school: no (7.0)
+
+contact = telephone AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+education = high.school AND
+campaign <= 1 AND
+duration <= 336: no (3.0)
+
+Rok = 2010 AND
+education = professional.course AND
+marital = single AND
+campaign > 2: yes (8.0)
+
+kategorie nieliczbowe = management AND
+month = apr AND
+education = university.degree AND
+campaign <= 2 AND
+marital = single AND
+duration <= 700: no (7.93/1.0)
+
+education = unknown AND
+kategorie nieliczbowe = management AND
+default = no AND
+marital = married AND
+campaign > 1: no (6.0)
+
+EMP.VAR.RATE <= 43831 AND
+przedzial_czas rozmowy = 0-1229.5 AND
+contact = telephone AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.9y AND
+duration > 626 AND
+marital = married AND
+default = no: no (4.98/1.21)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+kategorie nieliczbowe = admin. AND
+marital = single: yes (9.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = housemaid: no (13.0/4.0)
+
+kategorie nieliczbowe = housemaid AND
+education = basic.4y: yes (11.0/4.0)
+
+kategorie nieliczbowe = housemaid AND
+education = high.school AND
+marital = married AND
+duration > 282: yes (4.0/1.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = self-employed AND
+month = may AND
+marital = married: yes (7.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = entrepreneur AND
+marital = single: yes (11.52/1.82)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+education = unknown AND
+month = aug: no (10.0/1.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = student AND
+pdays > 27 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': yes (13.0/4.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+month = sep AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+age <= 33: yes (16.0/3.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+CONS.CONF.IDX <= -50 AND
+age <= 38 AND
+education = university.degree AND
+CONS.PRICE.IDX <= 93.798: yes (12.0)
+
+przedzial_wiek = '(30.5-44]' AND
+campaign > 8 AND
+campaign > 10: yes (9.2/0.2)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = retired: no (5.12/1.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+education = basic.9y AND
+previous > 0: no (4.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+month = mar AND
+marital = single: no (11.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+EMP.VAR.RATE <= 43831 AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+przedzial_euribor3m = '(3.574667-inf)' AND
+marital = married: no (8.57/0.17)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+campaign > 6 AND
+poutcome = nonexistent AND
+marital = single: no (11.22)
+
+duration > 807 AND
+Rok = 2009 AND
+month = jul: yes (5.0/2.0)
+
+education = professional.course AND
+kategorie nieliczbowe = unemployed AND
+NR.EMPLOYED > 4991.6: no (21.0/4.0)
+
+kategorie nieliczbowe = unemployed AND
+education = basic.9y AND
+CONS.CONF.IDX > -41.8: yes (12.0/1.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed AND
+campaign <= 3 AND
+default = no AND
+month = jun AND
+age <= 35: yes (9.0/1.0)
+
+duration > 807 AND
+przedzial_wiek = '(44-57.5]' AND
+month = apr AND
+EURIBOR3M <= 1.445: yes (12.5/0.83)
+
+education = university.degree AND
+default = unknown AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+przedzial_wiek = '(44-57.5]' AND
+duration > 725: yes (15.0)
+
+default = unknown AND
+kategorie nieliczbowe = self-employed: yes (5.0/1.0)
+
+default = unknown AND
+month = aug AND
+kategorie nieliczbowe = admin. AND
+marital = single: no (7.0/1.0)
+
+default = unknown AND
+kategorie nieliczbowe = student: no (5.0/1.0)
+
+education = university.degree AND
+kategorie nieliczbowe = retired AND
+marital = single: no (10.0)
+
+przedzial_wiek = '(71-84.5]' AND
+NR.EMPLOYED > 4963.6 AND
+kategorie nieliczbowe = retired AND
+previous > 0 AND
+age > 73 AND
+przedzial_cons.price.idx = '(-inf-92.628667]': yes (13.0/5.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = single AND
+kategorie nieliczbowe = admin. AND
+pdays > 27 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+duration > 198: no (4.33/0.17)
+
+default = unknown AND
+przedzial_wiek = '(57.5-71]' AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+EURIBOR3M > 4.962: no (9.64/2.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed AND
+education = basic.4y: yes (5.0/1.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX > 93.798: no (6.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+month = jun AND
+poutcome = success: no (11.15/1.33)
+
+poutcome = success AND
+month = jul AND
+EURIBOR3M > 0.793 AND
+duration <= 308: no (17.0)
+
+poutcome = success AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': yes (16.0/1.0)
+
+poutcome = success AND
+contact = cellular AND
+month = aug AND
+CONS.PRICE.IDX <= 93.075 AND
+education = university.degree AND
+marital = single AND
+EURIBOR3M <= 0.882: yes (6.0)
+
+poutcome = success AND
+contact = cellular AND
+kategorie nieliczbowe = retired AND
+age <= 68: yes (6.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed AND
+education = high.school AND
+age > 50: no (4.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed: yes (12.0/3.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+education = professional.course AND
+month = aug AND
+previous <= 2 AND
+campaign <= 5 AND
+default = no: no (9.0)
+
+przedzial_wiek = '(44-57.5]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+education = unknown: no (6.0/1.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = success AND
+campaign <= 4 AND
+NR.EMPLOYED <= 4963.6: yes (6.0)
+
+przedzial_wiek = '(30.5-44]' AND
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.4y AND
+contact = telephone AND
+default = no: no (13.0/1.0)
+
+duration <= 264 AND
+default = no AND
+campaign <= 3 AND
+Rok = 2009 AND
+kategorie nieliczbowe = technician AND
+education = university.degree AND
+month = jun AND
+previous <= 0 AND
+age > 37: no (6.99)
+
+education = unknown AND
+kategorie nieliczbowe = management AND
+duration > 395: yes (5.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+age <= 53: no (4.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = divorced AND
+month = jul: yes (8.0/1.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = single AND
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5: no (19.0/6.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = services: no (9.0/3.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+previous > 0 AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+marital = married AND
+EURIBOR3M <= 1.313: yes (4.83/1.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+previous > 0 AND
+kategorie nieliczbowe = blue-collar: no (11.41/1.41)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+default = no AND
+previous <= 0 AND
+campaign <= 2 AND
+NR.EMPLOYED <= 4991.6: yes (8.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = admin. AND
+default = no: no (3.0/1.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = entrepreneur AND
+CONS.PRICE.IDX <= 92.893: yes (3.0/1.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = technician AND
+CONS.CONF.IDX > -39.8: no (4.0/1.0)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed AND
+campaign <= 1 AND
+NR.EMPLOYED > 5023.5: yes (4.0)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = divorced: yes (11.94/2.0)
+
+kategorie nieliczbowe = housemaid AND
+education = high.school AND
+miesiac <= 9: no (4.0/0.0)
+
+kategorie nieliczbowe = housemaid AND
+campaign <= 3: yes (10.0/1.0)
+
+kategorie nieliczbowe = unemployed AND
+age <= 39 AND
+campaign <= 3 AND
+Rok = 2009 AND
+marital = married: yes (12.39/4.2)
+
+kategorie nieliczbowe = unemployed AND
+age > 38: no (12.0)
+
+kategorie nieliczbowe = entrepreneur AND
+education = professional.course: no (13.26/2.2)
+
+kategorie nieliczbowe = student AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]': no (3.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+NR.EMPLOYED <= 4963.6 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]': no (7.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+education = professional.course: yes (7.57/1.57)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+month = mar: yes (17.99/4.0)
+
+kategorie nieliczbowe = self-employed AND
+EMP.VAR.RATE <= 43831: no (10.03/3.49)
+
+kategorie nieliczbowe = management AND
+education = basic.6y AND
+campaign <= 2 AND
+duration <= 249: no (2.09)
+
+kategorie nieliczbowe = management AND
+education = basic.6y: yes (4.0)
+
+kategorie nieliczbowe = management AND
+month = sep AND
+przedzial_wiek = 0-30.5: no (4.0)
+
+kategorie nieliczbowe = management AND
+month = apr AND
+campaign <= 2 AND
+education = university.degree AND
+marital = divorced: no (7.0/1.0)
+
+kategorie nieliczbowe = entrepreneur AND
+CONS.PRICE.IDX <= 92.469: yes (8.0)
+
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+default = no AND
+education = unknown AND
+kategorie nieliczbowe = student: no (10.0/1.0)
+
+kategorie nieliczbowe = student AND
+marital = married: yes (4.0/1.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = '(30.5-44]' AND
+pdays > 27: yes (6.9/2.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+education = basic.6y AND
+campaign <= 1: no (4.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+education = unknown AND
+age <= 25 AND
+duration > 195: yes (17.0/1.0)
+
+kategorie nieliczbowe = entrepreneur AND
+education = high.school AND
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+default = no AND
+campaign > 1: yes (4.9/0.9)
+
+kategorie nieliczbowe = entrepreneur AND
+education = high.school: no (14.57/2.57)
+
+kategorie nieliczbowe = entrepreneur AND
+education = basic.9y AND
+duration > 689: no (5.0/1.0)
+
+kategorie nieliczbowe = entrepreneur AND
+education = university.degree AND
+age > 49: no (10.38/1.0)
+
+kategorie nieliczbowe = entrepreneur AND
+education = university.degree AND
+przedzial_wiek = '(44-57.5]': yes (8.09/0.09)
+
+duration <= 339 AND
+contact = telephone AND
+education = university.degree AND
+przedzial_wiek = 0-30.5 AND
+age > 26: no (3.0)
+
+kategorie nieliczbowe = entrepreneur AND
+education = university.degree AND
+przedzial_euribor3m = '(-inf-2.104333]': no (12.48/3.27)
+
+kategorie nieliczbowe = entrepreneur AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_cons.price.idx = '(94.339333-inf)': no (4.64/1.64)
+
+kategorie nieliczbowe = entrepreneur AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+month = nov AND
+campaign <= 1: yes (4.64/1.64)
+
+kategorie nieliczbowe = entrepreneur: yes (24.35/6.53)
+
+education = basic.4y AND
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = retired AND
+default = no AND
+poutcome = nonexistent AND
+duration > 97 AND
+marital = married AND
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+campaign <= 1: yes (11.0)
+
+duration > 807 AND
+Rok = 2008 AND
+przedzial_wiek = '(44-57.5]' AND
+CONS.CONF.IDX > -36.4 AND
+marital = married AND
+kategorie nieliczbowe = blue-collar: yes (12.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration > 807 AND
+Rok = 2008 AND
+kategorie nieliczbowe = self-employed AND
+NR.EMPLOYED > 5195.8: yes (13.0/2.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = self-employed AND
+przedzial_wiek = '(44-57.5]': no (13.93/4.87)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = services AND
+marital = married: yes (6.08/0.08)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = aug: no (5.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = services: no (4.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = blue-collar AND
+marital = single AND
+education = basic.9y AND
+duration <= 834: no (4.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = blue-collar AND
+previous <= 0 AND
+marital = married AND
+education = basic.9y AND
+campaign <= 4: no (12.0/4.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = self-employed AND
+Rok = 2008: no (6.51/0.9)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 339 AND
+contact = cellular AND
+month = may AND
+previous <= 0 AND
+marital = married: no (38.96/6.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = divorced AND
+education = university.degree AND
+NR.EMPLOYED <= 5195.8: yes (6.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_wiek = '(44-57.5]' AND
+przedzial_cons.price.idx = '(93.056333-93.484]': yes (6.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_wiek = '(44-57.5]' AND
+education = university.degree: no (6.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+przedzial_wiek = '(30.5-44]' AND
+month = may AND
+EURIBOR3M > 4.855 AND
+age <= 40 AND
+age > 33: no (5.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = single AND
+duration > 1376: no (10.4/2.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+education = professional.course AND
+default = no AND
+campaign > 1: no (8.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+CONS.PRICE.IDX > 93.2 AND
+marital = divorced: yes (7.89/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+CONS.PRICE.IDX > 93.2 AND
+EMP.VAR.RATE <= 43831 AND
+przedzial_wiek = '(30.5-44]': yes (7.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+CONS.PRICE.IDX <= 93.2: no (4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+education = basic.9y AND
+kategorie nieliczbowe = blue-collar AND
+campaign > 3: no (4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+kategorie nieliczbowe = technician: yes (11.0/4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar: yes (9.94/3.94)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+education = high.school AND
+duration > 1327: yes (6.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+education = basic.9y AND
+EURIBOR3M <= 1.327: yes (7.76)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+przedzial_wiek = '(44-57.5]': no (14.44/3.44)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+month = may AND
+kategorie nieliczbowe = admin.: yes (7.77/2.76)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+Rok = 2009 AND
+marital = married AND
+przedzial_wiek = '(30.5-44]' AND
+CONS.PRICE.IDX <= 92.893 AND
+campaign > 1: no (6.97/1.73)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+default = unknown AND
+poutcome = failure: no (5.07/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+kategorie nieliczbowe = technician AND
+CONS.PRICE.IDX <= 93.798: yes (6.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+kategorie nieliczbowe = unemployed AND
+campaign <= 1: yes (5.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+education = basic.4y AND
+przedzial_wiek = '(71-84.5]': no (12.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_wiek = '(71-84.5]' AND
+marital = divorced: yes (9.99/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+campaign > 3 AND
+education = university.degree AND
+campaign <= 4 AND
+marital = married: yes (6.83)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+przedzial_wiek = '(44-57.5]': yes (8.0/2.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+month = sep: no (6.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+month = nov: no (27.01/8.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+month = jul AND
+duration > 101: no (6.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = failure AND
+przedzial_euribor3m = '(3.574667-inf)' AND
+campaign <= 2: yes (12.75/1.45)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+przedzial_wiek = '(71-84.5]' AND
+education = unknown: yes (6.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = unknown AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+marital = single: no (11.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = unknown AND
+przedzial_nr.employed = '(5095.85-5161.975]': no (6.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = divorced AND
+poutcome = success AND
+EURIBOR3M > 0.843: yes (4.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+marital = divorced AND
+poutcome = failure AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+pdays > 27 AND
+duration <= 387: no (21.0/2.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+duration <= 208 AND
+poutcome = success AND
+education = high.school: no (15.0/4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = married AND
+education = university.degree AND
+CONS.PRICE.IDX > 93.444: no (6.0/2.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+marital = single: yes (4.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+education = high.school: no (3.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+education = university.degree AND
+age <= 36 AND
+EURIBOR3M > 4.964: yes (3.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]' AND
+education = university.degree AND
+age > 36: yes (3.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = success AND
+kategorie nieliczbowe = blue-collar: yes (22.33/8.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = failure AND
+month = oct AND
+campaign <= 2 AND
+przedzial_wiek = 0-30.5: yes (15.0/2.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+poutcome = failure AND
+kategorie nieliczbowe = blue-collar AND
+NR.EMPLOYED <= 5008.7: yes (10.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.6y AND
+przedzial_nr.employed = '(5029.725-5095.85]': yes (9.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.6y AND
+kategorie nieliczbowe = admin.: no (12.97/4.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.6y AND
+przedzial_wiek = 0-30.5 AND
+przedzial_nr.employed = '(5161.975-inf)': yes (9.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.6y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+duration <= 609: no (8.44)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+education = basic.6y AND
+kategorie nieliczbowe = retired: no (7.0/1.0)
+
+przedzial_czas rozmowy = 0-1229.5 AND
+kategorie nieliczbowe = unemployed AND
+campaign <= 3 AND
+marital = single AND
+campaign <= 1: no (14.0/1.0)
+
+przedzial_czas rozmowy = '(1229.5-2459]': no (6.94/2.0)
+
+kategorie nieliczbowe = unemployed AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+duration > 238 AND
+education = university.degree: yes (4.0)
+
+kategorie nieliczbowe = unemployed AND
+poutcome = nonexistent AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+przedzial_nr.employed = '(-inf-5029.725]': no (4.0)
+
+kategorie nieliczbowe = unemployed AND
+duration > 220 AND
+przedzial_euribor3m = '(-inf-2.104333]': yes (7.01/0.01)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+pdays > 11 AND
+CONS.PRICE.IDX > 93.798 AND
+age <= 73 AND
+przedzial_wiek = 0-30.5 AND
+age > 28: yes (9.0)
+
+education = basic.6y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+campaign <= 4 AND
+EURIBOR3M <= 1.327: yes (6.68/0.0)
+
+default = unknown AND
+Rok = 2009: no (14.09/4.09)
+
+education = basic.6y AND
+campaign <= 6 AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+EURIBOR3M > 1.384: no (4.37/1.37)
+
+education = basic.6y AND
+campaign > 6: no (4.33)
+
+education = unknown AND
+default = no AND
+poutcome = failure AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+campaign <= 1: no (4.0)
+
+education = unknown AND
+default = no AND
+poutcome = failure AND
+kategorie nieliczbowe = technician: yes (8.0)
+
+education = basic.6y AND
+kategorie nieliczbowe = services AND
+miesiac <= 6 AND
+EURIBOR3M > 4.859: no (3.2/0.4)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+przedzial_wiek = '(44-57.5]' AND
+EURIBOR3M <= 4.866: no (6.39)
+
+contact = telephone AND
+przedzial_nr.employed = '(5095.85-5161.975]': yes (10.63/1.82)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+campaign <= 3 AND
+przedzial_cons.conf.idx = '(-inf--46.816667]': yes (6.38/0.38)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+contact = telephone AND
+przedzial_wiek = '(30.5-44]': yes (4.0/1.0)
+
+education = basic.9y AND
+poutcome = nonexistent AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+age > 52 AND
+duration <= 859: yes (6.09)
+
+education = basic.9y AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+marital = married AND
+kategorie nieliczbowe = blue-collar AND
+EMP.VAR.RATE > 43831: no (11.0/1.0)
+
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+przedzial_cons.conf.idx = '(-30.883333-inf)': no (10.0/3.0)
+
+education = basic.4y AND
+age > 77: yes (8.0)
+
+marital = divorced AND
+kategorie nieliczbowe = technician AND
+education = professional.course AND
+duration > 702: yes (13.9/1.0)
+
+marital = divorced AND
+default = unknown AND
+contact = telephone: no (7.0)
+
+marital = divorced AND
+poutcome = failure AND
+miesiac > 5: yes (13.87/2.0)
+
+marital = divorced AND
+poutcome = failure: no (9.3/1.0)
+
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+campaign <= 5 AND
+education = basic.4y: no (8.0/1.0)
+
+marital = divorced AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+duration > 458: no (4.0)
+
+contact = telephone AND
+education = unknown: yes (7.0/1.0)
+
+marital = divorced AND
+education = basic.9y AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = services: no (5.0/1.0)
+
+marital = divorced AND
+education = basic.9y AND
+przedzial_wiek = '(44-57.5]': no (9.11/2.0)
+
+education = unknown AND
+CONS.PRICE.IDX <= 94.027 AND
+previous > 0: yes (10.0/1.0)
+
+education = unknown AND
+default = no AND
+poutcome = nonexistent AND
+month = jul AND
+CONS.PRICE.IDX <= 94.055 AND
+campaign <= 2: yes (5.9/2.0)
+
+education = unknown AND
+default = no AND
+month = jul: no (8.0)
+
+education = unknown AND
+default = no AND
+poutcome = nonexistent AND
+month = apr AND
+przedzial_wiek = 0-30.5 AND
+campaign <= 3: no (5.0/2.0)
+
+education = unknown AND
+default = no AND
+poutcome = nonexistent AND
+month = apr AND
+campaign > 1: yes (4.99)
+
+education = unknown AND
+default = no AND
+month = may: no (4.0)
+
+education = unknown AND
+default = no AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician: no (6.0/2.0)
+
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+przedzial_wiek = '(57.5-71]' AND
+education = university.degree: no (14.0/2.0)
+
+przedzial_wiek = '(71-84.5]' AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+poutcome = nonexistent: no (5.0)
+
+education = unknown AND
+default = no AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = retired AND
+CONS.CONF.IDX > -37.5: yes (5.0/1.0)
+
+education = unknown AND
+default = no AND
+poutcome = failure: no (4.0)
+
+education = unknown AND
+default = no AND
+kategorie nieliczbowe = student: no (3.99)
+
+kategorie nieliczbowe = self-employed AND
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+education = university.degree AND
+campaign > 1: no (7.2/0.9)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+pdays <= 27: yes (7.0/1.0)
+
+kategorie nieliczbowe = self-employed AND
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_nr.employed = '(5029.725-5095.85]': yes (3.71)
+
+kategorie nieliczbowe = retired AND
+marital = married AND
+campaign > 5: yes (11.0/1.0)
+
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+kategorie nieliczbowe = technician AND
+DataRokMiesi¹c <= 1246399200000: no (19.0/2.0)
+
+marital = married AND
+month = sep AND
+education = high.school AND
+duration > 311: yes (8.9/1.9)
+
+month = sep AND
+marital = single AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin.: yes (14.0/1.0)
+
+month = sep AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+education = university.degree AND
+Rok = 2009 AND
+EURIBOR3M <= 0.803 AND
+duration <= 434: no (6.0)
+
+month = sep AND
+poutcome = failure AND
+kategorie nieliczbowe = admin.: no (10.0/1.0)
+
+month = sep AND
+education = high.school AND
+marital = married: no (8.0)
+
+month = mar AND
+duration > 532: no (10.0)
+
+marital = divorced AND
+przedzial_cons.price.idx = '(94.339333-inf)': yes (11.0/4.0)
+
+marital = divorced AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.6y: no (4.0/2.0)
+
+marital = divorced AND
+education = basic.4y: yes (5.2/2.2)
+
+marital = divorced AND
+education = high.school AND
+Rok = 2009 AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 3 AND
+kategorie nieliczbowe = services AND
+age <= 42: no (5.0/1.0)
+
+marital = divorced AND
+kategorie nieliczbowe = blue-collar AND
+education = basic.9y AND
+month = jul AND
+EURIBOR3M > 4.962 AND
+duration > 717: yes (4.0/1.0)
+
+marital = unknown: yes (4.0/1.0)
+
+education = unknown AND
+default = no AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = admin.: yes (3.0)
+
+education = unknown AND
+default = no AND
+przedzial_wiek = 0-30.5: yes (4.99/1.0)
+
+education = unknown AND
+default = no AND
+przedzial_nr.employed = '(-inf-5029.725]': no (4.0)
+
+month = nov AND
+poutcome = failure AND
+CONS.PRICE.IDX <= 93.918 AND
+campaign > 1: no (7.0/1.0)
+
+education = unknown AND
+default = no: no (11.99/3.99)
+
+education = basic.6y AND
+kategorie nieliczbowe = services AND
+miesiac > 6: yes (3.0)
+
+education = professional.course AND
+contact = telephone AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+przedzial_wiek = '(44-57.5]': no (4.0)
+
+education = unknown: yes (3.0)
+
+education = basic.6y AND
+kategorie nieliczbowe = services AND
+age <= 40: yes (2.6/0.6)
+
+education = basic.6y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+marital = married AND
+month = may AND
+EURIBOR3M <= 4.858 AND
+duration <= 1104: no (7.0/2.0)
+
+contact = telephone AND
+education = basic.4y AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+default = unknown: yes (5.0/1.0)
+
+default = unknown AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(44-57.5]': no (8.81/2.0)
+
+education = basic.4y AND
+NR.EMPLOYED <= 4991.6: no (10.0)
+
+education = basic.4y AND
+kategorie nieliczbowe = retired AND
+default = no AND
+month = apr: yes (9.0/1.0)
+
+duration <= 208 AND
+kategorie nieliczbowe = self-employed: no (5.39/1.8)
+
+duration <= 208 AND
+kategorie nieliczbowe = retired AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': no (4.99)
+
+month = sep AND
+previous <= 1 AND
+education = university.degree AND
+marital = married AND
+EURIBOR3M > 0.768 AND
+CONS.PRICE.IDX > 93.2 AND
+duration <= 255: yes (6.0)
+
+education = basic.4y AND
+poutcome = nonexistent AND
+NR.EMPLOYED > 5023.5 AND
+kategorie nieliczbowe = retired AND
+default = no AND
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+duration > 338: yes (9.0/2.0)
+
+month = apr AND
+kategorie nieliczbowe = student AND
+CONS.PRICE.IDX <= 93.369 AND
+education = high.school AND
+campaign > 1: no (7.0/1.0)
+
+month = jul AND
+EURIBOR3M <= 4.957 AND
+age <= 61 AND
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = admin.: yes (13.73/2.37)
+
+przedzial_wiek = '(71-84.5]' AND
+month = aug: no (9.0/2.0)
+
+kategorie nieliczbowe = student AND
+przedzial_wiek = 0-30.5 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+CONS.PRICE.IDX > 92.893 AND
+EURIBOR3M > 1.266: yes (5.61/0.74)
+
+kategorie nieliczbowe = retired AND
+NR.EMPLOYED <= 4991.6: yes (23.0/1.0)
+
+previous > 1 AND
+education = high.school AND
+DataRokMiesi¹c > 1246399200000: no (12.0)
+
+kategorie nieliczbowe = retired AND
+poutcome = failure AND
+education = basic.4y: no (6.0)
+
+education = basic.4y AND
+NR.EMPLOYED > 5023.5 AND
+kategorie nieliczbowe = retired AND
+default = no: yes (10.99/3.0)
+
+education = basic.4y AND
+NR.EMPLOYED <= 5023.5: yes (8.0)
+
+kategorie nieliczbowe = retired AND
+marital = married AND
+month = may AND
+przedzial_wiek = '(71-84.5]': no (5.0)
+
+poutcome = failure AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+campaign <= 2 AND
+kategorie nieliczbowe = admin. AND
+duration > 317: no (7.87)
+
+poutcome = failure AND
+month = mar AND
+previous <= 1 AND
+CONS.PRICE.IDX > 93.075: yes (10.0)
+
+duration <= 264 AND
+education = basic.9y AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+age <= 41: no (8.21)
+
+kategorie nieliczbowe = retired AND
+marital = married AND
+education = high.school AND
+default = no AND
+poutcome = nonexistent AND
+month = aug: no (8.0/2.0)
+
+poutcome = failure AND
+month = oct AND
+pdays > 27 AND
+education = university.degree AND
+kategorie nieliczbowe = admin.: yes (7.0/1.0)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+campaign > 3: no (3.19)
+
+kategorie nieliczbowe = retired AND
+marital = married AND
+education = basic.9y: no (7.0/3.0)
+
+duration <= 208 AND
+kategorie nieliczbowe = admin. AND
+month = oct AND
+poutcome = nonexistent: no (14.0/1.0)
+
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+education = high.school AND
+przedzial_wiek = 0-30.5 AND
+campaign > 1: yes (8.0)
+
+kategorie nieliczbowe = retired AND
+marital = married AND
+campaign > 1 AND
+month = aug AND
+przedzial_wiek = '(44-57.5]': no (5.0)
+
+education = basic.4y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+age > 37 AND
+age <= 56: yes (10.71/1.71)
+
+education = basic.4y AND
+previous <= 0 AND
+contact = cellular AND
+przedzial_cons.price.idx = '(93.911667-94.339333]': no (10.9/1.9)
+
+education = basic.4y AND
+previous <= 0 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+age <= 49 AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 1: yes (5.48/2.24)
+
+education = basic.4y AND
+przedzial_wiek = '(44-57.5]' AND
+age > 49: yes (8.0/1.0)
+
+education = basic.4y AND
+age > 29: no (10.24/1.0)
+
+education = basic.9y AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+poutcome = nonexistent AND
+marital = single AND
+campaign > 1: no (5.0)
+
+education = basic.9y AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+campaign <= 1: yes (6.15/0.21)
+
+education = basic.9y AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+przedzial_nr.employed = '(-inf-5029.725]': no (6.0)
+
+education = basic.9y AND
+EMP.VAR.RATE <= 43831 AND
+contact = telephone AND
+EURIBOR3M > 4.857: no (5.53/0.04)
+
+education = basic.4y: yes (3.0)
+
+education = basic.9y AND
+month = oct AND
+marital = married: no (3.0/1.0)
+
+education = basic.9y AND
+month = mar: yes (6.0/2.0)
+
+education = basic.9y AND
+month = apr AND
+poutcome = nonexistent AND
+EURIBOR3M <= 1.423 AND
+kategorie nieliczbowe = blue-collar: no (5.85/1.78)
+
+education = basic.9y AND
+month = apr AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = blue-collar: yes (3.53/0.31)
+
+education = basic.9y AND
+miesiac <= 4 AND
+poutcome = nonexistent AND
+CONS.PRICE.IDX <= 93.369 AND
+kategorie nieliczbowe = technician AND
+age <= 31: no (3.0)
+
+education = basic.9y AND
+month = apr: no (14.5/4.19)
+
+education = basic.9y AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(30.5-44]' AND
+EURIBOR3M <= 4.959: yes (7.0)
+
+education = basic.9y AND
+Rok = 2009 AND
+kategorie nieliczbowe = services: yes (7.0/1.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = technician AND
+campaign <= 2 AND
+marital = married: no (6.82/1.82)
+
+education = basic.9y AND
+kategorie nieliczbowe = technician: yes (8.82/0.82)
+
+education = basic.9y AND
+kategorie nieliczbowe = student AND
+campaign <= 1: yes (6.0/1.0)
+
+kategorie nieliczbowe = blue-collar AND
+month = apr: yes (12.0/1.0)
+
+education = basic.9y AND
+month = aug: no (14.0/5.0)
+
+education = basic.9y AND
+month = jun AND
+default = no AND
+contact = telephone: no (14.0/5.0)
+
+education = basic.9y AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+duration > 559 AND
+kategorie nieliczbowe = blue-collar AND
+EURIBOR3M > 1.268 AND
+EURIBOR3M <= 1.299: yes (11.31/0.33)
+
+education = professional.course AND
+month = nov AND
+marital = single: yes (11.0/2.0)
+
+education = professional.course AND
+kategorie nieliczbowe = services AND
+przedzial_nr.employed = '(5161.975-inf)': yes (9.0/1.0)
+
+education = professional.course AND
+previous <= 0 AND
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+kategorie nieliczbowe = technician AND
+CONS.PRICE.IDX > 92.379: no (15.0/3.0)
+
+month = sep AND
+education = professional.course AND
+kategorie nieliczbowe = technician AND
+pdays > 27 AND
+previous <= 1 AND
+campaign > 1 AND
+duration > 311: no (5.0)
+
+month = oct AND
+education = professional.course AND
+przedzial_wiek = '(30.5-44]' AND
+poutcome = nonexistent: yes (5.0/1.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+campaign <= 1: no (7.0)
+
+month = oct AND
+education = basic.6y: no (4.0/1.0)
+
+month = oct AND
+education = professional.course AND
+age <= 60: no (4.0/1.0)
+
+month = oct AND
+education = high.school AND
+EURIBOR3M > 0.982: no (4.0)
+
+month = oct AND
+campaign > 2: yes (6.0)
+
+month = oct AND
+education = high.school AND
+kategorie nieliczbowe = services: no (4.0/1.0)
+
+month = oct AND
+education = high.school AND
+CONS.PRICE.IDX <= 93.444 AND
+kategorie nieliczbowe = admin. AND
+EURIBOR3M <= 0.737: yes (7.0/1.0)
+
+month = oct AND
+education = professional.course: yes (4.0)
+
+kategorie nieliczbowe = self-employed AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+marital = single AND
+CONS.CONF.IDX <= -47.1: yes (7.2)
+
+kategorie nieliczbowe = self-employed AND
+poutcome = nonexistent AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+marital = married: no (7.71/2.31)
+
+kategorie nieliczbowe = self-employed AND
+marital = single AND
+duration <= 415: no (8.61/0.9)
+
+kategorie nieliczbowe = self-employed: yes (11.58/3.48)
+
+kategorie nieliczbowe = retired AND
+default = no AND
+marital = divorced AND
+przedzial_wiek = '(57.5-71]' AND
+EURIBOR3M > 1.392: yes (4.0)
+
+kategorie nieliczbowe = retired AND
+default = no AND
+marital = divorced AND
+campaign > 1: no (6.0)
+
+education = basic.6y AND
+marital = single: no (8.0/2.0)
+
+education = basic.6y AND
+przedzial_wiek = '(44-57.5]' AND
+campaign <= 1: no (5.6)
+
+education = basic.6y AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]': yes (7.6/1.0)
+
+education = basic.6y AND
+month = jul AND
+EURIBOR3M > 4.959 AND
+campaign > 1 AND
+campaign > 2: yes (4.0/1.0)
+
+education = basic.6y AND
+month = jun AND
+default = no: yes (8.0/3.0)
+
+education = basic.6y AND
+month = jul AND
+campaign > 1 AND
+EURIBOR3M > 4.959: no (3.0)
+
+education = basic.6y AND
+CONS.CONF.IDX > -42.7 AND
+campaign > 1: yes (6.0/2.0)
+
+education = basic.6y AND
+CONS.CONF.IDX <= -42.7: yes (5.19)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+campaign > 2: no (4.0)
+
+education = basic.9y AND
+przedzial_cons.price.idx = '(94.339333-inf)': yes (6.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+campaign <= 1 AND
+poutcome = failure: yes (4.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+duration <= 525: no (4.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+kategorie nieliczbowe = technician AND
+campaign <= 2 AND
+przedzial_wiek = '(30.5-44]' AND
+CONS.PRICE.IDX <= 92.201 AND
+poutcome = nonexistent AND
+campaign <= 1 AND
+age <= 39: yes (10.0/2.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5: no (6.99)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+kategorie nieliczbowe = blue-collar: yes (4.0/1.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+month = jul AND
+marital = married AND
+przedzial_wiek = '(30.5-44]': no (16.0/2.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = blue-collar: no (7.93/2.97)
+
+education = professional.course AND
+kategorie nieliczbowe = blue-collar: yes (5.94/0.94)
+
+education = basic.9y AND
+default = unknown AND
+kategorie nieliczbowe = blue-collar AND
+month = jul AND
+marital = married AND
+duration > 574: no (7.36/1.0)
+
+education = basic.9y AND
+month = nov: no (20.11/8.96)
+
+education = basic.9y AND
+contact = telephone AND
+kategorie nieliczbowe = services: no (5.0/1.0)
+
+education = basic.9y AND
+contact = telephone AND
+campaign <= 3 AND
+marital = married AND
+campaign <= 2 AND
+duration > 723: yes (3.0)
+
+education = basic.9y AND
+contact = telephone AND
+duration > 656: no (8.33)
+
+education = basic.9y AND
+month = jul AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5: yes (4.0)
+
+education = basic.9y AND
+month = jun AND
+campaign > 1: yes (5.67/1.0)
+
+education = basic.9y AND
+month = jun AND
+duration <= 361: no (4.0)
+
+education = basic.9y AND
+month = oct: yes (3.0)
+
+education = basic.9y AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = services AND
+age <= 31: yes (4.0/1.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = management: yes (5.0/1.0)
+
+education = basic.9y AND
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = 0-30.5 AND
+marital = single: no (5.67)
+
+education = basic.9y AND
+poutcome = failure: no (4.64/1.64)
+
+education = basic.9y AND
+kategorie nieliczbowe = services AND
+CONS.PRICE.IDX > 93.876: no (4.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = admin. AND
+default = no: yes (9.37/1.9)
+
+education = basic.6y: no (2.0)
+
+campaign > 6 AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = management: yes (6.0/1.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = services: yes (2.0)
+
+default = unknown AND
+kategorie nieliczbowe = blue-collar AND
+education = high.school AND
+EMP.VAR.RATE > 43831 AND
+age > 35: yes (6.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = admin.: no (2.0)
+
+education = basic.9y AND
+contact = telephone: yes (2.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+CONS.PRICE.IDX <= 94.055 AND
+duration <= 462: yes (2.0)
+
+month = mar AND
+previous > 0: no (8.97/1.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = '(44-57.5]' AND
+campaign <= 1: no (5.0)
+
+education = basic.9y AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+marital = married: yes (24.9/7.9)
+
+education = basic.9y AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+CONS.CONF.IDX <= -41.8 AND
+marital = single AND
+age > 32: yes (5.67)
+
+education = basic.9y AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+CONS.CONF.IDX <= -41.8 AND
+marital = divorced: no (5.0/1.0)
+
+education = basic.9y AND
+default = no AND
+kategorie nieliczbowe = blue-collar AND
+CONS.CONF.IDX <= -41.8 AND
+duration <= 638: no (15.0/3.0)
+
+education = basic.9y AND
+default = no AND
+przedzial_wiek = '(30.5-44]': yes (6.48)
+
+education = basic.9y AND
+przedzial_wiek = 0-30.5 AND
+EURIBOR3M > 0.81 AND
+kategorie nieliczbowe = blue-collar AND
+CONS.PRICE.IDX > 93.369 AND
+duration <= 820 AND
+duration > 675: no (5.79)
+
+education = basic.9y AND
+przedzial_wiek = 0-30.5 AND
+miesiac > 6 AND
+kategorie nieliczbowe = blue-collar: yes (8.21/0.21)
+
+education = basic.9y AND
+przedzial_wiek = 0-30.5 AND
+duration > 222: no (7.0/1.0)
+
+education = basic.9y AND
+default = no: yes (4.0)
+
+education = basic.9y: no (4.0/1.0)
+
+education = professional.course AND
+campaign > 4 AND
+przedzial_wiek = '(30.5-44]' AND
+miesiac <= 7: yes (4.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = services: no (6.2/2.0)
+
+education = university.degree AND
+kategorie nieliczbowe = blue-collar AND
+przedzial_wiek = 0-30.5: no (5.0)
+
+education = professional.course AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+kategorie nieliczbowe = admin. AND
+marital = single: yes (3.0/1.0)
+
+education = high.school AND
+month = mar AND
+marital = single AND
+kategorie nieliczbowe = admin. AND
+age > 27 AND
+EURIBOR3M > 0.649: no (7.0/1.0)
+
+education = high.school AND
+month = mar AND
+EURIBOR3M <= 0.639: no (10.0)
+
+education = high.school AND
+month = mar AND
+CONS.PRICE.IDX > 93.075: yes (7.0)
+
+education = high.school AND
+month = sep: yes (4.0)
+
+education = high.school AND
+kategorie nieliczbowe = management: yes (10.93/3.93)
+
+education = high.school AND
+kategorie nieliczbowe = technician AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+marital = married: yes (5.0/1.0)
+
+education = high.school AND
+month = mar AND
+age <= 34: no (3.0)
+
+education = high.school AND
+month = apr AND
+campaign > 3: no (6.0)
+
+education = high.school AND
+month = oct AND
+kategorie nieliczbowe = student AND
+CONS.PRICE.IDX <= 93.444 AND
+EURIBOR3M > 0.733: no (3.0/1.0)
+
+education = high.school AND
+month = oct AND
+kategorie nieliczbowe = student: yes (4.0)
+
+education = high.school AND
+month = oct AND
+kategorie nieliczbowe = admin.: no (2.0)
+
+education = high.school AND
+month = oct AND
+campaign <= 1 AND
+duration > 237: yes (3.0/1.0)
+
+education = high.school AND
+month = apr AND
+poutcome = failure: yes (4.0/1.0)
+
+education = high.school AND
+month = apr AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX <= 93.369 AND
+marital = married: no (16.05/5.0)
+
+education = high.school AND
+month = apr AND
+EURIBOR3M <= 0.643: no (4.31/0.06)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+kategorie nieliczbowe = admin. AND
+EURIBOR3M <= 0.683 AND
+duration > 329: no (7.0)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+education = high.school: yes (6.0)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+pdays > 27 AND
+przedzial_wiek = 0-30.5 AND
+duration <= 281: no (4.0)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+przedzial_wiek = 0-30.5: yes (5.0)
+
+przedzial_cons.price.idx = '(93.484-93.911667]' AND
+przedzial_wiek = '(44-57.5]' AND
+marital = married AND
+previous <= 2: no (5.0)
+
+przedzial_cons.price.idx = '(93.484-93.911667]': yes (12.0)
+
+education = high.school AND
+poutcome = success AND
+campaign <= 3 AND
+CONS.PRICE.IDX <= 92.963 AND
+przedzial_wiek = '(30.5-44]': yes (5.91/0.91)
+
+education = high.school AND
+month = apr AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician: no (3.0/1.0)
+
+education = high.school AND
+month = jul AND
+poutcome = failure AND
+campaign > 1: no (6.0)
+
+poutcome = failure AND
+month = sep AND
+EURIBOR3M > 0.877: no (6.0)
+
+previous > 1 AND
+education = university.degree AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+duration > 141 AND
+poutcome = failure: yes (8.0)
+
+poutcome = failure AND
+campaign > 3: yes (14.86/2.67)
+
+education = high.school AND
+month = jul AND
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+marital = single: yes (7.0/1.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = management AND
+przedzial_wiek = 0-30.5: yes (5.82/1.0)
+
+education = university.degree AND
+kategorie nieliczbowe = student AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': yes (5.62/2.0)
+
+education = university.degree AND
+kategorie nieliczbowe = student AND
+age > 26: no (6.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = services: yes (3.0/1.0)
+
+education = university.degree AND
+kategorie nieliczbowe = retired AND
+month = apr AND
+duration <= 210: no (4.99/1.0)
+
+education = high.school AND
+month = jul AND
+poutcome = nonexistent AND
+duration > 297 AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+marital = divorced AND
+kategorie nieliczbowe = admin.: no (10.63/3.63)
+
+education = high.school AND
+month = jul AND
+poutcome = nonexistent AND
+duration > 297 AND
+CONS.PRICE.IDX <= 94.055 AND
+przedzial_wiek = '(30.5-44]' AND
+age > 41: yes (10.8/1.0)
+
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+marital = divorced AND
+CONS.PRICE.IDX <= 92.201 AND
+EURIBOR3M <= 0.881: no (4.0)
+
+education = university.degree AND
+kategorie nieliczbowe = retired AND
+przedzial_nr.employed = '(5095.85-5161.975]': yes (6.04/0.04)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = management AND
+age <= 36: no (3.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = technician AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+EURIBOR3M > 4.856 AND
+przedzial_wiek = '(30.5-44]' AND
+age > 34: no (6.78)
+
+contact = telephone AND
+kategorie nieliczbowe = technician AND
+Rok = 2008 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': yes (7.0/1.0)
+
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = technician: no (4.0)
+
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+przedzial_wiek = '(57.5-71]' AND
+campaign <= 1: no (8.0/1.0)
+
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+duration <= 609 AND
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+campaign <= 2 AND
+month = oct AND
+age <= 42 AND
+marital = single: yes (12.0/1.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = technician AND
+campaign <= 1: yes (7.0)
+
+education = university.degree AND
+default = unknown AND
+marital = single AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+przedzial_wiek = '(30.5-44]': yes (6.0/1.0)
+
+education = university.degree AND
+kategorie nieliczbowe = technician AND
+campaign > 4: no (12.0/1.0)
+
+przedzial_wiek = '(57.5-71]' AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+education = university.degree: yes (6.99/0.99)
+
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+default = unknown: no (11.0/3.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = technician AND
+EURIBOR3M > 4.856: no (6.59/2.43)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+Rok = 2009: no (6.0/2.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+marital = single AND
+przedzial_wiek = '(30.5-44]' AND
+EURIBOR3M > 4.958: no (4.0)
+
+contact = telephone AND
+month = jul AND
+marital = married: yes (5.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+marital = divorced: no (4.0/1.0)
+
+education = professional.course AND
+przedzial_nr.employed = '(-inf-5029.725]' AND
+kategorie nieliczbowe = technician AND
+campaign <= 3 AND
+campaign > 1: yes (10.0/1.0)
+
+contact = telephone AND
+month = aug AND
+age <= 56: yes (3.29)
+
+education = professional.course AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]' AND
+campaign <= 3 AND
+marital = single AND
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+age > 32: no (7.0/1.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+month = may AND
+age > 41: yes (7.0)
+
+education = university.degree AND
+przedzial_wiek = '(57.5-71]' AND
+marital = married AND
+age <= 62 AND
+poutcome = nonexistent AND
+EURIBOR3M > 1.252: yes (4.0/1.0)
+
+education = university.degree AND
+przedzial_wiek = '(57.5-71]' AND
+kategorie nieliczbowe = admin.: no (8.0/1.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+month = may AND
+age <= 29: no (4.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+marital = single: yes (9.0/3.0)
+
+education = university.degree AND
+contact = telephone AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = 0-30.5: yes (7.0/2.0)
+
+education = university.degree AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+poutcome = failure AND
+campaign <= 1: no (15.97/1.0)
+
+poutcome = failure AND
+duration <= 145: no (10.8)
+
+previous > 1 AND
+przedzial_wiek = 0-30.5 AND
+previous <= 4: yes (9.59/1.0)
+
+poutcome = failure AND
+campaign > 2 AND
+duration <= 567: no (13.1/1.06)
+
+poutcome = failure AND
+month = apr AND
+EURIBOR3M <= 1.384: yes (5.1/0.1)
+
+poutcome = failure AND
+month = may AND
+przedzial_wiek = 0-30.5: yes (8.97/1.0)
+
+poutcome = failure AND
+month = jul AND
+EURIBOR3M <= 0.849: yes (6.0)
+
+poutcome = failure AND
+month = may AND
+kategorie nieliczbowe = technician AND
+education = professional.course AND
+campaign > 1: yes (5.19/1.19)
+
+poutcome = success AND
+Rok = 2009 AND
+month = apr AND
+kategorie nieliczbowe = admin.: yes (7.0/1.0)
+
+poutcome = success AND
+Rok = 2009 AND
+campaign > 3: no (4.0)
+
+poutcome = success AND
+Rok = 2009 AND
+month = jun AND
+education = professional.course: yes (3.0)
+
+poutcome = success AND
+Rok = 2009 AND
+month = aug AND
+pdays <= 13 AND
+marital = married AND
+EURIBOR3M <= 0.882: no (4.0)
+
+poutcome = success AND
+Rok = 2009 AND
+marital = single AND
+przedzial_wiek = 0-30.5 AND
+pdays <= 6: no (10.0/1.0)
+
+previous > 0 AND
+education = university.degree AND
+month = may: yes (17.3/5.3)
+
+kategorie nieliczbowe = unemployed AND
+CONS.PRICE.IDX > 93.075: yes (6.01/2.01)
+
+kategorie nieliczbowe = services AND
+month = nov: no (8.0/2.0)
+
+kategorie nieliczbowe = management AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+age <= 40: yes (7.0)
+
+kategorie nieliczbowe = management AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+default = no AND
+education = university.degree AND
+marital = married AND
+przedzial_wiek = '(30.5-44]' AND
+campaign > 1: no (8.07/1.0)
+
+kategorie nieliczbowe = management AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+marital = married AND
+campaign <= 1: no (12.0/1.0)
+
+kategorie nieliczbowe = services AND
+month = apr AND
+education = high.school AND
+marital = married AND
+EURIBOR3M <= 1.384 AND
+duration > 293: yes (5.0)
+
+kategorie nieliczbowe = services AND
+month = apr AND
+education = high.school AND
+marital = married: no (8.86/0.93)
+
+kategorie nieliczbowe = services AND
+month = apr AND
+education = high.school AND
+EURIBOR3M <= 1.435: no (8.0/3.0)
+
+kategorie nieliczbowe = services AND
+month = apr AND
+education = university.degree: no (4.99)
+
+kategorie nieliczbowe = blue-collar AND
+education = high.school AND
+Rok = 2009: yes (13.91/5.48)
+
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+duration <= 727 AND
+przedzial_wiek = '(30.5-44]': no (11.0/1.0)
+
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+przedzial_wiek = '(30.5-44]': yes (9.9)
+
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+contact = cellular: yes (4.0)
+
+kategorie nieliczbowe = blue-collar AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+contact = telephone AND
+duration <= 844: yes (4.0/1.0)
+
+kategorie nieliczbowe = blue-collar: no (9.94/1.0)
+
+kategorie nieliczbowe = student AND
+poutcome = failure AND
+duration <= 348: no (6.6)
+
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+age <= 24 AND
+age <= 23: yes (8.87/1.63)
+
+kategorie nieliczbowe = retired AND
+month = aug: yes (6.0/1.0)
+
+kategorie nieliczbowe = retired AND
+month = jun: no (4.97/1.0)
+
+kategorie nieliczbowe = retired AND
+month = oct AND
+duration <= 455: yes (3.0)
+
+kategorie nieliczbowe = retired AND
+month = jul AND
+age > 51 AND
+campaign > 1 AND
+EURIBOR3M <= 4.962: yes (3.0/1.0)
+
+kategorie nieliczbowe = retired AND
+month = jul AND
+age > 52: no (4.0)
+
+kategorie nieliczbowe = retired AND
+Rok = 2009 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+campaign <= 1: yes (6.88/1.88)
+
+kategorie nieliczbowe = retired AND
+NR.EMPLOYED <= 5099.1: no (10.0/1.0)
+
+kategorie nieliczbowe = admin. AND
+poutcome = success: yes (12.0/4.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+marital = divorced: no (4.02/1.0)
+
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2009 AND
+month = nov: yes (5.0/1.0)
+
+kategorie nieliczbowe = services AND
+education = university.degree AND
+marital = single AND
+duration <= 350: yes (6.0/1.0)
+
+kategorie nieliczbowe = services AND
+przedzial_wiek = '(30.5-44]' AND
+poutcome = nonexistent AND
+duration > 390 AND
+Rok = 2009 AND
+marital = married AND
+age <= 33: yes (8.0)
+
+kategorie nieliczbowe = services AND
+przedzial_wiek = '(30.5-44]' AND
+NR.EMPLOYED <= 5076.2: no (12.99/1.0)
+
+poutcome = success AND
+Rok = 2009 AND
+education = professional.course AND
+marital = married: yes (3.0/1.0)
+
+poutcome = success AND
+education = professional.course: no (4.0)
+
+poutcome = failure AND
+previous <= 1 AND
+month = may AND
+EURIBOR3M > 1.259: no (8.0/1.0)
+
+poutcome = failure AND
+previous > 1: yes (7.0)
+
+poutcome = failure AND
+month = jul: no (5.0/1.0)
+
+poutcome = failure AND
+month = jun AND
+CONS.PRICE.IDX > 93.444: yes (4.0)
+
+poutcome = failure AND
+month = oct: yes (6.0/2.0)
+
+poutcome = failure AND
+month = jun AND
+kategorie nieliczbowe = admin.: no (3.98/0.98)
+
+poutcome = failure AND
+month = jun AND
+age > 31: yes (4.92)
+
+poutcome = failure AND
+month = aug AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+CONS.PRICE.IDX <= 93.075 AND
+przedzial_wiek = '(44-57.5]': yes (7.0/1.0)
+
+kategorie nieliczbowe = services AND
+education = high.school AND
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+age > 46: yes (8.0/2.0)
+
+kategorie nieliczbowe = services AND
+education = high.school AND
+month = aug: no (7.0/2.0)
+
+kategorie nieliczbowe = services AND
+education = high.school AND
+przedzial_nr.employed = '(5161.975-inf)' AND
+default = no AND
+EURIBOR3M > 4.962: yes (8.19/1.81)
+
+kategorie nieliczbowe = services AND
+education = high.school AND
+month = jul AND
+CONS.PRICE.IDX <= 94.055 AND
+marital = married: no (10.56/2.85)
+
+kategorie nieliczbowe = services AND
+education = high.school AND
+month = jul AND
+marital = single AND
+CONS.PRICE.IDX <= 94.055 AND
+campaign <= 4 AND
+przedzial_wiek = 0-30.5: no (5.0)
+
+kategorie nieliczbowe = management AND
+marital = divorced: yes (9.69/2.76)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.conf.idx = '(-30.883333-inf)': no (6.0/2.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+campaign <= 2 AND
+marital = married AND
+przedzial_wiek = '(44-57.5]': no (5.21/1.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]' AND
+duration > 542 AND
+duration <= 856: yes (8.9)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+przedzial_wiek = 0-30.5: no (5.0/1.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+przedzial_wiek = '(44-57.5]' AND
+EURIBOR3M > 1.264 AND
+age > 48: yes (4.74/1.74)
+
+kategorie nieliczbowe = management AND
+przedzial_cons.conf.idx = '(-46.816667--42.833333]': no (3.2)
+
+kategorie nieliczbowe = management AND
+default = no AND
+education = professional.course: no (4.0/1.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+przedzial_wiek = '(30.5-44]' AND
+age <= 34: no (4.0/1.0)
+
+kategorie nieliczbowe = management AND
+default = no AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+CONS.PRICE.IDX <= 92.201 AND
+EURIBOR3M > 0.859: no (5.0/1.0)
+
+kategorie nieliczbowe = management AND
+CONS.PRICE.IDX <= 92.713: yes (5.0)
+
+kategorie nieliczbowe = management AND
+default = unknown: yes (4.0/1.0)
+
+kategorie nieliczbowe = retired: yes (3.0)
+
+kategorie nieliczbowe = management AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+month = nov AND
+campaign <= 1 AND
+marital = single AND
+duration <= 545: no (3.0)
+
+kategorie nieliczbowe = management AND
+marital = single AND
+przedzial_wiek = '(30.5-44]' AND
+duration > 344: yes (8.0/1.0)
+
+kategorie nieliczbowe = management AND
+campaign <= 3 AND
+Rok = 2009 AND
+marital = married AND
+przedzial_wiek = '(44-57.5]': no (4.25)
+
+kategorie nieliczbowe = management AND
+CONS.PRICE.IDX > 92.963 AND
+campaign <= 3 AND
+Rok = 2009 AND
+campaign <= 2 AND
+age > 34 AND
+duration <= 509: yes (3.0/1.0)
+
+kategorie nieliczbowe = management AND
+CONS.PRICE.IDX > 92.963 AND
+age > 53: yes (4.02/0.02)
+
+kategorie nieliczbowe = management AND
+CONS.PRICE.IDX > 92.963 AND
+campaign <= 3 AND
+Rok = 2009 AND
+campaign <= 2 AND
+age <= 34 AND
+duration > 289: no (3.0/1.0)
+
+kategorie nieliczbowe = management AND
+CONS.PRICE.IDX > 92.963 AND
+campaign <= 3 AND
+Rok = 2009 AND
+EURIBOR3M > 1.384 AND
+age > 33: yes (3.0/1.0)
+
+kategorie nieliczbowe = management AND
+przedzial_nr.employed = '(5161.975-inf)': no (30.0/10.87)
+
+kategorie nieliczbowe = management AND
+miesiac > 5: yes (4.99/1.0)
+
+kategorie nieliczbowe = technician AND
+przedzial_wiek = '(57.5-71]': yes (10.0/4.0)
+
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+age <= 24: no (5.0)
+
+kategorie nieliczbowe = student AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+education = high.school AND
+age <= 26 AND
+CONS.PRICE.IDX <= 93.918 AND
+EURIBOR3M <= 1.423 AND
+age > 22: no (5.0/1.0)
+
+kategorie nieliczbowe = student AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+education = high.school AND
+age <= 26: yes (6.0)
+
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+przedzial_cons.conf.idx = '(-inf--46.816667]': no (6.0/1.0)
+
+kategorie nieliczbowe = student AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': yes (4.63)
+
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+education = high.school AND
+age > 24: no (4.03)
+
+kategorie nieliczbowe = management: no (4.0)
+
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+education = high.school AND
+duration > 351: yes (3.03/0.03)
+
+kategorie nieliczbowe = unemployed: no (3.0)
+
+month = sep AND
+przedzial_wiek = '(30.5-44]' AND
+education = professional.course AND
+EURIBOR3M <= 0.882: yes (5.0)
+
+przedzial_wiek = 0-30.5 AND
+month = oct AND
+campaign <= 1 AND
+duration <= 269: no (4.0)
+
+przedzial_wiek = 0-30.5 AND
+month = nov AND
+marital = single AND
+age > 29: no (7.0/1.0)
+
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = student AND
+poutcome = nonexistent AND
+education = high.school AND
+campaign <= 1 AND
+duration <= 284: yes (3.0/1.0)
+
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = services AND
+Rok = 2008 AND
+campaign <= 2: no (4.0/1.0)
+
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = services AND
+Rok = 2009 AND
+marital = single AND
+duration > 197: yes (7.0)
+
+przedzial_cons.conf.idx = '(-34.866667--30.883333]' AND
+kategorie nieliczbowe = technician AND
+przedzial_wiek = 0-30.5 AND
+education = university.degree: no (3.0)
+
+przedzial_wiek = 0-30.5 AND
+education = university.degree AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+age > 26 AND
+CONS.PRICE.IDX <= 94.055 AND
+age <= 28 AND
+campaign <= 2: yes (8.0)
+
+poutcome = failure AND
+month = aug AND
+kategorie nieliczbowe = admin. AND
+campaign > 1 AND
+CONS.PRICE.IDX <= 93.075 AND
+duration > 201: no (5.0/1.0)
+
+poutcome = failure AND
+month = aug AND
+campaign > 1: yes (8.0/1.0)
+
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+poutcome = nonexistent AND
+month = nov AND
+education = high.school: yes (9.17/2.02)
+
+przedzial_wiek = 0-30.5 AND
+month = mar AND
+campaign <= 2 AND
+duration <= 290 AND
+marital = single AND
+age > 27: no (7.0/1.0)
+
+przedzial_wiek = 0-30.5 AND
+month = mar: yes (13.99/2.0)
+
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+poutcome = nonexistent AND
+campaign <= 1 AND
+month = nov AND
+duration > 727: yes (6.9)
+
+przedzial_wiek = '(30.5-44]' AND
+default = unknown AND
+marital = single: yes (8.0/3.0)
+
+przedzial_wiek = '(30.5-44]' AND
+default = unknown AND
+kategorie nieliczbowe = technician AND
+education = university.degree: no (3.02)
+
+przedzial_wiek = '(30.5-44]' AND
+default = unknown AND
+campaign <= 2 AND
+kategorie nieliczbowe = admin. AND
+age <= 37: yes (5.0)
+
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+poutcome = nonexistent AND
+default = no AND
+education = university.degree AND
+marital = single AND
+age > 36 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]': no (8.58)
+
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+poutcome = nonexistent AND
+default = no AND
+education = university.degree AND
+Rok = 2009 AND
+month = may AND
+EURIBOR3M <= 1.286: no (13.58/1.28)
+
+przedzial_wiek = 0-30.5 AND
+age > 28 AND
+poutcome = nonexistent AND
+campaign > 2 AND
+kategorie nieliczbowe = admin.: yes (20.93/3.0)
+
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+month = sep AND
+kategorie nieliczbowe = admin.: yes (3.0)
+
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+poutcome = nonexistent AND
+education = professional.course AND
+campaign <= 1: no (8.0/1.0)
+
+przedzial_wiek = '(57.5-71]' AND
+contact = cellular AND
+EURIBOR3M <= 0.956: yes (5.0)
+
+przedzial_wiek = '(57.5-71]' AND
+campaign <= 1 AND
+duration > 540: yes (3.0/1.0)
+
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2009 AND
+campaign <= 3 AND
+przedzial_cons.price.idx = '(93.056333-93.484]': yes (8.6/1.4)
+
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+marital = divorced AND
+contact = cellular AND
+EURIBOR3M <= 4.965 AND
+kategorie nieliczbowe = admin. AND
+duration <= 653: no (7.56/1.0)
+
+przedzial_wiek = '(44-57.5]' AND
+campaign > 3 AND
+NR.EMPLOYED > 5023.5 AND
+Rok = 2008 AND
+EMP.VAR.RATE > 43831 AND
+kategorie nieliczbowe = admin. AND
+age > 48: yes (5.0)
+
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+marital = married AND
+duration <= 550: no (7.0)
+
+przedzial_wiek = '(57.5-71]': no (5.0)
+
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+marital = married AND
+kategorie nieliczbowe = services AND
+age <= 50: no (3.79)
+
+przedzial_wiek = '(30.5-44]' AND
+month = sep AND
+education = university.degree: no (5.0)
+
+przedzial_wiek = 0-30.5 AND
+marital = divorced AND
+przedzial_nr.employed = '(5029.725-5095.85]': yes (3.0/1.0)
+
+przedzial_wiek = 0-30.5 AND
+marital = married AND
+age <= 28 AND
+campaign <= 4 AND
+month = jun: no (8.0)
+
+poutcome = failure AND
+marital = single AND
+duration <= 279: no (4.96/1.0)
+
+poutcome = nonexistent AND
+Rok = 2010 AND
+age <= 41 AND
+marital = married: yes (9.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+age > 41 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': no (14.81/2.81)
+
+poutcome = nonexistent AND
+przedzial_cons.conf.idx = '(-30.883333-inf)' AND
+kategorie nieliczbowe = admin. AND
+campaign > 1: no (6.0)
+
+poutcome = nonexistent AND
+month = oct AND
+CONS.PRICE.IDX <= 93.444 AND
+EURIBOR3M <= 0.739: yes (7.0/1.0)
+
+poutcome = failure: yes (4.22/0.0)
+
+przedzial_wiek = '(44-57.5]' AND
+Rok = 2008 AND
+EMP.VAR.RATE <= 43831 AND
+age > 48: yes (16.31/3.0)
+
+przedzial_wiek = '(44-57.5]' AND
+contact = cellular AND
+NR.EMPLOYED <= 5023.5: no (6.0)
+
+Rok = 2011 AND
+duration > 246 AND
+kategorie nieliczbowe = admin.: yes (8.0)
+
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+Rok = 2010 AND
+miesiac <= 7: yes (7.0/1.0)
+
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+poutcome = nonexistent AND
+Rok = 2010 AND
+campaign <= 2: no (6.0)
+
+Rok = 2010 AND
+duration > 233: yes (5.0)
+
+Rok = 2011 AND
+marital = single: no (10.0/2.0)
+
+Rok = 2011 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+EURIBOR3M > 0.733: no (3.0/1.0)
+
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+education = professional.course AND
+duration > 607: yes (7.0/1.0)
+
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+education = university.degree AND
+campaign <= 1 AND
+marital = married: no (7.9)
+
+Rok = 2008 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = technician: no (7.0/1.0)
+
+Rok = 2008 AND
+kategorie nieliczbowe = services AND
+przedzial_wiek = 0-30.5: yes (4.0)
+
+Rok = 2008 AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+marital = single: no (5.0/1.0)
+
+Rok = 2008 AND
+przedzial_wiek = 0-30.5 AND
+marital = married AND
+duration <= 679: no (7.0)
+
+Rok = 2009 AND
+month = nov AND
+duration <= 317: no (4.0)
+
+Rok = 2009 AND
+month = nov AND
+duration <= 396: yes (4.0)
+
+Rok = 2009 AND
+month = jun AND
+duration > 228 AND
+education = high.school AND
+marital = single: yes (6.0)
+
+Rok = 2009 AND
+month = jul AND
+EURIBOR3M <= 1.018: no (6.0)
+
+Rok = 2009 AND
+month = jul AND
+marital = single AND
+przedzial_wiek = '(30.5-44]': yes (5.0)
+
+Rok = 2009 AND
+month = jul AND
+marital = married: yes (4.0/1.0)
+
+Rok = 2011: yes (4.0)
+
+przedzial_nr.employed = '(-inf-5029.725]': no (8.0/1.0)
+
+poutcome = success AND
+campaign <= 1: yes (3.0)
+
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(94.339333-inf)' AND
+kategorie nieliczbowe = admin. AND
+EURIBOR3M > 4.864 AND
+education = high.school: no (3.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(94.339333-inf)': yes (7.0/2.0)
+
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+CONS.PRICE.IDX <= 92.201 AND
+marital = single AND
+EURIBOR3M <= 0.854 AND
+education = university.degree: yes (6.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+default = no AND
+przedzial_wiek = 0-30.5: no (6.32/0.99)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+przedzial_wiek = '(44-57.5]': no (5.11/1.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+default = no AND
+education = high.school AND
+age > 43: yes (5.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+default = no AND
+education = high.school AND
+marital = married AND
+CONS.PRICE.IDX > 93.369 AND
+EURIBOR3M > 4.858: no (4.52/0.25)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+default = no AND
+education = high.school AND
+campaign <= 2 AND
+marital = married: no (5.65/0.31)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+marital = married: yes (6.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+education = high.school AND
+duration > 684: yes (8.62/2.77)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = student: no (4.03)
+
+poutcome = nonexistent AND
+contact = telephone AND
+campaign > 2: no (13.29/2.29)
+
+poutcome = nonexistent AND
+contact = telephone AND
+education = university.degree AND
+EURIBOR3M <= 4.857: yes (4.71/0.04)
+
+poutcome = nonexistent AND
+przedzial_cons.price.idx = '(-inf-92.628667]' AND
+CONS.PRICE.IDX <= 92.201 AND
+marital = single AND
+campaign <= 2 AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]' AND
+age <= 35: no (7.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services AND
+education = high.school: no (3.85)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = technician AND
+age <= 45: no (5.6)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+default = unknown AND
+education = professional.course: no (3.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+marital = divorced AND
+campaign <= 1 AND
+education = university.degree AND
+duration <= 548: yes (4.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+kategorie nieliczbowe = technician AND
+duration > 344 AND
+Rok = 2009: yes (4.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school AND
+marital = single AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+duration > 470: yes (7.25)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+month = jun AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+campaign <= 1: no (4.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+education = university.degree AND
+month = jun AND
+EURIBOR3M > 1.266: yes (4.28/1.43)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+education = university.degree AND
+month = jun AND
+duration <= 229: no (3.13/0.57)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+education = university.degree AND
+month = aug: yes (15.0/7.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+campaign <= 3 AND
+education = university.degree: yes (16.48/6.22)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+campaign <= 3 AND
+education = high.school AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': no (7.3/3.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]' AND
+month = aug AND
+kategorie nieliczbowe = admin. AND
+age > 47: no (6.0/2.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(44-57.5]': yes (14.27/5.07)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+month = jul AND
+kategorie nieliczbowe = admin. AND
+default = no AND
+marital = single AND
+education = university.degree: no (9.0/3.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+month = jul AND
+education = professional.course: no (7.0/2.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+contact = telephone AND
+EURIBOR3M > 4.857: yes (4.88/1.88)
+
+poutcome = nonexistent AND
+contact = telephone AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school AND
+EURIBOR3M <= 4.858: no (6.2/2.2)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+contact = cellular AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+przedzial_nr.employed = '(5095.85-5161.975]' AND
+duration <= 691 AND
+education = high.school: no (5.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+contact = cellular AND
+marital = married AND
+kategorie nieliczbowe = admin. AND
+CONS.PRICE.IDX <= 92.893: yes (7.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+contact = cellular AND
+month = jun AND
+education = university.degree AND
+duration > 157 AND
+marital = single AND
+campaign <= 1: yes (15.98/5.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+contact = telephone AND
+education = high.school: yes (3.72)
+
+poutcome = nonexistent AND
+contact = telephone: no (4.79/0.33)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = married AND
+kategorie nieliczbowe = technician AND
+campaign <= 2: yes (3.99/0.99)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+marital = single AND
+kategorie nieliczbowe = technician AND
+education = professional.course AND
+campaign <= 1: no (6.19)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+education = high.school AND
+CONS.PRICE.IDX > 92.843 AND
+marital = married: yes (9.0/3.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+default = unknown: yes (6.0/1.0)
+
+poutcome = nonexistent AND
+default = unknown AND
+przedzial_wiek = '(30.5-44]': no (6.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+month = mar AND
+kategorie nieliczbowe = technician AND
+marital = married AND
+duration <= 120: no (7.0/2.0)
+
+poutcome = nonexistent AND
+month = mar: yes (11.99/2.99)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+month = apr AND
+marital = married AND
+EURIBOR3M > 1.384: no (5.71/1.71)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+miesiac > 4 AND
+education = high.school AND
+campaign <= 5 AND
+age <= 40: no (12.0/2.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+miesiac <= 4: yes (9.29)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+przedzial_cons.conf.idx = '(-inf--46.816667]' AND
+campaign > 1 AND
+EURIBOR3M > 1.392: no (17.76/2.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = nov AND
+age > 33: yes (4.9)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = apr AND
+marital = married AND
+duration > 266: yes (7.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+education = university.degree AND
+month = jun: yes (8.99/2.99)
+
+poutcome = nonexistent AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+marital = single: yes (11.82/4.07)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+month = may AND
+campaign <= 1 AND
+duration > 321: yes (6.57)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+month = may AND
+education = university.degree: no (7.26/0.57)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician AND
+marital = single AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+duration <= 366: no (7.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': yes (4.99/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician AND
+marital = single AND
+age <= 29 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+education = professional.course AND
+age <= 27: no (5.57/0.57)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician AND
+marital = single AND
+age > 23 AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': yes (8.11/1.99)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+marital = single AND
+age <= 29 AND
+EURIBOR3M > 1.415: no (7.0/2.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician AND
+marital = single: yes (10.0/1.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+campaign > 1 AND
+CONS.CONF.IDX <= -39.8: yes (6.0/1.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+campaign <= 1 AND
+age > 28 AND
+CONS.PRICE.IDX <= 93.2 AND
+EURIBOR3M > 1.406: yes (6.0/2.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = admin. AND
+marital = married AND
+campaign <= 1 AND
+duration <= 445: no (5.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+marital = married AND
+campaign <= 2 AND
+przedzial_cons.price.idx = '(93.911667-94.339333]' AND
+campaign > 1: no (5.0/2.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = admin. AND
+education = high.school AND
+marital = married AND
+campaign <= 2 AND
+EURIBOR3M > 0.861: yes (6.0)
+
+poutcome = nonexistent AND
+education = high.school AND
+kategorie nieliczbowe = admin. AND
+przedzial_wiek = '(30.5-44]': no (7.02)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+education = university.degree AND
+kategorie nieliczbowe = technician AND
+age <= 32 AND
+duration <= 726: no (9.62)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+education = high.school: yes (4.0)
+
+poutcome = nonexistent AND
+education = high.school AND
+campaign > 1 AND
+month = jul AND
+default = no AND
+duration <= 716: no (4.0/1.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = '(30.5-44]' AND
+kategorie nieliczbowe = technician AND
+przedzial_cons.price.idx = '(92.628667-93.056333]' AND
+campaign <= 3 AND
+campaign <= 2 AND
+campaign <= 1: yes (10.93/3.0)
+
+poutcome = nonexistent AND
+education = high.school AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+default = no AND
+przedzial_euribor3m = '(3.574667-inf)' AND
+campaign <= 1 AND
+CONS.PRICE.IDX > 93.369 AND
+EURIBOR3M > 4.962: no (3.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+kategorie nieliczbowe = technician: no (5.0/1.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = married AND
+campaign <= 1: yes (3.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = jul AND
+campaign <= 1: no (3.0/1.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+miesiac <= 6 AND
+duration > 404: yes (11.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+education = high.school AND
+campaign <= 1 AND
+age > 24: yes (4.88/1.88)
+
+poutcome = nonexistent AND
+default = no AND
+education = high.school AND
+duration <= 559 AND
+NR.EMPLOYED > 5076.2: no (8.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = aug AND
+duration > 228 AND
+CONS.PRICE.IDX <= 92.756 AND
+EURIBOR3M > 0.859: yes (8.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+CONS.PRICE.IDX <= 92.469: no (7.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = aug AND
+EURIBOR3M > 4.963 AND
+campaign > 1: no (5.75/2.0)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = aug AND
+EURIBOR3M > 4.963: yes (4.14/0.14)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = apr AND
+EURIBOR3M <= 1.453 AND
+education = university.degree: yes (24.62/9.89)
+
+poutcome = nonexistent AND
+default = no AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+campaign <= 1 AND
+education = university.degree: no (11.19/0.1)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+education = university.degree AND
+age > 28: yes (5.0)
+
+poutcome = nonexistent AND
+default = unknown: no (3.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+month = jun AND
+campaign <= 1: yes (2.98/0.99)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+campaign <= 2 AND
+month = jun: no (5.0/1.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5 AND
+marital = single AND
+age <= 28: yes (6.0)
+
+poutcome = nonexistent AND
+przedzial_wiek = 0-30.5: no (6.21/2.1)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = may AND
+marital = single AND
+age > 31: no (5.38/1.28)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = may: yes (7.2/1.2)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = jul AND
+age > 39: no (7.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+education = university.degree AND
+month = jul AND
+marital = married AND
+age <= 35: yes (4.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+marital = single AND
+EURIBOR3M > 1.259: yes (4.46/0.23)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+przedzial_euribor3m = '(-inf-2.104333]' AND
+education = professional.course AND
+duration > 164: no (12.61/1.55)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = jul AND
+EURIBOR3M <= 4.962: yes (5.76/1.38)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = aug AND
+marital = divorced AND
+duration > 602: no (3.38)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = aug AND
+marital = married AND
+education = professional.course AND
+duration <= 674: yes (8.46/0.46)
+
+poutcome = nonexistent AND
+education = professional.course AND
+kategorie nieliczbowe = technician AND
+przedzial_cons.conf.idx = '(-38.85--34.866667]' AND
+age <= 36 AND
+EURIBOR3M <= 4.967: yes (9.0/3.0)
+
+poutcome = nonexistent AND
+education = professional.course: no (12.99/1.84)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = aug AND
+marital = married AND
+przedzial_euribor3m = '(3.574667-inf)': yes (6.46/2.46)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = admin. AND
+month = aug AND
+marital = single AND
+campaign > 1 AND
+age <= 35: yes (3.0/1.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = aug AND
+marital = married AND
+duration <= 355 AND
+EURIBOR3M > 0.861: no (3.0/1.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+month = aug AND
+marital = married AND
+duration > 355: no (2.54)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = technician AND
+Rok = 2009: yes (3.0)
+
+poutcome = nonexistent AND
+kategorie nieliczbowe = services: yes (2.0)
+
+poutcome = nonexistent AND
+month = nov: no (6.02/2.0)
+
+poutcome = nonexistent AND
+marital = divorced AND
+duration <= 592: yes (7.0)
+
+poutcome = nonexistent AND
+marital = single AND
+campaign <= 2 AND
+age > 31 AND
+campaign > 1 AND
+przedzial_cons.conf.idx = '(-42.833333--38.85]' AND
+duration <= 589: no (5.0/1.0)
+
+poutcome = nonexistent AND
+marital = single AND
+campaign <= 2 AND
+age > 31 AND
+age <= 39 AND
+kategorie nieliczbowe = admin. AND
+przedzial_cons.price.idx = '(92.628667-93.056333]': yes (5.0/1.0)
+
+poutcome = nonexistent AND
+marital = single AND
+campaign <= 2 AND
+przedzial_cons.price.idx = '(93.056333-93.484]' AND
+campaign <= 1 AND
+duration > 409: yes (7.0/2.0)
+
+poutcome = nonexistent AND
+marital = single AND
+campaign <= 2 AND
+przedzial_cons.price.idx = '(93.056333-93.484]': no (7.29/1.0)
+
+poutcome = nonexistent AND
+marital = single AND
+campaign > 2: yes (5.0)
+
+kategorie nieliczbowe = admin. AND
+marital = single AND
+month = jul AND
+age <= 32: no (4.0/1.0)
+
+kategorie nieliczbowe = admin. AND
+marital = single AND
+NR.EMPLOYED <= 5099.1: no (4.0/1.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+Rok = 2008 AND
+EURIBOR3M <= 4.966 AND
+CONS.PRICE.IDX <= 93.444 AND
+duration > 584 AND
+age <= 35: no (7.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+Rok = 2008 AND
+CONS.PRICE.IDX <= 93.444: yes (10.0/1.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+campaign > 1 AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+duration > 240: yes (5.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+przedzial_nr.employed = '(5029.725-5095.85]' AND
+duration <= 372 AND
+CONS.PRICE.IDX > 92.469: no (8.99/1.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+month = aug AND
+duration > 226: no (4.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+NR.EMPLOYED <= 5076.2: yes (5.0)
+
+kategorie nieliczbowe = admin. AND
+marital = married AND
+age > 33 AND
+CONS.PRICE.IDX <= 93.444 AND
+EURIBOR3M > 1.372: yes (4.0)
+
+CONS.PRICE.IDX <= 93.444: no (9.93/1.0)
+
+marital = single: yes (4.0/1.0)
+
+marital = married AND
+duration <= 628: no (3.0/1.0)
+
+age <= 35: no (2.0)
+
+: yes (2.0)
+
+Number of Rules  : 	1219
+
+
+Time taken to build model: 136.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       38841               89.9347 %
+Incorrectly Classified Instances      4347               10.0653 %
+Kappa statistic                          0.5498
+Mean absolute error                      0.1105
+Root mean squared error                  0.28  
+Relative absolute error                 48.3868 %
+Root relative squared error             82.8769 %
+Total Number of Instances            43188     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,946    0,407    0,939      0,946    0,942      0,550    0,882     0,965     no
+                 0,593    0,054    0,623      0,593    0,607      0,550    0,882     0,618     yes
+Weighted Avg.    0,899    0,361    0,897      0,899    0,898      0,550    0,882     0,919     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 35477  2035 |     a = no
+  2312  3364 |     b = yes
+

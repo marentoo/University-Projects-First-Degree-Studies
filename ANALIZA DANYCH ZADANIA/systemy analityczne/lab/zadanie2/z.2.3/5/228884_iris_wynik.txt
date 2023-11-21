@@ -1,0 +1,19 @@
+=== Performance information ===
+
+Scheme:   IBk
+Relation: iris
+
+
+Correctly Classified Instances         140               93.3333 %
+Incorrectly Classified Instances        10                6.6667 %
+Kappa statistic                          0.9   
+Mean absolute error                      0.0795
+Root mean squared error                  0.2198
+Total Number of Instances              150     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  1 49  0 |  b = Iris-versicolor
+  0  9 41 |  c = Iris-virginica

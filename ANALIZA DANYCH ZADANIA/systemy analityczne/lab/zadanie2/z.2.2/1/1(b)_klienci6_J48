@@ -1,0 +1,179 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     klienci6
+Instances:    1000
+Attributes:   9
+              numerklienta
+              miesiac
+              dzientygodnia
+              przedzialczasrozmowy
+              przedstawiciel
+              region
+              oddzial
+              plec
+              przedzialkwotowy
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+numerklienta = 6: 50-150 (85.0/50.0)
+numerklienta = 12: 50-150 (48.0/22.0)
+numerklienta = 9: 50-150 (69.0/34.0)
+numerklienta = 3
+|   przedzialczasrozmowy = 121-140: 150-250 (11.0/4.0)
+|   przedzialczasrozmowy = 141-160: 150-250 (7.0/3.0)
+|   przedzialczasrozmowy = 161-180: 50-150 (3.0)
+|   przedzialczasrozmowy = 1-20: 150-250 (10.0/2.0)
+|   przedzialczasrozmowy = 61-80
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 50-150 (5.0/2.0)
+|   |   oddzial = Wroclaw: 150-250 (2.0)
+|   |   oddzial = Rzeszow: 150-250 (2.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (6.0/1.0)
+|   przedzialczasrozmowy = 81-100
+|   |   miesiac = 8: 0-50 (4.0/1.0)
+|   |   miesiac = 9: 50-150 (2.0/1.0)
+|   |   miesiac = 10: 50-150 (5.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (8.0)
+|   przedzialczasrozmowy = 41-60: 50-150 (5.0)
+numerklienta = 7
+|   przedzialczasrozmowy = 121-140: 150-250 (14.0/4.0)
+|   przedzialczasrozmowy = 141-160
+|   |   plec = K: 150-250 (4.0)
+|   |   plec = M: 50-150 (6.0/3.0)
+|   przedzialczasrozmowy = 161-180: 150-250 (6.0/1.0)
+|   przedzialczasrozmowy = 1-20: 150-250 (4.0/1.0)
+|   przedzialczasrozmowy = 61-80: 50-150 (6.0/3.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (13.0/6.0)
+|   przedzialczasrozmowy = 81-100: 50-150 (10.0/2.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (9.0)
+|   przedzialczasrozmowy = 41-60
+|   |   miesiac = 8: 50-150 (0.0)
+|   |   miesiac = 9: 0-50 (2.0)
+|   |   miesiac = 10: 50-150 (3.0/1.0)
+numerklienta = 11: 50-150 (89.0/48.0)
+numerklienta = 2
+|   oddzial = Lodz: 50-150 (11.0/5.0)
+|   oddzial = Warszawa: 150-250 (23.0/6.0)
+|   oddzial = Wroclaw: 50-150 (13.0/6.0)
+|   oddzial = Rzeszow: 50-150 (11.0/3.0)
+numerklienta = 5
+|   dzientygodnia = poniedzialek: 0-50 (12.0/7.0)
+|   dzientygodnia = wtorek
+|   |   region = Poludnie: 50-150 (2.0/1.0)
+|   |   region = Zachod: 150-250 (3.0)
+|   |   region = Centrum
+|   |   |   miesiac = 8: 50-150 (4.0)
+|   |   |   miesiac = 9: 50-150 (1.0)
+|   |   |   miesiac = 10: 150-250 (2.0)
+|   dzientygodnia = sroda
+|   |   miesiac = 8: 50-150 (6.0/2.0)
+|   |   miesiac = 9: 150-250 (4.0/2.0)
+|   |   miesiac = 10: 50-150 (2.0)
+|   dzientygodnia = czwartek: 150-250 (18.0/7.0)
+|   dzientygodnia = piatek
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 50-150 (6.0/1.0)
+|   |   oddzial = Wroclaw: 50-150 (0.0)
+|   |   oddzial = Rzeszow: 150-250 (2.0)
+|   dzientygodnia = sobota: 150-250 (7.0/4.0)
+|   dzientygodnia = niedziela
+|   |   oddzial = Lodz: 0-50 (1.0)
+|   |   oddzial = Warszawa: 150-250 (3.0/1.0)
+|   |   oddzial = Wroclaw: 50-150 (4.0/1.0)
+|   |   oddzial = Rzeszow: 150-250 (3.0/1.0)
+numerklienta = 10: 50-150 (75.0/37.0)
+numerklienta = 1: 50-150 (41.0/19.0)
+numerklienta = 8
+|   dzientygodnia = poniedzialek
+|   |   przedzialczasrozmowy = 121-140: 50-150 (1.0)
+|   |   przedzialczasrozmowy = 141-160: 0-50 (1.0)
+|   |   przedzialczasrozmowy = 161-180: 0-50 (3.0/1.0)
+|   |   przedzialczasrozmowy = 1-20: 50-150 (2.0)
+|   |   przedzialczasrozmowy = 61-80: 50-150 (2.0)
+|   |   przedzialczasrozmowy = 101-120: 150-250 (1.0)
+|   |   przedzialczasrozmowy = 81-100: 150-250 (1.0)
+|   |   przedzialczasrozmowy = 21-40: 50-150 (0.0)
+|   |   przedzialczasrozmowy = 41-60: 50-150 (0.0)
+|   dzientygodnia = wtorek: 150-250 (9.0/2.0)
+|   dzientygodnia = sroda: 50-150 (6.0/3.0)
+|   dzientygodnia = czwartek: 50-150 (12.0/6.0)
+|   dzientygodnia = piatek: 150-250 (9.0/4.0)
+|   dzientygodnia = sobota: 50-150 (9.0/3.0)
+|   dzientygodnia = niedziela: 150-250 (11.0/4.0)
+numerklienta = 4: 50-150 (93.0/39.0)
+numerklienta = 15
+|   oddzial = Lodz
+|   |   miesiac = 8: 50-150 (1.0)
+|   |   miesiac = 9: 150-250 (2.0)
+|   |   miesiac = 10: 0-50 (4.0/2.0)
+|   oddzial = Warszawa: 150-250 (27.0/13.0)
+|   oddzial = Wroclaw: 50-150 (11.0/2.0)
+|   oddzial = Rzeszow: 150-250 (10.0/2.0)
+numerklienta = 13
+|   dzientygodnia = poniedzialek: 50-150 (5.0/3.0)
+|   dzientygodnia = wtorek: 150-250 (6.0/1.0)
+|   dzientygodnia = sroda: 50-150 (4.0/2.0)
+|   dzientygodnia = czwartek: 0-50 (3.0/1.0)
+|   dzientygodnia = piatek
+|   |   miesiac = 8: 150-250 (2.0)
+|   |   miesiac = 9: 50-150 (2.0/1.0)
+|   |   miesiac = 10: 50-150 (5.0/1.0)
+|   dzientygodnia = sobota
+|   |   przedstawiciel = P03: 150-250 (1.0)
+|   |   przedstawiciel = P02: 50-150 (2.0)
+|   |   przedstawiciel = P05: 150-250 (1.0)
+|   |   przedstawiciel = P01: 50-150 (2.0)
+|   |   przedstawiciel = P04: 150-250 (1.0)
+|   dzientygodnia = niedziela: 50-150 (7.0/2.0)
+numerklienta = 14
+|   przedzialczasrozmowy = 121-140: 50-150 (6.0/2.0)
+|   przedzialczasrozmowy = 141-160: 0-50 (5.0/2.0)
+|   przedzialczasrozmowy = 161-180: 0-50 (5.0/2.0)
+|   przedzialczasrozmowy = 1-20: 0-50 (4.0/1.0)
+|   przedzialczasrozmowy = 61-80: 150-250 (3.0/1.0)
+|   przedzialczasrozmowy = 101-120: 50-150 (7.0/2.0)
+|   przedzialczasrozmowy = 81-100
+|   |   plec = K: 50-150 (3.0/1.0)
+|   |   plec = M: 150-250 (2.0)
+|   przedzialczasrozmowy = 21-40: 50-150 (5.0/2.0)
+|   przedzialczasrozmowy = 41-60: 150-250 (10.0/5.0)
+
+Number of Leaves  : 	100
+
+Size of the tree : 	123
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         458               45.8    %
+Incorrectly Classified Instances       542               54.2    %
+Kappa statistic                          0.0231
+Mean absolute error                      0.3942
+Root mean squared error                  0.4759
+Relative absolute error                 97.3331 %
+Root relative squared error            105.7641 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,761    0,739    0,483      0,761    0,591      0,025    0,522     0,513     50-150
+                 0,230    0,215    0,398      0,230    0,292      0,018    0,522     0,408     150-250
+                 0,056    0,026    0,267      0,056    0,093      0,063    0,553     0,167     0-50
+Weighted Avg.    0,458    0,437    0,420      0,458    0,406      0,028    0,526     0,424     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 362 102  12 |   a = 50-150
+ 284  88  10 |   b = 150-250
+ 103  31   8 |   c = 0-50
+

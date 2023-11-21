@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.2.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.2.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="advanced_file_connectors:read_arff" compatibility="9.2.001" expanded="true" height="68" name="Read ARFF kienci6" width="90" x="112" y="34">
+        <parameter key="data_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\238359_klienci6.arff"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <list key="data_set_meta_data_information"/>
+        <parameter key="attribute_names_already_defined" value="false"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="9.2.001" expanded="true" height="82" name="Write CSV klienci6" width="90" x="246" y="34">
+        <parameter key="csv_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\klienci6.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.2.001" expanded="true" height="68" name="Read CSV klienci6" width="90" x="380" y="34">
+        <parameter key="csv_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\klienci6.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="numerklienta.true.polynominal.id"/>
+          <parameter key="1" value="miesiac.true.polynominal.attribute"/>
+          <parameter key="2" value="dzientygodnia.true.polynominal.attribute"/>
+          <parameter key="3" value="przedzialczasrozmowy.true.polynominal.attribute"/>
+          <parameter key="4" value="przedstawiciel.true.polynominal.attribute"/>
+          <parameter key="5" value="region.true.polynominal.attribute"/>
+          <parameter key="6" value="oddzial.true.polynominal.attribute"/>
+          <parameter key="7" value="plec.true.polynominal.attribute"/>
+          <parameter key="8" value="przedzialkwotowy.true.polynominal.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="advanced_file_connectors:read_arff" compatibility="9.2.001" expanded="true" height="68" name="Read ARFF klienci6new" width="90" x="112" y="136">
+        <parameter key="data_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\238359_klienci6new.arff"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <list key="data_set_meta_data_information"/>
+        <parameter key="attribute_names_already_defined" value="false"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+      </operator>
+      <operator activated="true" class="write_csv" compatibility="9.2.001" expanded="true" height="82" name="Write CSV klienci6new" width="90" x="246" y="136">
+        <parameter key="csv_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\klienci6new.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.2.001" expanded="true" height="68" name="Read CSV klienci6new" width="90" x="380" y="136">
+        <parameter key="csv_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\klienci6new.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1250"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="numerklienta.true.polynominal.id"/>
+          <parameter key="1" value="miesiac.true.polynominal.attribute"/>
+          <parameter key="2" value="dzientygodnia.true.polynominal.attribute"/>
+          <parameter key="3" value="przedzialczasrozmowy.true.polynominal.attribute"/>
+          <parameter key="4" value="przedstawiciel.true.polynominal.attribute"/>
+          <parameter key="5" value="region.true.polynominal.attribute"/>
+          <parameter key="6" value="oddzial.true.polynominal.attribute"/>
+          <parameter key="7" value="plec.true.polynominal.attribute"/>
+          <parameter key="8" value="przedzialkwotowy.true.polynominal.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="concurrency:optimize_parameters_grid" compatibility="8.2.000" expanded="true" height="124" name="Optimize Parameters (Grid)" origin="GENERATED_TEMPLATE" width="90" x="581" y="34">
+        <list key="parameters">
+          <parameter key="Decision Tree.minimal_leaf_size" value="[1.0;100.0;10;linear]"/>
+          <parameter key="Decision Tree.criterion" value="gain_ratio,information_gain,accuracy"/>
+        </list>
+        <parameter key="error_handling" value="fail on error"/>
+        <parameter key="log_performance" value="true"/>
+        <parameter key="log_all_criteria" value="false"/>
+        <parameter key="synchronize" value="false"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+        <process expanded="true">
+          <operator activated="true" class="concurrency:cross_validation" compatibility="8.2.000" expanded="true" height="145" name="Validation" origin="GENERATED_TEMPLATE" width="90" x="313" y="85">
+            <parameter key="split_on_batch_attribute" value="false"/>
+            <parameter key="leave_one_out" value="false"/>
+            <parameter key="number_of_folds" value="10"/>
+            <parameter key="sampling_type" value="automatic"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+            <parameter key="enable_parallel_execution" value="true"/>
+            <process expanded="true">
+              <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="9.2.001" expanded="true" height="103" name="Decision Tree" width="90" x="112" y="34">
+                <parameter key="criterion" value="accuracy"/>
+                <parameter key="maximal_depth" value="10"/>
+                <parameter key="apply_pruning" value="true"/>
+                <parameter key="confidence" value="0.1"/>
+                <parameter key="apply_prepruning" value="true"/>
+                <parameter key="minimal_gain" value="0.01"/>
+                <parameter key="minimal_leaf_size" value="100"/>
+                <parameter key="minimal_size_for_split" value="4"/>
+                <parameter key="number_of_prepruning_alternatives" value="3"/>
+              </operator>
+              <connect from_port="training set" to_op="Decision Tree" to_port="training set"/>
+              <connect from_op="Decision Tree" from_port="model" to_port="model"/>
+              <portSpacing port="source_training set" spacing="0"/>
+              <portSpacing port="sink_model" spacing="0"/>
+              <portSpacing port="sink_through 1" spacing="0"/>
+            </process>
+            <process expanded="true">
+              <operator activated="true" class="apply_model" compatibility="9.2.001" expanded="true" height="82" name="Apply Model (2)" origin="GENERATED_TEMPLATE" width="90" x="45" y="34">
+                <list key="application_parameters"/>
+                <parameter key="create_view" value="false"/>
+              </operator>
+              <operator activated="true" class="performance" compatibility="9.2.001" expanded="true" height="82" name="Performance" origin="GENERATED_TEMPLATE" width="90" x="179" y="34">
+                <parameter key="use_example_weights" value="true"/>
+              </operator>
+              <connect from_port="model" to_op="Apply Model (2)" to_port="model"/>
+              <connect from_port="test set" to_op="Apply Model (2)" to_port="unlabelled data"/>
+              <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Performance" to_port="labelled data"/>
+              <connect from_op="Performance" from_port="performance" to_port="performance 1"/>
+              <portSpacing port="source_model" spacing="0"/>
+              <portSpacing port="source_test set" spacing="0"/>
+              <portSpacing port="source_through 1" spacing="0"/>
+              <portSpacing port="sink_test set results" spacing="0"/>
+              <portSpacing port="sink_performance 1" spacing="0"/>
+              <portSpacing port="sink_performance 2" spacing="0"/>
+            </process>
+          </operator>
+          <operator activated="true" class="log" compatibility="9.2.001" expanded="true" height="82" name="Log" origin="GENERATED_TEMPLATE" width="90" x="447" y="187">
+            <list key="log">
+              <parameter key="C" value="operator.SVM.parameter.kernel_type"/>
+              <parameter key="Gamma" value="operator.SVM.parameter.kernel_gamma"/>
+              <parameter key="Performance" value="operator.Validation.value.performance main criterion"/>
+              <parameter key="Criterion" value="operator.Decision Tree.parameter.criterion"/>
+              <parameter key="Minimal_leaf_size" value="operator.Decision Tree.parameter.minimal_leaf_size"/>
+            </list>
+            <parameter key="sorting_type" value="none"/>
+            <parameter key="sorting_k" value="100"/>
+            <parameter key="persistent" value="false"/>
+          </operator>
+          <connect from_port="input 1" to_op="Validation" to_port="example set"/>
+          <connect from_op="Validation" from_port="model" to_port="model"/>
+          <connect from_op="Validation" from_port="performance 1" to_op="Log" to_port="through 1"/>
+          <connect from_op="Log" from_port="through 1" to_port="performance"/>
+          <portSpacing port="source_input 1" spacing="0"/>
+          <portSpacing port="source_input 2" spacing="0"/>
+          <portSpacing port="sink_performance" spacing="0"/>
+          <portSpacing port="sink_model" spacing="0"/>
+          <portSpacing port="sink_output 1" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.2.001" expanded="true" height="82" name="Apply Model" origin="GENERATED_TEMPLATE" width="90" x="715" y="187">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="log_to_data" compatibility="9.2.001" expanded="true" height="124" name="Log to Data" origin="GENERATED_TEMPLATE" width="90" x="849" y="34"/>
+      <operator activated="true" class="write_as_text" compatibility="9.2.001" expanded="true" height="124" name="Write as Text" width="90" x="983" y="187">
+        <parameter key="result_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\proces3.3.2c_tekst_2.res"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="write_excel" compatibility="9.2.001" expanded="true" height="82" name="Write Excel" width="90" x="1050" y="34">
+        <parameter key="excel_file" value="C:\Users\Monisia\Desktop\zadanie 3.3\proces3.3.2c_excel_2.xlsx"/>
+        <parameter key="file_format" value="xlsx"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="sheet_name" value="RapidMiner Data"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="number_format" value="#.0"/>
+      </operator>
+      <connect from_op="Read ARFF kienci6" from_port="output" to_op="Write CSV klienci6" to_port="input"/>
+      <connect from_op="Read CSV klienci6" from_port="output" to_op="Optimize Parameters (Grid)" to_port="input 1"/>
+      <connect from_op="Read ARFF klienci6new" from_port="output" to_op="Write CSV klienci6new" to_port="input"/>
+      <connect from_op="Read CSV klienci6new" from_port="output" to_op="Apply Model" to_port="unlabelled data"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="performance" to_op="Write as Text" to_port="input 3"/>
+      <connect from_op="Optimize Parameters (Grid)" from_port="model" to_op="Apply Model" to_port="model"/>
+      <connect from_op="Apply Model" from_port="labelled data" to_op="Log to Data" to_port="through 1"/>
+      <connect from_op="Apply Model" from_port="model" to_op="Write as Text" to_port="input 2"/>
+      <connect from_op="Log to Data" from_port="exampleSet" to_op="Write Excel" to_port="input"/>
+      <connect from_op="Log to Data" from_port="through 2" to_op="Write as Text" to_port="input 1"/>
+      <connect from_op="Write as Text" from_port="input 1" to_port="result 1"/>
+      <connect from_op="Write as Text" from_port="input 2" to_port="result 3"/>
+      <connect from_op="Write as Text" from_port="input 3" to_port="result 4"/>
+      <connect from_op="Write Excel" from_port="through" to_port="result 2"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+      <portSpacing port="sink_result 5" spacing="0"/>
+    </process>
+  </operator>
+</process>
